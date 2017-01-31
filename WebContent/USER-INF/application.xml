@@ -4,8 +4,8 @@
 
   <Resource name="amazonEmailResource" 
               smtp="email-smtp.us-east-1.amazonaws.com" 
-              amazonemailuser="AKIAJKIITXVYB7TTZSGQ"
-              amazonemialpassword="Aqbd3CKaZH/1tcGY2kVzqtXMNhVCNrL1v3RmBD7LRDbW"
+              amazonemailuser="AMAZON_EMAIL_USER"
+              amazonemialpassword="AMAZON_EMAIL_PASSWORD"
               amazonverifiedemail="mike@artitelly.org"
               port="465" 
               />

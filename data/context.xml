@@ -6,30 +6,16 @@
 <Resource name="jdbc/SoftleanDs" auth="Container"
               type="javax.sql.DataSource" 
               driverClassName="oracle.jdbc.OracleDriver"
-              url="jdbc:oracle:thin:@34.194.23.41:1521:paydb1"
-              username="testdb" 
-              password="testdb1234" 
+              url="jdbc:oracle:thin:@HOST_NAME:DB_PORT:DB_INSTANCE_NAME"
+              username="DB_USER" 
+              password="DB_PASSWORD" 
               maxActive="20" 
               maxIdle="10"
               maxWait="20000"
               logger="false"/>
 
 
-<!-- Prod -->
 
- <!--  
-<Resource name="jdbc/SoftleanDs" auth="Container"
-              type="javax.sql.DataSource" 
-              driverClassName="oracle.jdbc.OracleDriver"
-              url="jdbc:oracle:thin:@54.243.180.109:1521:paydb1"
-              username="testdb" 
-              password="testdb5234A" 
-              maxActive="100" 
-              maxIdle="10"
-              maxWait="20000"
-              logger="false"/>
-
--->
           
 </Context>	
 

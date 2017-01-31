@@ -1,0 +1,2571 @@
+insert into Table_ListProperty(objid,name,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE2F65BFE050B90A27935BAB','GenericCode','ReferralStatus','ReferralStatus','global',0,'2020CF74F6CCEE8CE050B90A2793593F','2020CF74F6CEEE8CE050B90A2793593F','sa','sa',sysdate)
+insert into Table_ListProperty(objid,name,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE3065BFE050B90A27935BAB','GenericCode','ReasonCode','ReasonCode','global',1,'2020CF74F6CCEE8CE050B90A2793593F','2020CF74F6CEEE8CE050B90A2793593F','sa','sa',sysdate)
+insert into Table_ListProperty(objid,name,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE3165BFE050B90A27935BAB','GenericCode','GroupCode','GroupCode','global',2,'2020CF74F6CCEE8CE050B90A2793593F','2020CF74F6CEEE8CE050B90A2793593F','sa','sa',sysdate)
+insert into Table_ListProperty(objid,name,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE3265BFE050B90A27935BAB','GenericCode','SkillCode','SkillCode','global',3,'2020CF74F6CCEE8CE050B90A2793593F','2020CF74F6CEEE8CE050B90A2793593F','sa','sa',sysdate)
+insert into Table_ListProperty(objid,name,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE3365BFE050B90A27935BAB','GenericCode','SubscribeCode','SubscribeCode','global',4,'2020CF74F6CCEE8CE050B90A2793593F','2020CF74F6CEEE8CE050B90A2793593F','sa','sa',sysdate)
+insert into Table_ListProperty(objid,name,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE3465BFE050B90A27935BAB','GenericCode','TaskStatusCode','TaskStatusCode','global',5,'2020CF74F6CCEE8CE050B90A2793593F','2020CF74F6CEEE8CE050B90A2793593F','sa','sa',sysdate)
+insert into Table_ListProperty(objid,name,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE3565BFE050B90A27935BAB','GenericCode','CountryCode','CountryCode','global',6,'2020CF74F6CCEE8CE050B90A2793593F','2020CF74F6CEEE8CE050B90A2793593F','sa','sa',sysdate)
+insert into Table_ListProperty(objid,name,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE3665BFE050B90A27935BAB','GenericCode','MonthCode','MonthCode','global',7,'2020CF74F6CCEE8CE050B90A2793593F','2020CF74F6CEEE8CE050B90A2793593F','sa','sa',sysdate)
+insert into Table_ListProperty(objid,name,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE3765BFE050B90A27935BAB','GenericCode','CardTypeCode','CardTypeCode','global',8,'2020CF74F6CCEE8CE050B90A2793593F','2020CF74F6CEEE8CE050B90A2793593F','sa','sa',sysdate)
+insert into Table_ListProperty(objid,name,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE3865BFE050B90A27935BAB','GenericCode','DeptCode','DeptCode','global',9,'2020CF74F6CCEE8CE050B90A2793593F','2020CF74F6CEEE8CE050B90A2793593F','sa','sa',sysdate)
+insert into Table_ListProperty(objid,name,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE3965BFE050B90A27935BAB','GenericCode','MediaCode','MediaCode','global',10,'2020CF74F6CCEE8CE050B90A2793593F','2020CF74F6CEEE8CE050B90A2793593F','sa','sa',sysdate)
+insert into Table_ListProperty(objid,name,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE3A65BFE050B90A27935BAB','GenericCode','YearCode','YearCode','global',11,'2020CF74F6CCEE8CE050B90A2793593F','2020CF74F6CEEE8CE050B90A2793593F','sa','sa',sysdate)
+insert into Table_ListProperty(objid,name,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE3B65BFE050B90A27935BAB','GenericCode','TaskCode','TaskCode','global',12,'2020CF74F6CCEE8CE050B90A2793593F','2020CF74F6CEEE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=FeatureList
+Attribute=IsActive
+PropertyString=Yes
+PropertyValue=1
+Scope=
+PropIndex=1
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE3C65BFE050B90A27935BAB','IsActive','FeatureList','Yes','1','',1,'2022B4014E5C1B1CE050B90A27935B32','2022B4014E5F1B1CE050B90A27935B32','sa','sa',sysdate)
+<ListProperty>
+Object=FeatureList
+Attribute=IsActive
+PropertyString=No
+PropertyValue=0
+Scope=
+PropIndex=2
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE3D65BFE050B90A27935BAB','IsActive','FeatureList','No','0','',2,'2022B4014E5C1B1CE050B90A27935B32','2022B4014E5F1B1CE050B90A27935B32','sa','sa',sysdate)
+<ListProperty>
+Object=Member
+Attribute=ResourceType
+PropertyString=Employee
+PropertyValue=Employee
+Scope=
+PropIndex=1
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE3E65BFE050B90A27935BAB','ResourceType','Member','Employee','Employee','',1,'2020CF74F7EAEE8CE050B90A2793593F','2020CF74F7EFEE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Member
+Attribute=ResourceType
+PropertyString=Contractor
+PropertyValue=Contractor
+Scope=
+PropIndex=2
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE3F65BFE050B90A27935BAB','ResourceType','Member','Contractor','Contractor','',2,'2020CF74F7EAEE8CE050B90A2793593F','2020CF74F7EFEE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Scenerio
+Attribute=Priority
+PropertyString=Priority-1
+PropertyValue=Priority-1
+Scope=
+PropIndex=1
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE4065BFE050B90A27935BAB','Priority','Scenerio','Priority-1','Priority-1','',1,'2020CF74F74BEE8CE050B90A2793593F','2020CF74F754EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Scenerio
+Attribute=Priority
+PropertyString=Priority-2
+PropertyValue=Priority-2
+Scope=
+PropIndex=2
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE4165BFE050B90A27935BAB','Priority','Scenerio','Priority-2','Priority-2','',2,'2020CF74F74BEE8CE050B90A2793593F','2020CF74F754EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Scenerio
+Attribute=Priority
+PropertyString=Priority-3
+PropertyValue=Priority-3
+Scope=
+PropIndex=3
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE4265BFE050B90A27935BAB','Priority','Scenerio','Priority-3','Priority-3','',3,'2020CF74F74BEE8CE050B90A2793593F','2020CF74F754EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Member
+Attribute=Status
+PropertyString=Active
+PropertyValue=Active
+Scope=
+PropIndex=1
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE4365BFE050B90A27935BAB','Status','Member','Active','Active','',1,'2020CF74F7EAEE8CE050B90A2793593F','2020CF74F7F4EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Member
+Attribute=Status
+PropertyString=Not In Project
+PropertyValue=Not In Project
+Scope=
+PropIndex=2
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE4465BFE050B90A27935BAB','Status','Member','Not In Project','Not In Project','',2,'2020CF74F7EAEE8CE050B90A2793593F','2020CF74F7F4EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Member
+Attribute=Status
+PropertyString=Vacation
+PropertyValue=Vacation
+Scope=
+PropIndex=3
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE4565BFE050B90A27935BAB','Status','Member','Vacation','Vacation','',3,'2020CF74F7EAEE8CE050B90A2793593F','2020CF74F7F4EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Member
+Attribute=PercentTime
+PropertyString=100 %
+PropertyValue=1.00
+Scope=
+PropIndex=1
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE4665BFE050B90A27935BAB','PercentTime','Member','100 %','1.00','',1,'2020CF74F7EAEE8CE050B90A2793593F','2020CF74F7EDEE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Member
+Attribute=PercentTime
+PropertyString=75 %
+PropertyValue=0.75
+Scope=
+PropIndex=2
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE4765BFE050B90A27935BAB','PercentTime','Member','75 %','0.75','',2,'2020CF74F7EAEE8CE050B90A2793593F','2020CF74F7EDEE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Member
+Attribute=PercentTime
+PropertyString=50 %
+PropertyValue=0.5
+Scope=
+PropIndex=3
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE4865BFE050B90A27935BAB','PercentTime','Member','50 %','0.5','',3,'2020CF74F7EAEE8CE050B90A2793593F','2020CF74F7EDEE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Member
+Attribute=PercentTime
+PropertyString=25 %
+PropertyValue=0.25
+Scope=
+PropIndex=4
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE4965BFE050B90A27935BAB','PercentTime','Member','25 %','0.25','',4,'2020CF74F7EAEE8CE050B90A2793593F','2020CF74F7EDEE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=TestMatrix
+Attribute=GroupCode
+PropertyString=Development
+PropertyValue=Development
+Scope=
+PropIndex=1
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE4A65BFE050B90A27935BAB','GroupCode','TestMatrix','Development','Development','',1,'2020CF74F782EE8CE050B90A2793593F','2020CF74F787EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=TestMatrix
+Attribute=GroupCode
+PropertyString=Testing
+PropertyValue=Testing
+Scope=
+PropIndex=2
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE4B65BFE050B90A27935BAB','GroupCode','TestMatrix','Testing','Testing','',2,'2020CF74F782EE8CE050B90A2793593F','2020CF74F787EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=TestMatrix
+Attribute=GroupCode
+PropertyString=Done
+PropertyValue=Done
+Scope=
+PropIndex=3
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE4C65BFE050B90A27935BAB','GroupCode','TestMatrix','Done','Done','',3,'2020CF74F782EE8CE050B90A2793593F','2020CF74F787EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Epic
+Attribute=Status
+PropertyString=Open
+PropertyValue=Open
+Scope=
+PropIndex=1
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE4D65BFE050B90A27935BAB','Status','Epic','Open','Open','',1,'2020CF74F737EE8CE050B90A2793593F','2020CF74F73AEE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Epic
+Attribute=Status
+PropertyString=Closed
+PropertyValue=Closed
+Scope=
+PropIndex=2
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE4E65BFE050B90A27935BAB','Status','Epic','Closed','Closed','',2,'2020CF74F737EE8CE050B90A2793593F','2020CF74F73AEE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Epic
+Attribute=Status
+PropertyString=In Progress
+PropertyValue=In Progress
+Scope=
+PropIndex=3
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE4F65BFE050B90A27935BAB','Status','Epic','In Progress','In Progress','',3,'2020CF74F737EE8CE050B90A2793593F','2020CF74F73AEE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Feature
+Attribute=Priority
+PropertyString=Priority-1
+PropertyValue=Priority-1
+Scope=
+PropIndex=1
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE5065BFE050B90A27935BAB','Priority','Feature','Priority-1','Priority-1','',1,'2020CF74F73FEE8CE050B90A2793593F','2020CF74F743EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Feature
+Attribute=Priority
+PropertyString=Priority-2
+PropertyValue=Priority-2
+Scope=
+PropIndex=2
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE5165BFE050B90A27935BAB','Priority','Feature','Priority-2','Priority-2','',2,'2020CF74F73FEE8CE050B90A2793593F','2020CF74F743EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Feature
+Attribute=Priority
+PropertyString=Priority-3
+PropertyValue=Priority-3
+Scope=
+PropIndex=3
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE5265BFE050B90A27935BAB','Priority','Feature','Priority-3','Priority-3','',3,'2020CF74F73FEE8CE050B90A2793593F','2020CF74F743EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Epic
+Attribute=Priority
+PropertyString=Priority-1
+PropertyValue=Priority-1
+Scope=
+PropIndex=1
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE5365BFE050B90A27935BAB','Priority','Epic','Priority-1','Priority-1','',1,'2020CF74F737EE8CE050B90A2793593F','2020CF74F73BEE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Epic
+Attribute=Priority
+PropertyString=Priority-2
+PropertyValue=Priority-2
+Scope=
+PropIndex=2
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE5465BFE050B90A27935BAB','Priority','Epic','Priority-2','Priority-2','',2,'2020CF74F737EE8CE050B90A2793593F','2020CF74F73BEE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Epic
+Attribute=Priority
+PropertyString=Priority-3
+PropertyValue=Priority-3
+Scope=
+PropIndex=3
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE5565BFE050B90A27935BAB','Priority','Epic','Priority-3','Priority-3','',3,'2020CF74F737EE8CE050B90A2793593F','2020CF74F73BEE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Lead
+Attribute=LeadSource
+PropertyString=Internet Survey
+PropertyValue=Internet Survey
+Scope=
+PropIndex=1
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE5665BFE050B90A27935BAB','LeadSource','Lead','Internet Survey','Internet Survey','',1,'2020CF74F904EE8CE050B90A2793593F','2020CF74F918EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Lead
+Attribute=LeadSource
+PropertyString=Networking
+PropertyValue=Networking
+Scope=
+PropIndex=2
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE5765BFE050B90A27935BAB','LeadSource','Lead','Networking','Networking','',2,'2020CF74F904EE8CE050B90A2793593F','2020CF74F918EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Lead
+Attribute=LeadSource
+PropertyString=Events
+PropertyValue=Events
+Scope=
+PropIndex=3
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE5865BFE050B90A27935BAB','LeadSource','Lead','Events','Events','',3,'2020CF74F904EE8CE050B90A2793593F','2020CF74F918EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Lead
+Attribute=LeadSource
+PropertyString=Trade Show
+PropertyValue=Trade Show
+Scope=
+PropIndex=4
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE5965BFE050B90A27935BAB','LeadSource','Lead','Trade Show','Trade Show','',4,'2020CF74F904EE8CE050B90A2793593F','2020CF74F918EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Lead
+Attribute=LeadSource
+PropertyString=Google Search
+PropertyValue=Google Search
+Scope=
+PropIndex=5
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE5A65BFE050B90A27935BAB','LeadSource','Lead','Google Search','Google Search','',5,'2020CF74F904EE8CE050B90A2793593F','2020CF74F918EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Lead
+Attribute=LeadSource
+PropertyString=Internet Search
+PropertyValue=Internet Search
+Scope=
+PropIndex=6
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE5B65BFE050B90A27935BAB','LeadSource','Lead','Internet Search','Internet Search','',6,'2020CF74F904EE8CE050B90A2793593F','2020CF74F918EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Lead
+Attribute=LeadSource
+PropertyString=Google Ads
+PropertyValue=Google Ads
+Scope=
+PropIndex=7
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE5C65BFE050B90A27935BAB','LeadSource','Lead','Google Ads','Google Ads','',7,'2020CF74F904EE8CE050B90A2793593F','2020CF74F918EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Lead
+Attribute=LeadSource
+PropertyString=Facebook Ads
+PropertyValue=Facebook Ads
+Scope=
+PropIndex=8
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE5D65BFE050B90A27935BAB','LeadSource','Lead','Facebook Ads','Facebook Ads','',8,'2020CF74F904EE8CE050B90A2793593F','2020CF74F918EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Lead
+Attribute=LeadSource
+PropertyString=LinkedIn Ads
+PropertyValue=LinkedIn Ads
+Scope=
+PropIndex=9
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE5E65BFE050B90A27935BAB','LeadSource','Lead','LinkedIn Ads','LinkedIn Ads','',9,'2020CF74F904EE8CE050B90A2793593F','2020CF74F918EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Lead
+Attribute=LeadSource
+PropertyString=Twitter Ads
+PropertyValue=Twitter Ads
+Scope=
+PropIndex=10
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE5F65BFE050B90A27935BAB','LeadSource','Lead','Twitter Ads','Twitter Ads','',10,'2020CF74F904EE8CE050B90A2793593F','2020CF74F918EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Lead
+Attribute=LeadSource
+PropertyString=Reference
+PropertyValue=Reference
+Scope=
+PropIndex=11
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE6065BFE050B90A27935BAB','LeadSource','Lead','Reference','Reference','',11,'2020CF74F904EE8CE050B90A2793593F','2020CF74F918EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Lead
+Attribute=LeadSource
+PropertyString=Friends
+PropertyValue=Friends
+Scope=
+PropIndex=12
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE6165BFE050B90A27935BAB','LeadSource','Lead','Friends','Friends','',12,'2020CF74F904EE8CE050B90A2793593F','2020CF74F918EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Lead
+Attribute=LeadSource
+PropertyString=Other Ads
+PropertyValue=Other Ads
+Scope=
+PropIndex=13
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE6265BFE050B90A27935BAB','LeadSource','Lead','Other Ads','Other Ads','',13,'2020CF74F904EE8CE050B90A2793593F','2020CF74F918EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Lead
+Attribute=LeadStatus
+PropertyString=None
+PropertyValue=None
+Scope=
+PropIndex=1
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE6365BFE050B90A27935BAB','LeadStatus','Lead','None','None','',1,'2020CF74F904EE8CE050B90A2793593F','2020CF74F917EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Lead
+Attribute=LeadStatus
+PropertyString=Intro Email
+PropertyValue=Intro Email
+Scope=
+PropIndex=2
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE6465BFE050B90A27935BAB','LeadStatus','Lead','Intro Email','Intro Email','',2,'2020CF74F904EE8CE050B90A2793593F','2020CF74F917EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Lead
+Attribute=LeadStatus
+PropertyString=Appointment Email
+PropertyValue=Appointment Email
+Scope=
+PropIndex=3
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE6565BFE050B90A27935BAB','LeadStatus','Lead','Appointment Email','Appointment Email','',3,'2020CF74F904EE8CE050B90A2793593F','2020CF74F917EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Lead
+Attribute=LeadStatus
+PropertyString=Followup Email
+PropertyValue=Followup Email
+Scope=
+PropIndex=4
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE6665BFE050B90A27935BAB','LeadStatus','Lead','Followup Email','Followup Email','',4,'2020CF74F904EE8CE050B90A2793593F','2020CF74F917EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Lead
+Attribute=LeadStatus
+PropertyString=1st Phone Call
+PropertyValue=1st Phone Call
+Scope=
+PropIndex=5
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE6765BFE050B90A27935BAB','LeadStatus','Lead','1st Phone Call','1st Phone Call','',5,'2020CF74F904EE8CE050B90A2793593F','2020CF74F917EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Lead
+Attribute=LeadStatus
+PropertyString=2nd Phone Call
+PropertyValue=2nd Phone Call
+Scope=
+PropIndex=6
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE6865BFE050B90A27935BAB','LeadStatus','Lead','2nd Phone Call','2nd Phone Call','',6,'2020CF74F904EE8CE050B90A2793593F','2020CF74F917EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Lead
+Attribute=LeadStatus
+PropertyString=3rd Phone Call
+PropertyValue=3rd Phone Call
+Scope=
+PropIndex=7
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE6965BFE050B90A27935BAB','LeadStatus','Lead','3rd Phone Call','3rd Phone Call','',7,'2020CF74F904EE8CE050B90A2793593F','2020CF74F917EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Lead
+Attribute=LeadStatus
+PropertyString=4th Phone Call
+PropertyValue=4th Phone Call
+Scope=
+PropIndex=8
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE6A65BFE050B90A27935BAB','LeadStatus','Lead','4th Phone Call','4th Phone Call','',8,'2020CF74F904EE8CE050B90A2793593F','2020CF74F917EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Lead
+Attribute=LeadStatus
+PropertyString=5th Phone Call
+PropertyValue=5th Phone Call
+Scope=
+PropIndex=9
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE6B65BFE050B90A27935BAB','LeadStatus','Lead','5th Phone Call','5th Phone Call','',9,'2020CF74F904EE8CE050B90A2793593F','2020CF74F917EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Lead
+Attribute=LeadStatus
+PropertyString=Closed
+PropertyValue=Closed
+Scope=
+PropIndex=10
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE6C65BFE050B90A27935BAB','LeadStatus','Lead','Closed','Closed','',10,'2020CF74F904EE8CE050B90A2793593F','2020CF74F917EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Deal
+Attribute=DealStage
+PropertyString=Proposed
+PropertyValue=Proposed
+Scope=
+PropIndex=1
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE6D65BFE050B90A27935BAB','DealStage','Deal','Proposed','Proposed','',1,'2020CF74F928EE8CE050B90A2793593F','2020CF74F92EEE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Deal
+Attribute=DealStage
+PropertyString=Negotiation
+PropertyValue=Negotiation
+Scope=
+PropIndex=2
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE6E65BFE050B90A27935BAB','DealStage','Deal','Negotiation','Negotiation','',2,'2020CF74F928EE8CE050B90A2793593F','2020CF74F92EEE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Deal
+Attribute=DealStage
+PropertyString=Optional
+PropertyValue=Optional
+Scope=
+PropIndex=3
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE6F65BFE050B90A27935BAB','DealStage','Deal','Optional','Optional','',3,'2020CF74F928EE8CE050B90A2793593F','2020CF74F92EEE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Deal
+Attribute=DealStage
+PropertyString=Final
+PropertyValue=Final
+Scope=
+PropIndex=4
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE7065BFE050B90A27935BAB','DealStage','Deal','Final','Final','',4,'2020CF74F928EE8CE050B90A2793593F','2020CF74F92EEE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Deal
+Attribute=DealStage
+PropertyString=Discarded
+PropertyValue=Discarded
+Scope=
+PropIndex=5
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE7165BFE050B90A27935BAB','DealStage','Deal','Discarded','Discarded','',5,'2020CF74F928EE8CE050B90A2793593F','2020CF74F92EEE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Deal
+Attribute=DealStage
+PropertyString=Next Year
+PropertyValue=Next Year
+Scope=
+PropIndex=6
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE7265BFE050B90A27935BAB','DealStage','Deal','Next Year','Next Year','',6,'2020CF74F928EE8CE050B90A2793593F','2020CF74F92EEE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Lead
+Attribute=LeadStage
+PropertyString=Raw
+PropertyValue=Raw
+Scope=
+PropIndex=1
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE7365BFE050B90A27935BAB','LeadStage','Lead','Raw','Raw','',1,'2020CF74F904EE8CE050B90A2793593F','2020CF74F916EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Lead
+Attribute=LeadStage
+PropertyString=Call
+PropertyValue=Call
+Scope=
+PropIndex=2
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE7465BFE050B90A27935BAB','LeadStage','Lead','Call','Call','',2,'2020CF74F904EE8CE050B90A2793593F','2020CF74F916EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Lead
+Attribute=LeadStage
+PropertyString=Appointment
+PropertyValue=Appointment
+Scope=
+PropIndex=3
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE7565BFE050B90A27935BAB','LeadStage','Lead','Appointment','Appointment','',3,'2020CF74F904EE8CE050B90A2793593F','2020CF74F916EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Lead
+Attribute=LeadStage
+PropertyString=Contact
+PropertyValue=Contact
+Scope=
+PropIndex=4
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE7665BFE050B90A27935BAB','LeadStage','Lead','Contact','Contact','',4,'2020CF74F904EE8CE050B90A2793593F','2020CF74F916EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Lead
+Attribute=LeadStage
+PropertyString=Opportunity
+PropertyValue=Opportunity
+Scope=
+PropIndex=5
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE7765BFE050B90A27935BAB','LeadStage','Lead','Opportunity','Opportunity','',5,'2020CF74F904EE8CE050B90A2793593F','2020CF74F916EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Lead
+Attribute=LeadStage
+PropertyString=Customer
+PropertyValue=Customer
+Scope=
+PropIndex=6
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE7865BFE050B90A27935BAB','LeadStage','Lead','Customer','Customer','',6,'2020CF74F904EE8CE050B90A2793593F','2020CF74F916EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Lead
+Attribute=LeadStage
+PropertyString=Closed
+PropertyValue=Closed
+Scope=
+PropIndex=7
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE7965BFE050B90A27935BAB','LeadStage','Lead','Closed','Closed','',7,'2020CF74F904EE8CE050B90A2793593F','2020CF74F916EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Contact
+Attribute=ContactStage
+PropertyString=Raw
+PropertyValue=Raw
+Scope=
+PropIndex=1
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE7A65BFE050B90A27935BAB','ContactStage','Contact','Raw','Raw','',1,'2020CF74F8E5EE8CE050B90A2793593F','2020CF74F8F8EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Contact
+Attribute=ContactStage
+PropertyString=Prospect
+PropertyValue=Prospect
+Scope=
+PropIndex=2
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE7B65BFE050B90A27935BAB','ContactStage','Contact','Prospect','Prospect','',2,'2020CF74F8E5EE8CE050B90A2793593F','2020CF74F8F8EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Contact
+Attribute=ContactStage
+PropertyString=Opportunity
+PropertyValue=Opportunity
+Scope=
+PropIndex=3
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE7C65BFE050B90A27935BAB','ContactStage','Contact','Opportunity','Opportunity','',3,'2020CF74F8E5EE8CE050B90A2793593F','2020CF74F8F8EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Contact
+Attribute=ContactStage
+PropertyString=Customer
+PropertyValue=Customer
+Scope=
+PropIndex=4
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE7D65BFE050B90A27935BAB','ContactStage','Contact','Customer','Customer','',4,'2020CF74F8E5EE8CE050B90A2793593F','2020CF74F8F8EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Contact
+Attribute=ContactStage
+PropertyString=Not Interested
+PropertyValue=Not Interested
+Scope=
+PropIndex=5
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE7E65BFE050B90A27935BAB','ContactStage','Contact','Not Interested','Not Interested','',5,'2020CF74F8E5EE8CE050B90A2793593F','2020CF74F8F8EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Contact
+Attribute=ContactStage
+PropertyString=Obsolete
+PropertyValue=Obsolete
+Scope=
+PropIndex=6
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE7F65BFE050B90A27935BAB','ContactStage','Contact','Obsolete','Obsolete','',6,'2020CF74F8E5EE8CE050B90A2793593F','2020CF74F8F8EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=JenkinsJob
+Attribute=RunType
+PropertyString=Parallel
+PropertyValue=Parallel
+Scope=
+PropIndex=1
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE8065BFE050B90A27935BAB','RunType','JenkinsJob','Parallel','Parallel','',1,'2020CF74F892EE8CE050B90A2793593F','2020CF74F896EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=JenkinsJob
+Attribute=RunType
+PropertyString=Sequential
+PropertyValue=Sequential
+Scope=
+PropIndex=2
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE8165BFE050B90A27935BAB','RunType','JenkinsJob','Sequential','Sequential','',2,'2020CF74F892EE8CE050B90A2793593F','2020CF74F896EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=CustomerImage
+Attribute=Status
+PropertyString=Pre-Launch
+PropertyValue=Pre-Launch
+Scope=
+PropIndex=1
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE8265BFE050B90A27935BAB','Status','CustomerImage','Pre-Launch','Pre-Launch','',1,'2020CF74F8BEEE8CE050B90A2793593F','2020CF74F8C6EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=CustomerImage
+Attribute=Status
+PropertyString=Launched
+PropertyValue=Launched
+Scope=
+PropIndex=2
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE8365BFE050B90A27935BAB','Status','CustomerImage','Launched','Launched','',2,'2020CF74F8BEEE8CE050B90A2793593F','2020CF74F8C6EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=CustomerImage
+Attribute=Status
+PropertyString=Started
+PropertyValue=Started
+Scope=
+PropIndex=3
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE8465BFE050B90A27935BAB','Status','CustomerImage','Started','Started','',3,'2020CF74F8BEEE8CE050B90A2793593F','2020CF74F8C6EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=CustomerImage
+Attribute=Status
+PropertyString=Stopped
+PropertyValue=Stopped
+Scope=
+PropIndex=4
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE8565BFE050B90A27935BAB','Status','CustomerImage','Stopped','Stopped','',4,'2020CF74F8BEEE8CE050B90A2793593F','2020CF74F8C6EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=CustomerImage
+Attribute=Status
+PropertyString=Terminated
+PropertyValue=Terminated
+Scope=
+PropIndex=5
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE8665BFE050B90A27935BAB','Status','CustomerImage','Terminated','Terminated','',5,'2020CF74F8BEEE8CE050B90A2793593F','2020CF74F8C6EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=CloudSetting
+Attribute=Status
+PropertyString=Active
+PropertyValue=Active
+Scope=
+PropIndex=1
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE8765BFE050B90A27935BAB','Status','CloudSetting','Active','Active','',1,'2020CF74F8B4EE8CE050B90A2793593F','2020CF74F8BCEE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=CloudSetting
+Attribute=Status
+PropertyString=In Active
+PropertyValue=In Active
+Scope=
+PropIndex=2
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE8865BFE050B90A27935BAB','Status','CloudSetting','In Active','In Active','',2,'2020CF74F8B4EE8CE050B90A2793593F','2020CF74F8BCEE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=CloudImage
+Attribute=Status
+PropertyString=Active
+PropertyValue=Active
+Scope=
+PropIndex=1
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE8965BFE050B90A27935BAB','Status','CloudImage','Active','Active','',1,'2020CF74F8AAEE8CE050B90A2793593F','2020CF74F8B2EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=CloudImage
+Attribute=Status
+PropertyString=In Active
+PropertyValue=In Active
+Scope=
+PropIndex=2
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE8A65BFE050B90A27935BAB','Status','CloudImage','In Active','In Active','',2,'2020CF74F8AAEE8CE050B90A2793593F','2020CF74F8B2EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Developer
+Attribute=JobType
+PropertyString=Part-Time
+PropertyValue=Part-Time
+Scope=
+PropIndex=1
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE8B65BFE050B90A27935BAB','JobType','Developer','Part-Time','Part-Time','',1,'2020CF74F89AEE8CE050B90A2793593F','2020CF74F8A7EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Developer
+Attribute=JobType
+PropertyString=Full-Time
+PropertyValue=Full-Time
+Scope=
+PropIndex=2
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE8C65BFE050B90A27935BAB','JobType','Developer','Full-Time','Full-Time','',2,'2020CF74F89AEE8CE050B90A2793593F','2020CF74F8A7EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Developer
+Attribute=JobType
+PropertyString=Contract
+PropertyValue=Contract
+Scope=
+PropIndex=3
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE8D65BFE050B90A27935BAB','JobType','Developer','Contract','Contract','',3,'2020CF74F89AEE8CE050B90A2793593F','2020CF74F8A7EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Developer
+Attribute=JobType
+PropertyString=Freelancer
+PropertyValue=Freelancer
+Scope=
+PropIndex=4
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE8E65BFE050B90A27935BAB','JobType','Developer','Freelancer','Freelancer','',4,'2020CF74F89AEE8CE050B90A2793593F','2020CF74F8A7EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Developer
+Attribute=JobType
+PropertyString=Intern
+PropertyValue=Intern
+Scope=
+PropIndex=5
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE8F65BFE050B90A27935BAB','JobType','Developer','Intern','Intern','',5,'2020CF74F89AEE8CE050B90A2793593F','2020CF74F8A7EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Developer
+Attribute=JobType
+PropertyString=Marketing
+PropertyValue=Marketing
+Scope=
+PropIndex=6
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE9065BFE050B90A27935BAB','JobType','Developer','Marketing','Marketing','',6,'2020CF74F89AEE8CE050B90A2793593F','2020CF74F8A7EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Developer
+Attribute=JobType
+PropertyString=Sales
+PropertyValue=Sales
+Scope=
+PropIndex=7
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE9165BFE050B90A27935BAB','JobType','Developer','Sales','Sales','',7,'2020CF74F89AEE8CE050B90A2793593F','2020CF74F8A7EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Developer
+Attribute=Status
+PropertyString=Open
+PropertyValue=Open
+Scope=
+PropIndex=1
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE9265BFE050B90A27935BAB','Status','Developer','Open','Open','',1,'2020CF74F89AEE8CE050B90A2793593F','2020CF74F8A8EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Developer
+Attribute=Status
+PropertyString=In Progress
+PropertyValue=In Progress
+Scope=
+PropIndex=2
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE9365BFE050B90A27935BAB','Status','Developer','In Progress','In Progress','',2,'2020CF74F89AEE8CE050B90A2793593F','2020CF74F8A8EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Developer
+Attribute=Status
+PropertyString=In Contract
+PropertyValue=In Contract
+Scope=
+PropIndex=3
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE9465BFE050B90A27935BAB','Status','Developer','In Contract','In Contract','',3,'2020CF74F89AEE8CE050B90A2793593F','2020CF74F8A8EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Developer
+Attribute=Status
+PropertyString=Expired
+PropertyValue=Expired
+Scope=
+PropIndex=4
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE9565BFE050B90A27935BAB','Status','Developer','Expired','Expired','',4,'2020CF74F89AEE8CE050B90A2793593F','2020CF74F8A8EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Developer
+Attribute=Status
+PropertyString=Closed
+PropertyValue=Closed
+Scope=
+PropIndex=5
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE9665BFE050B90A27935BAB','Status','Developer','Closed','Closed','',5,'2020CF74F89AEE8CE050B90A2793593F','2020CF74F8A8EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Consultant
+Attribute=Status
+PropertyString=Open
+PropertyValue=Open
+Scope=
+PropIndex=1
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE9765BFE050B90A27935BAB','Status','Consultant','Open','Open','',1,'2020CF74F880EE8CE050B90A2793593F','2020CF74F889EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Consultant
+Attribute=Status
+PropertyString=In Progress
+PropertyValue=In Progress
+Scope=
+PropIndex=2
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE9865BFE050B90A27935BAB','Status','Consultant','In Progress','In Progress','',2,'2020CF74F880EE8CE050B90A2793593F','2020CF74F889EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Consultant
+Attribute=Status
+PropertyString=In Contract
+PropertyValue=In Contract
+Scope=
+PropIndex=3
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE9965BFE050B90A27935BAB','Status','Consultant','In Contract','In Contract','',3,'2020CF74F880EE8CE050B90A2793593F','2020CF74F889EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Consultant
+Attribute=Status
+PropertyString=Closed
+PropertyValue=Closed
+Scope=
+PropIndex=4
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE9A65BFE050B90A27935BAB','Status','Consultant','Closed','Closed','',4,'2020CF74F880EE8CE050B90A2793593F','2020CF74F889EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Support
+Attribute=Priority
+PropertyString=Priority-0
+PropertyValue=Priority-0
+Scope=
+PropIndex=1
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE9B65BFE050B90A27935BAB','Priority','Support','Priority-0','Priority-0','',1,'2020CF74F86EEE8CE050B90A2793593F','2020CF74F875EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Support
+Attribute=Priority
+PropertyString=Priority-1
+PropertyValue=Priority-1
+Scope=
+PropIndex=2
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE9C65BFE050B90A27935BAB','Priority','Support','Priority-1','Priority-1','',2,'2020CF74F86EEE8CE050B90A2793593F','2020CF74F875EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Support
+Attribute=Priority
+PropertyString=Priority-2
+PropertyValue=Priority-2
+Scope=
+PropIndex=3
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE9D65BFE050B90A27935BAB','Priority','Support','Priority-2','Priority-2','',3,'2020CF74F86EEE8CE050B90A2793593F','2020CF74F875EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Support
+Attribute=Priority
+PropertyString=Priority-3
+PropertyValue=Priority-3
+Scope=
+PropIndex=4
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE9E65BFE050B90A27935BAB','Priority','Support','Priority-3','Priority-3','',4,'2020CF74F86EEE8CE050B90A2793593F','2020CF74F875EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Support
+Attribute=Severity
+PropertyString=Critical
+PropertyValue=Critical
+Scope=
+PropIndex=1
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CE9F65BFE050B90A27935BAB','Severity','Support','Critical','Critical','',1,'2020CF74F86EEE8CE050B90A2793593F','2020CF74F876EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Support
+Attribute=Severity
+PropertyString=Severity-1
+PropertyValue=Severity-1
+Scope=
+PropIndex=2
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CEA065BFE050B90A27935BAB','Severity','Support','Severity-1','Severity-1','',2,'2020CF74F86EEE8CE050B90A2793593F','2020CF74F876EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Support
+Attribute=Severity
+PropertyString=Severity-2
+PropertyValue=Severity-2
+Scope=
+PropIndex=3
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CEA165BFE050B90A27935BAB','Severity','Support','Severity-2','Severity-2','',3,'2020CF74F86EEE8CE050B90A2793593F','2020CF74F876EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Support
+Attribute=Severity
+PropertyString=Severity-3
+PropertyValue=Severity-3
+Scope=
+PropIndex=4
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CEA265BFE050B90A27935BAB','Severity','Support','Severity-3','Severity-3','',4,'2020CF74F86EEE8CE050B90A2793593F','2020CF74F876EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Support
+Attribute=Type
+PropertyString=Defect
+PropertyValue=Defect
+Scope=
+PropIndex=1
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CEA365BFE050B90A27935BAB','Type','Support','Defect','Defect','',1,'2020CF74F86EEE8CE050B90A2793593F','2020CF74F874EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Support
+Attribute=Type
+PropertyString=Enhancement
+PropertyValue=Enhancement
+Scope=
+PropIndex=2
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CEA465BFE050B90A27935BAB','Type','Support','Enhancement','Enhancement','',2,'2020CF74F86EEE8CE050B90A2793593F','2020CF74F874EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Support
+Attribute=Type
+PropertyString=Technical
+PropertyValue=Technical
+Scope=
+PropIndex=3
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CEA565BFE050B90A27935BAB','Type','Support','Technical','Technical','',3,'2020CF74F86EEE8CE050B90A2793593F','2020CF74F874EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Support
+Attribute=Type
+PropertyString=Other
+PropertyValue=Other
+Scope=
+PropIndex=4
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CEA665BFE050B90A27935BAB','Type','Support','Other','Other','',4,'2020CF74F86EEE8CE050B90A2793593F','2020CF74F874EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Support
+Attribute=Status
+PropertyString=Open
+PropertyValue=Open
+Scope=
+PropIndex=1
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CEA765BFE050B90A27935BAB','Status','Support','Open','Open','',1,'2020CF74F86EEE8CE050B90A2793593F','2020CF74F871EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Support
+Attribute=Status
+PropertyString=Resolved
+PropertyValue=Resolved
+Scope=
+PropIndex=2
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CEA865BFE050B90A27935BAB','Status','Support','Resolved','Resolved','',2,'2020CF74F86EEE8CE050B90A2793593F','2020CF74F871EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Support
+Attribute=Status
+PropertyString=Pending
+PropertyValue=Pending
+Scope=
+PropIndex=3
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CEA965BFE050B90A27935BAB','Status','Support','Pending','Pending','',3,'2020CF74F86EEE8CE050B90A2793593F','2020CF74F871EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Support
+Attribute=Status
+PropertyString=Investigating
+PropertyValue=Investigating
+Scope=
+PropIndex=4
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CEAA65BFE050B90A27935BAB','Status','Support','Investigating','Investigating','',4,'2020CF74F86EEE8CE050B90A2793593F','2020CF74F871EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Support
+Attribute=Status
+PropertyString=Deferred
+PropertyValue=Deferred
+Scope=
+PropIndex=5
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CEAB65BFE050B90A27935BAB','Status','Support','Deferred','Deferred','',5,'2020CF74F86EEE8CE050B90A2793593F','2020CF74F871EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Support
+Attribute=Status
+PropertyString=Closed
+PropertyValue=Closed
+Scope=
+PropIndex=6
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CEAC65BFE050B90A27935BAB','Status','Support','Closed','Closed','',6,'2020CF74F86EEE8CE050B90A2793593F','2020CF74F871EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=TestMatrix
+Attribute=Name
+PropertyString=Unit Test
+PropertyValue=Unit Test
+Scope=
+PropIndex=1
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CEAD65BFE050B90A27935BAB','Name','TestMatrix','Unit Test','Unit Test','',1,'2020CF74F782EE8CE050B90A2793593F','2020CF74F783EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=TestMatrix
+Attribute=Name
+PropertyString=Smoke Test
+PropertyValue=Smoke Test
+Scope=
+PropIndex=2
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CEAE65BFE050B90A27935BAB','Name','TestMatrix','Smoke Test','Smoke Test','',2,'2020CF74F782EE8CE050B90A2793593F','2020CF74F783EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=TestMatrix
+Attribute=Name
+PropertyString=Mobile Functional
+PropertyValue=Mobile Functional
+Scope=
+PropIndex=3
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CEAF65BFE050B90A27935BAB','Name','TestMatrix','Mobile Functional','Mobile Functional','',3,'2020CF74F782EE8CE050B90A2793593F','2020CF74F783EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=TestMatrix
+Attribute=Name
+PropertyString=Browser Functional
+PropertyValue=Browser Functional
+Scope=
+PropIndex=4
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CEB065BFE050B90A27935BAB','Name','TestMatrix','Browser Functional','Browser Functional','',4,'2020CF74F782EE8CE050B90A2793593F','2020CF74F783EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=TestMatrix
+Attribute=Name
+PropertyString=API Functional
+PropertyValue=API Functional
+Scope=
+PropIndex=5
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CEB165BFE050B90A27935BAB','Name','TestMatrix','API Functional','API Functional','',5,'2020CF74F782EE8CE050B90A2793593F','2020CF74F783EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=TestMatrix
+Attribute=Name
+PropertyString=Regression
+PropertyValue=Regression
+Scope=
+PropIndex=6
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CEB265BFE050B90A27935BAB','Name','TestMatrix','Regression','Regression','',6,'2020CF74F782EE8CE050B90A2793593F','2020CF74F783EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=TestMatrix
+Attribute=Name
+PropertyString=System Test
+PropertyValue=System Test
+Scope=
+PropIndex=7
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CEB365BFE050B90A27935BAB','Name','TestMatrix','System Test','System Test','',7,'2020CF74F782EE8CE050B90A2793593F','2020CF74F783EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=TestMatrix
+Attribute=Name
+PropertyString=Staging
+PropertyValue=Staging
+Scope=
+PropIndex=8
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CEB465BFE050B90A27935BAB','Name','TestMatrix','Staging','Staging','',8,'2020CF74F782EE8CE050B90A2793593F','2020CF74F783EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=TestMatrix
+Attribute=Name
+PropertyString=Production
+PropertyValue=Production
+Scope=
+PropIndex=9
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CEB565BFE050B90A27935BAB','Name','TestMatrix','Production','Production','',9,'2020CF74F782EE8CE050B90A2793593F','2020CF74F783EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=CourseFeedback
+Attribute=Ratings
+PropertyString=Excellent
+PropertyValue=Excellent
+Scope=
+PropIndex=1
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CEB665BFE050B90A27935BAB','Ratings','CourseFeedback','Excellent','Excellent','',1,'2020CF74F865EE8CE050B90A2793593F','2020CF74F86AEE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=CourseFeedback
+Attribute=Ratings
+PropertyString=Very Good
+PropertyValue=Very Good
+Scope=
+PropIndex=2
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CEB765BFE050B90A27935BAB','Ratings','CourseFeedback','Very Good','Very Good','',2,'2020CF74F865EE8CE050B90A2793593F','2020CF74F86AEE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=CourseFeedback
+Attribute=Ratings
+PropertyString=Good
+PropertyValue=Good
+Scope=
+PropIndex=3
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CEB865BFE050B90A27935BAB','Ratings','CourseFeedback','Good','Good','',3,'2020CF74F865EE8CE050B90A2793593F','2020CF74F86AEE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=CourseFeedback
+Attribute=Ratings
+PropertyString=Fair
+PropertyValue=Fair
+Scope=
+PropIndex=4
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CEB965BFE050B90A27935BAB','Ratings','CourseFeedback','Fair','Fair','',4,'2020CF74F865EE8CE050B90A2793593F','2020CF74F86AEE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=CourseFeedback
+Attribute=Ratings
+PropertyString=Poor
+PropertyValue=Poor
+Scope=
+PropIndex=5
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CEBA65BFE050B90A27935BAB','Ratings','CourseFeedback','Poor','Poor','',5,'2020CF74F865EE8CE050B90A2793593F','2020CF74F86AEE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=BookCourse
+Attribute=Status
+PropertyString=Not Paid
+PropertyValue=Not Paid
+Scope=
+PropIndex=1
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CEBB65BFE050B90A27935BAB','Status','BookCourse','Not Paid','Not Paid','',1,'2020CF74F85BEE8CE050B90A2793593F','2020CF74F860EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=BookCourse
+Attribute=Status
+PropertyString=Paid
+PropertyValue=Paid
+Scope=
+PropIndex=2
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CEBC65BFE050B90A27935BAB','Status','BookCourse','Paid','Paid','',2,'2020CF74F85BEE8CE050B90A2793593F','2020CF74F860EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=BookCourse
+Attribute=Status
+PropertyString=Started
+PropertyValue=Started
+Scope=
+PropIndex=3
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CEBD65BFE050B90A27935BAB','Status','BookCourse','Started','Started','',3,'2020CF74F85BEE8CE050B90A2793593F','2020CF74F860EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=BookCourse
+Attribute=Status
+PropertyString=Completed
+PropertyValue=Completed
+Scope=
+PropIndex=4
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CEBE65BFE050B90A27935BAB','Status','BookCourse','Completed','Completed','',4,'2020CF74F85BEE8CE050B90A2793593F','2020CF74F860EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=BookCourse
+Attribute=Status
+PropertyString=Postponed
+PropertyValue=Postponed
+Scope=
+PropIndex=5
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CEBF65BFE050B90A27935BAB','Status','BookCourse','Postponed','Postponed','',5,'2020CF74F85BEE8CE050B90A2793593F','2020CF74F860EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=BookCourse
+Attribute=Status
+PropertyString=Prodaccess
+PropertyValue=Prodaccess
+Scope=
+PropIndex=5
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CEC065BFE050B90A27935BAB','Status','BookCourse','Prodaccess','Prodaccess','',5,'2020CF74F85BEE8CE050B90A2793593F','2020CF74F860EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Training
+Attribute=Type
+PropertyString=Remote
+PropertyValue=1
+Scope=
+PropIndex=1
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CEC165BFE050B90A27935BAB','Type','Training','Remote','1','',1,'','','sa','sa',sysdate)
+<ListProperty>
+Object=Training
+Attribute=Type
+PropertyString=On-Site
+PropertyValue=0
+Scope=
+PropIndex=2
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CEC265BFE050B90A27935BAB','Type','Training','On-Site','0','',2,'','','sa','sa',sysdate)
+<ListProperty>
+Object=Training
+Attribute=Status
+PropertyString=Open
+PropertyValue=Open
+Scope=
+PropIndex=1
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CEC365BFE050B90A27935BAB','Status','Training','Open','Open','',1,'2020CF74F84FEE8CE050B90A2793593F','2020CF74F859EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Training
+Attribute=Status
+PropertyString=Started
+PropertyValue=Started
+Scope=
+PropIndex=2
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CEC465BFE050B90A27935BAB','Status','Training','Started','Started','',2,'2020CF74F84FEE8CE050B90A2793593F','2020CF74F859EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Training
+Attribute=Status
+PropertyString=Postponed
+PropertyValue=Postponed
+Scope=
+PropIndex=3
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CEC565BFE050B90A27935BAB','Status','Training','Postponed','Postponed','',3,'2020CF74F84FEE8CE050B90A2793593F','2020CF74F859EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Training
+Attribute=Status
+PropertyString=Prodaccess
+PropertyValue=Prodaccess
+Scope=
+PropIndex=4
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CEC665BFE050B90A27935BAB','Status','Training','Prodaccess','Prodaccess','',4,'2020CF74F84FEE8CE050B90A2793593F','2020CF74F859EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Training
+Attribute=Status
+PropertyString=Completed
+PropertyValue=Completed
+Scope=
+PropIndex=5
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CEC765BFE050B90A27935BAB','Status','Training','Completed','Completed','',5,'2020CF74F84FEE8CE050B90A2793593F','2020CF74F859EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=PrivilegeGroup
+Attribute=Status
+PropertyString=Active
+PropertyValue=1
+Scope=
+PropIndex=1
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CEC865BFE050B90A27935BAB','Status','PrivilegeGroup','Active','1','',1,'2020CF74F68CEE8CE050B90A2793593F','2020CF74F68FEE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=PrivilegeGroup
+Attribute=Status
+PropertyString=In Active
+PropertyValue=0
+Scope=
+PropIndex=2
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CEC965BFE050B90A27935BAB','Status','PrivilegeGroup','In Active','0','',2,'2020CF74F68CEE8CE050B90A2793593F','2020CF74F68FEE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=MyBug
+Attribute=Priority
+PropertyString=Priority-0
+PropertyValue=Priority-0
+Scope=
+PropIndex=1
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CECA65BFE050B90A27935BAB','Priority','MyBug','Priority-0','Priority-0','',1,'2020CF74FA90EE8CE050B90A2793593F','2020CF74FA97EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=MyBug
+Attribute=Priority
+PropertyString=Priority-1
+PropertyValue=Priority-1
+Scope=
+PropIndex=2
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CECB65BFE050B90A27935BAB','Priority','MyBug','Priority-1','Priority-1','',2,'2020CF74FA90EE8CE050B90A2793593F','2020CF74FA97EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=MyBug
+Attribute=Priority
+PropertyString=Priority-2
+PropertyValue=Priority-2
+Scope=
+PropIndex=3
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CECC65BFE050B90A27935BAB','Priority','MyBug','Priority-2','Priority-2','',3,'2020CF74FA90EE8CE050B90A2793593F','2020CF74FA97EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=MyBug
+Attribute=Priority
+PropertyString=Priority-3
+PropertyValue=Priority-3
+Scope=
+PropIndex=4
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CECD65BFE050B90A27935BAB','Priority','MyBug','Priority-3','Priority-3','',4,'2020CF74FA90EE8CE050B90A2793593F','2020CF74FA97EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=MyBug
+Attribute=Severity
+PropertyString=Critical
+PropertyValue=Critical
+Scope=
+PropIndex=1
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CECE65BFE050B90A27935BAB','Severity','MyBug','Critical','Critical','',1,'2020CF74FA90EE8CE050B90A2793593F','2020CF74FA98EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=MyBug
+Attribute=Severity
+PropertyString=Severity-1
+PropertyValue=Severity-1
+Scope=
+PropIndex=2
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CECF65BFE050B90A27935BAB','Severity','MyBug','Severity-1','Severity-1','',2,'2020CF74FA90EE8CE050B90A2793593F','2020CF74FA98EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=MyBug
+Attribute=Severity
+PropertyString=Severity-2
+PropertyValue=Severity-2
+Scope=
+PropIndex=3
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CED065BFE050B90A27935BAB','Severity','MyBug','Severity-2','Severity-2','',3,'2020CF74FA90EE8CE050B90A2793593F','2020CF74FA98EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=MyBug
+Attribute=Severity
+PropertyString=Severity-3
+PropertyValue=Severity-3
+Scope=
+PropIndex=4
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CED165BFE050B90A27935BAB','Severity','MyBug','Severity-3','Severity-3','',4,'2020CF74FA90EE8CE050B90A2793593F','2020CF74FA98EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=MyBug
+Attribute=Type
+PropertyString=Functional
+PropertyValue=Functional
+Scope=
+PropIndex=1
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CED265BFE050B90A27935BAB','Type','MyBug','Functional','Functional','',1,'2020CF74FA90EE8CE050B90A2793593F','2020CF74FA96EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=MyBug
+Attribute=Type
+PropertyString=Production
+PropertyValue=Production
+Scope=
+PropIndex=2
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CED365BFE050B90A27935BAB','Type','MyBug','Production','Production','',2,'2020CF74FA90EE8CE050B90A2793593F','2020CF74FA96EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=MyBug
+Attribute=Type
+PropertyString=Regression
+PropertyValue=Regression
+Scope=
+PropIndex=3
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CED465BFE050B90A27935BAB','Type','MyBug','Regression','Regression','',3,'2020CF74FA90EE8CE050B90A2793593F','2020CF74FA96EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=MyBug
+Attribute=Type
+PropertyString=Other
+PropertyValue=Other
+Scope=
+PropIndex=4
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CED565BFE050B90A27935BAB','Type','MyBug','Other','Other','',4,'2020CF74FA90EE8CE050B90A2793593F','2020CF74FA96EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=MyBug
+Attribute=Status
+PropertyString=Open
+PropertyValue=Open
+Scope=
+PropIndex=1
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CED665BFE050B90A27935BAB','Status','MyBug','Open','Open','',1,'2020CF74FA90EE8CE050B90A2793593F','2020CF74FA93EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=MyBug
+Attribute=Status
+PropertyString=Resolved
+PropertyValue=Resolved
+Scope=
+PropIndex=2
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CED765BFE050B90A27935BAB','Status','MyBug','Resolved','Resolved','',2,'2020CF74FA90EE8CE050B90A2793593F','2020CF74FA93EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=MyBug
+Attribute=Status
+PropertyString=Pending
+PropertyValue=Pending
+Scope=
+PropIndex=3
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CED865BFE050B90A27935BAB','Status','MyBug','Pending','Pending','',3,'2020CF74FA90EE8CE050B90A2793593F','2020CF74FA93EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=MyBug
+Attribute=Status
+PropertyString=Investigating
+PropertyValue=Investigating
+Scope=
+PropIndex=4
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CED965BFE050B90A27935BAB','Status','MyBug','Investigating','Investigating','',4,'2020CF74FA90EE8CE050B90A2793593F','2020CF74FA93EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=MyBug
+Attribute=Status
+PropertyString=Deferred
+PropertyValue=Deferred
+Scope=
+PropIndex=5
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CEDA65BFE050B90A27935BAB','Status','MyBug','Deferred','Deferred','',5,'2020CF74FA90EE8CE050B90A2793593F','2020CF74FA93EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=MyBug
+Attribute=Status
+PropertyString=Closed
+PropertyValue=Closed
+Scope=
+PropIndex=6
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CEDB65BFE050B90A27935BAB','Status','MyBug','Closed','Closed','',6,'2020CF74FA90EE8CE050B90A2793593F','2020CF74FA93EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Bug
+Attribute=Priority
+PropertyString=Priority-0
+PropertyValue=Priority-0
+Scope=
+PropIndex=1
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CEDC65BFE050B90A27935BAB','Priority','Bug','Priority-0','Priority-0','',1,'2020CF74F7C1EE8CE050B90A2793593F','2020CF74F7C8EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Bug
+Attribute=Priority
+PropertyString=Priority-1
+PropertyValue=Priority-1
+Scope=
+PropIndex=2
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CEDD65BFE050B90A27935BAB','Priority','Bug','Priority-1','Priority-1','',2,'2020CF74F7C1EE8CE050B90A2793593F','2020CF74F7C8EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Bug
+Attribute=Priority
+PropertyString=Priority-2
+PropertyValue=Priority-2
+Scope=
+PropIndex=3
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CEDE65BFE050B90A27935BAB','Priority','Bug','Priority-2','Priority-2','',3,'2020CF74F7C1EE8CE050B90A2793593F','2020CF74F7C8EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Bug
+Attribute=Priority
+PropertyString=Priority-3
+PropertyValue=Priority-3
+Scope=
+PropIndex=4
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CEDF65BFE050B90A27935BAB','Priority','Bug','Priority-3','Priority-3','',4,'2020CF74F7C1EE8CE050B90A2793593F','2020CF74F7C8EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Bug
+Attribute=Severity
+PropertyString=Critical
+PropertyValue=Critical
+Scope=
+PropIndex=1
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CEE065BFE050B90A27935BAB','Severity','Bug','Critical','Critical','',1,'2020CF74F7C1EE8CE050B90A2793593F','2020CF74F7C9EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Bug
+Attribute=Severity
+PropertyString=Severity-1
+PropertyValue=Severity-1
+Scope=
+PropIndex=2
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CEE165BFE050B90A27935BAB','Severity','Bug','Severity-1','Severity-1','',2,'2020CF74F7C1EE8CE050B90A2793593F','2020CF74F7C9EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Bug
+Attribute=Severity
+PropertyString=Severity-2
+PropertyValue=Severity-2
+Scope=
+PropIndex=3
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CEE265BFE050B90A27935BAB','Severity','Bug','Severity-2','Severity-2','',3,'2020CF74F7C1EE8CE050B90A2793593F','2020CF74F7C9EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Bug
+Attribute=Severity
+PropertyString=Severity-3
+PropertyValue=Severity-3
+Scope=
+PropIndex=4
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CEE365BFE050B90A27935BAB','Severity','Bug','Severity-3','Severity-3','',4,'2020CF74F7C1EE8CE050B90A2793593F','2020CF74F7C9EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Bug
+Attribute=Type
+PropertyString=Functional
+PropertyValue=Functional
+Scope=
+PropIndex=1
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CEE465BFE050B90A27935BAB','Type','Bug','Functional','Functional','',1,'2020CF74F7C1EE8CE050B90A2793593F','2020CF74F7C7EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Bug
+Attribute=Type
+PropertyString=Production
+PropertyValue=Production
+Scope=
+PropIndex=2
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CEE565BFE050B90A27935BAB','Type','Bug','Production','Production','',2,'2020CF74F7C1EE8CE050B90A2793593F','2020CF74F7C7EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Bug
+Attribute=Type
+PropertyString=Regression
+PropertyValue=Regression
+Scope=
+PropIndex=3
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CEE665BFE050B90A27935BAB','Type','Bug','Regression','Regression','',3,'2020CF74F7C1EE8CE050B90A2793593F','2020CF74F7C7EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Bug
+Attribute=Type
+PropertyString=Other
+PropertyValue=Other
+Scope=
+PropIndex=4
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CEE765BFE050B90A27935BAB','Type','Bug','Other','Other','',4,'2020CF74F7C1EE8CE050B90A2793593F','2020CF74F7C7EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Bug
+Attribute=Status
+PropertyString=Open
+PropertyValue=Open
+Scope=
+PropIndex=1
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CEE865BFE050B90A27935BAB','Status','Bug','Open','Open','',1,'2020CF74F7C1EE8CE050B90A2793593F','2020CF74F7C4EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Bug
+Attribute=Status
+PropertyString=Resolved
+PropertyValue=Resolved
+Scope=
+PropIndex=2
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CEE965BFE050B90A27935BAB','Status','Bug','Resolved','Resolved','',2,'2020CF74F7C1EE8CE050B90A2793593F','2020CF74F7C4EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Bug
+Attribute=Status
+PropertyString=Pending
+PropertyValue=Pending
+Scope=
+PropIndex=3
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CEEA65BFE050B90A27935BAB','Status','Bug','Pending','Pending','',3,'2020CF74F7C1EE8CE050B90A2793593F','2020CF74F7C4EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Bug
+Attribute=Status
+PropertyString=Investigating
+PropertyValue=Investigating
+Scope=
+PropIndex=4
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CEEB65BFE050B90A27935BAB','Status','Bug','Investigating','Investigating','',4,'2020CF74F7C1EE8CE050B90A2793593F','2020CF74F7C4EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Bug
+Attribute=Status
+PropertyString=Deferred
+PropertyValue=Deferred
+Scope=
+PropIndex=5
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CEEC65BFE050B90A27935BAB','Status','Bug','Deferred','Deferred','',5,'2020CF74F7C1EE8CE050B90A2793593F','2020CF74F7C4EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Bug
+Attribute=Status
+PropertyString=Closed
+PropertyValue=Closed
+Scope=
+PropIndex=6
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CEED65BFE050B90A27935BAB','Status','Bug','Closed','Closed','',6,'2020CF74F7C1EE8CE050B90A2793593F','2020CF74F7C4EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Module
+Attribute=Name
+PropertyString=Product
+PropertyValue=product
+Scope=
+PropIndex=1
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CEEE65BFE050B90A27935BAB','Name','Module','Product','product','',1,'2020CF74F657EE8CE050B90A2793593F','2020CF74F658EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Module
+Attribute=Name
+PropertyString=Projects
+PropertyValue=project
+Scope=
+PropIndex=2
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CEEF65BFE050B90A27935BAB','Name','Module','Projects','project','',2,'2020CF74F657EE8CE050B90A2793593F','2020CF74F658EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Module
+Attribute=Name
+PropertyString=Feature
+PropertyValue=feature
+Scope=
+PropIndex=3
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CEF065BFE050B90A27935BAB','Name','Module','Feature','feature','',3,'2020CF74F657EE8CE050B90A2793593F','2020CF74F658EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Module
+Attribute=Name
+PropertyString=Scenerio
+PropertyValue=scenerio
+Scope=
+PropIndex=4
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CEF165BFE050B90A27935BAB','Name','Module','Scenerio','scenerio','',4,'2020CF74F657EE8CE050B90A2793593F','2020CF74F658EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Module
+Attribute=Name
+PropertyString=Test matrix
+PropertyValue=testmatrix
+Scope=
+PropIndex=5
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CEF265BFE050B90A27935BAB','Name','Module','Test matrix','testmatrix','',5,'2020CF74F657EE8CE050B90A2793593F','2020CF74F658EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Module
+Attribute=Name
+PropertyString=Testrun
+PropertyValue=testrun
+Scope=
+PropIndex=6
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CEF365BFE050B90A27935BAB','Name','Module','Testrun','testrun','',6,'2020CF74F657EE8CE050B90A2793593F','2020CF74F658EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Module
+Attribute=Name
+PropertyString=Bugs
+PropertyValue=bug
+Scope=
+PropIndex=9
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CEF465BFE050B90A27935BAB','Name','Module','Bugs','bug','',9,'2020CF74F657EE8CE050B90A2793593F','2020CF74F658EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Module
+Attribute=Name
+PropertyString=Boards
+PropertyValue=projectboard
+Scope=
+PropIndex=10
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CEF565BFE050B90A27935BAB','Name','Module','Boards','projectboard','',10,'2020CF74F657EE8CE050B90A2793593F','2020CF74F658EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Module
+Attribute=Name
+PropertyString=Timesheet
+PropertyValue=weeksheet
+Scope=
+PropIndex=10
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CEF665BFE050B90A27935BAB','Name','Module','Timesheet','weeksheet','',10,'2020CF74F657EE8CE050B90A2793593F','2020CF74F658EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Module
+Attribute=Name
+PropertyString=Users
+PropertyValue=testuser
+Scope=
+PropIndex=11
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CEF765BFE050B90A27935BAB','Name','Module','Users','testuser','',11,'2020CF74F657EE8CE050B90A2793593F','2020CF74F658EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Module
+Attribute=Name
+PropertyString=Company
+PropertyValue=company
+Scope=
+PropIndex=12
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CEF865BFE050B90A27935BAB','Name','Module','Company','company','',12,'2020CF74F657EE8CE050B90A2793593F','2020CF74F658EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Member
+Attribute=SprintRole
+PropertyString=QE Engineer
+PropertyValue=QE Engineer
+Scope=
+PropIndex=1
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CEF965BFE050B90A27935BAB','SprintRole','Member','QE Engineer','QE Engineer','',1,'2020CF74F7EAEE8CE050B90A2793593F','2020CF74F7ECEE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Member
+Attribute=SprintRole
+PropertyString=Developer
+PropertyValue=Developer
+Scope=
+PropIndex=2
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CEFA65BFE050B90A27935BAB','SprintRole','Member','Developer','Developer','',2,'2020CF74F7EAEE8CE050B90A2793593F','2020CF74F7ECEE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Member
+Attribute=SprintRole
+PropertyString=QE Manager
+PropertyValue=QE Manager
+Scope=
+PropIndex=3
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CEFB65BFE050B90A27935BAB','SprintRole','Member','QE Manager','QE Manager','',3,'2020CF74F7EAEE8CE050B90A2793593F','2020CF74F7ECEE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Member
+Attribute=SprintRole
+PropertyString=Dev Manager
+PropertyValue=Dev Manager
+Scope=
+PropIndex=4
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CEFC65BFE050B90A27935BAB','SprintRole','Member','Dev Manager','Dev Manager','',4,'2020CF74F7EAEE8CE050B90A2793593F','2020CF74F7ECEE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Member
+Attribute=SprintRole
+PropertyString=Prod Manager
+PropertyValue=Prod Manager
+Scope=
+PropIndex=5
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CEFD65BFE050B90A27935BAB','SprintRole','Member','Prod Manager','Prod Manager','',5,'2020CF74F7EAEE8CE050B90A2793593F','2020CF74F7ECEE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Member
+Attribute=SprintRole
+PropertyString=Architect
+PropertyValue=Architect
+Scope=
+PropIndex=6
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CEFE65BFE050B90A27935BAB','SprintRole','Member','Architect','Architect','',6,'2020CF74F7EAEE8CE050B90A2793593F','2020CF74F7ECEE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Member
+Attribute=SprintRole
+PropertyString=Scrum Master
+PropertyValue=Scrum Master
+Scope=
+PropIndex=7
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CEFF65BFE050B90A27935BAB','SprintRole','Member','Scrum Master','Scrum Master','',7,'2020CF74F7EAEE8CE050B90A2793593F','2020CF74F7ECEE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Member
+Attribute=SprintRole
+PropertyString=Other
+PropertyValue=Other
+Scope=
+PropIndex=8
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CF0065BFE050B90A27935BAB','SprintRole','Member','Other','Other','',8,'2020CF74F7EAEE8CE050B90A2793593F','2020CF74F7ECEE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=TestUser
+Attribute=UserType
+PropertyString=Group User
+PropertyValue=1
+Scope=
+PropIndex=1
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CF0165BFE050B90A27935BAB','UserType','TestUser','Group User','1','',1,'2020CF74F691EE8CE050B90A2793593F','2020CF74F698EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=TestUser
+Attribute=UserType
+PropertyString=Admin
+PropertyValue=2
+Scope=
+PropIndex=2
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CF0265BFE050B90A27935BAB','UserType','TestUser','Admin','2','',2,'2020CF74F691EE8CE050B90A2793593F','2020CF74F698EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=TestUser
+Attribute=Status
+PropertyString=Active
+PropertyValue=1
+Scope=
+PropIndex=1
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CF0365BFE050B90A27935BAB','Status','TestUser','Active','1','',1,'2020CF74F691EE8CE050B90A2793593F','2020CF74F697EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=TestUser
+Attribute=Status
+PropertyString=In Active
+PropertyValue=2
+Scope=
+PropIndex=2
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CF0465BFE050B90A27935BAB','Status','TestUser','In Active','2','',2,'2020CF74F691EE8CE050B90A2793593F','2020CF74F697EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Project
+Attribute=Status
+PropertyString=Open
+PropertyValue=Open
+Scope=
+PropIndex=1
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CF0565BFE050B90A27935BAB','Status','Project','Open','Open','',1,'2020CF74F72BEE8CE050B90A2793593F','2020CF74F72FEE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Project
+Attribute=Status
+PropertyString=Closed
+PropertyValue=Closed
+Scope=
+PropIndex=2
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CF0665BFE050B90A27935BAB','Status','Project','Closed','Closed','',2,'2020CF74F72BEE8CE050B90A2793593F','2020CF74F72FEE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Project
+Attribute=Status
+PropertyString=In Progress
+PropertyValue=In Progress
+Scope=
+PropIndex=3
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CF0765BFE050B90A27935BAB','Status','Project','In Progress','In Progress','',3,'2020CF74F72BEE8CE050B90A2793593F','2020CF74F72FEE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Scenerio
+Attribute=IsAutomated
+PropertyString=No
+PropertyValue=No
+Scope=
+PropIndex=1
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CF0865BFE050B90A27935BAB','IsAutomated','Scenerio','No','No','',1,'2020CF74F74BEE8CE050B90A2793593F','2020CF74F752EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Scenerio
+Attribute=IsAutomated
+PropertyString=Yes
+PropertyValue=Yes
+Scope=
+PropIndex=2
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CF0965BFE050B90A27935BAB','IsAutomated','Scenerio','Yes','Yes','',2,'2020CF74F74BEE8CE050B90A2793593F','2020CF74F752EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Scenerio
+Attribute=IsActive
+PropertyString=Yes
+PropertyValue=Yes
+Scope=
+PropIndex=1
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CF0A65BFE050B90A27935BAB','IsActive','Scenerio','Yes','Yes','',1,'2020CF74F74BEE8CE050B90A2793593F','2020CF74F753EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=Scenerio
+Attribute=IsActive
+PropertyString=No
+PropertyValue=No
+Scope=
+PropIndex=2
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CF0B65BFE050B90A27935BAB','IsActive','Scenerio','No','No','',2,'2020CF74F74BEE8CE050B90A2793593F','2020CF74F753EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=TestEnv
+Attribute=IsActive
+PropertyString=Yes
+PropertyValue=Yes
+Scope=
+PropIndex=1
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CF0C65BFE050B90A27935BAB','IsActive','TestEnv','Yes','Yes','',1,'2020CF74F78DEE8CE050B90A2793593F','2020CF74F790EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=TestEnv
+Attribute=IsActive
+PropertyString=No
+PropertyValue=No
+Scope=
+PropIndex=2
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CF0D65BFE050B90A27935BAB','IsActive','TestEnv','No','No','',2,'2020CF74F78DEE8CE050B90A2793593F','2020CF74F790EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=MatrixMap
+Attribute=IsActive
+PropertyString=Yes
+PropertyValue=1
+Scope=
+PropIndex=1
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CF0E65BFE050B90A27935BAB','IsActive','MatrixMap','Yes','1','',1,'2020CF74F794EE8CE050B90A2793593F','2020CF74F796EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=MatrixMap
+Attribute=IsActive
+PropertyString=No
+PropertyValue=0
+Scope=
+PropIndex=2
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CF0F65BFE050B90A27935BAB','IsActive','MatrixMap','No','0','',2,'2020CF74F794EE8CE050B90A2793593F','2020CF74F796EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=MatrixList
+Attribute=IsActive
+PropertyString=Yes
+PropertyValue=1
+Scope=
+PropIndex=1
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CF1065BFE050B90A27935BAB','IsActive','MatrixList','Yes','1','',1,'2020CF74F9DFEE8CE050B90A2793593F','2020CF74F9E2EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=MatrixList
+Attribute=IsActive
+PropertyString=No
+PropertyValue=0
+Scope=
+PropIndex=2
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CF1165BFE050B90A27935BAB','IsActive','MatrixList','No','0','',2,'2020CF74F9DFEE8CE050B90A2793593F','2020CF74F9E2EE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=ScenerioRun
+Attribute=RunType
+PropertyString=Manual
+PropertyValue=Manual
+Scope=
+PropIndex=1
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CF1265BFE050B90A27935BAB','RunType','ScenerioRun','Manual','Manual','',1,'2020CF74F7AAEE8CE050B90A2793593F','2020CF74F7AFEE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=ScenerioRun
+Attribute=RunType
+PropertyString=Automated
+PropertyValue=Automated
+Scope=
+PropIndex=2
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CF1365BFE050B90A27935BAB','RunType','ScenerioRun','Automated','Automated','',2,'2020CF74F7AAEE8CE050B90A2793593F','2020CF74F7AFEE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=ScenerioRun
+Attribute=Status
+PropertyString=Passed
+PropertyValue=Passed
+Scope=
+PropIndex=1
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CF1465BFE050B90A27935BAB','Status','ScenerioRun','Passed','Passed','',1,'2020CF74F7AAEE8CE050B90A2793593F','2020CF74F7AEEE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=ScenerioRun
+Attribute=Status
+PropertyString=Failed
+PropertyValue=Failed
+Scope=
+PropIndex=2
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CF1565BFE050B90A27935BAB','Status','ScenerioRun','Failed','Failed','',2,'2020CF74F7AAEE8CE050B90A2793593F','2020CF74F7AEEE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=ScenerioRun
+Attribute=Status
+PropertyString=In Progress
+PropertyValue=In Progress
+Scope=
+PropIndex=3
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CF1665BFE050B90A27935BAB','Status','ScenerioRun','In Progress','In Progress','',3,'2020CF74F7AAEE8CE050B90A2793593F','2020CF74F7AEEE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=ScenerioRun
+Attribute=Status
+PropertyString=Skipped
+PropertyValue=Skipped
+Scope=
+PropIndex=4
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CF1765BFE050B90A27935BAB','Status','ScenerioRun','Skipped','Skipped','',4,'2020CF74F7AAEE8CE050B90A2793593F','2020CF74F7AEEE8CE050B90A2793593F','sa','sa',sysdate)
+<ListProperty>
+Object=ScenerioRun
+Attribute=Status
+PropertyString=Defect
+PropertyValue=Defect
+Scope=
+PropIndex=5
+</ListProperty>
+insert into Table_ListProperty(objid,name,TableName,PropertyString, PropertyValue,Scope,PropIndex,ListProperty2Object,ListProperty2Attribute,GroupUser,GenUser,GenDate)values('20231560CF1865BFE050B90A27935BAB','Status','ScenerioRun','Defect','Defect','',5,'2020CF74F7AAEE8CE050B90A2793593F','2020CF74F7AEEE8CE050B90A2793593F','sa','sa',sysdate)
+<ObjectRule>
+Name=Profile Rule
+TableName=Profile
+EffectedTable=Profile
+Description=Calling Upadte and Insert Rule for object Profile
+Reason=1
+ActionState=1
+Condition=objid$gt$0
+RuleIndex=1
+Status=1
+</ObjectRule>
+insert into Table_ObjectRule(ObjId,Name,TableName,EffectedTable,Description,Reason,ActionState,Condition,RuleIndex,Status,ObjectRule2Object,GroupUser,GenUser,GenDate)values('20231560CF1965BFE050B90A27935BAB','Profile Rule','Profile','Profile','Calling Upadte and Insert Rule for object Profile','1','1','objid$gt$0','1','1','2020CF74F6E1EE8CE050B90A2793593F','sa','sa',sysdate)
+<ActionQuery>
+Name=Call Insert_Profile procedure
+TableName=Profile
+Description=Call Insert_Profile procedure
+StepNo=1
+Input=@Objid
+InputDataType=@Integer
+Output=$runId
+QueryType=0
+HasRecordSet=0
+OracleQuery=exec Insert_Profile(@objid)
+MssqlQuery=exec Insert_Profile @objid
+Status=0
+</ActionQuery>
+insert into Table_ActionQuery(ObjId,Name,TableName,Description,StepNo,Input,InputDataType,Output,QueryType,HasRecordSet,OracleQuery,MssqlQuery,Status,ActionQuery2ObjectRule,GroupUser,GenUser,GenDate)values('20231560CF1A65BFE050B90A27935BAB','Call Insert_Profile procedure','Profile','Call Insert_Profile procedure','1','@Objid','@Integer','$runId','0','0','exec Insert_Profile(@objid)','exec Insert_Profile @objid','0','20231560CF1965BFE050B90A27935BAB','sa','sa',sysdate)
+<ObjectRule>
+Name=Calendar Rule
+TableName=Calendar
+EffectedTable=Calendar
+Description=Calling Upadte and Insert Rule for object Calendar
+Reason=1
+ActionState=1
+Condition=objid$gt$0
+RuleIndex=1
+Status=1
+</ObjectRule>
+insert into Table_ObjectRule(ObjId,Name,TableName,EffectedTable,Description,Reason,ActionState,Condition,RuleIndex,Status,ObjectRule2Object,GroupUser,GenUser,GenDate)values('20231560CF1B65BFE050B90A27935BAB','Calendar Rule','Calendar','Calendar','Calling Upadte and Insert Rule for object Calendar','1','1','objid$gt$0','1','1','2020CF74F82BEE8CE050B90A2793593F','sa','sa',sysdate)
+<ActionQuery>
+Name=Call Insert_Calendar procedure
+TableName=Calendar
+Description=Call Insert_Calendar procedure
+StepNo=1
+Input=@Objid
+InputDataType=@Integer
+Output=$runId
+QueryType=0
+HasRecordSet=0
+OracleQuery=exec Insert_Calendar(@objid)
+MssqlQuery=exec Insert_Calendar @objid
+Status=0
+</ActionQuery>
+insert into Table_ActionQuery(ObjId,Name,TableName,Description,StepNo,Input,InputDataType,Output,QueryType,HasRecordSet,OracleQuery,MssqlQuery,Status,ActionQuery2ObjectRule,GroupUser,GenUser,GenDate)values('20231560CF1C65BFE050B90A27935BAB','Call Insert_Calendar procedure','Calendar','Call Insert_Calendar procedure','1','@Objid','@Integer','$runId','0','0','exec Insert_Calendar(@objid)','exec Insert_Calendar @objid','0','20231560CF1B65BFE050B90A27935BAB','sa','sa',sysdate)
+<ObjectRule>
+Name=Training Rule
+TableName=Training
+EffectedTable=Training
+Description=Calling Upadte and Insert Rule for object Training
+Reason=1
+ActionState=1
+Condition=objid$gt$0
+RuleIndex=1
+Status=1
+</ObjectRule>
+insert into Table_ObjectRule(ObjId,Name,TableName,EffectedTable,Description,Reason,ActionState,Condition,RuleIndex,Status,ObjectRule2Object,GroupUser,GenUser,GenDate)values('20231560CF1D65BFE050B90A27935BAB','Training Rule','Training','Training','Calling Upadte and Insert Rule for object Training','1','1','objid$gt$0','1','1','2020CF74F84FEE8CE050B90A2793593F','sa','sa',sysdate)
+<ActionQuery>
+Name=Call Update_Training procedure
+TableName=Training
+Description=Call Update_Training procedure
+StepNo=1
+Input=@Objid
+InputDataType=@Integer
+Output=$runId
+QueryType=0
+HasRecordSet=0
+OracleQuery=exec Update_Training(@objid)
+MssqlQuery=exec Update_Training @objid
+Status=0
+</ActionQuery>
+insert into Table_ActionQuery(ObjId,Name,TableName,Description,StepNo,Input,InputDataType,Output,QueryType,HasRecordSet,OracleQuery,MssqlQuery,Status,ActionQuery2ObjectRule,GroupUser,GenUser,GenDate)values('20231560CF1E65BFE050B90A27935BAB','Call Update_Training procedure','Training','Call Update_Training procedure','1','@Objid','@Integer','$runId','0','0','exec Update_Training(@objid)','exec Update_Training @objid','0','20231560CF1D65BFE050B90A27935BAB','sa','sa',sysdate)
+<ObjectRule>
+Name=Bug Rule
+TableName=Bug
+EffectedTable=Bug
+Description=Calling Upadte and Insert Rule for object Bug
+Reason=1
+ActionState=1
+Condition=objid$gt$0
+RuleIndex=1
+Status=1
+</ObjectRule>
+insert into Table_ObjectRule(ObjId,Name,TableName,EffectedTable,Description,Reason,ActionState,Condition,RuleIndex,Status,ObjectRule2Object,GroupUser,GenUser,GenDate)values('20231560CF1F65BFE050B90A27935BAB','Bug Rule','Bug','Bug','Calling Upadte and Insert Rule for object Bug','1','1','objid$gt$0','1','1','2020CF74F7C1EE8CE050B90A2793593F','sa','sa',sysdate)
+<ActionQuery>
+Name=Call Update_Bug procedure
+TableName=Bug
+Description=Call Update_Bug procedure
+StepNo=1
+Input=@Objid
+InputDataType=@Integer
+Output=$runId
+QueryType=0
+HasRecordSet=0
+OracleQuery=exec Update_Bug(@objid)
+MssqlQuery=exec Update_Bug @objid
+Status=0
+</ActionQuery>
+insert into Table_ActionQuery(ObjId,Name,TableName,Description,StepNo,Input,InputDataType,Output,QueryType,HasRecordSet,OracleQuery,MssqlQuery,Status,ActionQuery2ObjectRule,GroupUser,GenUser,GenDate)values('20231560CF2065BFE050B90A27935BAB','Call Update_Bug procedure','Bug','Call Update_Bug procedure','1','@Objid','@Integer','$runId','0','0','exec Update_Bug(@objid)','exec Update_Bug @objid','0','20231560CF1F65BFE050B90A27935BAB','sa','sa',sysdate)
+<GenericCode>
+Name=Backlog
+AttributeName=GroupCode
+CodeValue=Backlog
+Description=Backlog
+Status=1
+CodeIndex=1
+</GenericCode>
+insert into Table_GenericCode(ObjId,Name,AttributeName,CodeValue,Description,Status,CodeIndex,GenericCode2CodeAttribute,GroupUser,GenUser,GenDate)values('20231560CF2165BFE050B90A27935BAB','Backlog','GroupCode','Backlog','Backlog','1','1','20231560CE3165BFE050B90A27935BAB','sa','sa',sysdate)
+<GenericCode>
+Name=Development
+AttributeName=GroupCode
+CodeValue=Development
+Description=Development
+Status=1
+CodeIndex=2
+</GenericCode>
+insert into Table_GenericCode(ObjId,Name,AttributeName,CodeValue,Description,Status,CodeIndex,GenericCode2CodeAttribute,GroupUser,GenUser,GenDate)values('20231560CF2265BFE050B90A27935BAB','Development','GroupCode','Development','Development','1','2','20231560CE3165BFE050B90A27935BAB','sa','sa',sysdate)
+<GenericCode>
+Name=Testing
+AttributeName=GroupCode
+CodeValue=Testing
+Description=Testing
+Status=1
+CodeIndex=3
+</GenericCode>
+insert into Table_GenericCode(ObjId,Name,AttributeName,CodeValue,Description,Status,CodeIndex,GenericCode2CodeAttribute,GroupUser,GenUser,GenDate)values('20231560CF2365BFE050B90A27935BAB','Testing','GroupCode','Testing','Testing','1','3','20231560CE3165BFE050B90A27935BAB','sa','sa',sysdate)
+<GenericCode>
+Name=Done
+AttributeName=GroupCode
+CodeValue=Done
+Description=Done
+Status=1
+CodeIndex=4
+</GenericCode>
+insert into Table_GenericCode(ObjId,Name,AttributeName,CodeValue,Description,Status,CodeIndex,GenericCode2CodeAttribute,GroupUser,GenUser,GenDate)values('20231560CF2465BFE050B90A27935BAB','Done','GroupCode','Done','Done','1','4','20231560CE3165BFE050B90A27935BAB','sa','sa',sysdate)
+<GenericCode>
+Name=Severity-1
+AttributeName=SeverityCode
+CodeValue=1
+Description=Severity-1
+Status=1
+CodeIndex=1
+</GenericCode>
+insert into Table_GenericCode(ObjId,Name,AttributeName,CodeValue,Description,Status,CodeIndex,GenericCode2CodeAttribute,GroupUser,GenUser,GenDate)values('20231560CF2565BFE050B90A27935BAB','Severity-1','SeverityCode','1','Severity-1','1','1','0','sa','sa',sysdate)
+<GenericCode>
+Name=Severity-2
+AttributeName=SeverityCode
+CodeValue=2
+Description=Severity-2
+Status=1
+CodeIndex=2
+</GenericCode>
+insert into Table_GenericCode(ObjId,Name,AttributeName,CodeValue,Description,Status,CodeIndex,GenericCode2CodeAttribute,GroupUser,GenUser,GenDate)values('20231560CF2665BFE050B90A27935BAB','Severity-2','SeverityCode','2','Severity-2','1','2','0','sa','sa',sysdate)
+<GenericCode>
+Name=Severity-3
+AttributeName=SeverityCode
+CodeValue=3
+Description=Severity-3
+Status=1
+CodeIndex=3
+</GenericCode>
+insert into Table_GenericCode(ObjId,Name,AttributeName,CodeValue,Description,Status,CodeIndex,GenericCode2CodeAttribute,GroupUser,GenUser,GenDate)values('20231560CF2765BFE050B90A27935BAB','Severity-3','SeverityCode','3','Severity-3','1','3','0','sa','sa',sysdate)
+<GenericCode>
+Name=Monthly Subscription
+AttributeName=SubscribeCode
+CodeValue=1
+Description=No Description Available
+Status=1
+CodeIndex=1
+</GenericCode>
+insert into Table_GenericCode(ObjId,Name,AttributeName,CodeValue,Description,Status,CodeIndex,GenericCode2CodeAttribute,GroupUser,GenUser,GenDate)values('20231560CF2865BFE050B90A27935BAB','Monthly Subscription','SubscribeCode','1','No Description Available','1','1','20231560CE3365BFE050B90A27935BAB','sa','sa',sysdate)
+<GenericCode>
+Name=Yearly Subscription
+AttributeName=SubscribeCode
+CodeValue=2
+Description=No Description Available
+Status=1
+CodeIndex=2
+</GenericCode>
+insert into Table_GenericCode(ObjId,Name,AttributeName,CodeValue,Description,Status,CodeIndex,GenericCode2CodeAttribute,GroupUser,GenUser,GenDate)values('20231560CF2965BFE050B90A27935BAB','Yearly Subscription','SubscribeCode','2','No Description Available','1','2','20231560CE3365BFE050B90A27935BAB','sa','sa',sysdate)
+<GenericCode>
+Name=2015
+AttributeName=YearCode
+CodeValue=2015
+Description=No Description Available
+Status=1
+CodeIndex=1
+</GenericCode>
+insert into Table_GenericCode(ObjId,Name,AttributeName,CodeValue,Description,Status,CodeIndex,GenericCode2CodeAttribute,GroupUser,GenUser,GenDate)values('20231560CF2A65BFE050B90A27935BAB','2015','YearCode','2015','No Description Available','1','1','20231560CE3A65BFE050B90A27935BAB','sa','sa',sysdate)
+<GenericCode>
+Name=2016
+AttributeName=YearCode
+CodeValue=2016
+Description=No Description Available
+Status=1
+CodeIndex=2
+</GenericCode>
+insert into Table_GenericCode(ObjId,Name,AttributeName,CodeValue,Description,Status,CodeIndex,GenericCode2CodeAttribute,GroupUser,GenUser,GenDate)values('20231560CF2B65BFE050B90A27935BAB','2016','YearCode','2016','No Description Available','1','2','20231560CE3A65BFE050B90A27935BAB','sa','sa',sysdate)
+<GenericCode>
+Name=2017
+AttributeName=YearCode
+CodeValue=2017
+Description=No Description Available
+Status=1
+CodeIndex=3
+</GenericCode>
+insert into Table_GenericCode(ObjId,Name,AttributeName,CodeValue,Description,Status,CodeIndex,GenericCode2CodeAttribute,GroupUser,GenUser,GenDate)values('20231560CF2C65BFE050B90A27935BAB','2017','YearCode','2017','No Description Available','1','3','20231560CE3A65BFE050B90A27935BAB','sa','sa',sysdate)
+<GenericCode>
+Name=2018
+AttributeName=YearCode
+CodeValue=2018
+Description=No Description Available
+Status=1
+CodeIndex=4
+</GenericCode>
+insert into Table_GenericCode(ObjId,Name,AttributeName,CodeValue,Description,Status,CodeIndex,GenericCode2CodeAttribute,GroupUser,GenUser,GenDate)values('20231560CF2D65BFE050B90A27935BAB','2018','YearCode','2018','No Description Available','1','4','20231560CE3A65BFE050B90A27935BAB','sa','sa',sysdate)
+<GenericCode>
+Name=2019
+AttributeName=YearCode
+CodeValue=2019
+Description=No Description Available
+Status=1
+CodeIndex=5
+</GenericCode>
+insert into Table_GenericCode(ObjId,Name,AttributeName,CodeValue,Description,Status,CodeIndex,GenericCode2CodeAttribute,GroupUser,GenUser,GenDate)values('20231560CF2E65BFE050B90A27935BAB','2019','YearCode','2019','No Description Available','1','5','20231560CE3A65BFE050B90A27935BAB','sa','sa',sysdate)
+<GenericCode>
+Name=2020
+AttributeName=YearCode
+CodeValue=2020
+Description=No Description Available
+Status=1
+CodeIndex=6
+</GenericCode>
+insert into Table_GenericCode(ObjId,Name,AttributeName,CodeValue,Description,Status,CodeIndex,GenericCode2CodeAttribute,GroupUser,GenUser,GenDate)values('20231560CF2F65BFE050B90A27935BAB','2020','YearCode','2020','No Description Available','1','6','20231560CE3A65BFE050B90A27935BAB','sa','sa',sysdate)
+<GenericCode>
+Name=2021
+AttributeName=YearCode
+CodeValue=2021
+Description=No Description Available
+Status=1
+CodeIndex=7
+</GenericCode>
+insert into Table_GenericCode(ObjId,Name,AttributeName,CodeValue,Description,Status,CodeIndex,GenericCode2CodeAttribute,GroupUser,GenUser,GenDate)values('20231560CF3065BFE050B90A27935BAB','2021','YearCode','2021','No Description Available','1','7','20231560CE3A65BFE050B90A27935BAB','sa','sa',sysdate)
+<GenericCode>
+Name=2022
+AttributeName=YearCode
+CodeValue=2022
+Description=No Description Available
+Status=1
+CodeIndex=8
+</GenericCode>
+insert into Table_GenericCode(ObjId,Name,AttributeName,CodeValue,Description,Status,CodeIndex,GenericCode2CodeAttribute,GroupUser,GenUser,GenDate)values('20231560CF3165BFE050B90A27935BAB','2022','YearCode','2022','No Description Available','1','8','20231560CE3A65BFE050B90A27935BAB','sa','sa',sysdate)
+<GenericCode>
+Name=2023
+AttributeName=YearCode
+CodeValue=2023
+Description=No Description Available
+Status=1
+CodeIndex=9
+</GenericCode>
+insert into Table_GenericCode(ObjId,Name,AttributeName,CodeValue,Description,Status,CodeIndex,GenericCode2CodeAttribute,GroupUser,GenUser,GenDate)values('20231560CF3265BFE050B90A27935BAB','2023','YearCode','2023','No Description Available','1','9','20231560CE3A65BFE050B90A27935BAB','sa','sa',sysdate)
+<GenericCode>
+Name=2024
+AttributeName=YearCode
+CodeValue=2024
+Description=No Description Available
+Status=1
+CodeIndex=10
+</GenericCode>
+insert into Table_GenericCode(ObjId,Name,AttributeName,CodeValue,Description,Status,CodeIndex,GenericCode2CodeAttribute,GroupUser,GenUser,GenDate)values('20231560CF3365BFE050B90A27935BAB','2024','YearCode','2024','No Description Available','1','10','20231560CE3A65BFE050B90A27935BAB','sa','sa',sysdate)
+<GenericCode>
+Name=2025
+AttributeName=YearCode
+CodeValue=2025
+Description=No Description Available
+Status=1
+CodeIndex=11
+</GenericCode>
+insert into Table_GenericCode(ObjId,Name,AttributeName,CodeValue,Description,Status,CodeIndex,GenericCode2CodeAttribute,GroupUser,GenUser,GenDate)values('20231560CF3465BFE050B90A27935BAB','2025','YearCode','2025','No Description Available','1','11','20231560CE3A65BFE050B90A27935BAB','sa','sa',sysdate)
+<GenericCode>
+Name=Open
+AttributeName=TaskStatusCode
+CodeValue=Open
+Description=No Description Available
+Status=1
+CodeIndex=1
+</GenericCode>
+insert into Table_GenericCode(ObjId,Name,AttributeName,CodeValue,Description,Status,CodeIndex,GenericCode2CodeAttribute,GroupUser,GenUser,GenDate)values('20231560CF3565BFE050B90A27935BAB','Open','TaskStatusCode','Open','No Description Available','1','1','20231560CE3465BFE050B90A27935BAB','sa','sa',sysdate)
+<GenericCode>
+Name=In Progress
+AttributeName=TaskStatusCode
+CodeValue=In Progress
+Description=No Description Available
+Status=1
+CodeIndex=2
+</GenericCode>
+insert into Table_GenericCode(ObjId,Name,AttributeName,CodeValue,Description,Status,CodeIndex,GenericCode2CodeAttribute,GroupUser,GenUser,GenDate)values('20231560CF3665BFE050B90A27935BAB','In Progress','TaskStatusCode','In Progress','No Description Available','1','2','20231560CE3465BFE050B90A27935BAB','sa','sa',sysdate)
+<GenericCode>
+Name=Done
+AttributeName=TaskStatusCode
+CodeValue=Done
+Description=No Description Available
+Status=1
+CodeIndex=3
+</GenericCode>
+insert into Table_GenericCode(ObjId,Name,AttributeName,CodeValue,Description,Status,CodeIndex,GenericCode2CodeAttribute,GroupUser,GenUser,GenDate)values('20231560CF3765BFE050B90A27935BAB','Done','TaskStatusCode','Done','No Description Available','1','3','20231560CE3465BFE050B90A27935BAB','sa','sa',sysdate)
+<GenericCode>
+Name=Open
+AttributeName=ReferralStatus
+CodeValue=Open
+Description=No Description Available
+Status=1
+CodeIndex=1
+</GenericCode>
+insert into Table_GenericCode(ObjId,Name,AttributeName,CodeValue,Description,Status,CodeIndex,GenericCode2CodeAttribute,GroupUser,GenUser,GenDate)values('20231560CF3865BFE050B90A27935BAB','Open','ReferralStatus','Open','No Description Available','1','1','20231560CE2F65BFE050B90A27935BAB','sa','sa',sysdate)
+<GenericCode>
+Name=Contacted
+AttributeName=ReferralStatus
+CodeValue=Contacted
+Description=No Description Available
+Status=1
+CodeIndex=2
+</GenericCode>
+insert into Table_GenericCode(ObjId,Name,AttributeName,CodeValue,Description,Status,CodeIndex,GenericCode2CodeAttribute,GroupUser,GenUser,GenDate)values('20231560CF3965BFE050B90A27935BAB','Contacted','ReferralStatus','Contacted','No Description Available','1','2','20231560CE2F65BFE050B90A27935BAB','sa','sa',sysdate)
+<GenericCode>
+Name=Signed
+AttributeName=ReferralStatus
+CodeValue=Signed
+Description=No Description Available
+Status=1
+CodeIndex=3
+</GenericCode>
+insert into Table_GenericCode(ObjId,Name,AttributeName,CodeValue,Description,Status,CodeIndex,GenericCode2CodeAttribute,GroupUser,GenUser,GenDate)values('20231560CF3A65BFE050B90A27935BAB','Signed','ReferralStatus','Signed','No Description Available','1','3','20231560CE2F65BFE050B90A27935BAB','sa','sa',sysdate)
+<GenericCode>
+Name=Trained
+AttributeName=ReferralStatus
+CodeValue=Trained
+Description=No Description Available
+Status=1
+CodeIndex=4
+</GenericCode>
+insert into Table_GenericCode(ObjId,Name,AttributeName,CodeValue,Description,Status,CodeIndex,GenericCode2CodeAttribute,GroupUser,GenUser,GenDate)values('20231560CF3B65BFE050B90A27935BAB','Trained','ReferralStatus','Trained','No Description Available','1','4','20231560CE2F65BFE050B90A27935BAB','sa','sa',sysdate)
+<GenericCode>
+Name=In Valid
+AttributeName=ReferralStatus
+CodeValue=In Valid
+Description=No Description Available
+Status=1
+CodeIndex=5
+</GenericCode>
+insert into Table_GenericCode(ObjId,Name,AttributeName,CodeValue,Description,Status,CodeIndex,GenericCode2CodeAttribute,GroupUser,GenUser,GenDate)values('20231560CF3C65BFE050B90A27935BAB','In Valid','ReferralStatus','In Valid','No Description Available','1','5','20231560CE2F65BFE050B90A27935BAB','sa','sa',sysdate)
+<GenericCode>
+Name=No Interest
+AttributeName=ReferralStatus
+CodeValue=No Interest
+Description=No Description Available
+Status=1
+CodeIndex=6
+</GenericCode>
+insert into Table_GenericCode(ObjId,Name,AttributeName,CodeValue,Description,Status,CodeIndex,GenericCode2CodeAttribute,GroupUser,GenUser,GenDate)values('20231560CF3D65BFE050B90A27935BAB','No Interest','ReferralStatus','No Interest','No Description Available','1','6','20231560CE2F65BFE050B90A27935BAB','sa','sa',sysdate)
+<GenericCode>
+Name=Call Again
+AttributeName=ReferralStatus
+CodeValue=Call Again
+Description=No Description Available
+Status=1
+CodeIndex=7
+</GenericCode>
+insert into Table_GenericCode(ObjId,Name,AttributeName,CodeValue,Description,Status,CodeIndex,GenericCode2CodeAttribute,GroupUser,GenUser,GenDate)values('20231560CF3E65BFE050B90A27935BAB','Call Again','ReferralStatus','Call Again','No Description Available','1','7','20231560CE2F65BFE050B90A27935BAB','sa','sa',sysdate)
+<GenericCode>
+Name=Claim Issued
+AttributeName=ReferralStatus
+CodeValue=Claim Issued
+Description=No Description Available
+Status=1
+CodeIndex=8
+</GenericCode>
+insert into Table_GenericCode(ObjId,Name,AttributeName,CodeValue,Description,Status,CodeIndex,GenericCode2CodeAttribute,GroupUser,GenUser,GenDate)values('20231560CF3F65BFE050B90A27935BAB','Claim Issued','ReferralStatus','Claim Issued','No Description Available','1','8','20231560CE2F65BFE050B90A27935BAB','sa','sa',sysdate)
+<GenericCode>
+Name=Claim Paid
+AttributeName=ReferralStatus
+CodeValue=Claim Paid
+Description=No Description Available
+Status=1
+CodeIndex=9
+</GenericCode>
+insert into Table_GenericCode(ObjId,Name,AttributeName,CodeValue,Description,Status,CodeIndex,GenericCode2CodeAttribute,GroupUser,GenUser,GenDate)values('20231560CF4065BFE050B90A27935BAB','Claim Paid','ReferralStatus','Claim Paid','No Description Available','1','9','20231560CE2F65BFE050B90A27935BAB','sa','sa',sysdate)
+<GenericCode>
+Name=Functional QE
+AttributeName=SkillCode
+CodeValue=Functional
+Description=No Description Available
+Status=1
+CodeIndex=1
+</GenericCode>
+insert into Table_GenericCode(ObjId,Name,AttributeName,CodeValue,Description,Status,CodeIndex,GenericCode2CodeAttribute,GroupUser,GenUser,GenDate)values('20231560CF4165BFE050B90A27935BAB','Functional QE','SkillCode','Functional','No Description Available','1','1','20231560CE3265BFE050B90A27935BAB','sa','sa',sysdate)
+<GenericCode>
+Name=Automation Engineer
+AttributeName=SkillCode
+CodeValue=Automation
+Description=No Description Available
+Status=1
+CodeIndex=2
+</GenericCode>
+insert into Table_GenericCode(ObjId,Name,AttributeName,CodeValue,Description,Status,CodeIndex,GenericCode2CodeAttribute,GroupUser,GenUser,GenDate)values('20231560CF4265BFE050B90A27935BAB','Automation Engineer','SkillCode','Automation','No Description Available','1','2','20231560CE3265BFE050B90A27935BAB','sa','sa',sysdate)
+<GenericCode>
+Name=Developer
+AttributeName=SkillCode
+CodeValue=Developer
+Description=No Description Available
+Status=1
+CodeIndex=3
+</GenericCode>
+insert into Table_GenericCode(ObjId,Name,AttributeName,CodeValue,Description,Status,CodeIndex,GenericCode2CodeAttribute,GroupUser,GenUser,GenDate)values('20231560CF4365BFE050B90A27935BAB','Developer','SkillCode','Developer','No Description Available','1','3','20231560CE3265BFE050B90A27935BAB','sa','sa',sysdate)
+<GenericCode>
+Name=Devops Enginner
+AttributeName=SkillCode
+CodeValue=Devops
+Description=No Description Available
+Status=1
+CodeIndex=4
+</GenericCode>
+insert into Table_GenericCode(ObjId,Name,AttributeName,CodeValue,Description,Status,CodeIndex,GenericCode2CodeAttribute,GroupUser,GenUser,GenDate)values('20231560CF4465BFE050B90A27935BAB','Devops Enginner','SkillCode','Devops','No Description Available','1','4','20231560CE3265BFE050B90A27935BAB','sa','sa',sysdate)
+<GenericCode>
+Name=Intern
+AttributeName=SkillCode
+CodeValue=Intern
+Description=No Description Available
+Status=1
+CodeIndex=5
+</GenericCode>
+insert into Table_GenericCode(ObjId,Name,AttributeName,CodeValue,Description,Status,CodeIndex,GenericCode2CodeAttribute,GroupUser,GenUser,GenDate)values('20231560CF4565BFE050B90A27935BAB','Intern','SkillCode','Intern','No Description Available','1','5','20231560CE3265BFE050B90A27935BAB','sa','sa',sysdate)
+<GenericCode>
+Name=Engineering
+AttributeName=DeptCode
+CodeValue=Engineering
+Description=No Description Available
+Status=1
+CodeIndex=1
+</GenericCode>
+insert into Table_GenericCode(ObjId,Name,AttributeName,CodeValue,Description,Status,CodeIndex,GenericCode2CodeAttribute,GroupUser,GenUser,GenDate)values('20231560CF4665BFE050B90A27935BAB','Engineering','DeptCode','Engineering','No Description Available','1','1','20231560CE3865BFE050B90A27935BAB','sa','sa',sysdate)
+<GenericCode>
+Name=Quality
+AttributeName=DeptCode
+CodeValue=Quality
+Description=No Description Available
+Status=1
+CodeIndex=2
+</GenericCode>
+insert into Table_GenericCode(ObjId,Name,AttributeName,CodeValue,Description,Status,CodeIndex,GenericCode2CodeAttribute,GroupUser,GenUser,GenDate)values('20231560CF4765BFE050B90A27935BAB','Quality','DeptCode','Quality','No Description Available','1','2','20231560CE3865BFE050B90A27935BAB','sa','sa',sysdate)
+<GenericCode>
+Name=Product
+AttributeName=DeptCode
+CodeValue=Product
+Description=No Description Available
+Status=1
+CodeIndex=3
+</GenericCode>
+insert into Table_GenericCode(ObjId,Name,AttributeName,CodeValue,Description,Status,CodeIndex,GenericCode2CodeAttribute,GroupUser,GenUser,GenDate)values('20231560CF4865BFE050B90A27935BAB','Product','DeptCode','Product','No Description Available','1','3','20231560CE3865BFE050B90A27935BAB','sa','sa',sysdate)
+<GenericCode>
+Name=Marketing
+AttributeName=DeptCode
+CodeValue=Marketing
+Description=No Description Available
+Status=1
+CodeIndex=4
+</GenericCode>
+insert into Table_GenericCode(ObjId,Name,AttributeName,CodeValue,Description,Status,CodeIndex,GenericCode2CodeAttribute,GroupUser,GenUser,GenDate)values('20231560CF4965BFE050B90A27935BAB','Marketing','DeptCode','Marketing','No Description Available','1','4','20231560CE3865BFE050B90A27935BAB','sa','sa',sysdate)
+<GenericCode>
+Name=Sales
+AttributeName=DeptCode
+CodeValue=Sales
+Description=No Description Available
+Status=1
+CodeIndex=5
+</GenericCode>
+insert into Table_GenericCode(ObjId,Name,AttributeName,CodeValue,Description,Status,CodeIndex,GenericCode2CodeAttribute,GroupUser,GenUser,GenDate)values('20231560CF4A65BFE050B90A27935BAB','Sales','DeptCode','Sales','No Description Available','1','5','20231560CE3865BFE050B90A27935BAB','sa','sa',sysdate)
+<GenericCode>
+Name=Finance
+AttributeName=DeptCode
+CodeValue=Finance
+Description=No Description Available
+Status=1
+CodeIndex=6
+</GenericCode>
+insert into Table_GenericCode(ObjId,Name,AttributeName,CodeValue,Description,Status,CodeIndex,GenericCode2CodeAttribute,GroupUser,GenUser,GenDate)values('20231560CF4B65BFE050B90A27935BAB','Finance','DeptCode','Finance','No Description Available','1','6','20231560CE3865BFE050B90A27935BAB','sa','sa',sysdate)
+<GenericCode>
+Name=HR
+AttributeName=DeptCode
+CodeValue=HR
+Description=No Description Available
+Status=1
+CodeIndex=7
+</GenericCode>
+insert into Table_GenericCode(ObjId,Name,AttributeName,CodeValue,Description,Status,CodeIndex,GenericCode2CodeAttribute,GroupUser,GenUser,GenDate)values('20231560CF4C65BFE050B90A27935BAB','HR','DeptCode','HR','No Description Available','1','7','20231560CE3865BFE050B90A27935BAB','sa','sa',sysdate)
+<GenericCode>
+Name=PMO
+AttributeName=DeptCode
+CodeValue=PMO
+Description=No Description Available
+Status=1
+CodeIndex=7
+</GenericCode>
+insert into Table_GenericCode(ObjId,Name,AttributeName,CodeValue,Description,Status,CodeIndex,GenericCode2CodeAttribute,GroupUser,GenUser,GenDate)values('20231560CF4D65BFE050B90A27935BAB','PMO','DeptCode','PMO','No Description Available','1','7','20231560CE3865BFE050B90A27935BAB','sa','sa',sysdate)
+<GenericCode>
+Name=Development
+AttributeName=TaskCode
+CodeValue=Development
+Description=No Description Available
+Status=1
+CodeIndex=1
+</GenericCode>
+insert into Table_GenericCode(ObjId,Name,AttributeName,CodeValue,Description,Status,CodeIndex,GenericCode2CodeAttribute,GroupUser,GenUser,GenDate)values('20231560CF4E65BFE050B90A27935BAB','Development','TaskCode','Development','No Description Available','1','1','20231560CE3B65BFE050B90A27935BAB','sa','sa',sysdate)
+<GenericCode>
+Name=Testing
+AttributeName=TaskCode
+CodeValue=Testing
+Description=No Description Available
+Status=1
+CodeIndex=2
+</GenericCode>
+insert into Table_GenericCode(ObjId,Name,AttributeName,CodeValue,Description,Status,CodeIndex,GenericCode2CodeAttribute,GroupUser,GenUser,GenDate)values('20231560CF4F65BFE050B90A27935BAB','Testing','TaskCode','Testing','No Description Available','1','2','20231560CE3B65BFE050B90A27935BAB','sa','sa',sysdate)
+<GenericCode>
+Name=IT
+AttributeName=TaskCode
+CodeValue=IT
+Description=No Description Available
+Status=1
+CodeIndex=3
+</GenericCode>
+insert into Table_GenericCode(ObjId,Name,AttributeName,CodeValue,Description,Status,CodeIndex,GenericCode2CodeAttribute,GroupUser,GenUser,GenDate)values('20231560CF5065BFE050B90A27935BAB','IT','TaskCode','IT','No Description Available','1','3','20231560CE3B65BFE050B90A27935BAB','sa','sa',sysdate)
+<GenericCode>
+Name=Other
+AttributeName=TaskCode
+CodeValue=Other
+Description=No Description Available
+Status=1
+CodeIndex=4
+</GenericCode>
+insert into Table_GenericCode(ObjId,Name,AttributeName,CodeValue,Description,Status,CodeIndex,GenericCode2CodeAttribute,GroupUser,GenUser,GenDate)values('20231560CF5165BFE050B90A27935BAB','Other','TaskCode','Other','No Description Available','1','4','20231560CE3B65BFE050B90A27935BAB','sa','sa',sysdate)
+
+insert into table_Calendar(ObjId,Name,YearCode,GroupUser,GenUser)values('20231560CF5265BFE050B90A27935BAB','2017','2017','sa','sa')
+
+insert into table_Calendar(ObjId,Name,YearCode,GroupUser,GenUser)values('20231560CF5365BFE050B90A27935BAB','2019','2019','sa','sa')
+
+insert into table_Calendar(ObjId,Name,YearCode,GroupUser,GenUser)values('20231560CF5465BFE050B90A27935BAB','2023','2023','sa','sa')
+
+insert into table_Calendar(ObjId,Name,YearCode,GroupUser,GenUser)values('20231560CF5565BFE050B90A27935BAB','2018','2018','sa','sa')
+
+insert into table_Calendar(ObjId,Name,YearCode,GroupUser,GenUser)values('20231560CF5665BFE050B90A27935BAB','2025','2025','sa','sa')
+
+insert into table_Calendar(ObjId,Name,YearCode,GroupUser,GenUser)values('20231560CF5765BFE050B90A27935BAB','2022','2022','sa','sa')
+
+insert into table_Calendar(ObjId,Name,YearCode,GroupUser,GenUser)values('20231560CF5865BFE050B90A27935BAB','2024','2024','sa','sa')
+
+insert into table_Calendar(ObjId,Name,YearCode,GroupUser,GenUser)values('20231560CF5965BFE050B90A27935BAB','2021','2021','sa','sa')
+
+insert into table_Calendar(ObjId,Name,YearCode,GroupUser,GenUser)values('20231560CF5A65BFE050B90A27935BAB','2016','2016','sa','sa')
+
+insert into table_Calendar(ObjId,Name,YearCode,GroupUser,GenUser)values('20231560CF5B65BFE050B90A27935BAB','2020','2020','sa','sa')

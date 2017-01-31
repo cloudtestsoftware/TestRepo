@@ -1,0 +1,85 @@
+//*****************************************************************//
+//Adding Object Rule
+//Table Name:Tasks
+//Attribute Name:Tasks Rule
+//********************************************************************//
+
+	<ObjectRule>
+		Name=Tasks Rule
+		TableName=Tasks
+		EffectedTable=Timesheet
+		Description=Calling Upadte and Insert Rule for object Tasks
+		Reason=1
+		ActionState=1
+		Condition=objid$gt$0
+		RuleIndex=1
+		Status=1
+	</ObjectRule>
+
+//*****************************************************************//
+//Adding Action Query
+//Table Name:Tasks
+//Name:Call Insert_Tasks procedure
+//Step No:1
+//**************************************************************//
+
+	<ActionQuery>
+		Name=Call Insert_Tasks procedure
+		TableName=Tasks
+		Description=Call Insert_Tasks procedure
+		StepNo=1
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$activityId
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=exec Insert_Tasks(@objid)
+		MssqlQuery=exec Insert_Tasks @objid
+		Status=0
+	</ActionQuery>
+
+	<ActionQuery>
+		Name=Select -ve objid for child Timesheet
+		TableName=Timesheet
+		Description=Select -ve objid for child Timesheet
+		StepNo=2
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$objid $name $Timesheetid
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=select objid, name ,objid Timesheetid from table_Timesheet where objid like \'-%\' and Timesheet2Tasks=@objid
+		MssqlQuery=select objid, name ,objid Timesheetid from table_Timesheet where objid like \'-%\' and Timesheet2Tasks=@objid
+		Status=0
+	</ActionQuery>
+
+	<ActionQuery>
+		Name=Update -ve objid for child Timesheet
+		TableName=Timesheet
+		Description=Update -ve objid for child Timesheet
+		StepNo=3
+		Input=@objid @name @Timesheetid
+		InputDataType=@Integer @Varchar @Integer
+		Output=$count
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=update table_Timesheet set objid=@objid where objid=@Timesheetid and name=@name
+		MssqlQuery=update table_Timesheet set objid=@objid where objid=@Timesheetid and name=@name
+		Status=0
+	</ActionQuery>
+
+
+	<ActionQuery>
+		Name=Call Upadte_Tasks procedure
+		TableName=Tasks
+		Description=Call Update_Tasks procedure
+		StepNo=4
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$activityId
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=exec Update_Tasks(@objid)
+		MssqlQuery=exec Update_Tasks @objid
+		Status=0
+	</ActionQuery>

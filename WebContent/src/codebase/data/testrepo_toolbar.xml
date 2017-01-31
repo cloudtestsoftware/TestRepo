@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<toolbar>
+    <item type="buttonSelect" id="button_skins"  text="Skin" img="skin.gif">
+	   <item type="button" id="dhx_skyblue" text="Sky Blue" img="skyblue.gif"/>
+		<item type="button" id="dhx_web" text="Web"  img="web.gif"/>
+		<item type="button" id="dhx_terrace" text="Terrace"  img="terrace.gif"/>
+		
+		</item>
+		
+ 		<item type="separator" id="button_separator_10" />
+		<item type="separator" id="button_separator_99" />
+		<item type="buttonSelect" id="artitelly" text="Artitelly" img="artitelly.gif">
+		    <item type="button" id="artitelly:company" text="Company" img="company.gif"/>
+			<item type="button" id="artitelly:calendar" text="Calendar" img="calendar.gif"/>
+			<item type="separator" id="button_separator_3001" />
+			<item type="button" id="artitelly:training" text="Training" img="training.gif" />
+			<item type="button" id="artitelly:referral" text="Referal" img="referral.gif"/>
+			<item type="separator" id="button_separator_3002" />
+			<item type="button" id="artitelly:support" text="Support" img="support.gif"/>
+			<item type="separator" id="button_separator_3003" />
+			<item type="button" id="artitelly:subscription" text="Subscription" img="subscribe.gif" />
+			<item type="button" id="artitelly:payments" text="Payments" img="payment.gif"/>
+			<item type="separator" id="button_separator_3004" />
+			<item type="button" id="artitelly:cloudimage" text="Cloud Image" img="cloud.gif"/>
+		</item>
+		<item type="separator" id="button_separator_102" />
+		<item type="buttonSelect" id="company" text="Company" img="company.gif">
+		    <item type="button" id="company:company" text="Company" img="company.gif"/>
+			<item type="button" id="company:privilegegroup" text="Privilege Group" img="privilege.gif"/>
+			<item type="separator" id="button_separator_2001" />
+			<item type="button" id="testuser:mytraining" text="Book Training" img="training.gif"/>
+			<item type="separator" id="button_separator_2002" />
+			<item type="button" id="company:jenkins" text="Setup Jenkins" img="jenkins.gif"/>
+			<item type="separator" id="button_separator_3004" />
+			<item type="button" id="company:cloudimage" text="Base Image" img="baseimage.gif"/>
+		</item>
+		<item type="separator" id="button_separator_103" />
+		<item type="buttonSelect" id="crm" text="CRM" img="crm.gif">
+		    <item type="button" id="crm:campaign" text="Campaign" img="campaign.gif"/>
+			<item type="button" id="crm:lead" text="Sales Lead"  img="saleslead.gif"/>
+			<item type="separator" id="button_separator_2002" />
+			<item type="button" id="crm:contact" text="Contact" img="contact.gif"/>
+			<item type="button" id="crm:opportunity" text="Opportunity" img="opportunity.gif"/>
+			<item type="button" id="crm:customer" text="Customer" img="customer.gif"/>
+			<item type="separator" id="button_separator_2003" />
+			<item type="button" id="crm:mylead" text="My Latest Lead" img="mycontact.gif"/>
+		</item>
+		<item type="separator" id="button_separator_100" />
+		<item type="buttonSelect" id="testuser" text="User" img="testuser.gif">
+		    <item type="button" id="testuser:myprofile" text="My Profile" img="profile.gif"/>
+			<item type="button" id="testuser:mytasks" text="My Tasks" img="task.gif" />
+			<item type="button" id="testuser:weeksheet" text="My Timesheet"  img="timesheet.gif"/>
+			<item type="button" id="testuser:mybug" text="Bugs Assigned" img="bug.gif"/>
+			<item type="separator" id="button_separator_1004" />
+			<item type="button" id="testuser:referral" text="My Referral" img="referral.gif"/>
+			<item type="separator" id="button_separator_1005" />
+			<item type="button" id="testuser:mytraining" text="Book Training" img="booking.gif"/>
+			<item type="button" id="testuser:bookcourse" text="My Booking" img="booked.gif"/>
+			<item type="separator" id="button_separator_1006" />
+			<item type="button" id="testuser:consultant" text="Book Consultant" img="booked2.gif" />
+			<item type="button" id="testuser:developer" text="Join As Freelancer" img="freelancer.gif" />
+			<item type="separator" id="button_separator_1007" />
+			<item type="button" id="testuser:support" text="Support" img="support.gif"/>
+		</item>
+		
+		<item type="separator" id="button_separator_11" />
+		<item type="button" id="product" text="Product" img="product.gif"/>
+		<item type="separator" id="button_separator_12" />
+		<item type="button" id="project" text="Project" img="project.gif"/>
+		<item type="separator" id="button_separator_13" />
+		<item type="button" id="feature" text="Feature" img="feature.gif"/>
+		<item type="separator" id="button_separator_14" />
+		<item type="button" id="scenerio" text="Scenario" img="scenario.gif"/>
+		<item type="separator" id="button_separator_15" />
+		<item type="buttonSelect" id="matrix" text="Matrix Setup" img="matrix.gif">
+		    <item type="button" id="matrix:testmatrix" text="Test Matrix" img="testmatrix.gif"/>
+			<item type="separator" id="button_separator_16" />
+			 <item type="button" id="matrix:featuregroup" text="Feature Group" img="featuregroup.gif"/>
+		</item>
+		<item type="buttonSelect" id="run" text="Test Run" img="run.gif">
+		    <item type="button" id="run:testrun" text="Matrix Run" img="matrix.gif"/>
+		    <item type="separator" id="button_separator_4000" />
+			 <item type="button" id="run:grouprun" text="Group Run" img="testgroup.gif" />
+			<item type="separator" id="button_separator_4001" />
+			 <item type="button" id="run:featurerun" text="Feature Run"  img="featuregroup.gif"/>
+			<item type="separator" id="button_separator_4002" />
+			 <item type="button" id="run:testscenerio" text="Scenerio Run" img="scenario.gif"/>
+			
+		</item>
+		<item type="separator" id="button_separator_19" />
+		<item type="button" id="bug" text="Bugs" img="bug.gif"/>
+		<item type="separator" id="button_separator_20" />
+		<item type="button" id="projectboard" text="Boards" img="projectboard.gif"/>
+		<item type="separator" id="button_separator_23" />
+		<item type="button" id="cloudprovider" text="Cloud" img="cloudprovider.gif"/>
+		<item type="separator" id="button_separator_21" />
+		<item type="button" id="weeksheet" text="Timesheet" img="weeksheet.gif"/>
+		<item type="separator" id="button_separator_22" />
+ </toolbar>

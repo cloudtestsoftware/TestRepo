@@ -1,0 +1,85 @@
+//*****************************************************************//
+//Adding Object Rule
+//Table Name:Training
+//Attribute Name:Training Rule
+//********************************************************************//
+
+	<ObjectRule>
+		Name=Training Rule
+		TableName=Training
+		EffectedTable=MyTraining
+		Description=Calling Upadte and Insert Rule for object Training
+		Reason=1
+		ActionState=1
+		Condition=objid$gt$0
+		RuleIndex=1
+		Status=1
+	</ObjectRule>
+
+//*****************************************************************//
+//Adding Action Query
+//Table Name:Training
+//Name:Call Insert_Training procedure
+//Step No:1
+//**************************************************************//
+
+	<ActionQuery>
+		Name=Call Insert_Training procedure
+		TableName=Training
+		Description=Call Insert_Training procedure
+		StepNo=1
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$activityId
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=exec Insert_Training(@objid)
+		MssqlQuery=exec Insert_Training @objid
+		Status=0
+	</ActionQuery>
+
+	<ActionQuery>
+		Name=Select -ve objid for child MyTraining
+		TableName=MyTraining
+		Description=Select -ve objid for child MyTraining
+		StepNo=2
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$objid $name $MyTrainingid
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=select objid, name ,objid MyTrainingid from table_MyTraining where objid like \'-%\' and MyTraining2Training=@objid
+		MssqlQuery=select objid, name ,objid MyTrainingid from table_MyTraining where objid like \'-%\' and MyTraining2Training=@objid
+		Status=0
+	</ActionQuery>
+
+	<ActionQuery>
+		Name=Update -ve objid for child MyTraining
+		TableName=MyTraining
+		Description=Update -ve objid for child MyTraining
+		StepNo=3
+		Input=@objid @name @MyTrainingid
+		InputDataType=@Integer @Varchar @Integer
+		Output=$count
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=update table_MyTraining set objid=@objid where objid=@MyTrainingid and name=@name
+		MssqlQuery=update table_MyTraining set objid=@objid where objid=@MyTrainingid and name=@name
+		Status=0
+	</ActionQuery>
+
+
+	<ActionQuery>
+		Name=Call Upadte_Training procedure
+		TableName=Training
+		Description=Call Update_Training procedure
+		StepNo=4
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$activityId
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=exec Update_Training(@objid)
+		MssqlQuery=exec Update_Training @objid
+		Status=0
+	</ActionQuery>

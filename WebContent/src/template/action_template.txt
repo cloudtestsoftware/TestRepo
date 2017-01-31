@@ -1,0 +1,41 @@
+<action  name="@actionid"  dataset="global:xls.Your_XLS_File_Name" description="@actionname">
+	   
+
+		<validator name="Step-1: Give A Name For This Step"  description=" Write few word why you need this step">
+			
+			<junit name="Test Browser Action= @actionid or Give any meaningful name for this container">
+				<testPackage name="com.testmax.runner">
+					<testClass class="SeleniumTestRunner">
+						
+						<taglib>
+						
+						    <!-- Taglib is normally uses tag and or with combination of one or more injectors.
+						     In this example, we are just calling the injector as taglib. 
+						     But in real world taglib in CloudTest platform is containers of abstract injectors with or without any real HTML tag definition
+						     To learn more about how to use injector please look at FAQ -->
+							
+							@taglib:Give_Me_Unique_Name.Give_Me_Injector_NameTest1
+							
+							
+						</taglib>
+						
+						<injectors>
+                           <!-- 
+                             No Injectors are defined in this example. Injectors are actual implementation of HTML tag attributes with its xpath.
+                             If a taglib contains injectors say A, B,C and if you put B in this section, then only B injector will be invoked.
+                             A and C, will not be executed. To learn more about how to use injector please look at FAQ.
+                            -->
+						</injectors>
+						
+					</testClass>
+				</testPackage>
+			</junit>
+			
+		<!-- Below is a sample assert. You can add more assert object with different operators like Eq, Nq, Has,Lt,LtEq etc --> 
+		
+            <assert name="Verify expected value= @input_from_xls " descriptor="VARCHAR" output="junit:v_read_from_browser" value="@input_from_xls" operator="Has" /> 
+            
+		</validator>
+
+
+	</action>

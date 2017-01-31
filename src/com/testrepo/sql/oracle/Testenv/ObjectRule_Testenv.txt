@@ -1,0 +1,85 @@
+//*****************************************************************//
+//Adding Object Rule
+//Table Name:Testenv
+//Attribute Name:Testenv Rule
+//********************************************************************//
+
+	<ObjectRule>
+		Name=Testenv Rule
+		TableName=Testenv
+		EffectedTable=ScenerioRun
+		Description=Calling Upadte and Insert Rule for object Testenv
+		Reason=1
+		ActionState=1
+		Condition=objid$gt$0
+		RuleIndex=1
+		Status=1
+	</ObjectRule>
+
+//*****************************************************************//
+//Adding Action Query
+//Table Name:Testenv
+//Name:Call Insert_Testenv procedure
+//Step No:1
+//**************************************************************//
+
+	<ActionQuery>
+		Name=Call Insert_Testenv procedure
+		TableName=Testenv
+		Description=Call Insert_Testenv procedure
+		StepNo=1
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$activityId
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=exec Insert_Testenv(@objid)
+		MssqlQuery=exec Insert_Testenv @objid
+		Status=0
+	</ActionQuery>
+
+	<ActionQuery>
+		Name=Select -ve objid for child ScenerioRun
+		TableName=ScenerioRun
+		Description=Select -ve objid for child ScenerioRun
+		StepNo=2
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$objid $name $ScenerioRunid
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=select objid, name ,objid ScenerioRunid from table_ScenerioRun where objid like \'-%\' and ScenerioRun2Testenv=@objid
+		MssqlQuery=select objid, name ,objid ScenerioRunid from table_ScenerioRun where objid like \'-%\' and ScenerioRun2Testenv=@objid
+		Status=0
+	</ActionQuery>
+
+	<ActionQuery>
+		Name=Update -ve objid for child ScenerioRun
+		TableName=ScenerioRun
+		Description=Update -ve objid for child ScenerioRun
+		StepNo=3
+		Input=@objid @name @ScenerioRunid
+		InputDataType=@Integer @Varchar @Integer
+		Output=$count
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=update table_ScenerioRun set objid=@objid where objid=@ScenerioRunid and name=@name
+		MssqlQuery=update table_ScenerioRun set objid=@objid where objid=@ScenerioRunid and name=@name
+		Status=0
+	</ActionQuery>
+
+
+	<ActionQuery>
+		Name=Call Upadte_Testenv procedure
+		TableName=Testenv
+		Description=Call Update_Testenv procedure
+		StepNo=4
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$activityId
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=exec Update_Testenv(@objid)
+		MssqlQuery=exec Update_Testenv @objid
+		Status=0
+	</ActionQuery>

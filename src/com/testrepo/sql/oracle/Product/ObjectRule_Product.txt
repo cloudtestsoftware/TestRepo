@@ -1,0 +1,85 @@
+//*****************************************************************//
+//Adding Object Rule
+//Table Name:Product
+//Attribute Name:Product Rule
+//********************************************************************//
+
+	<ObjectRule>
+		Name=Product Rule
+		TableName=Product
+		EffectedTable=TestMatrix
+		Description=Calling Upadte and Insert Rule for object Product
+		Reason=1
+		ActionState=1
+		Condition=objid$gt$0
+		RuleIndex=1
+		Status=1
+	</ObjectRule>
+
+//*****************************************************************//
+//Adding Action Query
+//Table Name:Product
+//Name:Call Insert_Product procedure
+//Step No:1
+//**************************************************************//
+
+	<ActionQuery>
+		Name=Call Insert_Product procedure
+		TableName=Product
+		Description=Call Insert_Product procedure
+		StepNo=1
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$activityId
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=exec Insert_Product(@objid)
+		MssqlQuery=exec Insert_Product @objid
+		Status=0
+	</ActionQuery>
+
+	<ActionQuery>
+		Name=Select -ve objid for child TestMatrix
+		TableName=TestMatrix
+		Description=Select -ve objid for child TestMatrix
+		StepNo=2
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$objid $name $TestMatrixid
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=select objid, name ,objid TestMatrixid from table_TestMatrix where objid like \'-%\' and TestMatrix2Product=@objid
+		MssqlQuery=select objid, name ,objid TestMatrixid from table_TestMatrix where objid like \'-%\' and TestMatrix2Product=@objid
+		Status=0
+	</ActionQuery>
+
+	<ActionQuery>
+		Name=Update -ve objid for child TestMatrix
+		TableName=TestMatrix
+		Description=Update -ve objid for child TestMatrix
+		StepNo=3
+		Input=@objid @name @TestMatrixid
+		InputDataType=@Integer @Varchar @Integer
+		Output=$count
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=update table_TestMatrix set objid=@objid where objid=@TestMatrixid and name=@name
+		MssqlQuery=update table_TestMatrix set objid=@objid where objid=@TestMatrixid and name=@name
+		Status=0
+	</ActionQuery>
+
+
+	<ActionQuery>
+		Name=Call Upadte_Product procedure
+		TableName=Product
+		Description=Call Update_Product procedure
+		StepNo=4
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$activityId
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=exec Update_Product(@objid)
+		MssqlQuery=exec Update_Product @objid
+		Status=0
+	</ActionQuery>

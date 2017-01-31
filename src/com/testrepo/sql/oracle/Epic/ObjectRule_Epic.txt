@@ -1,0 +1,85 @@
+//*****************************************************************//
+//Adding Object Rule
+//Table Name:Epic
+//Attribute Name:Epic Rule
+//********************************************************************//
+
+	<ObjectRule>
+		Name=Epic Rule
+		TableName=Epic
+		EffectedTable=Feature
+		Description=Calling Upadte and Insert Rule for object Epic
+		Reason=1
+		ActionState=1
+		Condition=objid$gt$0
+		RuleIndex=1
+		Status=1
+	</ObjectRule>
+
+//*****************************************************************//
+//Adding Action Query
+//Table Name:Epic
+//Name:Call Insert_Epic procedure
+//Step No:1
+//**************************************************************//
+
+	<ActionQuery>
+		Name=Call Insert_Epic procedure
+		TableName=Epic
+		Description=Call Insert_Epic procedure
+		StepNo=1
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$activityId
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=exec Insert_Epic(@objid)
+		MssqlQuery=exec Insert_Epic @objid
+		Status=0
+	</ActionQuery>
+
+	<ActionQuery>
+		Name=Select -ve objid for child Feature
+		TableName=Feature
+		Description=Select -ve objid for child Feature
+		StepNo=2
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$objid $name $Featureid
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=select objid, name ,objid Featureid from table_Feature where objid like \'-%\' and Feature2Epic=@objid
+		MssqlQuery=select objid, name ,objid Featureid from table_Feature where objid like \'-%\' and Feature2Epic=@objid
+		Status=0
+	</ActionQuery>
+
+	<ActionQuery>
+		Name=Update -ve objid for child Feature
+		TableName=Feature
+		Description=Update -ve objid for child Feature
+		StepNo=3
+		Input=@objid @name @Featureid
+		InputDataType=@Integer @Varchar @Integer
+		Output=$count
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=update table_Feature set objid=@objid where objid=@Featureid and name=@name
+		MssqlQuery=update table_Feature set objid=@objid where objid=@Featureid and name=@name
+		Status=0
+	</ActionQuery>
+
+
+	<ActionQuery>
+		Name=Call Upadte_Epic procedure
+		TableName=Epic
+		Description=Call Update_Epic procedure
+		StepNo=4
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$activityId
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=exec Update_Epic(@objid)
+		MssqlQuery=exec Update_Epic @objid
+		Status=0
+	</ActionQuery>

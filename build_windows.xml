@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<project name="testgen" basedir="." default="jar">    
+	<property name="src" value="${basedir}"/>    
+	<property name="output" value="D:\Projects\CloudTestSoftware\CloudApp\testrepo\build"/>	
+	<property name="libpath" value="D:\Projects\CloudTestSoftware\CloudApp\testrepo\WebContent\WEB-INF\lib"/>
+	<target name="compile" depends="create">        
+		<javac destdir="${output}">                       
+			<src path="${src}"/>                        
+			<classpath refid="java"/>        
+		</javac>    
+	</target>    
+	<target name="jar" depends="compile">        
+		<jar destfile="${libpath}/softleanservice.jar">            
+			<fileset dir="${output}"/>        
+		</jar>
+	</target>
+	
+	<target name="clean">        
+		<delete dir="${output}"/>    
+	</target>    
+	<target name="create" depends="clean">        
+		<mkdir dir="${output}"/>    
+	</target>    
+	<path id="java">        
+		<fileset dir="${libpath}">            
+			<include name="*.jar"/> 
+		</fileset> 
+		<fileset dir="${libpath}/jersey">            
+			<include name="*.jar"/> 
+		</fileset> 
+	</path>
+</project>

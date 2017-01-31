@@ -1,0 +1,209 @@
+//*****************************************************************//
+//Adding Object Rule
+//Table Name:Assignto
+//Attribute Name:Assignto Rule
+//********************************************************************//
+
+	<ObjectRule>
+		Name=Assignto Rule
+		TableName=Assignto
+		EffectedTable=Bug
+		Description=Calling Upadte and Insert Rule for object Assignto
+		Reason=1
+		ActionState=1
+		Condition=objid$gt$0
+		RuleIndex=1
+		Status=1
+	</ObjectRule>
+
+//*****************************************************************//
+//Adding Action Query
+//Table Name:Assignto
+//Name:Call Insert_Assignto procedure
+//Step No:1
+//**************************************************************//
+
+	<ActionQuery>
+		Name=Call Insert_Assignto procedure
+		TableName=Assignto
+		Description=Call Insert_Assignto procedure
+		StepNo=1
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$activityId
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=exec Insert_Assignto(@objid)
+		MssqlQuery=exec Insert_Assignto @objid
+		Status=0
+	</ActionQuery>
+
+	<ActionQuery>
+		Name=Select -ve objid for child Bug
+		TableName=Bug
+		Description=Select -ve objid for child Bug
+		StepNo=2
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$objid $name $Bugid
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=select objid, name ,objid Bugid from table_Bug where objid like \'-%\' and Bug2Assignto=@objid
+		MssqlQuery=select objid, name ,objid Bugid from table_Bug where objid like \'-%\' and Bug2Assignto=@objid
+		Status=0
+	</ActionQuery>
+
+	<ActionQuery>
+		Name=Update -ve objid for child Bug
+		TableName=Bug
+		Description=Update -ve objid for child Bug
+		StepNo=3
+		Input=@objid @name @Bugid
+		InputDataType=@Integer @Varchar @Integer
+		Output=$count
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=update table_Bug set objid=@objid where objid=@Bugid and name=@name
+		MssqlQuery=update table_Bug set objid=@objid where objid=@Bugid and name=@name
+		Status=0
+	</ActionQuery>
+
+
+	<ActionQuery>
+		Name=Select -ve objid for child Member
+		TableName=Member
+		Description=Select -ve objid for child Member
+		StepNo=4
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$objid $name $Memberid
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=select objid, name ,objid Memberid from table_Member where objid like \'-%\' and Member2Assignto=@objid
+		MssqlQuery=select objid, name ,objid Memberid from table_Member where objid like \'-%\' and Member2Assignto=@objid
+		Status=0
+	</ActionQuery>
+
+	<ActionQuery>
+		Name=Update -ve objid for child Member
+		TableName=Member
+		Description=Update -ve objid for child Member
+		StepNo=5
+		Input=@objid @name @Memberid
+		InputDataType=@Integer @Varchar @Integer
+		Output=$count
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=update table_Member set objid=@objid where objid=@Memberid and name=@name
+		MssqlQuery=update table_Member set objid=@objid where objid=@Memberid and name=@name
+		Status=0
+	</ActionQuery>
+
+
+	<ActionQuery>
+		Name=Select -ve objid for child MyBug
+		TableName=MyBug
+		Description=Select -ve objid for child MyBug
+		StepNo=6
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$objid $name $MyBugid
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=select objid, name ,objid MyBugid from table_MyBug where objid like \'-%\' and MyBug2Assignto=@objid
+		MssqlQuery=select objid, name ,objid MyBugid from table_MyBug where objid like \'-%\' and MyBug2Assignto=@objid
+		Status=0
+	</ActionQuery>
+
+	<ActionQuery>
+		Name=Update -ve objid for child MyBug
+		TableName=MyBug
+		Description=Update -ve objid for child MyBug
+		StepNo=7
+		Input=@objid @name @MyBugid
+		InputDataType=@Integer @Varchar @Integer
+		Output=$count
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=update table_MyBug set objid=@objid where objid=@MyBugid and name=@name
+		MssqlQuery=update table_MyBug set objid=@objid where objid=@MyBugid and name=@name
+		Status=0
+	</ActionQuery>
+
+
+	<ActionQuery>
+		Name=Select -ve objid for child MyTasks
+		TableName=MyTasks
+		Description=Select -ve objid for child MyTasks
+		StepNo=8
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$objid $name $MyTasksid
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=select objid, name ,objid MyTasksid from table_MyTasks where objid like \'-%\' and MyTasks2Assignto=@objid
+		MssqlQuery=select objid, name ,objid MyTasksid from table_MyTasks where objid like \'-%\' and MyTasks2Assignto=@objid
+		Status=0
+	</ActionQuery>
+
+	<ActionQuery>
+		Name=Update -ve objid for child MyTasks
+		TableName=MyTasks
+		Description=Update -ve objid for child MyTasks
+		StepNo=9
+		Input=@objid @name @MyTasksid
+		InputDataType=@Integer @Varchar @Integer
+		Output=$count
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=update table_MyTasks set objid=@objid where objid=@MyTasksid and name=@name
+		MssqlQuery=update table_MyTasks set objid=@objid where objid=@MyTasksid and name=@name
+		Status=0
+	</ActionQuery>
+
+
+	<ActionQuery>
+		Name=Select -ve objid for child Tasks
+		TableName=Tasks
+		Description=Select -ve objid for child Tasks
+		StepNo=10
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$objid $name $Tasksid
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=select objid, name ,objid Tasksid from table_Tasks where objid like \'-%\' and Tasks2Assignto=@objid
+		MssqlQuery=select objid, name ,objid Tasksid from table_Tasks where objid like \'-%\' and Tasks2Assignto=@objid
+		Status=0
+	</ActionQuery>
+
+	<ActionQuery>
+		Name=Update -ve objid for child Tasks
+		TableName=Tasks
+		Description=Update -ve objid for child Tasks
+		StepNo=11
+		Input=@objid @name @Tasksid
+		InputDataType=@Integer @Varchar @Integer
+		Output=$count
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=update table_Tasks set objid=@objid where objid=@Tasksid and name=@name
+		MssqlQuery=update table_Tasks set objid=@objid where objid=@Tasksid and name=@name
+		Status=0
+	</ActionQuery>
+
+
+	<ActionQuery>
+		Name=Call Upadte_Assignto procedure
+		TableName=Assignto
+		Description=Call Update_Assignto procedure
+		StepNo=12
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$activityId
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=exec Update_Assignto(@objid)
+		MssqlQuery=exec Update_Assignto @objid
+		Status=0
+	</ActionQuery>

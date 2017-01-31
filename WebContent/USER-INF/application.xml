@@ -1,0 +1,23 @@
+	
+<Context>
+
+
+  <Resource name="amazonEmailResource" 
+              smtp="email-smtp.us-east-1.amazonaws.com" 
+              amazonemailuser="AKIAJKIITXVYB7TTZSGQ"
+              amazonemialpassword="Aqbd3CKaZH/1tcGY2kVzqtXMNhVCNrL1v3RmBD7LRDbW"
+              amazonverifiedemail="mike@artitelly.org"
+              port="465" 
+              />
+ <Resource name="attachmentPath" 
+             path="/u02/app/apache/tomcat6repo/webapps/"
+              uri="attachments/"
+              />
+ 
+ <Resource name="attachmentPathDev" 
+              path="/Users/CloudTestSoftware/CloudApp/testrepo/WebContent/attachments/"
+              uri="attachments/"
+              />
+
+     
+</Context>	

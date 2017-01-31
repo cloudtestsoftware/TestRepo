@@ -1,0 +1,85 @@
+//*****************************************************************//
+//Adding Object Rule
+//Table Name:Assignleadto
+//Attribute Name:Assignleadto Rule
+//********************************************************************//
+
+	<ObjectRule>
+		Name=Assignleadto Rule
+		TableName=Assignleadto
+		EffectedTable=Lead
+		Description=Calling Upadte and Insert Rule for object Assignleadto
+		Reason=1
+		ActionState=1
+		Condition=objid$gt$0
+		RuleIndex=1
+		Status=1
+	</ObjectRule>
+
+//*****************************************************************//
+//Adding Action Query
+//Table Name:Assignleadto
+//Name:Call Insert_Assignleadto procedure
+//Step No:1
+//**************************************************************//
+
+	<ActionQuery>
+		Name=Call Insert_Assignleadto procedure
+		TableName=Assignleadto
+		Description=Call Insert_Assignleadto procedure
+		StepNo=1
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$activityId
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=exec Insert_Assignleadto(@objid)
+		MssqlQuery=exec Insert_Assignleadto @objid
+		Status=0
+	</ActionQuery>
+
+	<ActionQuery>
+		Name=Select -ve objid for child Lead
+		TableName=Lead
+		Description=Select -ve objid for child Lead
+		StepNo=2
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$objid $name $Leadid
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=select objid, name ,objid Leadid from table_Lead where objid like \'-%\' and Lead2Assignleadto=@objid
+		MssqlQuery=select objid, name ,objid Leadid from table_Lead where objid like \'-%\' and Lead2Assignleadto=@objid
+		Status=0
+	</ActionQuery>
+
+	<ActionQuery>
+		Name=Update -ve objid for child Lead
+		TableName=Lead
+		Description=Update -ve objid for child Lead
+		StepNo=3
+		Input=@objid @name @Leadid
+		InputDataType=@Integer @Varchar @Integer
+		Output=$count
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=update table_Lead set objid=@objid where objid=@Leadid and name=@name
+		MssqlQuery=update table_Lead set objid=@objid where objid=@Leadid and name=@name
+		Status=0
+	</ActionQuery>
+
+
+	<ActionQuery>
+		Name=Call Upadte_Assignleadto procedure
+		TableName=Assignleadto
+		Description=Call Update_Assignleadto procedure
+		StepNo=4
+		Input=@Objid
+		InputDataType=@Integer
+		Output=$activityId
+		QueryType=0
+		HasRecordSet=0
+		OracleQuery=exec Update_Assignleadto(@objid)
+		MssqlQuery=exec Update_Assignleadto @objid
+		Status=0
+	</ActionQuery>

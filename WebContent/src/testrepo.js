@@ -3,6 +3,7 @@ var debug=false;
 var skin;
 var itemcount=1;
 var main_layout;
+var window_layout;
 var main_cell;
 var testrepo_toolbar;
 var main_form;
@@ -12,6 +13,17 @@ var gridlist = {};
 var widgetlist = {};
 var widgetforms = {};
 var dataforms={};
+
+//toolbar tab variables
+var toolbarmainforms={};
+var toolbardataforms={};
+var toolbargridlist = {};
+var toolbarwidgetlist = {};
+var toolbarwidgetforms = {};
+var toolbarcurrentgrid = {};
+var toolbargridformdata={};
+var toolbardatafromstruct={}
+var toolbarchildcaller={};
 
 
 var gridformdata={};
@@ -56,8 +68,8 @@ var boardgrid={};
 
 var w=window,d=document,e=d.documentElement,g=d.getElementsByTagName('body')[0];
 var  layoutWidth,  layoutHeight;
-var main_win ;
-var layout_win ;
+//var main_win ;
+//var layout_win ;
 
 var  inputGridWidth,  inputGridHeight;
 
@@ -84,7 +96,14 @@ var  inputGridWidth,  inputGridHeight;
 			
 			dhtmlx.image_path="./src/codebase/skins/"+imagePath[skin]+"/imgs/";
 			dhtmlx.skin=skin;
-			
+			if(!window_layout){
+				window_layout = new dhtmlXLayoutObject({
+					parent: "layoutObj",
+					pattern: "1C",
+					skin: skin,
+					cells: [{id: "a", header: false}]
+				});
+			}
 			
 			
 			if (main_layout != null) {
@@ -93,10 +112,10 @@ var  inputGridWidth,  inputGridHeight;
 			}
 		/*	
 			main_win = new dhtmlXWindows();
-			layout_win = main_win.createWindow("w1", 0, 0, layoutWidth, layoutHeight);
-			layout_win.setText("Test Repository");
+			layout_win = main_win.createWindow("w1",0, 30, layoutWidth, layoutHeight);
+			layout_win.setText("Welcome");
             main_layout=layout_win.attachLayout({
-				parent: "layoutObj",
+				parent: "layoutObjChild",
 				pattern: "1C",
 				skin: skin,
 				cells: [{id: "a", header: false}]
@@ -124,7 +143,9 @@ var  inputGridWidth,  inputGridHeight;
 			    function resizeLayout(){
 			        window.clearTimeout(t);
 			        t = window.setTimeout(function(){
-			        	main_layout.setSizes(true);
+			        	try{
+			        		main_layout.setSizes(true);
+			        	}catch(err){}
 			        },200);
 			    }
 			
@@ -164,11 +185,13 @@ var  inputGridWidth,  inputGridHeight;
 					}else if(oldmenuselectid &&menuselectid!=null && oldmenuselectid!=menuselectid){
 						testrepo_toolbar.setItemImage(oldmenuselectid, oldmenuselectid+".gif");
 					}
-					
+					//layout_win.setText(testrepo_toolbar.getItemText(id));
 					
 				}catch(err){
+					
 					if(oldmenuselectid){
 						testrepo_toolbar.setItemImage(oldmenuselectid, oldmenuselectid+".gif");
+						//layout_win.setText(testrepo_toolbar.getItemText(oldmenuselectid,oldmenuselectid+":"+id));
 					}
 					
 				}
@@ -184,10 +207,56 @@ var  inputGridWidth,  inputGridHeight;
 		
 
 
+function destroyTabWorkspace(id){
+	 widget_form=null;
+	 current_grid=null;
+	 gridlist = null;
+	 widgetlist=null;
+	 widgetforms = null;
+	 dataforms=null;
+	 gridformdata=null;
+	 datafromstruct=null;
+	 tabdataforms=null;
+	 childcaller=null;
+	 
+	 if(toolbarmainforms[menuid]){
+		 
+		 toolbarmainforms[menuid]=null;
+	     toolbardataforms[menuid]=null;
+	     toolbargridlist[menuid] = null;
+	     toolbarwidgetlist[menuid] = null;
+	     toolbarwidgetforms[menuid] = null;
+	     toolbarcurrentgrid[menuid]=null;
+	     toolbardatafromstruct[menuid]=null;
+	     toolbarchildcaller[menuid]=null;
+	     toolbargridformdata[menuid]=null;
+	     
+	     toolbarmainforms[menuid]={};
+	     toolbardataforms[menuid]={};
+	     toolbargridlist[menuid] = {};
+	     toolbarwidgetlist[menuid] = {};
+	     toolbarwidgetforms[menuid] = {};
+	     toolbarcurrentgrid[menuid]={};
+	     toolbardatafromstruct[menuid]={};
+	     toolbarchildcaller[menuid]={};
+	     toolbargridformdata[menuid]={};
+	 }
+	
+}
 function initWorkspace(){
 	 
 	 widget_form=null;
 	 current_grid=null;
+	 gridlist = null;
+	 widgetlist=null;
+	 widgetforms = null;
+	 dataforms=null;
+	 gridformdata=null;
+	 datafromstruct=null;
+	 tabdataforms=null;
+	 childcaller=null;
+	 
+	 //initialize
 	 gridlist = {};
 	 widgetlist={};
 	 widgetforms = {};
@@ -196,6 +265,21 @@ function initWorkspace(){
 	 datafromstruct={};
 	 tabdataforms={};
 	 childcaller={};
+	 
+	 //initialize toolbar menu
+	 if(!toolbarmainforms[menuid]){
+		 toolbarmainforms[menuid]={};
+	     toolbardataforms[menuid]={};
+	     toolbargridlist[menuid] = {};
+	     toolbarwidgetlist[menuid] = {};
+	     toolbarwidgetforms[menuid] = {};
+	     toolbarcurrentgrid[menuid]={};
+	     toolbardatafromstruct[menuid]={};
+	     toolbarchildcaller[menuid]={};
+	     toolbargridformdata[menuid]={};
+	 }
+	
+	 
 	 layoutWidth=w.innerWidth||e.clientWidth||g.clientWidth;
 	 layoutHeight=w.innerHeight||e.clientHeight||g.clientHeight;
 	 if(!layoutWidth){
@@ -209,6 +293,28 @@ function initWorkspace(){
 	 
 }
 
+function initTabClick(caller,oldmenuid){
+	
+		  menuid=caller;
+	     
+		 //initialize worspace
+		 initWorkspace();
+		 
+		 if(toolbarwidgetforms[menuid]){
+			 main_form=toolbarmainforms[menuid];
+			 gridlist=toolbargridlist[menuid];
+			 widgetlist=toolbarwidgetlist[menuid];
+			 widgetforms=toolbarwidgetforms[menuid];
+			 dataforms=toolbardataforms[menuid];
+			 current_grid=toolbarcurrentgrid[menuid];
+			 childcaller=toolbarchildcaller[menuid];
+			 gridformdata=toolbargridformdata[menuid];
+			 datafromstruct=toolbardatafromstruct[menuid];
+			
+		 }
+	
+     
+}
 
 function call_testrepo_toolbar_skin(skin){
 	doOnLoad(skin);
@@ -220,16 +326,36 @@ function testrepo_toolbar_callback(id){
 	 var caller=id;
 	 //toolbar button image
 	
-	 menuid=id;
-	 initWorkspace();
-	 if(main_form){
+	 try{
+		 if(toolbarmainforms[id]  && toolbarmainforms[id].getForm()) return;
+	 }catch(err){
+		 
+	 }
+	 
+	 
+	
+	 if( menuid !=id){
+		 menuid=id;
+		 initWorkspace();
 		 try{
-      	 	 main_form.unload();
-      	 	 main_form=null;
+			 if(toolbarmainforms[id]){
+			    	 main_form=toolbarmainforms[id];
+			    	 gridlist =toolbargridlist[id];
+			    	 widgetlist=toolbarwidgetlist[id];
+			    	 widgetforms =toolbarwidgetforms[id];
+			    	 dataforms=toolbardataforms[id];
+			    	 current_grid=toolbarcurrentgrid[id];
+			    	 childcaller=toolbarchildcaller[id];
+					 gridformdata=toolbargridformdata[id];
+					 datafromstruct=toolbardatafromstruct[id];
+			 }
+	    	
       	 }catch(err){
-      	 	 main_form=null;
+      	 	
       	 }
 	 }
+	 
+	
 	 
 	 if(advance_form){
 		 try{
@@ -270,9 +396,13 @@ function testrepo_toolbar_callback(id){
      }
      */
    //add regular tabbar
-    search_tabbar = main_cell.attachTabbar();
-	search_tabbar.addTab('regular','Search');
-	regular_tab = search_tabbar.cells('regular');
+    if(!search_tabbar){
+    	search_tabbar = main_cell.attachTabbar();
+    }
+    
+	search_tabbar.addTab(caller,caller);
+	search_tabbar.enableTabCloseButton(true);
+	regular_tab = search_tabbar.cells(caller);
 	
 	if(menuid=='projectboard'){
 		search_tabbar.addTab('advance','Sprint Board');
@@ -286,22 +416,28 @@ function testrepo_toolbar_callback(id){
     if((menuselectid=="crm" && caller.indexOf("my")>=0) ||menuselectid=="testuser" ||menuselectid=="artitelly"){
     	 addRegularMainSearchForm(caller);
     	action_button_callback("search:"+caller,null);
-    }else{
+    }else {
     	 addRegularMainSearchForm(caller);
     }
+    search_tabbar.attachEvent("onTabClose", function(id){
+    	destroyTabWorkspace(id);
+        return true;
+    });
     search_tabbar.attachEvent('onTabClick', function(id, last_id){
-    	
-    	search_tabbar.tabs(last_id).disable();
-    	search_tabbar.tabs(id).enable();
-    	search_tabbar.tabs(id).setActive();
-		if(id=='regular'){
-			addRegularMainSearchForm(caller);
-		}else if(id=='advance' &&last_id!='task'){
-			//dhtmlx.message("Sprint Board");
-			
-			addAdvanceForm(caller)
-			loadDataView();
-		}
+    	if(last_id){
+    		initTabClick(id,last_id);
+        	search_tabbar.tabs(last_id).disable();
+	    	search_tabbar.tabs(id).enable();
+	    	search_tabbar.tabs(id).setActive();
+			if(id==caller && !toolbarmainforms[id]){
+				addRegularMainSearchForm(caller);
+			}else if(id=='advance' &&last_id && last_id!='task'){
+				//dhtmlx.message("Sprint Board");
+				
+				addAdvanceForm(caller)
+				loadDataView();
+			}
+    	}
 	});
   
    
@@ -346,7 +482,9 @@ function addRegularMainSearchForm(caller){
 	    	formContext=eval(caller+"_main_context");
 	    }catch(err){ }
 	
-	    if(main_form){
+	  /*
+	  if(main_form){
+	   
 	    	return;
 	       
 	    }else{
@@ -357,11 +495,12 @@ function addRegularMainSearchForm(caller){
 	      	 	 main_form=null;
 	      	 }
 	    }
-	      
+	    */
 	    
 	    try{
 	  	 	if(formContext){
 	  	 	  main_form = regular_tab.attachForm(formContext);
+	  	 	  toolbarmainforms[caller]=main_form;
 	  	 	  regular_tab.setActive();
 	  		}
 	  	 	
@@ -427,10 +566,20 @@ function addWidgetLayout(table,container ){
     	widget_cell.hideHeader();
     	//widget_cell.setWidth('0');
    		widgetlist[table]=widget_layout;
+   		toolbarwidgetlist[menuid][table]=widget_layout;
 		widget_form=widget_cell.attachForm(contextData);
 		widget_form.attachEvent('onButtonClick', function(name, command){
 	        action_button_callback(name,command);
 		});
+
+		try{
+			//if(!toolbarwidgetforms[menuid]) toolbarwidgetforms[menuid]={};
+			toolbarwidgetforms[menuid][table]=widget_form;
+			widgetforms=toolbarwidgetforms[menuid];
+			
+		}catch(err){}
+		
+		
 		widgetforms[table]=widget_form;
 		if(current_grid &&current_grid.getSelectedRowId()){
 			//add parent relation
@@ -514,6 +663,9 @@ function getWidgetForm(table){
 	var form;
 	if(widgetforms[table]){
 		form=widgetforms[table];
+	}else if(toolbarwidgetforms[menuid]){
+		form=toolbarwidgetforms[menuid][table];
+		
 	}else if(tabwidgetforms){
 		form=tabwidgetforms[table];
 	}
@@ -535,7 +687,7 @@ function getMainForm(){
 	 return form;
 }
 function scrollToChild(child){
-	 
+	 var container;
 	 var table=child.split(":")[1];
 	 var table_container=table+"_container";
 	
@@ -543,7 +695,10 @@ function scrollToChild(child){
 		 document.getElementById("layoutObj").scrollIntoView();
 		 return false;
 	 }
-	 var container= getMainForm().getContainer(table_container);
+	 try{
+		  container= getMainForm().getContainer(table_container);
+	 }catch(err){}
+	
 	 if(!container ){// &&child.indexOf("tabwidget")>=0
 		 table_container=table+"_grid_container";
 		 if(!container && getWidgetForm(table)){
@@ -584,7 +739,11 @@ function scrollToChild(child){
 
 function removeWidget(table){
   var fieldset_name=table+"_form_fieldset";
-  main_form.removeItem(fieldset_name);
+   if(main_form){
+	   main_form.removeItem(fieldset_name);
+   }
+ 
+ 
 }
 
 function removeList(table){
@@ -722,6 +881,10 @@ function addGridToMainForm(container, table,widget_form){
   	//grid.setUserData("","table",table);
 	gridlist[table]=grid;
 	
+	if(toolbargridlist[menuid] &&!toolbargridlist[menuid][table]){
+		toolbargridlist[menuid][table]=grid;
+	}
+	
 	grid.attachEvent('onRowSelect',function(rowId,cellIndex){
 		
 	        //alert("rowid="+grid.getSelectedRowId())
@@ -731,6 +894,9 @@ function addGridToMainForm(container, table,widget_form){
 			grid_onRowSelect_callback(grid,table,rowId,cellIndex);
 			callCustomRowSelect(table,'onRowSelect');
 			gridlist[table]=grid;
+			if(toolbargridlist[menuid] &&!toolbargridlist[menuid][table]){
+				toolbargridlist[menuid][table]=grid;
+			}
 		
 	});
 	
@@ -766,6 +932,7 @@ function addGridToMainForm(container, table,widget_form){
 	
 	
 	current_grid=grid;
+	toolbarcurrentgrid[menuid]=grid;
 	
 	 var data_form=getDataForm(table);
 	 
@@ -803,6 +970,8 @@ function addDataForm(table){
 			data_form=null;
 		}
    	}
+   if(!widgetforms[table]) widgetforms=toolbarwidgetforms[menuid];
+   
    if(widgetforms[table]){
   	 parent_objid=widgetforms[table].getUserData("parent_objid","");
    }else{
@@ -849,7 +1018,12 @@ function addDataForm(table){
     	callCustomFormLoad(table);
     	setDataFormFieldWidth(table);
 	});
-	
+	try{
+		
+		toolbardataforms[menuid][table]=data_form;
+		
+	}catch(err){}
+
 	dataforms[table]=data_form;
 	addHTMLContent(table);
    	
@@ -893,15 +1067,21 @@ function setParentObject(form, parent, table){
 function grid_onRowSelect_callback(grid,table,rowId,cellIndex){
         var colIdx=0;
         var formdata={};
-        var current_table=current_grid.getUserData("","table");
+        var current_table=null
         var child_table=getChild(menuid,table);
         var form=null;
         var focusitem;
+        if(current_grid){
+        	current_table=current_grid.getUserData("","table");
+        }else{
+        	current_table=grid.getUserData("","table");
+        }
         //if child caller
         if(childcaller[current_table]|| childcaller[table]){
         	current_table=grid.getUserData("","table");
         }
         current_grid=grid;
+        toolbarcurrentgrid[menuid]=grid;
         
         if(child_table &&child_table!=current_table & current_table!=table){
            current_table=child_table;
@@ -969,6 +1149,7 @@ function grid_onRowSelect_callback(grid,table,rowId,cellIndex){
 	        });
    			 setFormRelation(table);
 	         gridformdata[table]=formdata;
+	         toolbargridformdata[menuid][table]=formdata;
 	       
 	    }else{
 	        dhtmlx.message("Form is not loaded yet!");
@@ -1035,6 +1216,9 @@ function getDataForm(table){
 	if(tabdataforms &&tabdataforms[table]){
 	  	   return tabdataforms[table];
 	}
+	if(toolbardataforms[menuid] &&toolbardataforms[menuid][table]){
+		return toolbardataforms[menuid][table];
+	}
 	 return dataforms[table];
 	
 }
@@ -1085,16 +1269,21 @@ function clearParentChildBeneath(table){
   removeWidget(table);
   
   while (getChild(menuid,table)!=null){
-        var child=getChild(menuid,table);
-        table=child;
-  		widget_form=widgetforms[child];
-        if(widget_form){
-        	widget_form.unload();
-        	widgetforms[child]=null;
-        	dataforms[child]=null;
-        	removeWidget(child);
-        	
-        }
+	   try{
+		   var child=getChild(menuid,table);
+	        table=child;
+	  		widget_form=widgetforms[child];
+	        if(widget_form){
+	        	widget_form.unload();
+	        	widgetforms[child]=null;
+	        	dataforms[child]=null;
+	        	removeWidget(child);
+	        	
+	        }
+	   }catch(err){
+		   dhtmlx.message(err + " could not find object " +child +" in widgetforms list!")
+	   }
+        
         	
    }
   clearCustomChildBeneath(table);
@@ -1682,6 +1871,7 @@ function get(strURL,table){
 				var response=xmlHttpReq.responseText;;
 				if (xmlHttpReq.readyState == 4) {	
 					datafromstruct[table]=xmlHttpReq.responseText;
+					toolbardatafromstruct[table]=xmlHttpReq.responseText;
 				}
 				if(response.indexOf("Authentication Failed for user=null")>=0){
 					dhtmlx.alert("Your session got expired! Please click Refresh button on the browser!");
@@ -2212,15 +2402,18 @@ function hideFormCols(table){
 function enableEditorToolbar(table){
 	var form=getDataForm(table);
 	if(form){
-		form.forEachItem(function(name){
-			try{
-				var editor=form.getEditor(name);
-				if(editor){
-					editor.toolbar=true;
-				 }
-			  }catch(err){  }
-			 
-		 });
+		try{
+			form.forEachItem(function(name){
+				try{
+					var editor=form.getEditor(name);
+					if(editor){
+						editor.toolbar=true;
+					 }
+				  }catch(err){  }
+				 
+			 });
+		}catch(err){}
+		
 	}
 	
 	

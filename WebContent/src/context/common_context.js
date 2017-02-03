@@ -392,7 +392,7 @@ var menuconfig={
 	        },
 	        "mytasks": {
 	            "mytasks": {"caption":"My Tasks","button_width":"100","child":"tasknote","form":"tasks","formcolhide":"loginname","disablefields":"storypoint,startdate,duedate,estimatedhr"},
-	        	"feature": {"caption":"Features", "relatedto":"objid:tasks2feature", "parent":"mytasks","child":"scenerio", "button_width":"100","formload":"update_feature_status","rowselect":"update_feature_status","buttonhide":"featuretestcount,create,save,remove_custom_table,scroll:epic"},
+	        	"feature": {"caption":"Features", "relatedto":"objid:tasks2feature", "parent":"mytasks","child":"scenerio", "button_width":"100","formload":"update_feature_status","rowselect":"update_feature_status","buttonhide":"summary,feature:featuretestcount:handle_custom_changes,create:feature,save:feature,remove_custom_table,scroll:epic"},
 	        	"scenerio": {"caption":"Scenarios", "relation":"scenerio2feature", "child":"matrixlist", "parent":"feature","button_width":"100","formcolhide":"projectname,featurename"},
 	        	"matrixlist": {"caption":"Matrix", "relation":"matrixmap2scenerio", "parent":"scenerio","button_width":"100","rowselect":"update_matrixlist_for_scenerio","excludecolupdate":":scenerio","buttonhide":"scroll:project"},
 	        	"tasknote": {"caption":"Note", "relation":"tasknote2tasks", "parent":"mytasks","button_width":"100","buttonhide":"scroll:tasks:tabwidget,scroll:feature:tabwidget"},

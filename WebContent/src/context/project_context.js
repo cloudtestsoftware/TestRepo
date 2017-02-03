@@ -247,7 +247,7 @@ var epic_toolbar=
 		
 		{ type: "separator" },
 		{ id: "scroll:project", type: "button", img: "up1.gif", title: "Previous step", action:"action_button_callback"},
-		{ id: "epic:feature:handle_custom_changes", type: "button", img: "down1.gif",  title: "Next step", action:"action_button_callback" },
+		{ id: "scroll:feature", type: "button", img: "down1.gif",  title: "Next step", action:"action_button_callback" },
 		
 	]
 

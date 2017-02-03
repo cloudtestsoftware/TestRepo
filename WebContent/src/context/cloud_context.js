@@ -405,6 +405,37 @@ var createscript_grid_context=
 	  ];
 */
 
+var createscript_grid_context=
+	[
+	{ type:"fieldset" , name:"createscript_list", label:"Launch Script List", list:[
+	    
+		{ type:"container" , name:"createscript_grid_container", inputWidth:"500", inputHeight:"400"  },
+		{ type:"input" , name:"grid:rowcount", label:"Total Rows:"  },
+		
+		{ type:"newcolumn"   },
+		
+		{ type:"block" , name:"createscript_action_block", offsetLeft:"30", list:[
+        
+		{ type:"container" , name:"createscript_form_cont", inputWidth:"50%", inputHeight:"100%"  },
+		{ type:"container" , name:"createscript_datagrid_cont", inputWidth:0, inputHeight:0  },
+		{ type:"container" , name:"simpleLog", inputWidth:300, inputHeight:200  }
+		
+		]  },
+	]  }
+	
+	];
+
+var createscript_toolbar=
+	[
+		
+		{ id: "make:createscript:createAttachment", type: "button", img: "upload.gif", title: "Upload script file", action:"action_button_callback"},
+		{ id: "show:createscript:getDownloadFile", type: "button", img: "download.gif",  title: "Download script file", action:"action_button_callback" },
+		{ id: "delete:createscript:deleteFile", type: "button", img: "delete.gif", title: "Delete script file", action:"action_button_callback"},
+		{ type: "separator" },
+		{ id: "scroll:createimage", type: "button", img: "up1.gif", title: "Back to image", action:"action_button_callback"},
+		
+		
+	];
 
 /*
 var launchscript_grid_context=
@@ -460,7 +491,7 @@ var launchscript_toolbar=
 		{ id: "delete:launchscript:deleteFile", type: "button", img: "delete.gif", title: "Delete script file", action:"action_button_callback"},
 		{ type: "separator" },
 		{ id: "scroll:createimage", type: "button", img: "up1.gif", title: "Back to image", action:"action_button_callback"},
-		{ id: "bug:launchscript:removeMe", type: "button", img: "up1.gif", title: "Back to bug", action:"action_button_callback"},
+		
 		
 	];
 function save_privilege(name){

@@ -219,6 +219,7 @@ function destroyTabWorkspace(id){
 	 tabdataforms=null;
 	 childcaller=null;
 	 
+	 
 	 if(toolbarmainforms[menuid]){
 		 
 		 toolbarmainforms[menuid]=null;
@@ -316,7 +317,47 @@ function initTabClick(caller,oldmenuid){
      
 }
 
+function destroyTabWorkspaceForSkin(){
+	 search_tabbar=null;
+	 widget_form=null;
+	 current_grid=null;
+	 gridlist = null;
+	 widgetlist=null;
+	 widgetforms = null;
+	 dataforms=null;
+	 gridformdata=null;
+	 datafromstruct=null;
+	 tabdataforms=null;
+	 childcaller=null;
+	 advance_form=null;
+	 task_form=null;
+	 
+	 if(toolbarmainforms[menuid]){
+		 
+		 toolbarmainforms=null;
+	     toolbardataforms=null;
+	     toolbargridlist = null;
+	     toolbarwidgetlist = null;
+	     toolbarwidgetforms = null;
+	     toolbarcurrentgrid=null;
+	     toolbardatafromstruct=null;
+	     toolbarchildcaller=null;
+	     toolbargridformdata=null;
+	     
+	     toolbarmainforms={};
+	     toolbardataforms={};
+	     toolbargridlist = {};
+	     toolbarwidgetlist = {};
+	     toolbarwidgetforms = {};
+	     toolbarcurrentgrid={};
+	     toolbardatafromstruct={};
+	     toolbarchildcaller={};
+	     toolbargridformdata={};
+	 }
+	
+}
 function call_testrepo_toolbar_skin(skin){
+	destroyTabWorkspaceForSkin();
 	doOnLoad(skin);
 }
 
@@ -573,7 +614,7 @@ function addWidgetLayout(table,container ){
 		});
 
 		try{
-			//if(!toolbarwidgetforms[menuid]) toolbarwidgetforms[menuid]={};
+			
 			toolbarwidgetforms[menuid][table]=widget_form;
 			widgetforms=toolbarwidgetforms[menuid];
 			

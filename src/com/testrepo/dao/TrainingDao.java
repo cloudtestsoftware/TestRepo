@@ -27,34 +27,20 @@
 	public class TrainingDao extends TrainingImpl {
 		Map<String, Cookie> cookies; 
 		Map<String,String> userdata;
-		private String []deletetabs={"training,"};
 		private String []childtabs={"mytraining"};
-		private String []childtabnames={"MyTraining"};
 		
-		private String [] maincol={"objid","name","startdate","enddate","course","location","fees","lastdate","starttime","type","status"};
+		private String [] maincol={"objid","name","startdate","enddate","course","location","fees","lastdate","starttime","taskcode","status"};
 		private String [] maincolcaption={"Id","Name","Start Date","End Date","Course","Location","Fees ($)","Booking Ends","Start Time","Type","Status"};
 		private String [] mainsqldatatype={DataType.VARCHAR,DataType.VARCHAR,DataType.DATE,DataType.DATE,DataType.VARCHAR,DataType.VARCHAR,DataType.NUMBER,DataType.DATE,DataType.VARCHAR,DataType.VARCHAR,DataType.VARCHAR};
 		private String [] mainformfields={"input","input","input","input","input","input","input","input","input","input","input"};
-		private String [] maindatadomain={"Int_t","String200_t","Date_t","Date_t","String4000_t","String300_t","Money_t","Date_t","Time_t","Type_t","Status_t"};
-		private String [] maincolsearch={"#text_filter,#text_filter,,,,,,,,,"};
+		private String [] maindatadomain={"Int_t","String200_t","Date_t","Date_t","String4000_t","String300_t","Money_t","Date_t","Time_t","Code_t","Status_t"};
 		
 		private String [] summarycol={"name"};
 		private String [] summarycolcaption={"Name"};
 		private String [] summarysqldatatype={DataType.VARCHAR};
-		private String [] summarydatadomain={"Name_t"};
-		
-		private String [] reportcol={"objid","name"};
-		private String [] reportcolcaption={"Id","Name"};
-		private String [] reportsqldatatype={DataType.VARCHAR,DataType.VARCHAR};
-		private String [] reportdatadomain={"Id_t","String200_t"};
-		
-		private String [] searchcol={"objid","name"};
-		private String [] searchcolcaption={"Id","Name"};
-		private String [] searchcoltype={"integer","text"};
-		private String [] searchdatadomain={"Id_t","String200_t"};
 
-		private String [] propTraininglist={"type","status"};
-		private String [] codeTraininglist={};
+		private String [] propTraininglist={"status"};
+		private String [] codeTraininglist={"taskcode"};
 		private String [] relationTraininglist={};
 		
 		private String [] mytrainingcol={"objid","name","startdate","enddate","course","location","fees","lastdate","starttime","type"};

@@ -27,35 +27,21 @@
 	public class MytrainingDao extends MytrainingImpl {
 		Map<String, Cookie> cookies; 
 		Map<String,String> userdata;
-		private String []deletetabs={""};
 		private String []childtabs={""};
-		private String []childtabnames={""};
 		
 		private String [] maincol={"objid","mytraining2training","name","startdate","enddate","course","location","fees","lastdate","starttime","type"};
 		private String [] maincolcaption={"Id","Training","Name","Start Date","End Date","Course","Location","Fees ($)","Booking Ends","Start Time","Type"};
 		private String [] mainsqldatatype={DataType.VARCHAR,DataType.INTEGER,DataType.VARCHAR,DataType.DATE,DataType.DATE,DataType.VARCHAR,DataType.VARCHAR,DataType.NUMBER,DataType.DATE,DataType.VARCHAR,DataType.VARCHAR};
 		private String [] mainformfields={"input","input","input","input","input","input","input","input","input","input","input"};
 		private String [] maindatadomain={"Int_t","Int_t","String200_t","Date_t","Date_t","String4000_t","String300_t","Money_t","Date_t","Time_t","Type_t"};
-		private String [] maincolsearch={"#text_filter,#select_filter,#text_filter,,,,,,,,"};
 		
 		private String [] summarycol={"name"};
 		private String [] summarycolcaption={"Name"};
 		private String [] summarysqldatatype={DataType.VARCHAR};
-		private String [] summarydatadomain={"Name_t"};
-		
-		private String [] reportcol={"objid","name"};
-		private String [] reportcolcaption={"Id","Name"};
-		private String [] reportsqldatatype={DataType.VARCHAR,DataType.VARCHAR};
-		private String [] reportdatadomain={"Id_t","String200_t"};
-		
-		private String [] searchcol={"objid","name"};
-		private String [] searchcolcaption={"Id","Name"};
-		private String [] searchcoltype={"integer","text"};
-		private String [] searchdatadomain={"Id_t","String200_t"};
 
 		private String [] propMytraininglist={};
 		private String [] codeMytraininglist={};
-		private String [] relationMytraininglist={"training:mytraining2training:list:table_training t,table_company c@t.lastdate between sysdate and sysdate+35"};
+		private String [] relationMytraininglist={"training:mytraining2training:list:table_training t,table_company c@t.lastdate between sysdate and sysdate+35 order by t.lastdate asc"};
 
 		public MytrainingDao(UriInfo uriInfo, HttpHeaders header) throws AuthenticationException{
 			this.setObject("Mytraining");
@@ -127,7 +113,7 @@
 		}
 
 		public Rows getMytrainingSummaryRows(){
-			TemplateTable tab=this.DogetPostSelect(summarycol,summarysqldatatype,this.MytrainingFilter);
+			TemplateTable tab=this.DogetPostSelect(summarycol,summarysqldatatype,this.MytrainingFilter,false);
 			ArrayList<String> chartcols=tu.getChartSelectColumns("Mytraining");
 			Rows rows=tu.getXMLSummaryRows(tab,summarycolcaption);
 			ArrayList<Userdata> userdata=rows.getUserdata();
@@ -149,13 +135,13 @@
 		}
 
 		public Rows getMytrainingRows(){
-			TemplateTable tab=this.DogetPostSelect(maincol,mainsqldatatype,this.MytrainingFilter);
+			TemplateTable tab=this.DogetPostSelect(maincol,mainsqldatatype,this.MytrainingFilter,false);
 			Rows rows=tu.getXMLRows(tab, "Mytraining",codeMytraininglist,propMytraininglist,relationMytraininglist,maincolcaption,maindatadomain,this.getGroupuser());
 			return rows;
 		}
 
 		public Items getMytrainingForm(){
-			TemplateTable tab=this.DogetPostSelect(maincol,mainsqldatatype,this.MytrainingFilter);
+			TemplateTable tab=this.DogetPostSelect(maincol,mainsqldatatype,this.MytrainingFilter,true);
 			Items items=tu.getXMLForm(tab, "Mytraining",codeMytraininglist,propMytraininglist,relationMytraininglist,maincolcaption,maindatadomain,mainformfields,this.getGroupuser(),this.getRelationFilters());
 			return items;
 		}

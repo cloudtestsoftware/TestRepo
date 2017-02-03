@@ -16,7 +16,7 @@ BEGIN
 		Fees=Fees,
 		LastDate=LastDate,
 		StartTime=StartTime,
-		Type=Type,
+		TaskCode=TaskCode,
 		Status=Status,
 		moduser=moduser 
 		where objid=pnObjid;

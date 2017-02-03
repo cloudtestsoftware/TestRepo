@@ -937,7 +937,7 @@ function hideGrid(grid){
 }
 
 function viewBoard(){
-	search_tabbar.tabs("regular").disable();
+	search_tabbar.tabs("projectboard").disable();
 	search_tabbar.tabs("advance").enable();
 	search_tabbar.tabs("advance").setActive();
 	addAdvanceForm(menuid)

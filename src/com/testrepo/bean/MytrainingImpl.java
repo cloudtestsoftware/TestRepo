@@ -108,12 +108,15 @@
 		 }
 
 
-		  public  TemplateTable  DogetPostSelect(String[] column,String[] datatype,String parentfilter){
+		  public  TemplateTable  DogetPostSelect(String[] column,String[] datatype,String parentfilter,boolean isform){
 			 String sql="";
 			 TemplateQuery query =new TemplateQuery();
 			//do some custom pre query operation if any 
 			 EventListener.registerPreQueryParent("Mytraining",column,datatype);
 			 query.setUserName(this.getUsername());
+			 if(isform){
+				 query.setIsForm(isform);
+			 }
 			 if (tu.isEmptyValue(parentfilter)){
 				 if(!tu.isEmptyValue(this.getParentobjid()))
 					query.makeTableSelect(this.getObject(),"ObjId","=",this.getParentobjid(),column,datatype);

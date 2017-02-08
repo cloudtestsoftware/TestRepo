@@ -86,7 +86,7 @@ var company_toolbar=
 		//{ id: "create:company", type: "button", img: "create.gif", title: "Create", action:"action_button_callback"},
 		{ id: "save:company", type: "button", img: "save.gif",  title: "Save", action:"action_button_callback" },
 		{ type: "separator" },
-		{ id: "scroll:testuser", type: "button", img: "up1.gif", title: "Back to user", action:"action_button_callback"},
+		{ id: "scroll:testuser", type: "button", img: "down1.gif", title: "Back to user", action:"action_button_callback"},
 		
 	];
 
@@ -147,7 +147,7 @@ var privilegegroup_toolbar=
 		{ id: "save:privilegegroup", type: "button", img: "save.gif",  title: "Save", action:"action_button_callback" },
 		{ type: "separator" },
 		
-		{ id: "scroll:module", type: "button", img: "down1.gif", title: "Next step to add variables", action:"action_button_callback"}
+		{ id: "scroll:module", type: "button", img: "down1.gif", title: "Next step to give access for module", action:"action_button_callback"}
 		
 	];
 

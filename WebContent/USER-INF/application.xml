@@ -10,7 +10,7 @@
               port="465" 
               />
  <Resource name="attachmentPath" 
-             path="/u02/app/apache/tomcat6repo/webapps/"
+             path="/u01/apache/apache-tomcat-7.0.73/webapps/"
               uri="attachments/"
               />
  

@@ -49,7 +49,6 @@ var project_toolbar=
 		
 		{ id: "new", type: "buttonSelect", img: "new.gif",text: "Add", title:"Add to project", openAll: true, renderSelect: false,
 			options: [
-			    { type: "button", id: "project:epic:handle_custom_changes", text: "Add Epic", img: "epic.gif"},
 				{ type: "button", id: "project:member:handle_custom_changes", text: "Add Member",img: "member.gif" },
 				{ type: "button", id: "project:board:handle_custom_changes", text: "Add Board", img: "board.gif" },
 			]
@@ -62,7 +61,7 @@ var project_toolbar=
 		
 		{ type: "separator" },
 		{ id: "scroll:release", type: "button", img: "up1.gif", title: "Previous step", action:"action_button_callback"},
-		{ id: "project:epic:handle_custom_changes", type: "button", img: "down1.gif",  title: "Next step", action:"action_button_callback" },
+		{ id: "scroll:epic", type: "button", img: "down1.gif",  title: "Next step", action:"action_button_callback" },
 		
 	]
 

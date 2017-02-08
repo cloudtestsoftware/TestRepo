@@ -2,7 +2,7 @@
 
 var training_main_context = [
         {type: "settings", position: "label-left", labelWidth: 150},
-		{ type:"fieldset" , name:"search_filterset", label:"training Search Filters", list:[
+		{ type:"fieldset" , name:"search_filterset", label:"Training Search Filters", list:[
 		{ type:"input" , name:"name", label:"Partial training Name:"  },
 		{ type:"input" , name:"projectname", label:"Partial Project Name:"  },
 		{ type:"button" , name:"search:training:search_custom_action", value:"Search", command:"save"  }
@@ -37,7 +37,7 @@ var training_grid_context=
 
 var training_grid_context=
 	[
-	{ type:"fieldset" , name:"training_list", label:"training List", list:[
+	{ type:"fieldset" , name:"training_list", label:"Training List", list:[
 	    
 		{ type:"container" , name:"training_grid_container", inputWidth:"500", inputHeight:"400"  },
 		{ type:"input" , name:"grid:rowcount", label:"Total Rows:"  },
@@ -169,6 +169,7 @@ var bookcourse_toolbar=
 		{ id: "payment:bookcourse:make_payment", type: "button", img: "payment.gif", title: "Pay Fees", action:"action_button_callback"},
 		{ id: "register:bookcourse:get_prod_access", type: "button", img: "register.gif",  title: "Register course", action:"action_button_callback" },
 		{ type: "separator" },
+		{ id: "scroll:training", type: "button", img: "up1.gif", title: "Back to booking", action:"action_button_callback"},
 		{ id: "scroll:mytraining", type: "button", img: "up1.gif", title: "Back to booking", action:"action_button_callback"},
 		{ id: "scroll:coursefeedback", type: "button", img: "down1.gif", title: "give feedback", action:"action_button_callback"},
 		

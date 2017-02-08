@@ -74,7 +74,7 @@ var featurerun_toolbar=
 		{ id: "file:download:featurerun", type: "button", img: "download.gif", title: "Download", action:"action_button_callback"},
 		{ type: "separator" },
 		{ id: "scroll:testrun", type: "button", img: "up1.gif", title: "Back to testrun", action:"action_button_callback"},
-		{ id: "scroll:grouprun", type: "button", img: "up2.gif", title: "Back to grouprun", action:"action_button_callback"},
+		{ id: "scroll:grouprun", type: "button", img: "up1.gif", title: "Back to grouprun", action:"action_button_callback"},
 		{ id: "scroll:testscenerio", type: "button", img: "down1.gif", title: "Go to testscenario", action:"action_button_callback"},
 		
 	];
@@ -118,7 +118,7 @@ var featuretestresult_grid_context=
 var featuretestresult_toolbar=
 	[
 		{ id: "release:featuretestresult:removeMe", type: "button", img: "up1.gif", title: "Previous step", action:"action_button_callback"},
-		{ id: "scroll:feature:tabwidget", type: "button", img: "up2.gif", title: "Back to feature", action:"action_button_callback"}
+		{ id: "scroll:feature:tabwidget", type: "button", img: "up1.gif", title: "Back to feature", action:"action_button_callback"}
 		
 	]
 /*
@@ -176,7 +176,7 @@ var groupfeaturerun_toolbar=
 
 		{ id: "file:download:groupfeaturerun", type: "button", img: "download.gif", title: "Download", action:"action_button_callback"},
 		{ type: "separator" },
-		{ id: "scroll:grouprun", type: "button", img: "up2.gif", title: "Back to grouprun", action:"action_button_callback"},
+		{ id: "scroll:grouprun", type: "button", img: "up1.gif", title: "Back to grouprun", action:"action_button_callback"},
 		{ id: "scroll:groupscenerio", type: "button", img: "down1.gif", title: "Go to scenario", action:"action_button_callback"},
 		
 	];

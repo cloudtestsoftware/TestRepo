@@ -5746,8 +5746,26 @@
 		Remark=Jenkin Job token
 	</Attribute>
 	<Attribute>
-		AttributeName=ReportUrl
+		AttributeName=JobUrl
 		AttrIndex=7
+		AliasName=Job URL 
+		Behavior=text
+		DomainName=String250_t
+		IsNull=yes
+		DefaultValue=null
+		HasProperty=no
+		HasCodeObject=no
+		FieldType=null
+		IsViewField=no
+		SelectMandatory=no
+		IsSearchField=yes
+		IsBaseline=yes
+		Version=1.0
+		Remark=Job URL to locate the Job physically in Jenkins
+	</Attribute>
+	<Attribute>
+		AttributeName=ReportUrl
+		AttrIndex=8
 		AliasName=Job Report URL
 		Behavior=text
 		DomainName=String300_t
@@ -9653,7 +9671,7 @@
   <Attribute>
     AttributeName=JenkinUrl
     AttrIndex=2
-    AliasName=Jenkin URL
+    AliasName=CICD/Jenkin URL
     Behavior=text
     DomainName=String200_t
     IsNull=no
@@ -9841,6 +9859,362 @@
 </SemanticObject>
 
 //**********************************************//
+    CicdService
+//**********************************************//
+
+<SemanticObject>
+  ObjectName=CicdService
+  AliasName=CicdService
+  ObjectType=Table
+  ObjectFilter=null
+  IsBaseline=Yes
+  Version=1.0
+  ObjectTypeNo=128
+  GroupAccess=admin
+  AllowDelete=no
+  AllowNew=yes
+  AllowSearch=yes
+  Remark= This table stores the Cicd Service
+  <Attribute>
+    AttributeName=Name
+    AttrIndex=1
+    AliasName=Name
+    Behavior=text
+    DomainName=String200_t
+    IsNull=no
+    DefaultValue=null
+    HasProperty=no
+    HasCodeObject=no
+    FieldType=null
+    IsViewField=no
+    SelectMandatory=yes
+    IsSearchField=yes
+    IsBaseline=yes
+    Version=1.0
+    Remark=Name of the CICD Service 
+  </Attribute>
+  <Attribute>
+    AttributeName=Endpoint
+    AttrIndex=2
+    AliasName=CICD Endpoints
+    Behavior=text
+    DomainName=String300_t
+    IsNull=no
+    DefaultValue=null
+    HasProperty=no
+    HasCodeObject=no
+    FieldType=null
+    IsViewField=no
+    SelectMandatory=no
+    IsSearchField=no
+    IsBaseline=yes
+    Version=1.0
+    Remark=End point of the CI/CD Service
+  </Attribute>
+  <Attribute>
+    AttributeName=ExternalId
+    AttrIndex=3
+    AliasName=External ServiceId
+    Behavior=text
+    DomainName=String100_t
+    IsNull=no
+    DefaultValue=null
+    HasProperty=no
+    HasCodeObject=no
+    FieldType=null
+    IsViewField=no
+    SelectMandatory=no
+    IsSearchField=no
+    IsBaseline=yes
+    Version=1.0
+    Remark=External reference of the CI/CD Service
+  </Attribute>
+  <Attribute>
+    AttributeName=AuthType
+    AttrIndex=4
+    AliasName=Auth Type
+    Behavior=select
+    DomainName=Type_t
+    IsNull=no
+    DefaultValue=null
+    HasProperty=yes
+    HasCodeObject=no
+    FieldType=null
+    IsViewField=no
+    SelectMandatory=yes
+    IsSearchField=no
+    IsBaseline=yes
+    Version=1.0
+    Remark=Auth type basic , oAuth etc
+  </Attribute>
+  <Attribute>
+    AttributeName=Method
+    AttrIndex=5
+    AliasName=Method Call
+    Behavior=select
+    DomainName=Type_t
+    IsNull=no
+    DefaultValue=null
+    HasProperty=yes
+    HasCodeObject=no
+    FieldType=null
+    IsViewField=no
+    SelectMandatory=yes
+    IsSearchField=no
+    IsBaseline=yes
+    Version=1.0
+    Remark=method of service call POST , GET, PUT, etc
+  </Attribute> 
+  <Attribute>
+    AttributeName=ExpiryDate
+    AttrIndex=6
+    AliasName=Expired On
+    Behavior=date
+    DomainName=Date_t
+    IsNull=no
+    DefaultValue=null
+    HasProperty=no
+    HasCodeObject=no
+    FieldType=null
+    IsViewField=no
+    SelectMandatory=yes
+    IsSearchField=yes
+    IsBaseline=yes
+    Version=1.0
+    Remark=Date when expired
+  </Attribute>
+  <Index>
+     Indexname=Pk_CicdService_Indx01
+     Fields=ObjId
+     IndexType=Unique
+  </Index>
+ 
+</SemanticObject>
+
+//**********************************************//
+       VarService
+//**********************************************//
+<SemanticObject>
+  ObjectName=VarService
+  AliasName=VarService
+  ObjectType=Table
+  ObjectFilter=null
+  IsBaseline=Yes
+  Version=1.0
+  ObjectTypeNo=129
+  GroupAccess=yes
+  AllowDelete=no
+  AllowNew=yes
+  AllowSearch=yes
+  Remark= This table stores the VarService
+  <Attribute>
+    AttributeName=Name
+    AttrIndex=1
+    AliasName=Key Name
+    Behavior=text
+    DomainName=Name_t
+    IsNull=no
+    DefaultValue=null
+    HasProperty=no
+    HasCodeObject=no
+    FieldType=null
+    IsViewField=no
+    SelectMandatory=yes
+    IsSearchField=yes
+    IsBaseline=yes
+    Version=1.0
+    Remark=Name of the Cloud Setting
+  </Attribute>
+  <Attribute>
+    AttributeName=KeyValue
+    AttrIndex=2
+    AliasName=Secret Key
+    Behavior=text
+    DomainName=String200_t
+    IsNull=no
+    DefaultValue=null
+    HasProperty=no
+    HasCodeObject=no
+    FieldType=null
+    IsViewField=no
+    SelectMandatory=yes
+    IsSearchField=yes
+    IsBaseline=yes
+    Version=1.0
+    Remark=Key value
+  </Attribute>
+   <Attribute>
+    AttributeName=Type
+    AttrIndex=3
+    AliasName=Type
+    Behavior=select
+    DomainName=Type_t
+    IsNull=no
+    DefaultValue=null
+    HasProperty=yes
+    HasCodeObject=no
+    FieldType=null
+    IsViewField=no
+    SelectMandatory=yes
+    IsSearchField=yes
+    IsBaseline=yes
+    Version=1.0
+    Remark=type of the variable like header , cookiee, body
+  </Attribute>
+  <AttributeRelation>
+        RelationName=VarService2CicdService
+        ParentTable=CicdService
+        RelationType=MTO
+        CurrentState=0
+        TabIndex=0
+        DefaultFilter=null 
+        IsMandatory=no
+        Remark=Related to CicdService
+   </AttributeRelation>
+  <Index>
+     Indexname=Pk_VarService_Indx01
+     Fields=ObjId
+     IndexType=Unique
+  </Index>
+  <Index>
+     Indexname=Fk_VarService_Indx01
+     Fields=VarService2CicdService
+     IndexType=Indexed
+  </Index>
+</SemanticObject>
+
+//**********************************************//
+       ServiceSecret
+//**********************************************//
+<SemanticObject>
+  ObjectName=ServiceSecret
+  AliasName=ServiceSecret
+  ObjectType=Table
+  ObjectFilter=null
+  IsBaseline=Yes
+  Version=1.0
+  ObjectTypeNo=130
+  GroupAccess=yes
+  AllowDelete=no
+  AllowNew=yes
+  AllowSearch=yes
+  Remark= This table stores the ServiceSecret
+  <Attribute>
+    AttributeName=Name
+    AttrIndex=1
+    AliasName=Key Name
+    Behavior=text
+    DomainName=String200_t
+    IsNull=no
+    DefaultValue=null
+    HasProperty=no
+    HasCodeObject=no
+    FieldType=null
+    IsViewField=no
+    SelectMandatory=yes
+    IsSearchField=yes
+    IsBaseline=yes
+    Version=1.0
+    Remark=Name of the Cloud Setting
+  </Attribute>
+  <Attribute>
+    AttributeName=KeyValue
+    AttrIndex=2
+    AliasName=Secret Key
+    Behavior=password
+    DomainName=String300_t
+    IsNull=no
+    DefaultValue=null
+    HasProperty=no
+    HasCodeObject=no
+    FieldType=null
+    IsViewField=no
+    SelectMandatory=yes
+    IsSearchField=yes
+    IsBaseline=yes
+    Version=1.0
+    Remark=Key value
+  </Attribute>
+  
+  <AttributeRelation>
+        RelationName=ServiceSecret2CicdService
+        ParentTable=CicdService
+        RelationType=MTO
+        CurrentState=0
+        TabIndex=0
+        DefaultFilter=null 
+        IsMandatory=no
+        Remark=Related to CicdService
+   </AttributeRelation>
+  <Index>
+     Indexname=Pk_ServiceSecret_Indx01
+     Fields=ObjId
+     IndexType=Unique
+  </Index>
+  <Index>
+     Indexname=Fk_ServiceSecret_Indx01
+     Fields=ServiceSecret2CicdService
+     IndexType=Indexed
+  </Index>
+</SemanticObject>
+
+//**********************************************//
+       ServiceBody
+//**********************************************//
+<SemanticObject>
+  ObjectName=ServiceBody
+  AliasName=ServiceBody
+  ObjectType=Table
+  ObjectFilter=null
+  IsBaseline=Yes
+  Version=1.0
+  ObjectTypeNo=131
+  GroupAccess=yes
+  AllowDelete=no
+  AllowNew=yes
+  AllowSearch=yes
+  Remark= This table stores the ServiceBody
+  <Attribute>
+    AttributeName=Body
+    AttrIndex=1
+    AliasName=Body
+    Behavior=text
+    DomainName=String4000_t
+    IsNull=no
+    DefaultValue=null
+    HasProperty=no
+    HasCodeObject=no
+    FieldType=null
+    IsViewField=no
+    SelectMandatory=yes
+    IsSearchField=yes
+    IsBaseline=yes
+    Version=1.0
+    Remark=Name of the Cloud Setting
+  </Attribute>
+  <AttributeRelation>
+        RelationName=ServiceBody2CicdService
+        ParentTable=CicdService
+        RelationType=MTO
+        CurrentState=0
+        TabIndex=0
+        DefaultFilter=null 
+        IsMandatory=no
+        Remark=Related to CicdService
+   </AttributeRelation>
+  <Index>
+     Indexname=Pk_ServiceBody_Indx01
+     Fields=ObjId
+     IndexType=Unique
+  </Index>
+  <Index>
+     Indexname=Fk_ServiceBody_Indx01
+     Fields=ServiceBody2CicdService
+     IndexType=Indexed
+  </Index>
+</SemanticObject>
+
+//**********************************************//
   Developer
 //**********************************************//
 <SemanticObject>
@@ -9850,7 +10224,7 @@
   ObjectFilter=null
   IsBaseline=Yes
   Version=1.0
-  ObjectTypeNo=129
+  ObjectTypeNo=134
   GroupAccess=admin
   AllowDelete=no
   AllowNew=yes
@@ -14288,7 +14662,7 @@
   </Index>
 </SemanticObject>
 
-/**********************************************//
+//**********************************************//
        VarLaunch
 //**********************************************//
 <SemanticObject>
@@ -14379,6 +14753,8 @@
      IndexType=Indexed
   </Index>
 </SemanticObject>
+
+
 
 //****************************Views****************//
 //*************************************************//
@@ -18907,7 +19283,7 @@
   <Attribute>
     AttributeName=browsers
     AttrIndex=3
-    AliasName=Test Artifacts
+    AliasName=Browsers
     Behavior=text
     DomainName=String50_t
     IsNull=no

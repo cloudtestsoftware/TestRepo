@@ -26,7 +26,7 @@
 		<item type="buttonSelect" id="company" text="Company" img="company.gif">
 		    <item type="button" id="company:company" text="Company" img="company.gif"/>
 			<item type="button" id="company:privilegegroup" text="Privilege Group" img="privilege.gif"/>
-			<item type="button" id="company:testuser" text="Add User" img="user.gif"/>
+			<item type="button" id="testuser:testuser" text="Add User" img="user.gif"/>
 			<item type="button" id="artitelly:calendar" text="Add Calendar Year" img="calendar.gif"/>
 			<item type="separator" id="button_separator_2001" />
 			<item type="button" id="artitelly:training" text="Schedule Training" img="training.gif" />

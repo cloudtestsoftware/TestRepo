@@ -140,8 +140,8 @@ var sceneriorun_toolbar=
 		{ id: "create:sceneriorun", type: "button", img: "create.gif", title: "Create", action:"action_button_callback"},
 		{ id: "save:sceneriorun", type: "button", img: "save.gif",  title: "Save", action:"action_button_callback" },
 		{ type: "separator" },
-		{ id: "scroll:testscenerio", type: "button", img: "up1.gif", title: "Back to provider", action:"action_button_callback"},
-		{ id: "scroll:featurerun", type: "button", img: "up2.gif", title: "Back to provider", action:"action_button_callback"},
+		{ id: "scroll:testscenerio", type: "button", img: "up1.gif", title: "Back to testscenerio", action:"action_button_callback"},
+		{ id: "scroll:featurerun", type: "button", img: "up2.gif", title: "Back to featurerun", action:"action_button_callback"},
 		{ id: "scroll:attachment", type: "button", img: "down1.gif", title: "Go to attachmentr", action:"action_button_callback"},
 		
 	];

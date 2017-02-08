@@ -63,7 +63,7 @@ var bug_toolbar=
 	[
 		{ id: "new", type: "buttonSelect", img: "new.gif",text: "Add", title:"Add to Bug", openAll: true, renderSelect: false,
 			options: [
-			    { type: "button", id: "bug:attachment:handle_custom_changes", text: "Add Attachment", img: "attatchment.gif"},
+			    { type: "button", id: "bug:attachment:handle_custom_changes", text: "Add Attachment", img: "attachment.gif"},
 				
 			]
 		},
@@ -108,42 +108,44 @@ var attachment_grid_context=
 	];
 
 */
-
-
-var attatchment_grid_context=
+var attachment_grid_context=
 	[
-	{ type:"fieldset" , name:"attatchment_list", label:"Attatchment List", list:[
+	{ type:"fieldset" , name:"attachment_list", label:"Attatchment List", list:[
 	    
-		{ type:"container" , name:"attatchment_grid_container", inputWidth:"500", inputHeight:"400"  },
+		{ type:"container" , name:"attachment_grid_container", inputWidth:"500", inputHeight:"400"  },
 		{ type:"input" , name:"grid:rowcount", label:"Total Rows:"  },
 		
 		{ type:"newcolumn"   },
 		
-		{ type:"block" , name:"attatchment_action_block", offsetLeft:"30", list:[
+		{ type:"block" , name:"attachment_action_block", offsetLeft:"30", list:[
         
-		{ type:"container" , name:"attatchment_form_cont", inputWidth:"50%", inputHeight:"100%"  },
-		{ type:"container" , name:"attatchment_datagrid_cont", inputWidth:0, inputHeight:0  },
-		{ type:"block" , name:"attatchment_save_block", offsetLeft:"100", list:[
-		{ type:"button" , name:"save:attatchment", value:"Save", width:"90",  }
+		{ type:"container" , name:"attachment_form_cont", inputWidth:"50%", inputHeight:"100%"  },
+		{ type:"container" , name:"attachment_datagrid_cont", inputWidth:0, inputHeight:0  },
+		{ type:"container" , name:"attachment_fileupload_cont", inputWidth:300, inputHeight:200  },
+		{ type:"container" , name:"simpleLog", inputWidth:300, inputHeight:200  },
+		{ type:"block" , name:"attachment_save_block", offsetLeft:"100", list:[
+		{ type:"button" , name:"save:attachment", value:"Save", width:"90",  }
 		]  },
 		]  },
 	]  }
 	
 	];
 
-var attatchment_toolbar=
+var attachment_toolbar=
 	[
 		
-		{ id: "make:attachment:createAttachment", type: "button", img: "attachment.gif",  title: "Upload file", action:"action_button_callback" },
+		{ id: "make:attachment:createAttachment", type: "button", img: "upload.gif",  title: "Upload file", action:"action_button_callback" },
 		{ id: "show:attachment:getDownloadFile", type: "button", img: "download.gif",  title: "Download attachment", action:"action_button_callback" },
 		{ id: "delete:attachment:deleteFile", type: "button", img: "delete.gif",  title: "Delete attachment", action:"action_button_callback" },
 		{ id: "bug:attachment:removeMe", type: "button", img: "close.gif", title: "Close", action:"action_button_callback"},
 		{ type: "separator" },
-		{ id: "scroll:sceneriorun", type: "button", img: "up.gif", title: "Back to test", action:"action_button_callback"},
+		{ id: "scroll:sceneriorun", type: "button", img: "up1.gif", title: "Back to test", action:"action_button_callback"},
 		{ id: "scroll:testscenerio", type: "button", img: "up1.gif", title: "Back to scenario", action:"action_button_callback"},
-		{ id: "scroll:featurerun", type: "button", img: "up2.gif", title: "Back to feature", action:"action_button_callback"}
+		{ id: "scroll:featurerun", type: "button", img: "up1.gif", title: "Back to feature", action:"action_button_callback"}
 		
 	];
+
+
 
 /*
 var bugscenerio_grid_context=
@@ -248,7 +250,7 @@ var resolution_toolbar=
 		{ id: "save:resolution", type: "button", img: "save.gif",  title: "Save", action:"action_button_callback" },
 		{ type: "separator" },
 		{ id: "mybug:resolution:removeMe", type: "button", img: "up1.gif", title: "Previous step", action:"action_button_callback"},
-		{ id: "scroll:bug", type: "button", img: "down1.gif", title: "Next step to bug", action:"action_button_callback"}
+		{ id: "scroll:bug", type: "button", img: "up1.gif", title: "Next step to bug", action:"action_button_callback"}
 		
 	];
 

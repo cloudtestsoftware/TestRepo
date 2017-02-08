@@ -105,8 +105,10 @@ var feature_toolbar=
 		{ id: "save:feature", type: "button", img: "save.gif",  title: "Save", action:"action_button_callback" },
 		{ id: "file:download:feature", type: "button", img: "download.gif",  title: "Download file", action:"action_button_callback" },
 		{ type: "separator" },
-		{ id: "scroll:epic", type: "button", img: "up1.gif", title: "Previous step", action:"action_button_callback"},
-		{ id: "scroll:scenerio", type: "button", img: "down1.gif",  title: "Next step", action:"action_button_callback" },
+		{ id: "scroll:epic", type: "button", img: "up1.gif", title: "Previous step Epic", action:"action_button_callback"},
+		{ id: "scroll:mytasks", type: "button", img: "up1.gif", title: "Previous step mytask", action:"action_button_callback"},
+		{ id: "scroll:scenerio", type: "button", img: "down1.gif",  title: "Next step scenario", action:"action_button_callback" },
+		{ id: "scroll:tasks", type: "button", img: "down1.gif",  title: "Next step Task", action:"action_button_callback" },
 		
 	]
 
@@ -297,7 +299,7 @@ var featurelist_grid_context=
 
 	var featurelist_toolbar=
 		[
-			{ id: "scroll:featur", type: "button", img: "up1.gif", title: "Previous step", action:"action_button_callback"}
+			{ id: "scroll:feature", type: "button", img: "up1.gif", title: "Previous step to feature", action:"action_button_callback"}
 			
 		]
 

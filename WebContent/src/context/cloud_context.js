@@ -86,7 +86,7 @@ var createimage_grid_context=
 	       
 	        { type:"button" , name:"create:createimage", value:"Create", width:"100"  },
 	        { type:"button" , name:"save:createimage", value:"Save", width:"100"  },
-	        { type:"button" , name:"provision:createimage", value:"Provision Image", width:"100"  },
+	        { type:"button" , name:"provision:createimage:handle_custom_changes", value:"Provision Image", width:"100"  },
 			
 	 ]  },
 	 { type:"fieldset" , name:"createimage_add_set", label:"Addons", offsetLeft:"30", list:[
@@ -139,7 +139,7 @@ var createimage_toolbar=
 		},
 		{ id: "create:createimage", type: "button", img: "create.gif", title: "Create", action:"action_button_callback"},
 		{ id: "save:createimage", type: "button", img: "save.gif",  title: "Save", action:"action_button_callback" },
-		{ id: "provision:createimage", type: "button", img: "launchimage.gif",  title: "Provision Image", action:"action_button_callback" },
+		{ id: "provision:createimage:handle_custom_changes", type: "button", img: "launchimage.gif",  title: "Provision Image", action:"action_button_callback" },
 		{ type: "separator" },
 		{ id: "scroll:cloudprovider", type: "button", img: "up1.gif", title: "Back to provider", action:"action_button_callback"},
 		{ id: "scroll:varprovision", type: "button", img: "down1.gif", title: "Next step to add variables to provision", action:"action_button_callback"}
@@ -210,7 +210,7 @@ var launchimage_toolbar=
 			]
 		},
 		{ id: "create:launchimage", type: "button", img: "create.gif", title: "Create", action:"action_button_callback"},
-		{ id: "save:launchimage", type: "button", img: "save.gif",  title: "Save", action:"action_button_callback" },
+		{ id: "save:launchimage:handle_custom_changes", type: "button", img: "save.gif",  title: "Save", action:"action_button_callback" },
 		{ id: "launch:launchimage", type: "button", img: "launchimage.gif",  title: "Launch Image", action:"action_button_callback" },
 		{ type: "separator" },
 		{ id: "scroll:cloudprovider", type: "button", img: "up1.gif", title: "Back to provider", action:"action_button_callback"},
@@ -418,6 +418,7 @@ var createscript_grid_context=
         
 		{ type:"container" , name:"createscript_form_cont", inputWidth:"50%", inputHeight:"100%"  },
 		{ type:"container" , name:"createscript_datagrid_cont", inputWidth:0, inputHeight:0  },
+		{ type:"container" , name:"createscript_fileupload_cont", inputWidth:300, inputHeight:200  },
 		{ type:"container" , name:"simpleLog", inputWidth:300, inputHeight:200  }
 		
 		]  },
@@ -476,6 +477,7 @@ var launchscript_grid_context=
         
 		{ type:"container" , name:"launchscript_form_cont", inputWidth:"50%", inputHeight:"100%"  },
 		{ type:"container" , name:"launchscript_datagrid_cont", inputWidth:0, inputHeight:0  },
+		{ type:"container" , name:"launchscript_fileupload_cont", inputWidth:300, inputHeight:200  },
 		{ type:"container" , name:"simpleLog", inputWidth:300, inputHeight:200  }
 		
 		]  },

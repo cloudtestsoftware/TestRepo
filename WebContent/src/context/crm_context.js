@@ -940,7 +940,7 @@ var deal_toolbar=
 		{ id: "save:deal", type: "button", img: "save.gif",  title: "Save", action:"action_button_callback" },
 		{ type: "separator" },
 		{ id: "scroll:opportunity", type: "button", img: "up1.gif", title: "Back to opportunity", action:"action_button_callback"},
-		{ id: "scroll:customer", type: "button", img: "up2.gif", title: "Back to customer", action:"action_button_callback"},
+		{ id: "scroll:customer", type: "button", img: "up1.gif", title: "Back to customer", action:"action_button_callback"},
 		
 	];
 

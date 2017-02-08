@@ -24,7 +24,6 @@
 	<script language="JavaScript" src="./src/context/featurerun_context.js" type="text/javascript"></script>
 	<script language="JavaScript" src="./src/context/testscenerio_context.js" type="text/javascript"></script>
 	<script language="JavaScript" src="./src/context/board_context.js" type="text/javascript"></script>
-	<script language="JavaScript" src="./src/context/tab_widget.js" type="text/javascript"></script>
 	<script language="JavaScript" src="./src/context/company_context.js" type="text/javascript"></script>
 	<script language="JavaScript" src="./src/context/appadmin_context.js" type="text/javascript"></script>
 	<script language="JavaScript" src="./src/context/timesheet_context.js" type="text/javascript"></script>

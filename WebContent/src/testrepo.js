@@ -9,6 +9,7 @@ var testrepo_toolbar;
 var main_form;
 var advance_form;
 var task_form;
+
 var gridlist = {};
 var widgetlist = {};
 var widgetforms = {};
@@ -219,28 +220,39 @@ function destroyTabWorkspace(id){
 	 tabdataforms=null;
 	 childcaller=null;
 	 
+	 //initialize
+	 gridlist = {};
+	 widgetlist={};
+	 widgetforms = {};
+	 dataforms={};
+	 gridformdata={};
+	 datafromstruct={};
+	 tabdataforms={};
+	 childcaller={};
 	 
-	 if(toolbarmainforms[menuid]){
+	 if(toolbarmainforms[id]){
 		 
-		 toolbarmainforms[menuid]=null;
-	     toolbardataforms[menuid]=null;
-	     toolbargridlist[menuid] = null;
-	     toolbarwidgetlist[menuid] = null;
-	     toolbarwidgetforms[menuid] = null;
-	     toolbarcurrentgrid[menuid]=null;
-	     toolbardatafromstruct[menuid]=null;
-	     toolbarchildcaller[menuid]=null;
-	     toolbargridformdata[menuid]=null;
+		 toolbarmainforms[id]=null;
+	     toolbardataforms[id]=null;
+	     toolbargridlist[id] = null;
+	     toolbarwidgetlist[id] = null;
+	     toolbarwidgetforms[id] = null;
+	     toolbarcurrentgrid[id]=null;
+	     toolbardatafromstruct[id]=null;
+	     toolbarchildcaller[id]=null;
+	     toolbargridformdata[id]=null;
 	     
-	     toolbarmainforms[menuid]={};
-	     toolbardataforms[menuid]={};
-	     toolbargridlist[menuid] = {};
-	     toolbarwidgetlist[menuid] = {};
-	     toolbarwidgetforms[menuid] = {};
-	     toolbarcurrentgrid[menuid]={};
-	     toolbardatafromstruct[menuid]={};
-	     toolbarchildcaller[menuid]={};
-	     toolbargridformdata[menuid]={};
+	    
+	     
+	     toolbarmainforms[id]={};
+	     toolbardataforms[id]={};
+	     toolbargridlist[id] = {};
+	     toolbarwidgetlist[id] = {};
+	     toolbarwidgetforms[id] = {};
+	     toolbarcurrentgrid[id]={};
+	     toolbardatafromstruct[id]={};
+	     toolbarchildcaller[id]={};
+	     toolbargridformdata[id]={};
 	 }
 	
 }
@@ -294,9 +306,9 @@ function initWorkspace(){
 	 
 }
 
-function initTabClick(caller,oldmenuid){
+function initTabClick(caller){
 	
-		  menuid=caller;
+	     menuid=caller;
 	     
 		 //initialize worspace
 		 initWorkspace();
@@ -356,6 +368,44 @@ function destroyTabWorkspaceForSkin(){
 	 }
 	
 }
+
+function removeToolbarObjectMemory(menuid, table){
+	
+	
+	 //initialize
+	 gridlist[table] = null;
+	 widgetlist[table]=null;
+	 widgetforms[table] = null;
+	 dataforms[table]=null;
+	 gridformdata[table]=null;
+	 datafromstruct[table]=null;
+	 //tabdataforms[table]=null;
+	 childcaller[table]=null;
+	 
+	 //initialize toolbar menu
+	 if(!toolbarmainforms[menuid]){
+		 toolbarmainforms[table]=null;
+	     toolbardataforms[menuid][table]=null;
+	     toolbargridlist[menuid][table]=null;
+	     toolbarwidgetlist[menuid][table]=null;
+	     toolbarwidgetforms[menuid][table]=null;
+	     toolbarcurrentgrid[menuid][table]=null;
+	     toolbardatafromstruct[menuid][table]=null;
+	     toolbarchildcaller[menuid][table]=null;
+	     toolbargridformdata[menuid][table]=null;
+	 }
+	 
+}
+function reInitializeBoardObjects(table){
+	 gridlist[table] = toolbargridlist[menuid][table];
+	 widgetlist[table]=toolbarwidgetlist[menuid][table];
+	 widgetforms[table] = toolbarwidgetforms[menuid][table];
+	 dataforms[table]=toolbardataforms[menuid][table];
+	 gridformdata[table]=toolbargridformdata[menuid][table];
+	 datafromstruct[table]=toolbardatafromstruct[menuid][table];
+	 tabdataforms[table]=toolbardataforms[menuid][table];
+	 childcaller[table]=toolbarchildcaller[menuid][table];
+}
 function call_testrepo_toolbar_skin(skin){
 	destroyTabWorkspaceForSkin();
 	doOnLoad(skin);
@@ -368,7 +418,14 @@ function testrepo_toolbar_callback(id){
 	 //toolbar button image
 	
 	 try{
-		 if(toolbarmainforms[id]  && toolbarmainforms[id].getForm()) return;
+		 if(toolbarmainforms[id]  && toolbarmainforms[id].getForm()) {
+			    var last_id=search_tabbar.getActiveTab();
+			    search_tabbar.tabs(last_id).disable();
+		    	search_tabbar.tabs(id).enable();
+		    	search_tabbar.tabs(id).setActive();
+			 
+			 return;
+		 }
 	 }catch(err){
 		 
 	 }
@@ -461,16 +518,42 @@ function testrepo_toolbar_callback(id){
     	 addRegularMainSearchForm(caller);
     }
     search_tabbar.attachEvent("onTabClose", function(id){
+    	
     	destroyTabWorkspace(id);
+    	//search_tabbar.goToPrevTab();
+    	//search_tabbar.setTabInActive();
+    	
+        return true;
+    });
+    
+    search_tabbar.attachEvent("onSelect", function(id, lastId){
+    	
+    	if(toolbarmainforms[id]){
+	    	 main_form=toolbarmainforms[id];
+	    	 gridlist =toolbargridlist[id];
+	    	 widgetlist=toolbarwidgetlist[id];
+	    	 widgetforms =toolbarwidgetforms[id];
+	    	 dataforms=toolbardataforms[id];
+	    	 current_grid=toolbarcurrentgrid[id];
+	    	 childcaller=toolbarchildcaller[id];
+			 gridformdata=toolbargridformdata[id];
+			 datafromstruct=toolbardatafromstruct[id];
+	 }
+        // your code here
         return true;
     });
     search_tabbar.attachEvent('onTabClick', function(id, last_id){
     	if(last_id){
-    		initTabClick(id,last_id);
+    		if(id!='advance' && id!='task'){
+    			initTabClick(id);
+    		}else{
+    			initTabClick("projectboard");
+    		}
         	search_tabbar.tabs(last_id).disable();
 	    	search_tabbar.tabs(id).enable();
 	    	search_tabbar.tabs(id).setActive();
 			if(id==caller && !toolbarmainforms[id]){
+				
 				addRegularMainSearchForm(caller);
 			}else if(id=='advance' &&last_id && last_id!='task'){
 				//dhtmlx.message("Sprint Board");
@@ -488,7 +571,7 @@ function testrepo_toolbar_callback(id){
 function addAdvanceForm(caller){
 	var formContext;
 	
-	if(advance_form){
+	if(advance_form && caller=='projectboard'){
     	 try{
     		 advance_form.unload();
     		 advance_form=null;
@@ -499,9 +582,10 @@ function addAdvanceForm(caller){
 	try{
 		if(caller=='projectboard'){
 			formContext=projectboard_advance_context();
-		}else{
-			 formContext=eval(caller+"_advance_context");
 		}
+		/*else{
+			 formContext=eval(caller+"_advance_context");
+		}*/
 		
 		if(formContext){
 	  	 	  advance_form = advance_tab.attachForm(formContext);
@@ -616,53 +700,57 @@ function addWidgetLayout(table,container ){
 		try{
 			
 			toolbarwidgetforms[menuid][table]=widget_form;
-			widgetforms=toolbarwidgetforms[menuid];
+			widgetforms[table]=widget_form;
 			
 		}catch(err){}
 		
 		
 		widgetforms[table]=widget_form;
-		if(current_grid &&current_grid.getSelectedRowId()){
-			//add parent relation
-			current_parent_id=current_grid.cells(current_grid.getSelectedRowId(),1).getValue();
-			getWidgetForm(table).setUserData("parent_objid","",current_parent_id);
-			//validate if additional relation need to set from the parent grid
-			var additional_relation=getAdditionalRelation(menuid, table);
-			var mutiple_relations;
-			if(additional_relation){
-				mutiple_relations=additional_relation.split(",");
-			}
-			if(mutiple_relations &&mutiple_relations.length>=1){
-				for(var i=0;i<mutiple_relations.length;i++){
-					try{
-						additional_relation=mutiple_relations[i];
-						items=additional_relation.split(":");
-					}catch(err){}
-					 
-					if(additional_relation){
-						var colidx=getGridColumnIndex(current_grid,(items&& items.length>1?items[1]:additional_relation));
-						if(colidx!=-1){
-							var value=current_grid.cells(current_grid.getSelectedRowId(),colidx).getValue();
-							getWidgetForm(table).setUserData(additional_relation,"",value);
+		try{
+			if(current_grid &&current_grid.getSelectedRowId()){
+				//add parent relation
+				current_parent_id=current_grid.cells(current_grid.getSelectedRowId(),1).getValue();
+				getWidgetForm(table).setUserData("parent_objid","",current_parent_id);
+				//validate if additional relation need to set from the parent grid
+				var additional_relation=getAdditionalRelation(menuid, table);
+				var mutiple_relations;
+				if(additional_relation){
+					mutiple_relations=additional_relation.split(",");
+				}
+				if(mutiple_relations &&mutiple_relations.length>=1){
+					for(var i=0;i<mutiple_relations.length;i++){
+						try{
+							additional_relation=mutiple_relations[i];
+							items=additional_relation.split(":");
+						}catch(err){}
+						 
+						if(additional_relation){
+							var colidx=getGridColumnIndex(current_grid,(items&& items.length>1?items[1]:additional_relation));
+							if(colidx!=-1){
+								var value=current_grid.cells(current_grid.getSelectedRowId(),colidx).getValue();
+								getWidgetForm(table).setUserData(additional_relation,"",value);
+							}
+							
 						}
-						
 					}
 				}
+				/*
+				try{
+					items=additional_relation.split(":");
+				}catch(err){}
+				 
+				if(additional_relation){
+					var colidx=getGridColumnIndex(current_grid,(items&& items.length>1?items[1]:additional_relation));
+					if(colidx!=-1){
+						var value=current_grid.cells(current_grid.getSelectedRowId(),colidx).getValue();
+						getWidgetForm(table).setUserData(additional_relation,"",value);
+					}
+					
+				}*/
 			}
-			/*
-			try{
-				items=additional_relation.split(":");
-			}catch(err){}
-			 
-			if(additional_relation){
-				var colidx=getGridColumnIndex(current_grid,(items&& items.length>1?items[1]:additional_relation));
-				if(colidx!=-1){
-					var value=current_grid.cells(current_grid.getSelectedRowId(),colidx).getValue();
-					getWidgetForm(table).setUserData(additional_relation,"",value);
-				}
-				
-			}*/
-		}
+		}catch(err){}
+		
+			
 		container=table+"_grid_container";
     	addGridToMainForm(container,table,widget_form);
     
@@ -707,23 +795,21 @@ function getWidgetForm(table){
 	}else if(toolbarwidgetforms[menuid]){
 		form=toolbarwidgetforms[menuid][table];
 		
-	}else if(tabwidgetforms){
-		form=tabwidgetforms[table];
 	}
 	return form;
 }
 
 function getMainForm(){
-	var form;
+	var form=main_form;
 	var tabwidget;
 	 try{
 		 tabwidget=current_grid.getUserData("","tabwidget");
 	 }catch(err){}	
 	
-	 if(tabwidget && tabwidget=='yes'){
-		 form=tab_form;
-	 }else{
-		 form=main_form;
+	 
+    //if(tabwidget && tabwidget=='yes'||
+	 if(search_tabbar &&task_form &&search_tabbar.getActiveTab()=="task"	) {
+		 form= task_form;
 	 }
 	 return form;
 }
@@ -743,17 +829,24 @@ function scrollToChild(child){
 	 if(!container ){// &&child.indexOf("tabwidget")>=0
 		 table_container=table+"_grid_container";
 		 if(!container && getWidgetForm(table)){
-			 container= getWidgetForm(table).getContainer(table_container);
+			 try{
+				 container= getWidgetForm(table).getContainer(table_container);
+			 }catch(err){}
+			
 		 }
 		 if(!container && getWidgetForm(table)){
 			 table_container=table+"_tab_grid_container";
-			 container= getWidgetForm(table).getContainer(table_container);
+			 try{
+				 container= getWidgetForm(table).getContainer(table_container);
+			 }catch(err){}
+			
 		 }
 			
 	 }
     
      if(!container){
-    	 dhtmlx.alert("Please select a row in the grid!");
+    	 //dhtmlx.alert("No Container Object is found!");
+    	 //dhtmlx.alert("Please select a row in the grid!" + " Form container ="+ container + " not found!");
     	 return false;
      }
 	 var cont_id=container.getAttribute("id");
@@ -765,8 +858,8 @@ function scrollToChild(child){
 				 if(grid){
 					 var rowid=grid.getSelectedRowId();
 					 if(rowid){
-						 grid_onRowSelect_callback(grid,table,rowid,null);
-						 //grid.clearSelection();
+						 //grid_onRowSelect_callback(grid,table,rowid,null);
+						 grid.clearSelection();
 					 }
 				 }
 		  }
@@ -777,15 +870,15 @@ function scrollToChild(child){
 	
 	
 }
-
 function removeWidget(table){
-  var fieldset_name=table+"_form_fieldset";
-   if(main_form){
-	   main_form.removeItem(fieldset_name);
-   }
- 
- 
-}
+	  var fieldset_name=table+"_form_fieldset";
+	   if(main_form){
+		   main_form.removeItem(fieldset_name);
+	   }
+	  
+	   removeToolbarObjectMemory(menuid, table);
+	 
+	}
 
 function removeList(table){
 	  var fieldset_name=table+"_list";
@@ -799,22 +892,30 @@ function addGridToMainForm(container, table,widget_form){
 	var items;
 	var multirelation;
 	var relation;
+	var tabfilter;
 	var relationfilter;
     var additional_relation;
   	var	grid=new dhtmlXGridObject(widget_form.getContainer(container));
 	var invokefilter=getInvokeFilter(menuid, table);
     var parent_objid=getWidgetForm(table).getUserData("parent_objid","");
     var filter=getSearchFilter(table);
+   
+    if(task_form &&search_tabbar.getActiveTab()=="task" && table=="feature"){
+    	filter=task_form.getUserData("filter","");
+    }
     //if you have mutiple tabs like board and want to swtich between tab using some filter you can use tab filter
     //look at the code in board_context.js in method addSprintTask()
-    var tabfilter=getWidgetForm(table).getUserData("filter","");
+    try{
+    	  tabfilter=getWidgetForm(table).getUserData("filter","");
+    }catch(err){}
+   
    
     var uri=getURI(menuid, table);
 	if(!uri){
 		uri="filter";
 	}
 	
-    if(filter && ((menuid==table)||invokefilter)){
+    if(filter && ((menuid==table)||invokefilter ||search_tabbar.getActiveTab()=="task")){
         //dhtmlx.message(filter);
     	
     	gurl=www_url+'/rest/'+table+'/'+uri+'?token='+token +"&filters="+filter;
@@ -1015,8 +1116,6 @@ function addDataForm(table){
    
    if(widgetforms[table]){
   	 parent_objid=widgetforms[table].getUserData("parent_objid","");
-   }else{
-	   parent_objid=tabwidgetforms[table].getUserData("parent_objid","");
    }
    
    	var  furl=www_url+'/rest/'+table+'/form?token='+token +"&relationfilter="+parent_objid;
@@ -1029,8 +1128,6 @@ function addDataForm(table){
    	
     if(widgetforms[table]){
     	widget_form=widgetforms[table];
-    }else{
-    	widget_form=tabwidgetforms[table];
     }
    	
    	data_form=new dhtmlXForm(widget_form.getContainer(container));
@@ -1132,7 +1229,10 @@ function grid_onRowSelect_callback(grid,table,rowId,cellIndex){
         if(current_table &&!( current_table==table)){
         	widget_form=widgetforms[current_table];
         	if(widget_form){
-        		widget_form.unload();
+        		try{
+        			widget_form.unload();
+        		}catch(err){}
+        		
         		widgetforms[current_table]=null;
         		dataforms[current_table]=null;
         		
@@ -1217,9 +1317,6 @@ function setFormRelation(table){
 	 var formdata=gridformdata[table];
 	 if(widgetforms[table]){
 		 value=widgetforms[table].getUserData("parent_objid","");
-	 }else{
-		 value=tabwidgetforms[table].getUserData("parent_objid","");
-		 current_grid.setUserData("","tabwidget","yes");
 	 }
 	 if(!value){
 		 value=current_parent_id;

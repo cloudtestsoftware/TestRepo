@@ -400,7 +400,7 @@ var tasknote_toolbar=
 		{ id: "save:tasknote", type: "button", img: "save.gif",  title: "Save", action:"action_button_callback" },
 		{ type: "separator" },
 		{ id: "scroll:tasks:tabwidget", type: "button", img: "up1.gif", title: "Back to task", action:"action_button_callback"},
-		{ id: "scroll:feature:tabwidget", type: "button", img: "up1.gif", title: "Back to feature", action:"action_button_callback"},
+		{ id: "scroll:feature:tabwidget", type: "button", img: "home.gif", title: "Back to feature", action:"action_button_callback"},
 		{ id: "scroll:mytasks", type: "button", img: "up1.gif", title: "Back to my tasks", action:"action_button_callback"},
 		
 	];
@@ -872,23 +872,49 @@ function loadDataView(){
   }
 }
 
+function initTaskTab(table){
+	 gridlist[table] = null;
+	 widgetlist[table]=null;
+	 widgetforms[table] = null;
+	 dataforms[table]=null;
+	 gridformdata[table]=null;
+	 datafromstruct[table]=null;
+	 tabdataforms[table]=null;
+	 childcaller[table]=null;
+}
 function addSprintTask(table,id){
 	search_tabbar.tabs("advance").disable();
 	search_tabbar.tabs("task").enable();
 	search_tabbar.tabs("task").setActive();
-	initTabWidget();
+	
+	initTaskTab("feature");
+	initTaskTab("tasks");
+	initTaskTab("tasknote");
+	
+	
+	try{
+		if(task_tab){
+			task_tab.unload();
+		}
+		
+	}catch(err){}
+
 	if(task_form){
 		task_form.unload();
 		task_form=null;
 	}
+	tabwidget_container=table+"_container";
+	
 	var str = [
-	   		{ type:"container" , name:"task_tab_container", inputWidth:"100%", inputHeight:"100%"  }
+	   		{ type:"container" , name:tabwidget_container, inputWidth:layoutWidth, inputHeight:layoutHeight  }
 	   	];
 	task_form = task_tab.attachForm(str);
-	tabwidget_container=table+"_tab_container";
+	
 	var filter="objid='"+id+"'";
-    addTabContainer(table,tabwidget_container,task_form,filter);
-    addTabWidgetLayout(table,tabwidget_container,task_form,filter);
+	task_form.setUserData("filter","",filter);
+	addWidgetContainer(table,tabwidget_container);
+    addWidgetLayout(table,tabwidget_container);
+   
     
 }
 
@@ -984,3 +1010,4 @@ function update_sprint_tasks(name){
 	//dataforms["tasks"]=form;
 	saveChanges(table, "tasks");
 }
+

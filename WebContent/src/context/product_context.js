@@ -145,7 +145,7 @@ var release_grid_context=
 			
 			{ type: "separator" },
 			{ id: "scroll:product", type: "button", img: "up1.gif", title: "Previous step product", action:"action_button_callback"},
-			{ id: "release:project:handle_custom_changes", type: "button", img: "down1.gif",  title: "Next step project", action:"action_button_callback" },
+			{ id: "scroll:project", type: "button", img: "down1.gif",  title: "Next step project", action:"action_button_callback" },
 			
 		]
 
@@ -244,10 +244,12 @@ var releasetestcount_grid_context=
 	
 	var documents_toolbar=
 		[
-			{ id: "make:documents:createAttachment", type: "button", img: "up2.gif", title: "Upload File", action:"action_button_callback"},
+			{ id: "make:documents:createAttachment", type: "button", img: "upload.gif", title: "Upload File", action:"action_button_callback"},
 			{ id: "show:documents:getDownloadFile", type: "button", img: "download.gif", title: "Download File", action:"action_button_callback"},
 			{ id: "delete:documents:deleteFile", type: "button", img: "delete.gif", title: "Delete File", action:"action_button_callback"},
-			{ id: "release:document:removeMe", type: "button", img: "up1.gif", title: "Previous step", action:"action_button_callback"}
+			{ id: "scroll:release", type: "button", img: "up1.gif", title: "Back to Release", action:"action_button_callback"},
+			{ id: "scroll:epic", type: "button", img: "up1.gif", title: "Back to epic", action:"action_button_callback"},
+			{ id: "scroll:feature", type: "button", img: "up1.gif", title: "Back to feature", action:"action_button_callback"},
 			
 		]
 

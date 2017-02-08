@@ -37,13 +37,13 @@ var scenerio_toolbar=
 
 		{ id: "summary", type: "buttonSelect", img: "summary.gif",text: "Summary", title:"Scenario summary", openAll: true, renderSelect: false,
 			options: [
-				{ type: "button", id: "scenerio:sceneriotestcount:handle_custom_changes", text: "Scenario Facts",img: "facts.gif" }
+				{ type: "button", id: "scenerio:testcount:handle_custom_changes", text: "Scenario Facts",img: "facts.gif" }
 			]
 		},
 		
 		{ id: "new", type: "buttonSelect", img: "new.gif",text: "Add", title:"Add to scenario", openAll: true, renderSelect: false,
 			options: [
-			    { type: "button", id: "scenerio:teststeps:handle_custom_changes", text: "Add Test Steps", img: "testcase.gif"},
+			    { type: "button", id: "scenerio:matrixlist:handle_custom_changes", text: "Add Test Matrix", img: "testcase.gif"},
 				
 			]
 		},
@@ -56,7 +56,8 @@ var scenerio_toolbar=
 		
 		{ type: "separator" },
 		{ id: "scroll:feature", type: "button", img: "up1.gif", title: "Previous step", action:"action_button_callback"},
-		{ id: "scenerio:matrixlist:handle_custom_changes", type: "button", img: "down1.gif",  title: "Next step", action:"action_button_callback" },
+		{ id: "scroll:teststeps", type: "button", img: "down1.gif", title: "Add Test cases", action:"action_button_callback"},
+		//{ id: "scenerio:matrixlist:handle_custom_changes", type: "button", img: "down1.gif",  title: "Next step", action:"action_button_callback" },
 		
 	]
 

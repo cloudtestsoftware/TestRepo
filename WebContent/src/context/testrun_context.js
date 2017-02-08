@@ -87,14 +87,6 @@ var testrun_toolbar=
 			]
 		},
 		
-		{ id: "new", type: "buttonSelect", img: "new.gif",text: "Add", title:"Add to testrun", openAll: true, renderSelect: false,
-			options: [
-			    { type: "button", id: "testrun:documents:handle_custom_changes", text: "Add Document", img: "document.gif"},
-				{ type: "button", id: "testrun:estimation:handle_custom_changes", text: "Add Estimation",img: "estimation.gif" },
-				
-			]
-		},
-		
 		{ type: "separator"},
 		
 		{ id: "testrun:jobrun:handle_custom_changes", type: "button", img: "testrun.gif", title: "Run Job", action:"action_button_callback"},
@@ -102,7 +94,7 @@ var testrun_toolbar=
 		
 		{ type: "separator" },
 		{ id: "scroll:testmatrix", type: "button", img: "up1.gif", title: "Back to matrix", action:"action_button_callback"},
-		{ id: "scroll:featurerun", type: "button", img: "down1.gif",  title: "Next step feature run", action:"action_button_callback" },
+		{ id: "scroll:jobrun", type: "button", img: "down1.gif",  title: "Next step job run", action:"action_button_callback" },
 		
 	];
 
@@ -250,7 +242,7 @@ var sceneriorunresult_toolbar=
 	 	{ id: "update:sceneriorunresult:update_sceneriorun_result", type: "button", img: "Save.gif", title: "Update", action:"action_button_callback"},
 	 	{ id: "scroll:testrunresult", type: "button", img: "up.gif", title: "Back to result", action:"action_button_callback"},
 	 	{ id: "scroll:grouprunresult", type: "button", img: "up1.gif", title: "Back to group result", action:"action_button_callback"},
-	 	{ id: "scroll:summaryreport", type: "button", img: "up2.gif", title: "Back to Summary", action:"action_button_callback"},
+	 	{ id: "scroll:summaryreport", type: "button", img: "up1.gif", title: "Back to Summary", action:"action_button_callback"},
 		{ id: "scroll:bug", type: "button", img: "down1.gif", title: "Go to Bug", action:"action_button_callback"}
 		
 	];
@@ -306,7 +298,7 @@ var jobrun_toolbar=
 		
 		{ type: "separator" },
 		{ id: "scroll:testrun", type: "button", img: "up1.gif", title: "Back to Testrun", action:"action_button_callback"},
-		{ id: "scroll:grouprun", type: "button", img: "up2.gif", title: "Back to Grouprun", action:"action_button_callback"},
+		//{ id: "scroll:grouprun", type: "button", img: "up1.gif", title: "Back to Grouprun", action:"action_button_callback"},
 		
 	];
 
@@ -379,7 +371,7 @@ var grouprun_toolbar=
 		
 		{ type: "separator" },
 		{ id: "scroll:featuregroup", type: "button", img: "up1.gif", title: "Back to Group", action:"action_button_callback"},
-		{ id: "scroll:featurerun", type: "button", img: "down1.gif",  title: "Next step feature run", action:"action_button_callback" },
+		{ id: "scroll:jobrun", type: "button", img: "down1.gif",  title: "Next step job run", action:"action_button_callback" },
 		
 	];
 /*

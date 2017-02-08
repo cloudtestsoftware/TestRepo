@@ -398,7 +398,7 @@ var menuconfig={
 	        	"tasknote": {"caption":"Note", "relation":"tasknote2tasks", "parent":"mytasks","button_width":"100","buttonhide":"scroll:tasks:tabwidget,scroll:feature:tabwidget"},
 	        	"tasks": {"caption":"Tasks", "relation":"tasks2feature", "parent":"feature","button_width":"100","buttonhide":"tasks_next_step"},
 	            "jenkinsjob": {"caption":"Jenkins Job", "relation":"jenkinsjob2feature", "parent":"feature","button_width":"100"},
-	            "documents": {"caption":"Documents", "relation":"documents2feature", "parent":"feature","button_width":"100","buttonhide":"epic,release"},
+	            "documents": {"caption":"Documents", "relation":"documents2feature", "parent":"feature","button_width":"100","buttonhide":"scroll:epic,scroll:release"},
 	            "featurelist": {"caption":"Feature Test Group", "relation":"featuremap2feature", "parent":"feature","button_width":"100","rowselect":"update_featuregrouplist_for_feature","excludecolupdate":":myfeature"},
 	          
 	        },
@@ -415,12 +415,12 @@ var menuconfig={
 	        	"mybug": {"caption":"My Bugs","button_width":"100","child":"resolution","form":"bug","formcolhide":"","disablefields":""},
 	        	"bugscenerio": {"caption":"Test Scenerio", "relation":"bugscenerio2bug", "parent":"mybug","button_width":"100","buttonhide":"scroll:bug"},
 	        	"attachment": {"caption":"Attachments", "relation":"attachment2bug", "parent":"mybug","button_width":"100","buttonhide":"attachment_view_set"},
-	            "resolution": {"caption":"Resolution", "relation":"resolution2bug", "parent":"mybug","button_width":"100","buttonhide":"resolution_view_set"}
+	            "resolution": {"caption":"Resolution", "relation":"resolution2bug", "parent":"mybug","button_width":"100","buttonhide":"scroll:bug"}
 		        
 	        },
 	        "mytraining": {
 	            "mytraining": {"caption":"Training Schedule","button_width":"100","child":"bookcourse","formcolhide":"mytraining2training","showlistcols":[3,9]},
-	            "bookcourse": {"caption":"Book Course", "relation":"bookcourse2training", "parent":"mytraining","button_width":"100","disablefields":"status,amountpaid,confirmationno","buttonhide":"create,prod","formload":"verify_prod_access","rowselect":"verify_prod_access","buttonhide":"coursefeedback_next_steps"},
+	            "bookcourse": {"caption":"Book Course", "relation":"bookcourse2training", "parent":"mytraining","button_width":"100","disablefields":"status,amountpaid,confirmationno","buttonhide":"create,prod","formload":"verify_prod_access","rowselect":"verify_prod_access","buttonhide":"scroll:coursefeedback,scroll:training"},
 	        },
 	        "mycontact": {
 	            "mycontact": {"caption":"My Contact","button_width":"100","showlistcols":[2,3,11],"disablefields":"","formcolhide":""}
@@ -433,16 +433,16 @@ var menuconfig={
 	        "cloudprovider": {
 	            "cloudprovider": {"caption":"Cloud Provider","button_width":"100","child":"accesskey","showlistcols":[2,3]},
 	            "accesskey": {"caption":"Access Key", "relation":"accesskey2cloudprovider", "parent":"cloudprovider","button_width":"100","disablefields":"","formchange":""},
-	            "createimage": {"caption":"Create Image", "relation":"createimage2cloudprovider", "parent":"cloudprovider","button_width":"100"},
+	            "createimage": {"caption":"Create Image", "relation":"createimage2cloudprovider", "parent":"cloudprovider","child":"varprovision","button_width":"100"},
 	            "createscript": {"caption":"Script File", "relation":"createscript2createimage", "parent":"createimage","button_width":"100"},
 	            "varprovision": {"caption":"Add Variables", "relation":"varprovision2createimage", "parent":"createimage","button_width":"100"},
-	            "launchimage": {"caption":"Launch Image", "relation":"launchimage2cloudprovider", "parent":"cloudprovider","button_width":"100"},
+	            "launchimage": {"caption":"Launch Image", "relation":"launchimage2cloudprovider", "parent":"cloudprovider","child":"varlaunch","button_width":"100"},
 	            "launchscript": {"caption":"Script File", "relation":"launchscript2createimage", "parent":"launchimage","button_width":"100"},
 	            "varlaunch": {"caption":"Add Variables", "relation":"varlaunch2createimage", "parent":"launchimage","button_width":"100"},
 	            
 	        },
 	        "bookcourse": {
-	            "bookcourse": {"caption":"Book Course", "relation":"bookcourse2training", "parent":"mytraining","child":"coursefeedback","button_width":"100","disablefields":"status,amountpaid,confirmationno","buttonhide":"create,prod","formload":"verify_prod_access","rowselect":"verify_prod_access","buttonhide":"coursefeedback_priv_steps"},
+	            "bookcourse": {"caption":"Book Course", "relation":"bookcourse2training", "parent":"mytraining","child":"coursefeedback","button_width":"100","disablefields":"status,amountpaid,confirmationno","buttonhide":"create,prod","formload":"verify_prod_access","rowselect":"verify_prod_access","buttonhide":"scroll:training,scroll:mytraining"},
 	            "coursefeedback": {"caption":"Feedback", "relation":"coursefeedback2bookcourse", "parent":"bookcourse","button_width":"100"},
 	        },
 	        "campaign": {
@@ -463,7 +463,7 @@ var menuconfig={
             },
 	        "training": {
 	            "training": {"caption":"Training","child":"bookcourse","button_width":"100"},
-	            "bookcourse": {"caption":"Book Course", "relation":"bookcourse2training", "parent":"training","child":"coursefeedback","button_width":"100"},
+	            "bookcourse": {"caption":"Book Course", "relation":"bookcourse2training", "parent":"training","child":"coursefeedback","button_width":"100","buttonhide":"scroll:mytraining"},
 	            "coursefeedback": {"caption":"Feedback", "relation":"coursefeedback2bookcourse", "parent":"bookcourse","button_width":"100"},
 	        },
 	        "support": {
@@ -498,23 +498,23 @@ var menuconfig={
 	        "product": {
 	            "product": {"caption":"Products","child":"release","button_width":"100"},
 	            "release": {"caption":"Release", "relation":"release2product","child":"project","parent":"product","button_width":"100","uri":"rows"},
-	            "project": {"caption":"Projects", "relatedto":"project2product:release2product", "relation":"project2release","parent":"release","button_width":"100","buttonhide":"project:epic:handle_custom_changes"},
+	            "project": {"caption":"Projects", "relatedto":"project2product:release2product", "relation":"project2release","parent":"release","button_width":"100","buttonhide":"scroll:epic"},
 	            "producttestcount": {"caption":"Product Facts", "relation":"producttestcount2product","parent":"product","button_width":"100","rowselect":"draw_testcount_chart","formload":"draw_testcount_chart","chartcols":[4,5,6,7]},
 	            "member": {"caption":"Member", "relation":"member2project", "parent":"project","button_width":"100","formchange":"populate_member"},
 	            "board": {"caption":"Board", "relation":"board2project", "parent":"project","button_width":"100"},
 	            "functionalgroup": {"caption":"Functional Group", "relation":"functionalgroup2product", "parent":"product","button_width":"100"},
 	            "hourbooked": {"caption":"Resource Booked", "relatedto":"hourbooked2testuser:member2assignto","showlistcols":[3,4,6], "parent":"member","button_width":"100"},
-	            "documents": {"caption":"Documents", "relation":"documents2release", "parent":"release","button_width":"100","buttonhide":"epic,feature"},
+	            "documents": {"caption":"Documents", "relation":"documents2release", "parent":"release","button_width":"100","buttonhide":"scroll:epic,scroll:feature"},
 	            "releasetestcount": {"caption":"Release Facts", "relation":"releasetestcount2release","parent":"release","button_width":"100","rowselect":"draw_testcount_chart","formload":"draw_testcount_chart","chartcols":[4,5,6,7]},
 	            "projecttestcount": {"caption":"Project Facts", "relation":"projecttestcount2project","parent":"project","button_width":"100","showlistcols":[3,5],"rowselect":"draw_testcount_chart","formload":"draw_testcount_chart","chartcols":[5,6,7,8]},
 	            "projectprogress": {"caption":"Project Cost & Progress", "relation":"projectprogress2project","parent":"project","button_width":"100","showlistcols":[3,5],"rowselect":"draw_projectprogress_chart","formload":"draw_projectprogress_chart"},
 	           
 	        },
 	        "project": {
-	        	"project": {"caption":"Projects", "relation":"project2product","child":"epic","parent":"product","button_width":"100","uri":"rows","buttonhide":"create,project_priv_step"},
+	        	"project": {"caption":"Projects", "relation":"project2product","child":"epic","parent":"product","button_width":"100","uri":"rows","buttonhide":"create,scroll:release"},
 	        	 "epic": {"caption":"Epic", "relation":"epic2project", "parent":"project","child":"feature","button_width":"100"},
-	        	"feature": {"caption":"Features",  "relatedto":"feature2project:epic2project","relation":"feature2epic", "child":"scenerio", "parent":"project","button_width":"100","formload":"update_feature_status","rowselect":"update_feature_status","buttonhide":"scroll:mytasks"},
-	            "scenerio": {"caption":"Scenarios", "relation":"scenerio2feature", "child":"matrixlist", "parent":"feature","button_width":"100","formcolhide":"projectname,featurename,externid"},
+	        	"feature": {"caption":"Features",  "relatedto":"feature2project:epic2project","relation":"feature2epic", "child":"scenerio", "parent":"project","button_width":"100","formload":"update_feature_status","rowselect":"update_feature_status","buttonhide":"scroll:mytasks,scroll:tasks"},
+	            "scenerio": {"caption":"Scenarios", "relation":"scenerio2feature", "child":"teststeps", "parent":"feature","button_width":"100","formcolhide":"projectname,featurename,externid"},
 	            "matrixlist": {"caption":"Matrix", "relation":"matrixmap2scenerio", "parent":"scenerio","button_width":"100","rowselect":"update_matrixlist_for_scenerio","excludecolupdate":":scenerio"},
 	            "member": {"caption":"Member", "relation":"member2project", "parent":"project","button_width":"100","formchange":"populate_member","uri":"rows","disablefields":"totalhrs,resourcecost"},
 	            "board": {"caption":"Board", "relation":"board2project", "parent":"project","button_width":"100"},
@@ -525,7 +525,7 @@ var menuconfig={
 	            "epictestcount": {"caption":"Epic Facts", "relation":"epictestcount2epic","parent":"epic","button_width":"100","showlistcols":[3,5],"rowselect":"draw_testcount_chart","formload":"draw_testcount_chart","chartcols":[5,6,7,8]},
 	            "featuretestcount": {"caption":"Feature Facts", "relation":"featuretestcount2feature","parent":"feature","button_width":"100","showlistcols":[3,5],"rowselect":"draw_testcount_chart","formload":"draw_testcount_chart","chartcols":[5,6,7,8]},
 	            "testcount": {"caption":"Scenerio Facts", "relation":"testcount2scenerio","parent":"scenerio","button_width":"100","rowselect":"draw_testcount_chart","formload":"draw_testcount_chart","chartcols":[3,5]},
-	            "documents": {"caption":"Documents", "relation":"documents2epic", "parent":"epic","button_width":"100","buttonhide":"release"},
+	            "documents": {"caption":"Documents", "relation":"documents2epic", "parent":"epic","button_width":"100","buttonhide":"scroll:release,scroll:feature"},
 	            "teststeps": {"caption":"Tests", "relation":"teststeps2scenerio", "parent":"scenerio","button_width":"100","formcolhide":"externid","buttonhide":"teststeps_priv_step"},
 	            "estimation": {"caption":"Estimation", "relation":"estimation2epic", "parent":"epic","button_width":"100","uri":"rows","disablefields":"totalhr,totalcost"},
 	            "hourbooked": {"caption":"Resource Booked", "relatedto":"hourbooked2testuser:member2assignto","showlistcols":[3,4,6], "parent":"member","button_width":"100"},
@@ -533,10 +533,10 @@ var menuconfig={
 		           
 	        },
 	        "feature": {
-	        	"feature": {"caption":"Features", "relation":"feature2project", "child":"scenerio", "parent":"project","button_width":"100","uri":"rows","formload":"update_feature_status","rowselect":"update_feature_status","buttonhide":"feature_priv_step,scroll:mytasks"},
-	        	"scenerio": {"caption":"Scenarios", "relation":"scenerio2feature", "child":"matrixlist", "parent":"feature","button_width":"100","formcolhide":"projectname,featurename,externid"},
+	        	"feature": {"caption":"Features", "relation":"feature2project", "child":"scenerio", "parent":"project","button_width":"100","uri":"rows","formload":"update_feature_status","rowselect":"update_feature_status","buttonhide":"scroll:epic,scroll:mytasks,scroll:tasks"},
+	        	"scenerio": {"caption":"Scenarios", "relation":"scenerio2feature", "child":"teststeps", "parent":"feature","button_width":"100","formcolhide":"projectname,featurename,externid"},
 	        	"jenkinsjob": {"caption":"Jenkins Job", "relation":"jenkinsjob2feature", "parent":"feature","button_width":"100"},
-	        	"documents": {"caption":"Documents", "relation":"documents2feature", "parent":"feature","button_width":"100","buttonhide":"epic,release"},
+	        	"documents": {"caption":"Documents", "relation":"documents2feature", "parent":"feature","button_width":"100","buttonhide":"scroll:epic,scroll:release"},
 	        	"tasks": {"caption":"Tasks", "relation":"tasks2feature", "parent":"feature","button_width":"100","buttonhide":"tasks_next_step"},
 	            "matrixlist": {"caption":"Matrix", "relation":"matrixmap2scenerio", "parent":"scenerio","button_width":"100","rowselect":"update_matrixlist_for_scenerio","excludecolupdate":":scenerio","buttonhide":"scroll:project"},
 	        	"featuretestcount": {"caption":"Feature Facts", "relation":"featuretestcount2feature","parent":"feature","button_width":"100","showlistcols":[3,5],"rowselect":"draw_testcount_chart","formload":"draw_testcount_chart","chartcols":[5,6,7,8]},
@@ -552,14 +552,14 @@ var menuconfig={
 	        	"teststeps": {"caption":"Tests", "relation":"teststeps2scenerio", "parent":"scenerio","button_width":"100","formcolhide":"externid","buttonhide":"teststeps_priv_step"},
 	        },
 	        "grouprun": {
-	        	"grouprun": {"caption":"Group Run","child":"featurerun","button_width":"100","showlistcols":[6,7],"formcolhide":"productname","uri":"rows","buttonhide":"create,grouprun_priv_step"},
+	        	"grouprun": {"caption":"Group Run","child":"featurerun","button_width":"100","showlistcols":[6,7],"formcolhide":"productname","uri":"rows","buttonhide":"create,scroll:featuregroup"},
 	        	"featurerun": {"caption":"Feature Run", "relation":"featurerun2testrun", "relatedto":"featurerun2testmatrix:grouprun2testmatrix" , "child":"testscenerio", "parent":"testrun","button_width":"100","buttonhide":"scroll:testrun"},
 	        	"jobrun": {"caption":"Run Job", "relation":"jobrun2testrun", "parent":"grouprun","button_width":"100","rowselect":"set_base_url","formload":"set_base_url","buttonhide":"testrun"},
 	        	"testscenerio": {"caption":"Test Scenario", "relation":"testscenerio2featurerun","relatedto":"featurerun2testmatrix:featurerun2testmatrix,sceneriorun2testrun:featurerun2testrun", "child":"sceneriorun", "parent":"featurerun","button_width":"100","rowselect":"create_new_sceneriorun_form"},
 	        	"sceneriorun": {"caption":"Test Run", "relation":"sceneriorun2testscenerio","relatedto":"sceneriorun2testrun","listrelation":"testscenerio.sceneriorun2testrun","child":"attachment", "parent":"testscenerio","button_width":"100","uri":"rows","formcolhide":"envname"},
 	        	"bug": {"caption":"Defect", "relation":"bug2sceneriorun", "parent":"sceneriorun","button_width":"100"},
 	        	"teststeps": {"caption":"Test Steps", "relatedto":"teststeps2scenerio", "parent":"testscenerio","button_width":"100","buttonhide":"create,save","formcolhide":"externid","buttonhide":"teststeps_action_set"},
-	        	"attachment": {"caption":"Attachments", "relation":"attachment2sceneriorun", "parent":"sceneriorun","button_width":"100","buttonhide":"removeMe"},
+	        	"attachment": {"caption":"Attachments", "relation":"attachment2sceneriorun", "parent":"sceneriorun","button_width":"100","buttonhide":"scroll:sceneriorun,scroll:testscenerio,scroll:featurerun"},
 		        "grouprunresult": {"caption":"Group Run Facts", "relation":"grouprunresult2grouprun","parent":"grouprun","child":"sceneriorunresult","button_width":"100","rowselect":"draw_board_chart","formload":"draw_board_chart","chartcols":[5,6,7,8,12]},
 		        "featuretestresult": {"caption":"Feature Run Facts", "relation":"featuretestresult2featurerun","relatedto":"featurerun2testrun","parent":"featurerun","button_width":"100","buttonhide":"scroll:feature:tabwidget","rowselect":"draw_board_chart","formload":"draw_board_chart","chartcols":[4,5,6,7,11]},
 		        "summaryreport": {"caption":"Summary Reports","relation":"summaryreport2testrun","relatedto":"summaryreport2testmatrix:grouprun2testmatrix", "parent":"grouprun","child":"sceneriorunresult","button_width":"100","buttonhide":"scroll:testrun","showlistcols":[6,8,9,12,19],"formcolhide":":name"},
@@ -569,14 +569,14 @@ var menuconfig={
 			       
 	        },
 	        "testrun": {
-	        	"testrun": {"caption":"Matrix Run","child":"featurerun","button_width":"100","showlistcols":[5,6],"formcolhide":"productname","uri":"rows","buttonhide":"create,testrun_priv_step"},
+	        	"testrun": {"caption":"Matrix Run","child":"jobrun","button_width":"100","showlistcols":[5,6],"formcolhide":"productname","uri":"rows","buttonhide":"create,scroll:testmatrix"},
 	        	"featurerun": {"caption":"Feature Run", "relation":"featurerun2testrun", "child":"testscenerio", "parent":"testrun","button_width":"100","buttonhide":"scroll:grouprun"},
 	        	"jobrun": {"caption":"Run Job", "relation":"jobrun2testrun", "parent":"testrun","button_width":"100","rowselect":"set_base_url","formload":"set_base_url","buttonhide":"grouprun"},
 	        	"testscenerio": {"caption":"Test Scenario", "relation":"testscenerio2featurerun","relatedto":"featurerun2testmatrix:featurerun2testmatrix,sceneriorun2testrun:featurerun2testrun", "child":"sceneriorun", "parent":"featurerun","button_width":"100","rowselect":"create_new_sceneriorun_form"},
 	        	"sceneriorun": {"caption":"Test Run", "relation":"sceneriorun2testscenerio","relatedto":"sceneriorun2testrun","listrelation":"testscenerio.sceneriorun2testrun","child":"attachment", "parent":"testscenerio","button_width":"100","uri":"rows","formcolhide":"envname"},
 	        	"bug": {"caption":"Defect", "relation":"bug2sceneriorun", "parent":"sceneriorun","button_width":"100"},
 	        	"teststeps": {"caption":"Test Steps", "relatedto":"teststeps2scenerio", "parent":"testscenerio","button_width":"100","buttonhide":"create,save","formcolhide":"externid","buttonhide":"teststeps_action_set"},
-	        	"attachment": {"caption":"Attachments", "relation":"attachment2sceneriorun", "parent":"sceneriorun","button_width":"100","buttonhide":"removeMe"},
+	        	"attachment": {"caption":"Attachments", "relation":"attachment2sceneriorun", "parent":"sceneriorun","button_width":"100","buttonhide":"scroll:sceneriorun,scroll:testscenerio,scroll:featurerun"},
 		        "testrunresult": {"caption":"Matrix Run Facts", "relation":"testrunresult2testrun","parent":"testrun","child":"sceneriorunresult","button_width":"100","rowselect":"draw_board_chart","formload":"draw_board_chart","chartcols":[4,5,6,7,11]},
 		        "featuretestresult": {"caption":"Feature Run Facts", "relation":"featuretestresult2featurerun","relatedto":"featurerun2testrun","parent":"featurerun","button_width":"100","buttonhide":"scroll:feature:tabwidget","rowselect":"draw_board_chart","formload":"draw_board_chart","chartcols":[4,5,6,7,11]},
 		        "summaryreport": {"caption":"Summary Reports","relation":"summaryreport2testrun","relatedto":"summaryreport2testmatrix:testrun2testmatrix", "parent":"testrun","child":"sceneriorunresult","button_width":"100","buttonhide":"scroll:grouprun","showlistcols":[6,8,9,12,19],"formcolhide":":name"},
@@ -587,19 +587,19 @@ var menuconfig={
 		      
 	        },
 	        "featurerun": {
-	        	"featurerun": {"caption":"Feature Run", "relation":"featurerun2testrun", "child":"testscenerio", "parent":"testrun","button_width":"100","uri":"rows","buttonhide":"featurerun_priv_step"},
+	        	"featurerun": {"caption":"Feature Run", "relation":"featurerun2testrun", "child":"testscenerio", "parent":"testrun","button_width":"100","uri":"rows","buttonhide":"scroll:testrun,scroll:grouprun"},
 	        	"testscenerio": {"caption":"Test Scenerio", "relation":"testscenerio2featurerun", "relatedto":"featurerun2testmatrix:featurerun2testmatrix,sceneriorun2testrun:featurerun2testrun","child":"sceneriorun", "parent":"featurerun","button_width":"100","rowselect":"create_new_sceneriorun_form"},
 		        "sceneriorun": {"caption":"Scenario Run", "relation":"sceneriorun2testscenerio","relatedto":"sceneriorun2testrun","listrelation":"testscenerio.sceneriorun2testrun","child":"attachment", "parent":"testscenerio","button_width":"100","uri":"rows","formcolhide":"envname"},
-	        	"attachment": {"caption":"Attachments", "relation":"attachment2sceneriorun", "parent":"sceneriorun","button_width":"100","buttonhide":"removeMe"},
+	        	"attachment": {"caption":"Attachments", "relation":"attachment2sceneriorun", "parent":"sceneriorun","button_width":"100","buttonhide":"scroll:sceneriorun,scroll:testscenerio,scroll:bug"},
 	        	"bug": {"caption":"Defect", "relation":"bug2sceneriorun", "parent":"sceneriorun","button_width":"100"},
 	        	"teststeps": {"caption":"Test Steps", "relatedto":"teststeps2scenerio", "parent":"testscenerio","button_width":"100","buttonhide":"create,save","formcolhide":"externid","buttonhide":"teststeps_action_set"},
 	        	"featuretestresult": {"caption":"Feature Run Facts", "relation":"featuretestresult2featurerun","relatedto":"featurerun2testrun","parent":"featurerun","button_width":"100","buttonhide":"scroll:feature:tabwidget","rowselect":"draw_board_chart","formload":"draw_board_chart","chartcols":[4,5,6,7,11]},
 		        
 	        },
 	        "testscenerio": {
-	        	 "testscenerio": {"caption":"Test Scenerio", "relation":"testscenerio2featurerun", "child":"sceneriorun", "parent":"featurerun","button_width":"100","rowselect":"create_new_sceneriorun_form","buttonhide":"testscenerio_priv_step"},
+	        	 "testscenerio": {"caption":"Test Scenerio", "relation":"testscenerio2featurerun", "child":"sceneriorun", "parent":"featurerun","button_width":"100","rowselect":"create_new_sceneriorun_form","buttonhide":"scroll:featurerun"},
 	        	 "sceneriorun": {"caption":"Scenario Run", "relation":"sceneriorun2testscenerio","relatedto":"sceneriorun2testrun","listrelation":"testscenerio.sceneriorun2testrun","child":"attachment", "parent":"testscenerio","button_width":"100","uri":"rows","formcolhide":"envname","buttonhide":"scroll:featurerun"},
-		          "attachment": {"caption":"Attachments", "relation":"attachment2sceneriorun", "parent":"sceneriorun","button_width":"100","buttonhide":"scroll:featurerun,removeMe"},
+		          "attachment": {"caption":"Attachments", "relation":"attachment2sceneriorun", "parent":"sceneriorun","button_width":"100","buttonhide":"scroll:sceneriorun,scroll:bug,scroll:featurerun"},
 	        	  "bug": {"caption":"Defect", "relation":"bug2sceneriorun", "parent":"sceneriorun","button_width":"100"},
 	        	  "teststeps": {"caption":"Test Steps", "relatedto":"teststeps2scenerio", "parent":"testscenerio","button_width":"100","buttonhide":"create,save","formcolhide":"externid","buttonhide":"teststeps_action_set"},
 	        	  "resolution": {"caption":"Resolution", "relation":"resolution2bug", "parent":"bug","button_width":"100"}
@@ -607,22 +607,22 @@ var menuconfig={
 	        },
 	        "testmatrix": {
 	        	"testmatrix": {"caption":"Test Matrix", "child":"testrun","button_width":"100","uri":"rows","showlistcols":[4,5],"formcolhide":"productname"},
-	        	"testrun": {"caption":"Matrix Run", "relatedto":"testrun2product:testmatrix2product", "relation":"testrun2testmatrix","parent":"testmatrix","button_width":"100","formcolhide":"productname","buttonhide":"testrun_next_step"},
+	        	"testrun": {"caption":"Matrix Run", "relatedto":"testrun2product:testmatrix2product", "relation":"testrun2testmatrix","parent":"testmatrix","button_width":"100","formcolhide":"productname","buttonhide":"scroll:jobrun,testrun:jobrun:handle_custom_changes"},
 	        	"testenv": {"caption":"Test Env", "relation":"testenv2testmatrix",  "parent":"testmatrix","button_width":"100"},
 	        	"jobrun": {"caption":"Run Job", "relation":"jobrun2testrun", "parent":"testrun","button_width":"100","rowselect":"set_base_url","formload":"set_base_url"},
 	        	
 	        },
 	        "featuregroup": {
 	        	"featuregroup": {"caption":"Feature Group", "child":"grouprun","button_width":"100","uri":"rows","showlistcols":[3,4],"formcolhide":"productname"},
-	        	"grouprun": {"caption":"Group Run", "relatedto":"grouprun2product:featuregroup2product", "relation":"grouprun2featuregroup","parent":"featuregroup","button_width":"100","formcolhide":"productname","buttonhide":"grouprun_next_step"},
+	        	"grouprun": {"caption":"Group Run", "relatedto":"grouprun2product:featuregroup2product", "relation":"grouprun2featuregroup","parent":"featuregroup","button_width":"100","formcolhide":"productname","buttonhide":"scroll:jobrun"},
 	        	
 	        	
 	        },
 	        "bug": {
 	        	"bug": {"caption":"Bug","child":"resolution","button_width":"100","buttonhide":"bug:bug:removeMe"},
 	        	"bugscenerio": {"caption":"Test Scenario", "relation":"bugscenerio2bug", "parent":"bug","button_width":"100","buttonhide":":mybug"},
-	        	"attachment": {"caption":"Attachments", "relation":"attachment2bug", "parent":"bug","button_width":"100","buttonhide":"attachment_view_set"},
-	            "resolution": {"caption":"Resolution", "relation":"resolution2bug", "parent":"bug","button_width":"100"}
+	        	"attachment": {"caption":"Attachments", "relation":"attachment2bug", "parent":"bug","button_width":"100","buttonhide":"scroll:sceneriorun,scroll:testscenerio,scroll:featurerun"},
+	            "resolution": {"caption":"Resolution", "relation":"resolution2bug", "parent":"bug","button_width":"100","buttonhide":"mybug:resolution:removeMe"}
 		        
 	        },
 	        "projectboard": {
@@ -630,7 +630,7 @@ var menuconfig={
 	            "sprint": {"caption":"Sprint", "relation":"sprint2projectboard","child":"sprintboard", "parent":"projectboard","button_width":"100","showlistcols":[3,4,5]},
 	            "sprintboard": {"caption":"Board", "relation":"sprintboard2sprint", "parent":"sprint","child":"backlog","button_width":"100"},
 	            "backlog": {"caption":"Feature List", "relation":"backlog2board","relatedto":"sprintboard2sprint", "parent":"board","button_width":"100","rowselect":"update_backlog_relation"},
-	            "feature": {"caption":"Feature", "relation":"feature2board", "parent":"board","child":"tasks","button_width":"100","formcolhide":"projectname"},
+	            "feature": {"caption":"Feature", "relation":"feature2board", "parent":"board","child":"tasks","button_width":"100","formcolhide":"projectname","buttonhide":"scroll:scenerio,scroll:epic,create:feature,new,summary,file:download:feature,scroll:mytasks"},
 	            "tasks": {"caption":"Tasks", "relation":"tasks2feature", "parent":"feature","child":"tasknote","button_width":"100"},
 	            "tasknote": {"caption":"Note", "relation":"tasknote2tasks", "parent":"tasks","button_width":"100","buttonhide":"scroll:mytasks"},
 	            "projectboardresult": {"caption":"Project Board Facts", "relation":"boardresult2projectboard","parent":"projectboard","button_width":"100","rowselect":"draw_board_chart","formload":"draw_board_chart","chartcols":[3,4,5,6,10]},
@@ -649,6 +649,9 @@ var menuconfig={
 	        "company": {
 	        	"company": {"caption":"Company","child":"testuser","button_width":"100"},
 	        	"testuser": {"caption":"User", "relation":"testuser2company", "parent":"company","button_width":"100","buttonhide":"scroll:privilegegroup"}
+	        },
+	        "testuser": {
+	        	"testuser": {"caption":"User", "relation":"testuser2company", "parent":"company","button_width":"100","buttonhide":"scroll:privilegegroup,scroll:company"}
 	        },
 	        "calendar": {
 	        	"calendar": {"caption":"Calendar","child":"week","button_width":"100"},

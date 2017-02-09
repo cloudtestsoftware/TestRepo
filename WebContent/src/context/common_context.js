@@ -41,12 +41,20 @@ var layout={
         "cloudprovider":"600",};
    
 
-var chooseexclude="matrixlist ";
+var chooseexclude={"matrixlist":true,
+		          "featurelist":true,};
 
 //use this variable to reinitialize child caller
 
 var childcallertables=" summaryreport, testrunresult, grouprunresult";
 
+function getChooseExclude(key){
+	
+		if(chooseexclude[key] ){
+			return chooseexclude[key];
+		}
+		return false;
+}
 function getLayoutHeight(key){
 	
 	if(layoutHeight ){

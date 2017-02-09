@@ -55,6 +55,7 @@ var scenerio_toolbar=
 		{ id: "file:download:scenerio", type: "button", img: "download.gif",  title: "Download file", action:"action_button_callback" },
 		
 		{ type: "separator" },
+		{ id: "home:project", type: "button", img: "lookup.gif",  title: "Lookup", action:"action_button_callback" },
 		{ id: "scroll:feature", type: "button", img: "up1.gif", title: "Previous step", action:"action_button_callback"},
 		{ id: "scroll:teststeps", type: "button", img: "down1.gif", title: "Add Test cases", action:"action_button_callback"},
 		//{ id: "scenerio:matrixlist:handle_custom_changes", type: "button", img: "down1.gif",  title: "Next step", action:"action_button_callback" },

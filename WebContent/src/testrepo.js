@@ -90,7 +90,7 @@ var  inputGridWidth,  inputGridHeight;
 		
 			initWorkspace();
 			
-			skin = "dhx_web";
+			skin = "dhx_skyblue";
 			if(layout_skin){
 				skin=layout_skin;
 			}
@@ -813,6 +813,7 @@ function getMainForm(){
 	 }
 	 return form;
 }
+
 function scrollToChild(child){
 	 var container;
 	 var table=child.split(":")[1];
@@ -825,7 +826,14 @@ function scrollToChild(child){
 	 try{
 		  container= getMainForm().getContainer(table_container);
 	 }catch(err){}
-	
+	 
+	 if(!container){
+
+		 table_container=table+"_home_container";
+		 try{
+			  container= getMainForm().getContainer(table_container);
+		 }catch(err){}
+	 }
 	 if(!container ){// &&child.indexOf("tabwidget")>=0
 		 table_container=table+"_grid_container";
 		 if(!container && getWidgetForm(table)){
@@ -867,6 +875,28 @@ function scrollToChild(child){
 		 dhtmlx.alert("Please select a row in the grid!");
     	 return false;
 	 }
+}
+
+function goToHome(child){
+	 var container;
+	 var table=child.split(":")[1];
+	 var table_container=table+"_home_container";
+	
+	 try{
+		  container= getMainForm().getContainer(table_container);
+	 }catch(err){}
+	 
+	 
+    if(!container){
+    	 return false;
+    }
+	 var cont_id=container.getAttribute("id");
+	 if(cont_id){
+		 document.getElementById(cont_id).scrollIntoView(true);
+		 window.scrollTo(0,0);
+		 
+	 }
+	 return false;
 	
 	
 }
@@ -1010,6 +1040,7 @@ function addGridToMainForm(container, table,widget_form){
 	grid.clearAll();
 	grid.load(gurl,'xml');
     grid.setUserData("","table",table);
+   
 	grid.attachEvent("onXLE", function(grid,count){
 		if(updated_objid){
 			selectGridRow(table,updated_objid)
@@ -1018,8 +1049,11 @@ function addGridToMainForm(container, table,widget_form){
 		callCustomRowSelect(table,"onXLE");
 		callCustomFormLoad(table);
 		
-  		
   	});
+	
+	grid.attachEvent("onDataReady",function(){
+		setGridFilters(grid);
+	});
   	//grid.setUserData("","table",table);
 	gridlist[table]=grid;
 	
@@ -1030,7 +1064,7 @@ function addGridToMainForm(container, table,widget_form){
 	grid.attachEvent('onRowSelect',function(rowId,cellIndex){
 		
 	        //alert("rowid="+grid.getSelectedRowId())
-		   if(chooseexclude.indexOf(table)<0 &&grid.getColumnId(0).indexOf("choose")>=0){
+		   if(!getChooseExclude(table) &&grid.getColumnId(0).indexOf("choose")>=0){
 			   grid.cells(rowId,0).setValue("1");
 		   }
 			grid_onRowSelect_callback(grid,table,rowId,cellIndex);
@@ -1066,9 +1100,10 @@ function addGridToMainForm(container, table,widget_form){
 			widgetforms[table].disableItem("grid:rowcount");
 		}
 		
-		if(grid.getColumnId(0).indexOf("choose")>=0){
+		if(!getChooseExclude(table) && grid.getColumnId(0).indexOf("choose")>=0){
 			grid.setColumnHidden(0,true);
 		}
+		
 		
 	}); 
 	
@@ -1095,7 +1130,30 @@ function addGridToMainForm(container, table,widget_form){
 
 }
 
-
+function setGridFilters(grid){
+	var rowId=0;
+	var colIdx=0;
+	var filter="";
+	grid.forEachCell(rowId,function(c){
+		try{
+			var colid=grid.getColumnId(colIdx);
+			if(colid){
+				if(colid.indexOf("name")>0 && filter.indexOf("#text_filter")<0){
+	        		filter+=",#text_filter";
+	        	}else if(colIdx>0){
+	        		filter+=",";
+	        	}
+	        	colIdx++;
+			}
+			
+		}catch(err){}
+			
+			
+     });
+	
+	grid.attachHeader(filter);
+	
+}
 
 function addDataForm(table){
    var parent_objid;
@@ -1525,9 +1583,8 @@ function action_button_callback(name,command){
 	}else if(name.indexOf('find:')>=0){
 	   handle_find_changes(name);
 	   
-	/*}else if(name.indexOf('buttonfilter:')>=0){
-	   handle_button_filter(name);
-	 */  
+	}else if(name.indexOf('home:')>=0){
+		goToHome(name);
 	   
 	}else if(name.indexOf(':download')>=0){
 		grid2excel(name);

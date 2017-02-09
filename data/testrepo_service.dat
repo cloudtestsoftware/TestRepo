@@ -9914,7 +9914,7 @@
   <Attribute>
     AttributeName=ExternalId
     AttrIndex=3
-    AliasName=External ServiceId
+    AliasName=External Asset Id
     Behavior=text
     DomainName=String100_t
     IsNull=no

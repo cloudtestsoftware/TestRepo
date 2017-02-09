@@ -1,8 +1,11 @@
 
 
 var project_main_context = [
+        { type:"block" , name:"project_home_block", offsetLeft:"10", list:[
+        { type:"container" , name:"project_home_container", inputWidth:"10", inputHeight:"10"  },
         {type: "settings", position: "label-left", labelWidth: 130},
-		{ type:"fieldset" , name:"search_filterset", label:"Project Search Filters", list:[
+		{ type:"fieldset" , name:"search_filterset", label:"Project Search Filters",  list:[
+        
 		{ type:"input" , name:"name", label:"Partial Name [*]"  },
 		{ type:"select" , name:"status", label:"Project Status", inputWidth:140, options:[
 					{ value:"Open", text:"Open" },
@@ -11,6 +14,7 @@ var project_main_context = [
 			] },
 		{ type:"button" , name:"search:project:search_custom_action", value:"Search", command:"save"  },
 		
+		]  },
 		]  },
 		
 	];
@@ -39,7 +43,7 @@ var project_grid_context=
 
 var project_toolbar=
 	[
-
+	    
 		{ id: "summary", type: "buttonSelect", img: "summary.gif",text: "Summary", title:"Project Summary", openAll: true, renderSelect: false,
 			options: [
 				{ type: "button", id: "project:projectprogress:handle_custom_changes", text: "Project Dashboard",img: "board.gif" },

@@ -77,6 +77,8 @@
 			 <item type="button" id="matrix:featuregroup" text="Feature Group" img="featuregroup.gif"/>
 			 <item type="separator" id="button_separator_16" />
 			<item type="button" id="matrix:jenkins" text="Setup CI/CD Endpoint" img="jenkins.gif"/>
+			<item type="separator" id="button_separator_17" />
+			<item type="button" id="matrix:servicerepo" text="Setup Services" img="api.gif"/>
 		</item>
 		<item type="buttonSelect" id="run" text="Test Run" img="run.gif" renderSelect="false" openAll="true">
 		    <item type="button" id="run:testrun" text="Automated Feature Run" img="matrix.gif"/>

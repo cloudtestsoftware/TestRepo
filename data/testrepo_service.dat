@@ -9859,12 +9859,12 @@
 </SemanticObject>
 
 //**********************************************//
-    CicdService
+    ServiceRepo
 //**********************************************//
 
 <SemanticObject>
-  ObjectName=CicdService
-  AliasName=CicdService
+  ObjectName=ServiceRepo
+  AliasName=ServiceRepo
   ObjectType=Table
   ObjectFilter=null
   IsBaseline=Yes
@@ -9894,9 +9894,27 @@
     Remark=Name of the CICD Service 
   </Attribute>
   <Attribute>
-    AttributeName=Endpoint
+    AttributeName=Description
     AttrIndex=2
-    AliasName=CICD Endpoints
+    AliasName=Description
+    Behavior=text
+    DomainName=String4000_t
+    IsNull=no
+    DefaultValue=null
+    HasProperty=no
+    HasCodeObject=no
+    FieldType=null
+    IsViewField=no
+    SelectMandatory=no
+    IsSearchField=no
+    IsBaseline=yes
+    Version=1.0
+    Remark=description about this service how to use this
+  </Attribute>
+  <Attribute>
+    AttributeName=Endpoint
+    AttrIndex=3
+    AliasName=Endpoint
     Behavior=text
     DomainName=String300_t
     IsNull=no
@@ -9913,10 +9931,28 @@
   </Attribute>
   <Attribute>
     AttributeName=ExternalId
-    AttrIndex=3
+    AttrIndex=4
     AliasName=External Asset Id
     Behavior=text
     DomainName=String100_t
+    IsNull=yes
+    DefaultValue=null
+    HasProperty=no
+    HasCodeObject=no
+    FieldType=null
+    IsViewField=no
+    SelectMandatory=no
+    IsSearchField=no
+    IsBaseline=yes
+    Version=1.0
+    Remark=External reference of the CI/CD Service
+  </Attribute>
+   <Attribute>
+    AttributeName=Version
+    AttrIndex=5
+    AliasName=Version
+    Behavior=text
+    DomainName=String50_t
     IsNull=no
     DefaultValue=null
     HasProperty=no
@@ -9930,8 +9966,26 @@
     Remark=External reference of the CI/CD Service
   </Attribute>
   <Attribute>
+    AttributeName=ServiceType
+    AttrIndex=6
+    AliasName=Service Type
+    Behavior=select
+    DomainName=Type_t
+    IsNull=no
+    DefaultValue=null
+    HasProperty=yes
+    HasCodeObject=no
+    FieldType=null
+    IsViewField=no
+    SelectMandatory=yes
+    IsSearchField=no
+    IsBaseline=yes
+    Version=1.0
+    Remark=Service type CICD, AWS, Application, etc
+  </Attribute>
+  <Attribute>
     AttributeName=AuthType
-    AttrIndex=4
+    AttrIndex=7
     AliasName=Auth Type
     Behavior=select
     DomainName=Type_t
@@ -9948,9 +10002,27 @@
     Remark=Auth type basic , oAuth etc
   </Attribute>
   <Attribute>
-    AttributeName=Method
-    AttrIndex=5
-    AliasName=Method Call
+    AttributeName=IsActive
+    AttrIndex=8
+    AliasName=Is Active
+    Behavior=select
+    DomainName=Type_t
+    IsNull=no
+    DefaultValue=null
+    HasProperty=yes
+    HasCodeObject=no
+    FieldType=null
+    IsViewField=no
+    SelectMandatory=yes
+    IsSearchField=no
+    IsBaseline=yes
+    Version=1.0
+    Remark=Is this service currently active yes or no
+  </Attribute>
+  <Attribute>
+    AttributeName=MethodType
+    AttrIndex=9
+    AliasName=Method Type
     Behavior=select
     DomainName=Type_t
     IsNull=no
@@ -9967,7 +10039,7 @@
   </Attribute> 
   <Attribute>
     AttributeName=ExpiryDate
-    AttrIndex=6
+    AttrIndex=10
     AliasName=Expired On
     Behavior=date
     DomainName=Date_t
@@ -9983,8 +10055,44 @@
     Version=1.0
     Remark=Date when expired
   </Attribute>
+  <Attribute>
+    AttributeName=PostBody
+    AttrIndex=11
+    AliasName=Post Body
+    Behavior=text
+    DomainName=String4000_t
+    IsNull=yes
+    DefaultValue=null
+    HasProperty=no
+    HasCodeObject=no
+    FieldType=null
+    IsViewField=no
+    SelectMandatory=no
+    IsSearchField=no
+    IsBaseline=yes
+    Version=1.0
+    Remark=json body for post
+  </Attribute>
+   <Attribute>
+    AttributeName=ResponseBody
+    AttrIndex=12
+    AliasName=Response Body
+    Behavior=text
+    DomainName=String4000_t
+    IsNull=yes
+    DefaultValue=null
+    HasProperty=no
+    HasCodeObject=no
+    FieldType=null
+    IsViewField=no
+    SelectMandatory=no
+    IsSearchField=no
+    IsBaseline=yes
+    Version=1.0
+    Remark=json body of response
+  </Attribute>
   <Index>
-     Indexname=Pk_CicdService_Indx01
+     Indexname=Pk_ServiceRepo_Indx01
      Fields=ObjId
      IndexType=Unique
   </Index>
@@ -9992,11 +10100,11 @@
 </SemanticObject>
 
 //**********************************************//
-       VarService
+       ServiceParam
 //**********************************************//
 <SemanticObject>
-  ObjectName=VarService
-  AliasName=VarService
+  ObjectName=ServiceParam
+  AliasName=ServiceParam
   ObjectType=Table
   ObjectFilter=null
   IsBaseline=Yes
@@ -10006,7 +10114,7 @@
   AllowDelete=no
   AllowNew=yes
   AllowSearch=yes
-  Remark= This table stores the VarService
+  Remark= This table stores the ServiceParam
   <Attribute>
     AttributeName=Name
     AttrIndex=1
@@ -10028,7 +10136,7 @@
   <Attribute>
     AttributeName=KeyValue
     AttrIndex=2
-    AliasName=Secret Key
+    AliasName=Key Value
     Behavior=text
     DomainName=String200_t
     IsNull=no
@@ -10044,9 +10152,9 @@
     Remark=Key value
   </Attribute>
    <Attribute>
-    AttributeName=Type
+    AttributeName=ParamType
     AttrIndex=3
-    AliasName=Type
+    AliasName=Param Type
     Behavior=select
     DomainName=Type_t
     IsNull=no
@@ -10062,33 +10170,48 @@
     Remark=type of the variable like header , cookiee, body
   </Attribute>
   <AttributeRelation>
-        RelationName=VarService2CicdService
-        ParentTable=CicdService
+        RelationName=ServiceParam2ServiceRepo
+        ParentTable=ServiceRepo
         RelationType=MTO
         CurrentState=0
         TabIndex=0
         DefaultFilter=null 
         IsMandatory=no
-        Remark=Related to CicdService
+        Remark=Related to ServiceRepo
+   </AttributeRelation>
+    <AttributeRelation>
+        RelationName=ServiceParam2ServiceApi
+        ParentTable=ServiceApi
+        RelationType=MTO
+        CurrentState=0
+        TabIndex=0
+        DefaultFilter=null 
+        IsMandatory=no
+        Remark=Related to ServiceApi
    </AttributeRelation>
   <Index>
-     Indexname=Pk_VarService_Indx01
+     Indexname=Pk_ServiceParam_Indx01
      Fields=ObjId
      IndexType=Unique
   </Index>
   <Index>
-     Indexname=Fk_VarService_Indx01
-     Fields=VarService2CicdService
+     Indexname=Fk_ServiceParam_Indx01
+     Fields=ServiceParam2ServiceRepo
+     IndexType=Indexed
+  </Index>
+  <Index>
+     Indexname=Fk_ServiceParam_Indx02
+     Fields=ServiceParam2ServiceApi
      IndexType=Indexed
   </Index>
 </SemanticObject>
 
 //**********************************************//
-       ServiceSecret
+       ServiceAuth
 //**********************************************//
 <SemanticObject>
-  ObjectName=ServiceSecret
-  AliasName=ServiceSecret
+  ObjectName=ServiceAuth
+  AliasName=ServiceAuth
   ObjectType=Table
   ObjectFilter=null
   IsBaseline=Yes
@@ -10098,11 +10221,11 @@
   AllowDelete=no
   AllowNew=yes
   AllowSearch=yes
-  Remark= This table stores the ServiceSecret
+  Remark= This table stores the ServiceAuth
   <Attribute>
     AttributeName=Name
     AttrIndex=1
-    AliasName=Key Name
+    AliasName=Auth Key Name
     Behavior=text
     DomainName=String200_t
     IsNull=no
@@ -10120,7 +10243,7 @@
   <Attribute>
     AttributeName=KeyValue
     AttrIndex=2
-    AliasName=Secret Key
+    AliasName=Auth Key Value
     Behavior=password
     DomainName=String300_t
     IsNull=no
@@ -10137,49 +10260,49 @@
   </Attribute>
   
   <AttributeRelation>
-        RelationName=ServiceSecret2CicdService
-        ParentTable=CicdService
+        RelationName=ServiceAuth2ServiceRepo
+        ParentTable=ServiceRepo
         RelationType=MTO
         CurrentState=0
         TabIndex=0
         DefaultFilter=null 
         IsMandatory=no
-        Remark=Related to CicdService
+        Remark=Related to ServiceRepo
    </AttributeRelation>
   <Index>
-     Indexname=Pk_ServiceSecret_Indx01
+     Indexname=Pk_ServiceAuth_Indx01
      Fields=ObjId
      IndexType=Unique
   </Index>
   <Index>
-     Indexname=Fk_ServiceSecret_Indx01
-     Fields=ServiceSecret2CicdService
+     Indexname=Fk_ServiceAuth_Indx01
+     Fields=ServiceAuth2ServiceRepo
      IndexType=Indexed
   </Index>
 </SemanticObject>
+//**********************************************//
+    ServiceApi
+//**********************************************//
 
-//**********************************************//
-       ServiceBody
-//**********************************************//
 <SemanticObject>
-  ObjectName=ServiceBody
-  AliasName=ServiceBody
+  ObjectName=ServiceApi
+  AliasName=ServiceApi
   ObjectType=Table
   ObjectFilter=null
   IsBaseline=Yes
   Version=1.0
   ObjectTypeNo=131
-  GroupAccess=yes
+  GroupAccess=admin
   AllowDelete=no
   AllowNew=yes
   AllowSearch=yes
-  Remark= This table stores the ServiceBody
+  Remark= This table stores the  Service
   <Attribute>
-    AttributeName=Body
+    AttributeName=Name
     AttrIndex=1
-    AliasName=Body
+    AliasName=Name
     Behavior=text
-    DomainName=String4000_t
+    DomainName=String200_t
     IsNull=no
     DefaultValue=null
     HasProperty=no
@@ -10190,28 +10313,229 @@
     IsSearchField=yes
     IsBaseline=yes
     Version=1.0
-    Remark=Name of the Cloud Setting
+    Remark=Name of the API
+  </Attribute>
+  <Attribute>
+    AttributeName=Description
+    AttrIndex=2
+    AliasName=Description
+    Behavior=text
+    DomainName=String4000_t
+    IsNull=no
+    DefaultValue=null
+    HasProperty=no
+    HasCodeObject=no
+    FieldType=null
+    IsViewField=no
+    SelectMandatory=no
+    IsSearchField=no
+    IsBaseline=yes
+    Version=1.0
+    Remark=description about this service how to use this
+  </Attribute>
+  <Attribute>
+    AttributeName=Uri
+    AttrIndex=3
+    AliasName=Relative Uri
+    Behavior=text
+    DomainName=String300_t
+    IsNull=yes
+    DefaultValue=null
+    HasProperty=no
+    HasCodeObject=no
+    FieldType=null
+    IsViewField=no
+    SelectMandatory=no
+    IsSearchField=no
+    IsBaseline=yes
+    Version=1.0
+    Remark=URI relative to the service endpoint
+  </Attribute>
+   <Attribute>
+    AttributeName=Version
+    AttrIndex=4
+    AliasName=Version
+    Behavior=text
+    DomainName=String50_t
+    IsNull=no
+    DefaultValue=null
+    HasProperty=no
+    HasCodeObject=no
+    FieldType=null
+    IsViewField=no
+    SelectMandatory=no
+    IsSearchField=no
+    IsBaseline=yes
+    Version=1.0
+    Remark=External reference of the CI/CD Service
+  </Attribute>
+  <Attribute>
+    AttributeName=MethodType
+    AttrIndex=5
+    AliasName=Method Type
+    Behavior=select
+    DomainName=Type_t
+    IsNull=no
+    DefaultValue=null
+    HasProperty=yes
+    HasCodeObject=no
+    FieldType=null
+    IsViewField=no
+    SelectMandatory=yes
+    IsSearchField=no
+    IsBaseline=yes
+    Version=1.0
+    Remark=method of service call POST , GET, PUT, etc
+  </Attribute> 
+   <Attribute>
+    AttributeName=PostBody
+    AttrIndex=6
+    AliasName=Post Body
+    Behavior=text
+    DomainName=String4000_t
+    IsNull=yes
+    DefaultValue=null
+    HasProperty=no
+    HasCodeObject=no
+    FieldType=null
+    IsViewField=no
+    SelectMandatory=no
+    IsSearchField=no
+    IsBaseline=yes
+    Version=1.0
+    Remark=json body for post
+  </Attribute>
+   <Attribute>
+    AttributeName=ResponseBody
+    AttrIndex=7
+    AliasName=Response Body
+    Behavior=text
+    DomainName=String4000_t
+    IsNull=yes
+    DefaultValue=null
+    HasProperty=no
+    HasCodeObject=no
+    FieldType=null
+    IsViewField=no
+    SelectMandatory=no
+    IsSearchField=no
+    IsBaseline=yes
+    Version=1.0
+    Remark=json body of response
   </Attribute>
   <AttributeRelation>
-        RelationName=ServiceBody2CicdService
-        ParentTable=CicdService
+        RelationName=ServiceApi2ServiceRepo
+        ParentTable=ServiceRepo
         RelationType=MTO
         CurrentState=0
         TabIndex=0
         DefaultFilter=null 
         IsMandatory=no
-        Remark=Related to CicdService
+        Remark=Related to ServiceRepo
    </AttributeRelation>
   <Index>
-     Indexname=Pk_ServiceBody_Indx01
+     Indexname=Pk_ServiceApi_Indx01
      Fields=ObjId
      IndexType=Unique
   </Index>
-  <Index>
-     Indexname=Fk_ServiceBody_Indx01
-     Fields=ServiceBody2CicdService
+   <Index>
+     Indexname=Fk_ServiceApi_Indx01
+     Fields=ServiceApi2ServiceRepo
      IndexType=Indexed
   </Index>
+ 
+</SemanticObject>
+
+//*************************************************//
+  ServiceDoc
+//*********************************************//
+<SemanticObject>
+  ObjectName=ServiceDoc
+  AliasName=ServiceDoc
+  ObjectType=Table
+  ObjectFilter=
+  IsBaseline=Yes
+  Version=1.0
+  ObjectTypeNo=132
+  GroupAccess=yes
+  AllowDelete=no
+  AllowNew=yes
+  AllowSearch=yes
+  Remark= This table stores all attachment about service request and response
+  
+  <Attribute>
+    AttributeName=Name
+    AttrIndex=1
+    AliasName=Name
+    Behavior=text
+    DomainName=Name_t
+    IsNull=no
+    DefaultValue=null
+    HasProperty=no
+    HasCodeObject=no
+    FieldType=null
+    IsViewField=no
+    SelectMandatory=yes
+    IsSearchField=yes
+    IsBaseline=yes
+    Version=1.0
+    Remark=The name of steps in scenerio
+  </Attribute>
+  <Attribute>
+    AttributeName=filepath
+    AttrIndex=2
+    AliasName=File Path
+    Behavior=text
+    DomainName=String300_t
+    IsNull=yes
+    DefaultValue=null
+    HasProperty=no
+    HasCodeObject=no
+    FieldType=null
+    IsViewField=no
+    SelectMandatory=no
+    IsSearchField=yes
+    IsBaseline=yes
+    Version=1.0
+    Remark=path to the attachment
+  </Attribute>
+  <AttributeRelation>
+    RelationName=ServiceDoc2ServiceRepo
+    ParentTable=ServiceRepo
+    RelationType=MTO
+    CurrentState=0
+    TabIndex=0
+     DefaultFilter=null 
+    IsMandatory=no
+    Remark=Related to ServiceRepo
+  </AttributeRelation>
+  <AttributeRelation>
+    RelationName=ServiceDoc2ServiceApi
+    ParentTable=ServiceApi
+    RelationType=MTO
+    CurrentState=0
+    TabIndex=0
+    DefaultFilter=null 
+    IsMandatory=no
+    Remark=Related to ServiceApi
+  </AttributeRelation>
+  
+  <Index>
+    Indexname=Pk_ServiceDoc_Indx01
+    Fields=ObjId
+    IndexType=Unique
+  </Index>
+  <Index>
+    Indexname=Fk_ServiceDoc_Indx01
+    Fields=ServiceDoc2ServiceRepo
+    IndexType=Indexed
+  </Index>
+  <Index>
+    Indexname=Fk_ServiceDoc_Indx02
+    Fields=ServiceDoc2ServiceApi
+    IndexType=Indexed
+  </Index>
+  
 </SemanticObject>
 
 //**********************************************//

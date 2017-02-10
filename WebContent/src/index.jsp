@@ -31,6 +31,7 @@
 	<script language="JavaScript" src="./src/context/training_context.js" type="text/javascript"></script>
 	<script language="JavaScript" src="./src/context/crm_context.js" type="text/javascript"></script>
 	<script language="JavaScript" src="./src/context/cloud_context.js" type="text/javascript"></script>
+	<script language="JavaScript" src="./src/context/service_context.js" type="text/javascript"></script>
 	<style>
 		div#layoutObj {
 			position: absolute;

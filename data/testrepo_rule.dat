@@ -1,4 +1,728 @@
+//Attribute:ParamType
 
+<ListProperty>
+
+  Object=ServiceParam
+
+  Attribute=ParamType
+
+  PropertyString=Header
+
+  PropertyValue=HEADER
+
+  Scope=
+
+  PropIndex=1
+
+</ListProperty>
+
+<ListProperty>
+
+  Object=ServiceParam
+
+  Attribute=ParamType
+
+  PropertyString=Cookiee
+
+  PropertyValue=COOKIEE
+
+  Scope=
+
+  PropIndex=2
+
+</ListProperty>
+
+<ListProperty>
+
+  Object=ServiceParam
+
+  Attribute=ParamType
+
+  PropertyString=Variable
+
+  PropertyValue=VARIABLE
+
+  Scope=
+
+  PropIndex=3
+
+</ListProperty>
+<ListProperty>
+
+  Object=ServiceParam
+
+  Attribute=ParamType
+
+  PropertyString=Expression
+
+  PropertyValue=EXP
+
+  Scope=
+
+  PropIndex=4
+
+</ListProperty>
+
+//Attribute:MethodType
+
+<ListProperty>
+
+  Object=ServiceApi
+
+  Attribute=MethodType
+
+  PropertyString=GET
+
+  PropertyValue=GET
+
+  Scope=
+
+  PropIndex=1
+
+</ListProperty>
+
+<ListProperty>
+
+  Object=ServiceApi
+
+  Attribute=MethodType
+
+  PropertyString=POST
+
+  PropertyValue=POST
+
+  Scope=
+
+  PropIndex=2
+
+</ListProperty>
+
+<ListProperty>
+
+  Object=ServiceApi
+
+  Attribute=MethodType
+
+  PropertyString=PUT
+
+  PropertyValue=PUT
+
+  Scope=
+
+  PropIndex=3
+
+</ListProperty>
+<ListProperty>
+
+  Object=ServiceApi
+
+  Attribute=MethodType
+
+  PropertyString=DELETE
+
+  PropertyValue=DELETE
+
+  Scope=
+
+  PropIndex=4
+
+</ListProperty>
+<ListProperty>
+
+  Object=ServiceApi
+
+  Attribute=MethodType
+
+  PropertyString=PURGE
+
+  PropertyValue=PURGE
+
+  Scope=
+
+  PropIndex=5
+
+</ListProperty>
+<ListProperty>
+
+  Object=ServiceApi
+
+  Attribute=MethodType
+
+  PropertyString=PATCH
+
+  PropertyValue=PATCH
+
+  Scope=
+
+  PropIndex=6
+
+</ListProperty>
+
+<ListProperty>
+
+  Object=ServiceApi
+
+  Attribute=MethodType
+
+  PropertyString=COPY
+
+  PropertyValue=COPY
+
+  Scope=
+
+  PropIndex=7
+
+</ListProperty>
+
+<ListProperty>
+
+  Object=ServiceApi
+
+  Attribute=MethodType
+
+  PropertyString=HEAD
+
+  PropertyValue=HEAD
+
+  Scope=
+
+  PropIndex=8
+
+</ListProperty>
+<ListProperty>
+
+  Object=ServiceApi
+
+  Attribute=MethodType
+
+  PropertyString=LINK
+
+  PropertyValue=LINK
+
+  Scope=
+
+  PropIndex=9
+
+</ListProperty>
+<ListProperty>
+
+  Object=ServiceApi
+
+  Attribute=MethodType
+
+  PropertyString=UNLINK
+
+  PropertyValue=UNLINK
+
+  Scope=
+
+  PropIndex=10
+
+</ListProperty>
+<ListProperty>
+
+  Object=ServiceApi
+
+  Attribute=MethodType
+
+  PropertyString=LOCK
+
+  PropertyValue=LOCK
+
+  Scope=
+
+  PropIndex=11
+
+</ListProperty>
+
+<ListProperty>
+
+  Object=ServiceApi
+
+  Attribute=MethodType
+
+  PropertyString=UNLOCK
+
+  PropertyValue=UNLOCK
+
+  Scope=
+
+  PropIndex=12
+
+</ListProperty>
+
+<ListProperty>
+
+  Object=ServiceApi
+
+  Attribute=MethodType
+
+  PropertyString=OPTIONS
+
+  PropertyValue=OPTIONS
+
+  Scope=
+
+  PropIndex=13
+
+</ListProperty>
+<ListProperty>
+
+  Object=ServiceApi
+
+  Attribute=MethodType
+
+  PropertyString=PROPFIND
+
+  PropertyValue=PROPFIND
+
+  Scope=
+
+  PropIndex=14
+
+</ListProperty>
+<ListProperty>
+
+  Object=ServiceApi
+
+  Attribute=MethodType
+
+  PropertyString=VIEW
+
+  PropertyValue=VIEW
+
+  Scope=
+
+  PropIndex=15
+
+</ListProperty>
+
+//Attribute:IsActive
+
+<ListProperty>
+
+	Object=ServiceRepo
+
+	Attribute=IsActive
+
+	PropertyString=Yes
+
+	PropertyValue=1
+
+	Scope=
+
+	PropIndex=1
+
+</ListProperty>
+
+<ListProperty>
+
+	Object=ServiceRepo
+
+	Attribute=IsActive
+
+	PropertyString=No
+
+	PropertyValue=0
+
+	Scope=
+
+	PropIndex=2
+
+</ListProperty>
+
+//Attribute:MethodType
+
+<ListProperty>
+
+  Object=ServiceRepo
+
+  Attribute=MethodType
+
+  PropertyString=GET
+
+  PropertyValue=GET
+
+  Scope=
+
+  PropIndex=1
+
+</ListProperty>
+
+<ListProperty>
+
+  Object=ServiceRepo
+
+  Attribute=MethodType
+
+  PropertyString=POST
+
+  PropertyValue=POST
+
+  Scope=
+
+  PropIndex=2
+
+</ListProperty>
+
+<ListProperty>
+
+  Object=ServiceRepo
+
+  Attribute=MethodType
+
+  PropertyString=PUT
+
+  PropertyValue=PUT
+
+  Scope=
+
+  PropIndex=3
+
+</ListProperty>
+<ListProperty>
+
+  Object=ServiceRepo
+
+  Attribute=MethodType
+
+  PropertyString=DELETE
+
+  PropertyValue=DELETE
+
+  Scope=
+
+  PropIndex=4
+
+</ListProperty>
+<ListProperty>
+
+  Object=ServiceRepo
+
+  Attribute=MethodType
+
+  PropertyString=PURGE
+
+  PropertyValue=PURGE
+
+  Scope=
+
+  PropIndex=5
+
+</ListProperty>
+<ListProperty>
+
+  Object=ServiceRepo
+
+  Attribute=MethodType
+
+  PropertyString=PATCH
+
+  PropertyValue=PATCH
+
+  Scope=
+
+  PropIndex=6
+
+</ListProperty>
+
+<ListProperty>
+
+  Object=ServiceRepo
+
+  Attribute=MethodType
+
+  PropertyString=COPY
+
+  PropertyValue=COPY
+
+  Scope=
+
+  PropIndex=7
+
+</ListProperty>
+
+<ListProperty>
+
+  Object=ServiceRepo
+
+  Attribute=MethodType
+
+  PropertyString=HEAD
+
+  PropertyValue=HEAD
+
+  Scope=
+
+  PropIndex=8
+
+</ListProperty>
+<ListProperty>
+
+  Object=ServiceRepo
+
+  Attribute=MethodType
+
+  PropertyString=LINK
+
+  PropertyValue=LINK
+
+  Scope=
+
+  PropIndex=9
+
+</ListProperty>
+<ListProperty>
+
+  Object=ServiceRepo
+
+  Attribute=MethodType
+
+  PropertyString=UNLINK
+
+  PropertyValue=UNLINK
+
+  Scope=
+
+  PropIndex=10
+
+</ListProperty>
+<ListProperty>
+
+  Object=ServiceRepo
+
+  Attribute=MethodType
+
+  PropertyString=LOCK
+
+  PropertyValue=LOCK
+
+  Scope=
+
+  PropIndex=11
+
+</ListProperty>
+
+<ListProperty>
+
+  Object=ServiceRepo
+
+  Attribute=MethodType
+
+  PropertyString=UNLOCK
+
+  PropertyValue=UNLOCK
+
+  Scope=
+
+  PropIndex=12
+
+</ListProperty>
+
+<ListProperty>
+
+  Object=ServiceRepo
+
+  Attribute=MethodType
+
+  PropertyString=OPTIONS
+
+  PropertyValue=OPTIONS
+
+  Scope=
+
+  PropIndex=13
+
+</ListProperty>
+<ListProperty>
+
+  Object=ServiceRepo
+
+  Attribute=MethodType
+
+  PropertyString=PROPFIND
+
+  PropertyValue=PROPFIND
+
+  Scope=
+
+  PropIndex=14
+
+</ListProperty>
+<ListProperty>
+
+  Object=ServiceRepo
+
+  Attribute=MethodType
+
+  PropertyString=VIEW
+
+  PropertyValue=VIEW
+
+  Scope=
+
+  PropIndex=15
+
+</ListProperty>
+//Attribute:AuthType
+
+<ListProperty>
+
+  Object=ServiceRepo
+
+  Attribute=AuthType
+
+  PropertyString=No Auth
+
+  PropertyValue=NoAuth
+
+  Scope=
+
+  PropIndex=1
+
+</ListProperty>
+
+<ListProperty>
+
+  Object=ServiceRepo
+
+  Attribute=AuthType
+
+  PropertyString=Basic
+
+  PropertyValue=Basic
+
+  Scope=
+
+  PropIndex=2
+
+</ListProperty>
+
+<ListProperty>
+
+  Object=ServiceRepo
+
+  Attribute=AuthType
+
+  PropertyString=oAuth 1.0
+
+  PropertyValue=oAuth1
+
+  Scope=
+
+  PropIndex=3
+
+</ListProperty>
+<ListProperty>
+
+  Object=ServiceRepo
+
+  Attribute=AuthType
+
+  PropertyString=oAuth 2.0
+
+  PropertyValue=oAuth2
+
+  Scope=
+
+  PropIndex=4
+
+</ListProperty>
+<ListProperty>
+
+  Object=ServiceRepo
+
+  Attribute=AuthType
+
+  PropertyString=AWS Signature
+
+  PropertyValue=AWS
+
+  Scope=
+
+  PropIndex=5
+
+</ListProperty>
+
+//Attribute:ServiceType
+
+<ListProperty>
+
+  Object=ServiceRepo
+
+  Attribute=ServiceType
+
+  PropertyString=CICD
+
+  PropertyValue=CICD
+
+  Scope=
+
+  PropIndex=1
+
+</ListProperty>
+
+<ListProperty>
+
+  Object=ServiceRepo
+
+  Attribute=ServiceType
+
+  PropertyString=AWS
+
+  PropertyValue=AWS
+
+  Scope=
+
+  PropIndex=2
+
+</ListProperty>
+
+<ListProperty>
+
+  Object=ServiceRepo
+
+  Attribute=ServiceType
+
+  PropertyString=Application
+
+  PropertyValue=Application
+
+  Scope=
+
+  PropIndex=3
+
+</ListProperty>
+<ListProperty>
+
+  Object=ServiceRepo
+
+  Attribute=ServiceType
+
+  PropertyString=Custom
+
+  PropertyValue=Custom
+
+  Scope=
+
+  PropIndex=4
+
+</ListProperty>
+<ListProperty>
+
+  Object=ServiceRepo
+
+  Attribute=ServiceType
+
+  PropertyString=3rd Party
+
+  PropertyValue=3rdParty
+
+  Scope=
+
+  PropIndex=5
+
+</ListProperty>
 //Attribute:Status
 
 <ListProperty>

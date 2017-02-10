@@ -449,6 +449,13 @@ var menuconfig={
 	            "varlaunch": {"caption":"Add Variables", "relation":"varlaunch2createimage", "parent":"launchimage","button_width":"100"},
 	            
 	        },
+	        "servicerepo": {
+                "servicerepo": {"caption":"Service Repo","child":"serviceparam","button_width":"100","showlistcols":[2,3],"buttonhide":""},
+                "serviceauth": {"caption":"Service Auth", "relation":"serviceauth2servicerepo", "parent":"servicerepo","button_width":"100","showlistcols":[3],"buttonhide":""},
+                "serviceparam": {"caption":"Service Param", "relation":"serviceparam2servicerepo", "parent":"servicerepo","button_width":"100","showlistcols":[4],"buttonhide":""},
+                "serviceapi": {"caption":"Service API", "relation":"serviceapi2servicerepo", "parent":"servicerepo","button_width":"100","showlistcols":[3,4]},
+                "servicedoc": {"caption":"Service Template", "relation":"servicedoc2servicerepo", "parent":"servicerepo","button_width":"100","buttonhide":""},
+            },
 	        "bookcourse": {
 	            "bookcourse": {"caption":"Book Course", "relation":"bookcourse2training", "parent":"mytraining","child":"coursefeedback","button_width":"100","disablefields":"status,amountpaid,confirmationno","buttonhide":"create,prod","formload":"verify_prod_access","rowselect":"verify_prod_access","buttonhide":"scroll:training,scroll:mytraining"},
 	            "coursefeedback": {"caption":"Feedback", "relation":"coursefeedback2bookcourse", "parent":"bookcourse","button_width":"100"},

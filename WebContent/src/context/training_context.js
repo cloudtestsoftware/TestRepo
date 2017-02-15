@@ -59,12 +59,12 @@ var training_grid_context=
 var training_toolbar=
 	[
 		
-		{ id: "create:training", type: "button", img: "create.gif", title: "Create", action:"action_button_callback"},
-		{ id: "save:training", type: "button", img: "save.gif",  title: "Save", action:"action_button_callback" },
-		{ id: "prod:training:give_prod_access", type: "button", img: "approve.gif", title: "Grant", action:"action_button_callback"},
-		{ id: "prod:training:revoke_prod_access", type: "button", img: "revoke.gif",  title: "Revoke", action:"action_button_callback" },
+		{ id: "create:training", type: "button", img: "create.gif", title: "Create", action:""},
+		{ id: "save:training", type: "button", img: "save.gif",  title: "Save", action:"" },
+		{ id: "prod:training:give_prod_access", type: "button", img: "approve.gif", title: "Grant", action:""},
+		{ id: "prod:training:revoke_prod_access", type: "button", img: "revoke.gif",  title: "Revoke", action:"" },
 		{ type: "separator" },
-		{ id: "scroll:bookcourse", type: "button", img: "down1.gif", title: "Go to booking course", action:"action_button_callback"},
+		{ id: "scroll:bookcourse", type: "button", img: "down1.gif", title: "Go to booking course", action:""},
 		
 	];
 
@@ -108,7 +108,7 @@ var mytraining_grid_context=
 var mytraining_toolbar=
 	[
 		
-		{ id: "scroll:bookcourse", type: "button", img: "down1.gif", title: "Go to booking of training", action:"action_button_callback"},
+		{ id: "scroll:bookcourse", type: "button", img: "down1.gif", title: "Go to booking of training", action:""},
 		
 	];
 
@@ -164,14 +164,14 @@ var bookcourse_grid_context=
 var bookcourse_toolbar=
 	[
 		
-		{ id: "create:bookcourse", type: "button", img: "create.gif", title: "Create", action:"action_button_callback"},
-		{ id: "save:bookcourse", type: "button", img: "save.gif",  title: "Save", action:"action_button_callback" },
-		{ id: "payment:bookcourse:make_payment", type: "button", img: "payment.gif", title: "Pay Fees", action:"action_button_callback"},
-		{ id: "register:bookcourse:get_prod_access", type: "button", img: "register.gif",  title: "Register course", action:"action_button_callback" },
+		{ id: "create:bookcourse", type: "button", img: "create.gif", title: "Create", action:""},
+		{ id: "save:bookcourse", type: "button", img: "save.gif",  title: "Save", action:"" },
+		{ id: "payment:bookcourse:make_payment", type: "button", img: "payment.gif", title: "Pay Fees", action:""},
+		{ id: "register:bookcourse:get_prod_access", type: "button", img: "register.gif",  title: "Register course", action:"" },
 		{ type: "separator" },
-		{ id: "scroll:training", type: "button", img: "up1.gif", title: "Back to booking", action:"action_button_callback"},
-		{ id: "scroll:mytraining", type: "button", img: "up1.gif", title: "Back to booking", action:"action_button_callback"},
-		{ id: "scroll:coursefeedback", type: "button", img: "down1.gif", title: "give feedback", action:"action_button_callback"},
+		{ id: "scroll:training", type: "button", img: "up1.gif", title: "Back to booking", action:""},
+		{ id: "scroll:mytraining", type: "button", img: "up1.gif", title: "Back to booking", action:""},
+		{ id: "scroll:coursefeedback", type: "button", img: "down1.gif", title: "give feedback", action:""},
 		
 	];
 var coursefeedback_grid_context=

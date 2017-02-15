@@ -2,6 +2,70 @@
 
 <ListProperty>
 
+  Object=ApiParam
+
+  Attribute=ParamType
+
+  PropertyString=Header
+
+  PropertyValue=HEADER
+
+  Scope=
+
+  PropIndex=1
+
+</ListProperty>
+
+<ListProperty>
+
+  Object=ApiParam
+
+  Attribute=ParamType
+
+  PropertyString=Cookiee
+
+  PropertyValue=COOKIEE
+
+  Scope=
+
+  PropIndex=2
+
+</ListProperty>
+
+<ListProperty>
+
+  Object=ApiParam
+
+  Attribute=ParamType
+
+  PropertyString=Variable
+
+  PropertyValue=VARIABLE
+
+  Scope=
+
+  PropIndex=3
+
+</ListProperty>
+<ListProperty>
+
+  Object=ApiParam
+
+  Attribute=ParamType
+
+  PropertyString=Expression
+
+  PropertyValue=EXP
+
+  Scope=
+
+  PropIndex=4
+
+</ListProperty>
+//Attribute:ParamType
+
+<ListProperty>
+
   Object=ServiceParam
 
   Attribute=ParamType

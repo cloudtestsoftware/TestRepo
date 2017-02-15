@@ -59,12 +59,12 @@ var testuser_grid_context=
 var testuser_toolbar=
 	[
 		
-		{ id: "create:testuser", type: "button", img: "create.gif", title: "Create", action:"action_button_callback"},
-		{ id: "save:testuser", type: "button", img: "save.gif",  title: "Save", action:"action_button_callback" },
-		{ id: "delete:testuser", type: "button", img: "delete.gif",  title: "Delete", action:"action_button_callback" },
+		{ id: "create:testuser", type: "button", img: "create.gif", title: "Create", action:""},
+		{ id: "save:testuser", type: "button", img: "save.gif",  title: "Save", action:"" },
+		{ id: "delete:testuser", type: "button", img: "delete.gif",  title: "Delete", action:"" },
 		{ type: "separator" },
-		{ id: "scroll:company", type: "button", img: "up1.gif", title: "Back to company", action:"action_button_callback"},
-		{ id: "scroll:privilegegroup", type: "button", img: "up2.gif", title: "Back to Privelege Group", action:"action_button_callback"},
+		{ id: "scroll:company", type: "button", img: "up1.gif", title: "Back to company", action:""},
+		{ id: "scroll:privilegegroup", type: "button", img: "up2.gif", title: "Back to Privelege Group", action:""},
 		
 	];
 

@@ -67,10 +67,10 @@ var cloudprovider_toolbar=
 				
 			]
 		},
-		{ id: "create:cloudprovider", type: "button", img: "create.gif", title: "Create", action:"action_button_callback"},
-		{ id: "save:cloudprovider", type: "button", img: "save.gif",  title: "Save", action:"action_button_callback" },
+		{ id: "create:cloudprovider", type: "button", img: "create.gif", title: "Create", action:""},
+		{ id: "save:cloudprovider", type: "button", img: "save.gif",  title: "Save", action:"" },
 		{ type: "separator" },
-		{ id: "scroll:accesskey", type: "button", img: "down1.gif", title: "Next step to access key", action:"action_button_callback"}
+		{ id: "scroll:accesskey", type: "button", img: "down1.gif", title: "Next step to access key", action:""}
 		
 	];
 
@@ -137,12 +137,12 @@ var createimage_toolbar=
 				
 			]
 		},
-		{ id: "create:createimage", type: "button", img: "create.gif", title: "Create", action:"action_button_callback"},
-		{ id: "save:createimage", type: "button", img: "save.gif",  title: "Save", action:"action_button_callback" },
-		{ id: "provision:createimage:handle_custom_changes", type: "button", img: "launchimage.gif",  title: "Provision Image", action:"action_button_callback" },
+		{ id: "create:createimage", type: "button", img: "create.gif", title: "Create", action:""},
+		{ id: "save:createimage", type: "button", img: "save.gif",  title: "Save", action:"" },
+		{ id: "provision:createimage:handle_custom_changes", type: "button", img: "launchimage.gif",  title: "Provision Image", action:"" },
 		{ type: "separator" },
-		{ id: "scroll:cloudprovider", type: "button", img: "up1.gif", title: "Back to provider", action:"action_button_callback"},
-		{ id: "scroll:varprovision", type: "button", img: "down1.gif", title: "Next step to add variables to provision", action:"action_button_callback"}
+		{ id: "scroll:cloudprovider", type: "button", img: "up1.gif", title: "Back to provider", action:""},
+		{ id: "scroll:varprovision", type: "button", img: "down1.gif", title: "Next step to add variables to provision", action:""}
 		
 	];
 
@@ -209,12 +209,12 @@ var launchimage_toolbar=
 				
 			]
 		},
-		{ id: "create:launchimage", type: "button", img: "create.gif", title: "Create", action:"action_button_callback"},
-		{ id: "save:launchimage:handle_custom_changes", type: "button", img: "save.gif",  title: "Save", action:"action_button_callback" },
-		{ id: "launch:launchimage", type: "button", img: "launchimage.gif",  title: "Launch Image", action:"action_button_callback" },
+		{ id: "create:launchimage", type: "button", img: "create.gif", title: "Create", action:""},
+		{ id: "save:launchimage:handle_custom_changes", type: "button", img: "save.gif",  title: "Save", action:"" },
+		{ id: "launch:launchimage", type: "button", img: "launchimage.gif",  title: "Launch Image", action:"" },
 		{ type: "separator" },
-		{ id: "scroll:cloudprovider", type: "button", img: "up1.gif", title: "Back to provider", action:"action_button_callback"},
-		{ id: "scroll:varlaunch", type: "button", img: "down1.gif", title: "Next step to add variables to launch", action:"action_button_callback"}
+		{ id: "scroll:cloudprovider", type: "button", img: "up1.gif", title: "Back to provider", action:""},
+		{ id: "scroll:varlaunch", type: "button", img: "down1.gif", title: "Next step to add variables to launch", action:""}
 		
 	];
 
@@ -265,10 +265,10 @@ var accesskey_grid_context=
 var accesskey_toolbar=
 	[
 		
-		{ id: "create:accesskey", type: "button", img: "create.gif", title: "Create", action:"action_button_callback"},
-		{ id: "save:accesskey", type: "button", img: "save.gif",  title: "Save", action:"action_button_callback" },
+		{ id: "create:accesskey", type: "button", img: "create.gif", title: "Create", action:""},
+		{ id: "save:accesskey", type: "button", img: "save.gif",  title: "Save", action:"" },
 		{ type: "separator" },
-		{ id: "scroll:cloudprovider", type: "button", img: "up1.gif", title: "Back to provider", action:"action_button_callback"},
+		{ id: "scroll:cloudprovider", type: "button", img: "up1.gif", title: "Back to provider", action:""},
 		
 	];
 
@@ -320,10 +320,10 @@ var varprovision_grid_context=
 var varprovision_toolbar=
 	[
 		
-		{ id: "create:varprovision", type: "button", img: "create.gif", title: "Create", action:"action_button_callback"},
-		{ id: "save:varprovision", type: "button", img: "save.gif",  title: "Save", action:"action_button_callback" },
+		{ id: "create:varprovision", type: "button", img: "create.gif", title: "Create", action:""},
+		{ id: "save:varprovision", type: "button", img: "save.gif",  title: "Save", action:"" },
 		{ type: "separator" },
-		{ id: "scroll:createimage", type: "button", img: "up1.gif", title: "Back to Image", action:"action_button_callback"},
+		{ id: "scroll:createimage", type: "button", img: "up1.gif", title: "Back to Image", action:""},
 		
 	];
 /*
@@ -372,10 +372,10 @@ var varlaunch_grid_context=
 var varlaunch_toolbar=
 	[
 		
-		{ id: "create:varlaunch", type: "button", img: "create.gif", title: "Create", action:"action_button_callback"},
-		{ id: "save:varlaunch", type: "button", img: "save.gif",  title: "Save", action:"action_button_callback" },
+		{ id: "create:varlaunch", type: "button", img: "create.gif", title: "Create", action:""},
+		{ id: "save:varlaunch", type: "button", img: "save.gif",  title: "Save", action:"" },
 		{ type: "separator" },
-		{ id: "scroll:launchimage", type: "button", img: "up1.gif", title: "Back to launch image", action:"action_button_callback"},
+		{ id: "scroll:launchimage", type: "button", img: "up1.gif", title: "Back to launch image", action:""},
 		
 	];
 
@@ -429,11 +429,11 @@ var createscript_grid_context=
 var createscript_toolbar=
 	[
 		
-		{ id: "make:createscript:createAttachment", type: "button", img: "upload.gif", title: "Upload script file", action:"action_button_callback"},
-		{ id: "show:createscript:getDownloadFile", type: "button", img: "download.gif",  title: "Download script file", action:"action_button_callback" },
-		{ id: "delete:createscript:deleteFile", type: "button", img: "delete.gif", title: "Delete script file", action:"action_button_callback"},
+		{ id: "make:createscript:createAttachment", type: "button", img: "upload.gif", title: "Upload script file", action:""},
+		{ id: "show:createscript:getDownloadFile", type: "button", img: "download.gif",  title: "Download script file", action:"" },
+		{ id: "delete:createscript:deleteFile", type: "button", img: "delete.gif", title: "Delete script file", action:""},
 		{ type: "separator" },
-		{ id: "scroll:createimage", type: "button", img: "up1.gif", title: "Back to image", action:"action_button_callback"},
+		{ id: "scroll:createimage", type: "button", img: "up1.gif", title: "Back to image", action:""},
 		
 		
 	];
@@ -488,11 +488,11 @@ var launchscript_grid_context=
 var launchscript_toolbar=
 	[
 		
-		{ id: "make:launchscript:createAttachment", type: "button", img: "upload.gif", title: "Upload script file", action:"action_button_callback"},
-		{ id: "show:launchscript:getDownloadFile", type: "button", img: "download.gif",  title: "Download script file", action:"action_button_callback" },
-		{ id: "delete:launchscript:deleteFile", type: "button", img: "delete.gif", title: "Delete script file", action:"action_button_callback"},
+		{ id: "make:launchscript:createAttachment", type: "button", img: "upload.gif", title: "Upload script file", action:""},
+		{ id: "show:launchscript:getDownloadFile", type: "button", img: "download.gif",  title: "Download script file", action:"" },
+		{ id: "delete:launchscript:deleteFile", type: "button", img: "delete.gif", title: "Delete script file", action:""},
 		{ type: "separator" },
-		{ id: "scroll:createimage", type: "button", img: "up1.gif", title: "Back to image", action:"action_button_callback"},
+		{ id: "scroll:createimage", type: "button", img: "up1.gif", title: "Back to image", action:""},
 		
 		
 	];

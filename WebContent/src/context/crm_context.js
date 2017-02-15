@@ -174,7 +174,7 @@ var mycontact_grid_context=
 
 var mycontact_toolbar=
 	[
-		{ id: "update:mycontact:update_contact", type: "button", img: "save.gif",  title: "Save", action:"action_button_callback" },
+		{ id: "update:mycontact:update_contact", type: "button", img: "save.gif",  title: "Save", action:"" },
 		
 	];
 
@@ -227,10 +227,10 @@ var mylead_grid_context=
 
 var mylead_toolbar=
 	[
-		{ id: "update:mylead:update_contact", type: "button", img: "save.gif",  title: "Save", action:"action_button_callback" },
-		{ id: "mylead:lead:remove_custom_table", type: "button", img: "clear.gif",  title: "Clear", action:"action_button_callback" },
+		{ id: "update:mylead:update_contact", type: "button", img: "save.gif",  title: "Save", action:"" },
+		{ id: "mylead:lead:remove_custom_table", type: "button", img: "clear.gif",  title: "Clear", action:"" },
 		{ type: "separator" },
-		{ id: "scroll:leadnote", type: "button", img: "down1.gif", title: "Next step to add variables", action:"action_button_callback"}
+		{ id: "scroll:leadnote", type: "button", img: "down1.gif", title: "Next step to add variables", action:""}
 		
 	];
 
@@ -292,12 +292,12 @@ var campaign_toolbar=
 				
 			]
 		},
-		{ id: "create:campaign", type: "button", img: "create.gif", title: "Create", action:"action_button_callback"},
-		{ id: "update:campaign:update_table_data", type: "button", img: "save.gif",  title: "Save", action:"action_button_callback" },
-		{ id: "file:download:campaign", type: "button", img: "download.gif",  title: "Download campaign list", action:"action_button_callback" },
-		{ id: "campaign:lead:handle_custom_changes", type: "button", img: "lookup.gif",  title: "View Lead", action:"action_button_callback" },
+		{ id: "create:campaign", type: "button", img: "create.gif", title: "Create", action:""},
+		{ id: "update:campaign:update_table_data", type: "button", img: "save.gif",  title: "Save", action:"" },
+		{ id: "file:download:campaign", type: "button", img: "download.gif",  title: "Download campaign list", action:"" },
+		{ id: "campaign:lead:handle_custom_changes", type: "button", img: "lookup.gif",  title: "View Lead", action:"" },
 		{ type: "separator" },
-		{ id: "scroll:varprovision", type: "button", img: "down1.gif", title: "Next step to add variables", action:"action_button_callback"}
+		{ id: "scroll:varprovision", type: "button", img: "down1.gif", title: "Next step to add variables", action:""}
 		
 	];
 
@@ -349,10 +349,10 @@ var campaignnote_grid_context=
 var campaignnote_toolbar=
 	[
 		
-		{ id: "create:campaignnote", type: "button", img: "create.gif", title: "Create", action:"action_button_callback"},
-		{ id: "save:campaignnote", type: "button", img: "save.gif",  title: "Save", action:"action_button_callback" },
+		{ id: "create:campaignnote", type: "button", img: "create.gif", title: "Create", action:""},
+		{ id: "save:campaignnote", type: "button", img: "save.gif",  title: "Save", action:"" },
 		{ type: "separator" },
-		{ id: "scroll:campaign", type: "button", img: "up1.gif", title: "Back to campaign", action:"action_button_callback"},
+		{ id: "scroll:campaign", type: "button", img: "up1.gif", title: "Back to campaign", action:""},
 		
 	];
 
@@ -404,10 +404,10 @@ var customernote_grid_context=
 var customernote_toolbar=
 	[
 		
-		{ id: "create:customernote", type: "button", img: "create.gif", title: "Create", action:"action_button_callback"},
-		{ id: "save:customernote", type: "button", img: "save.gif",  title: "Save", action:"action_button_callback" },
+		{ id: "create:customernote", type: "button", img: "create.gif", title: "Create", action:""},
+		{ id: "save:customernote", type: "button", img: "save.gif",  title: "Save", action:"" },
 		{ type: "separator" },
-		{ id: "scroll:customer", type: "button", img: "up1.gif", title: "Back to customer", action:"action_button_callback"},
+		{ id: "scroll:customer", type: "button", img: "up1.gif", title: "Back to customer", action:""},
 		
 	];
 
@@ -459,10 +459,10 @@ var opportunitynote_grid_context=
 var opportunitynote_toolbar=
 	[
 		
-		{ id: "create:opportunitynote", type: "button", img: "create.gif", title: "Create", action:"action_button_callback"},
-		{ id: "save:opportunitynote", type: "button", img: "save.gif",  title: "Save", action:"action_button_callback" },
+		{ id: "create:opportunitynote", type: "button", img: "create.gif", title: "Create", action:""},
+		{ id: "save:opportunitynote", type: "button", img: "save.gif",  title: "Save", action:"" },
 		{ type: "separator" },
-		{ id: "scroll:opportunity", type: "button", img: "up1.gif", title: "Back to opportunity", action:"action_button_callback"},
+		{ id: "scroll:opportunity", type: "button", img: "up1.gif", title: "Back to opportunity", action:""},
 		
 	];
 
@@ -513,10 +513,10 @@ var surveyquestion_grid_context=
 var surveyquestion_toolbar=
 	[
 		
-		{ id: "create:surveyquestion", type: "button", img: "create.gif", title: "Create", action:"action_button_callback"},
-		{ id: "save:surveyquestion", type: "button", img: "save.gif",  title: "Save", action:"action_button_callback" },
+		{ id: "create:surveyquestion", type: "button", img: "create.gif", title: "Create", action:""},
+		{ id: "save:surveyquestion", type: "button", img: "save.gif",  title: "Save", action:"" },
 		{ type: "separator" },
-		{ id: "scroll:campaign", type: "button", img: "up1.gif", title: "Back to campaign", action:"action_button_callback"},
+		{ id: "scroll:campaign", type: "button", img: "up1.gif", title: "Back to campaign", action:""},
 		
 	];
 
@@ -564,8 +564,8 @@ var qualifygift_grid_context=
 var qualifygift_toolbar=
 	[
 		
-		{ id: "create:qualifygift", type: "button", img: "create.gif", title: "Create", action:"action_button_callback"},
-		{ id: "save:qualifygift", type: "button", img: "save.gif",  title: "Save", action:"action_button_callback" },
+		{ id: "create:qualifygift", type: "button", img: "create.gif", title: "Create", action:""},
+		{ id: "save:qualifygift", type: "button", img: "save.gif",  title: "Save", action:"" },
 		
 	];
 
@@ -631,12 +631,12 @@ var contact_toolbar=
 				
 			]
 		},
-		{ id: "create:contact", type: "button", img: "create.gif", title: "Create", action:"action_button_callback"},
-		{ id: "update:contact:update_table_data", type: "button", img: "save.gif",  title: "Save", action:"action_button_callback" },
-		{ id: "file:download:contact", type: "button", img: "download.gif",  title: "Download Contacts", action:"action_button_callback" },
+		{ id: "create:contact", type: "button", img: "create.gif", title: "Create", action:""},
+		{ id: "update:contact:update_table_data", type: "button", img: "save.gif",  title: "Save", action:"" },
+		{ id: "file:download:contact", type: "button", img: "download.gif",  title: "Download Contacts", action:"" },
 		{ type: "separator" },
-		{ id: "scroll:lead", type: "button", img: "up1.gif", title: "Back to Lead", action:"action_button_callback"},
-		{ id: "scroll:contactnote", type: "button", img: "down1.gif", title: "Next step to add notes", action:"action_button_callback"}
+		{ id: "scroll:lead", type: "button", img: "up1.gif", title: "Back to Lead", action:""},
+		{ id: "scroll:contactnote", type: "button", img: "down1.gif", title: "Next step to add notes", action:""}
 		
 	];
 
@@ -688,10 +688,10 @@ var contactnote_grid_context=
 var contactnote_toolbar=
 	[
 		
-		{ id: "create:contactnote", type: "button", img: "create.gif", title: "Create", action:"action_button_callback"},
-		{ id: "save:contactnote", type: "button", img: "save.gif",  title: "Save", action:"action_button_callback" },
+		{ id: "create:contactnote", type: "button", img: "create.gif", title: "Create", action:""},
+		{ id: "save:contactnote", type: "button", img: "save.gif",  title: "Save", action:"" },
 		{ type: "separator" },
-		{ id: "scroll:contact", type: "button", img: "up1.gif", title: "Back to Contact", action:"action_button_callback"},
+		{ id: "scroll:contact", type: "button", img: "up1.gif", title: "Back to Contact", action:""},
 		
 	];
 
@@ -756,12 +756,12 @@ var lead_toolbar=
 				
 			]
 		},
-		{ id: "create:lead", type: "button", img: "create.gif", title: "Create", action:"action_button_callback"},
-		{ id: "update:lead:validate_lead", type: "button", img: "save.gif",  title: "Save", action:"action_button_callback" },
-		{ id: "file:download:lead", type: "button", img: "download.gif",  title: "Download Lead", action:"action_button_callback" },
+		{ id: "create:lead", type: "button", img: "create.gif", title: "Create", action:""},
+		{ id: "update:lead:validate_lead", type: "button", img: "save.gif",  title: "Save", action:"" },
+		{ id: "file:download:lead", type: "button", img: "download.gif",  title: "Download Lead", action:"" },
 		{ type: "separator" },
-		{ id: "scroll:campaign", type: "button", img: "up1.gif", title: "Back to campaign", action:"action_button_callback"},
-		{ id: "scroll:leadnote", type: "button", img: "down1.gif", title: "Next step to add note", action:"action_button_callback"}
+		{ id: "scroll:campaign", type: "button", img: "up1.gif", title: "Back to campaign", action:""},
+		{ id: "scroll:leadnote", type: "button", img: "down1.gif", title: "Next step to add note", action:""}
 		
 	];
 /*
@@ -812,11 +812,11 @@ var leadnote_grid_context=
 var leadnote_toolbar=
 	[
 		
-		{ id: "create:leadnote", type: "button", img: "create.gif", title: "Create", action:"action_button_callback"},
-		{ id: "save:leadnote", type: "button", img: "save.gif",  title: "Save", action:"action_button_callback" },
+		{ id: "create:leadnote", type: "button", img: "create.gif", title: "Create", action:""},
+		{ id: "save:leadnote", type: "button", img: "save.gif",  title: "Save", action:"" },
 		{ type: "separator" },
-		{ id: "scroll:lead", type: "button", img: "up1.gif", title: "Back to Lead", action:"action_button_callback"},
-		{ id: "scroll:mylead", type: "button", img: "up1.gif", title: "Back to MyLead", action:"action_button_callback"},
+		{ id: "scroll:lead", type: "button", img: "up1.gif", title: "Back to Lead", action:""},
+		{ id: "scroll:mylead", type: "button", img: "up1.gif", title: "Back to MyLead", action:""},
 		
 	];
 
@@ -879,12 +879,12 @@ var customer_toolbar=
 				
 			]
 		},
-		{ id: "create:customer", type: "button", img: "create.gif", title: "Create", action:"action_button_callback"},
-		{ id: "save:customer", type: "button", img: "save.gif",  title: "Save", action:"action_button_callback" },
-		{ id: "file:download:customer", type: "button", img: "download.gif",  title: "Download customer list", action:"action_button_callback" },
+		{ id: "create:customer", type: "button", img: "create.gif", title: "Create", action:""},
+		{ id: "save:customer", type: "button", img: "save.gif",  title: "Save", action:"" },
+		{ id: "file:download:customer", type: "button", img: "download.gif",  title: "Download customer list", action:"" },
 		{ type: "separator" },
-		{ id: "scroll:contact", type: "button", img: "up1.gif", title: "Back to contact", action:"action_button_callback"},
-		{ id: "scroll:deal", type: "button", img: "down1.gif", title: "Next step to deal", action:"action_button_callback"}
+		{ id: "scroll:contact", type: "button", img: "up1.gif", title: "Back to contact", action:""},
+		{ id: "scroll:deal", type: "button", img: "down1.gif", title: "Next step to deal", action:""}
 		
 	];
 
@@ -936,11 +936,11 @@ var deal_grid_context=
 var deal_toolbar=
 	[
 		
-		{ id: "create:deal", type: "button", img: "create.gif", title: "Create", action:"action_button_callback"},
-		{ id: "save:deal", type: "button", img: "save.gif",  title: "Save", action:"action_button_callback" },
+		{ id: "create:deal", type: "button", img: "create.gif", title: "Create", action:""},
+		{ id: "save:deal", type: "button", img: "save.gif",  title: "Save", action:"" },
 		{ type: "separator" },
-		{ id: "scroll:opportunity", type: "button", img: "up1.gif", title: "Back to opportunity", action:"action_button_callback"},
-		{ id: "scroll:customer", type: "button", img: "up1.gif", title: "Back to customer", action:"action_button_callback"},
+		{ id: "scroll:opportunity", type: "button", img: "up1.gif", title: "Back to opportunity", action:""},
+		{ id: "scroll:customer", type: "button", img: "up1.gif", title: "Back to customer", action:""},
 		
 	];
 
@@ -1006,12 +1006,12 @@ var opportunity_toolbar=
 				
 			]
 		},
-		{ id: "create:opportunity", type: "button", img: "create.gif", title: "Create", action:"action_button_callback"},
-		{ id: "update:opportunity:update_table_data", type: "button", img: "save.gif",  title: "Save", action:"action_button_callback" },
-		{ id: "file:download:opportunity", type: "button", img: "download.gif",  title: "Download opportunities", action:"action_button_callback" },
+		{ id: "create:opportunity", type: "button", img: "create.gif", title: "Create", action:""},
+		{ id: "update:opportunity:update_table_data", type: "button", img: "save.gif",  title: "Save", action:"" },
+		{ id: "file:download:opportunity", type: "button", img: "download.gif",  title: "Download opportunities", action:"" },
 		{ type: "separator" },
-		{ id: "scroll:contact", type: "button", img: "up1.gif", title: "Back to contact", action:"action_button_callback"},
-		{ id: "scroll:dea", type: "button", img: "down1.gif", title: "Next step to deal", action:"action_button_callback"}
+		{ id: "scroll:contact", type: "button", img: "up1.gif", title: "Back to contact", action:""},
+		{ id: "scroll:dea", type: "button", img: "down1.gif", title: "Next step to deal", action:""}
 		
 	];
 
@@ -1060,11 +1060,11 @@ var leaddoc_grid_context=
 var leaddoc_toolbar=
 	[
 		
-		{ id: "make:leaddoc:createAttachment", type: "button", img: "attachment.gif", title: "Attachment", action:"action_button_callback"},
-		{ id: "show:leaddoc:getDownloadFile", type: "button", img: "download.gif",  title: "Download", action:"action_button_callback" },
-		{ id: "delete:leaddoc:deleteFile", type: "button", img: "delete.gif",  title: "Delete file", action:"action_button_callback" },
+		{ id: "make:leaddoc:createAttachment", type: "button", img: "attachment.gif", title: "Attachment", action:""},
+		{ id: "show:leaddoc:getDownloadFile", type: "button", img: "download.gif",  title: "Download", action:"" },
+		{ id: "delete:leaddoc:deleteFile", type: "button", img: "delete.gif",  title: "Delete file", action:"" },
 		{ type: "separator" },
-		{ id: "scroll:lead", type: "button", img: "up1.gif", title: "Back to lead", action:"action_button_callback"},
+		{ id: "scroll:lead", type: "button", img: "up1.gif", title: "Back to lead", action:""},
 		
 	];
 

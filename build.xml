@@ -10,7 +10,7 @@
 		</javac>    
 	</target>    
 	<target name="jar" depends="compile">        
-		<jar destfile="${libpath}/softleanservice.jar">            
+		<jar destfile="${libpath}/testreposervice.jar">            
 			<fileset dir="${output}"/>        
 		</jar>
 	</target>

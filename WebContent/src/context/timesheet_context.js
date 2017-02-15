@@ -57,10 +57,10 @@ var weeksheet_grid_context=
 var weeksheet_toolbar=
 	[
 		
-		{ id: "file:download:weeksheet", type: "button", img: "download.gif", title: "Download", action:"action_button_callback"},
+		{ id: "file:download:weeksheet", type: "button", img: "download.gif", title: "Download", action:""},
 		
 		{ type: "separator" },
-		{ id: "scroll:timesheet", type: "button", img: "down1.gif", title: "Go to Timesheet", action:"action_button_callback"},
+		{ id: "scroll:timesheet", type: "button", img: "down1.gif", title: "Go to Timesheet", action:""},
 		
 	];
 
@@ -111,10 +111,10 @@ var timesheet_grid_context=
 var timesheet_toolbar=
 	[
 		
-		{ id: "create:timesheet", type: "button", img: "create.gif", title: "Create", action:"action_button_callback"},
-		{ id: "save:timesheet", type: "button", img: "save.gif",  title: "Save", action:"action_button_callback" },
+		{ id: "create:timesheet", type: "button", img: "create.gif", title: "Create", action:""},
+		{ id: "save:timesheet", type: "button", img: "save.gif",  title: "Save", action:"" },
 		{ type: "separator" },
-		{ id: "scroll:weeksheet", type: "button", img: "up1.gif", title: "Back to week", action:"action_button_callback"},
+		{ id: "scroll:weeksheet", type: "button", img: "up1.gif", title: "Back to week", action:""},
 		
 	];
 

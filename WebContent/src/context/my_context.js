@@ -78,7 +78,7 @@ var myprofile_grid_context=
 
 var myprofile_toolbar=
 	[
-		{ id: "update:myprofile:update_testuser_profile", type: "button", img: "save.gif",  title: "Save", action:"action_button_callback" },
+		{ id: "update:myprofile:update_testuser_profile", type: "button", img: "save.gif",  title: "Save", action:"" },
 		
 	];
 
@@ -136,11 +136,11 @@ var mytasks_toolbar=
 				
 			]
 		},
-		{ id: "create:mytasks", type: "button", img: "create.gif", title: "Create", action:"action_button_callback"},
-		{ id: "update:mytasks:update_testuser_tasks", type: "button", img: "save.gif",  title: "Save", action:"action_button_callback" },
-		{ id: "mytasks:feature:handle_custom_changes", type: "button", img: "view.gif",  title: "View Feature", action:"action_button_callback" },
+		{ id: "create:mytasks", type: "button", img: "create.gif", title: "Create", action:""},
+		{ id: "update:mytasks:update_testuser_tasks", type: "button", img: "save.gif",  title: "Save", action:"" },
+		{ id: "mytasks:feature:handle_custom_changes", type: "button", img: "view.gif",  title: "View Feature", action:"" },
 		{ type: "separator" },
-		{ id: "scroll:tasknote", type: "button", img: "down1.gif", title: "Next step to add notes", action:"action_button_callback"}
+		{ id: "scroll:tasknote", type: "button", img: "down1.gif", title: "Next step to add notes", action:""}
 		
 	];
 
@@ -200,11 +200,11 @@ var mybug_toolbar=
 			]
 		},
 		
-		{ id: "update:mybug:update_testuser_bug", type: "button", img: "save.gif",  title: "Save", action:"action_button_callback" },
-		{ id: "mybug:bugscenerio:handle_custom_changes", type: "button", img: "scenario.gif",  title: "View Scenario", action:"action_button_callback" },
-		{ id: "file:download:bug", type: "button", img: "download.gif", title: "Download bugs", action:"action_button_callback"},
+		{ id: "update:mybug:update_testuser_bug", type: "button", img: "save.gif",  title: "Save", action:"" },
+		{ id: "mybug:bugscenerio:handle_custom_changes", type: "button", img: "scenario.gif",  title: "View Scenario", action:"" },
+		{ id: "file:download:bug", type: "button", img: "download.gif", title: "Download bugs", action:""},
 		{ type: "separator" },
-		{ id: "scroll:resolution", type: "button", img: "down1.gif", title: "Next step to add resolution", action:"action_button_callback"}
+		{ id: "scroll:resolution", type: "button", img: "down1.gif", title: "Next step to add resolution", action:""}
 		
 	];
 
@@ -253,9 +253,9 @@ var referral_grid_context=
 var referral_toolbar=
 	[
 		
-		{ id: "create:referral", type: "button", img: "create.gif", title: "Create", action:"action_button_callback"},
-		{ id: "send:referral:send_referral", type: "button", img: "send.gif",  title: "Send", action:"action_button_callback" },
-		{ id: "claim:referral:make_claim", type: "button", img: "claim.gif",  title: "Make A Claim", action:"action_button_callback" },
+		{ id: "create:referral", type: "button", img: "create.gif", title: "Create", action:""},
+		{ id: "send:referral:send_referral", type: "button", img: "send.gif",  title: "Send", action:"" },
+		{ id: "claim:referral:make_claim", type: "button", img: "claim.gif",  title: "Make A Claim", action:"" },
 		
 		
 	];
@@ -306,10 +306,10 @@ var support_grid_context=
 var support_toolbar=
 	[
 		
-		{ id: "create:support", type: "button", img: "create.gif", title: "Create", action:"action_button_callback"},
-		{ id: "save:support", type: "button", img: "save.gif",  title: "Save", action:"action_button_callback" },
+		{ id: "create:support", type: "button", img: "create.gif", title: "Create", action:""},
+		{ id: "save:support", type: "button", img: "save.gif",  title: "Save", action:"" },
 		{ type: "separator" },
-		{ id: "scroll:supportnote", type: "button", img: "down1.gif", title: "Add notes", action:"action_button_callback"},
+		{ id: "scroll:supportnote", type: "button", img: "down1.gif", title: "Add notes", action:""},
 		
 	];
 
@@ -359,10 +359,10 @@ var supportnote_grid_context=
 var supportnote_toolbar=
 	[
 		
-		{ id: "create:supportnote", type: "button", img: "create.gif", title: "Create", action:"action_button_callback"},
-		{ id: "save:supportnote", type: "button", img: "save.gif",  title: "Save", action:"action_button_callback" },
+		{ id: "create:supportnote", type: "button", img: "create.gif", title: "Create", action:""},
+		{ id: "save:supportnote", type: "button", img: "save.gif",  title: "Save", action:"" },
 		{ type: "separator" },
-		{ id: "scroll:support", type: "button", img: "up1.gif", title: "Back to support", action:"action_button_callback"},
+		{ id: "scroll:support", type: "button", img: "up1.gif", title: "Back to support", action:""},
 		
 	];
 
@@ -409,8 +409,8 @@ var consultant_grid_context=
 var consultant_toolbar=
 	[
 		
-		{ id: "create:consultant", type: "button", img: "create.gif", title: "Create", action:"action_button_callback"},
-		{ id: "save:consultant", type: "button", img: "save.gif",  title: "Save", action:"action_button_callback" },
+		{ id: "create:consultant", type: "button", img: "create.gif", title: "Create", action:""},
+		{ id: "save:consultant", type: "button", img: "save.gif",  title: "Save", action:"" },
 		
 	];
 
@@ -460,10 +460,10 @@ var developer_grid_context=
 var developer_toolbar=
 	[
 		
-		{ id: "create:developer", type: "button", img: "create.gif", title: "Create", action:"action_button_callback"},
-		{ id: "save:developer", type: "button", img: "save.gif",  title: "Save", action:"action_button_callback" },
+		{ id: "create:developer", type: "button", img: "create.gif", title: "Create", action:""},
+		{ id: "save:developer", type: "button", img: "save.gif",  title: "Save", action:"" },
 		{ type: "separator" },
-		{ id: "scroll:resume", type: "button", img: "down1.gif", title: "Next to resume", action:"action_button_callback"},
+		{ id: "scroll:resume", type: "button", img: "down1.gif", title: "Next to resume", action:""},
 		
 	];
 
@@ -516,11 +516,11 @@ var resume_grid_context=
 var resume_toolbar=
 	[
 		
-		{ id: "make:resume:createAttachment", type: "button", img: "attachment.gif", title: "Attachment", action:"action_button_callback"},
-		{ id: "show:resume:getDownloadFile", type: "button", img: "download.gif",  title: "Download", action:"action_button_callback" },
-		{ id: "delete:resume:deleteFile", type: "button", img: "delete.gif",  title: "Delete", action:"action_button_callback" },
+		{ id: "make:resume:createAttachment", type: "button", img: "attachment.gif", title: "Attachment", action:""},
+		{ id: "show:resume:getDownloadFile", type: "button", img: "download.gif",  title: "Download", action:"" },
+		{ id: "delete:resume:deleteFile", type: "button", img: "delete.gif",  title: "Delete", action:"" },
 		{ type: "separator" },
-		{ id: "scroll:developer", type: "button", img: "up1.gif", title: "Back to developer", action:"action_button_callback"},
+		{ id: "scroll:developer", type: "button", img: "up1.gif", title: "Back to developer", action:""},
 		
 	];
 

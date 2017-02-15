@@ -60,12 +60,12 @@ var project_toolbar=
 		
 		{ type: "separator"},
 		
-		{ id: "create:project", type: "button", img: "create.gif", title: "Create", action:"action_button_callback"},
-		{ id: "save:project", type: "button", img: "save.gif",  title: "Save", action:"action_button_callback" },
+		{ id: "create:project", type: "button", img: "create.gif", title: "Create", action:""},
+		{ id: "save:project", type: "button", img: "save.gif",  title: "Save", action:"" },
 		
 		{ type: "separator" },
-		{ id: "scroll:release", type: "button", img: "up1.gif", title: "Previous step", action:"action_button_callback"},
-		{ id: "scroll:epic", type: "button", img: "down1.gif",  title: "Next step", action:"action_button_callback" },
+		{ id: "scroll:release", type: "button", img: "up1.gif", title: "Previous step", action:""},
+		{ id: "scroll:epic", type: "button", img: "down1.gif",  title: "Next step", action:"" },
 		
 	]
 
@@ -95,11 +95,11 @@ var member_grid_context=
 var member_toolbar=
 	[
 		
-		{ id: "create:member", type: "button", img: "create.gif", title: "Create", action:"action_button_callback"},
-		{ id: "save:member", type: "button", img: "save.gif",  title: "Save", action:"action_button_callback" },
+		{ id: "create:member", type: "button", img: "create.gif", title: "Create", action:""},
+		{ id: "save:member", type: "button", img: "save.gif",  title: "Save", action:"" },
 		{ type: "separator" },
-		{ id: "project:member:removeMe", type: "button", img: "up1.gif", title: "Previous step", action:"action_button_callback"}
-		//{ id: "scroll:project", type: "button", img: "up1.gif", title: "Previous step", action:"action_button_callback"}
+		{ id: "project:member:removeMe", type: "button", img: "up1.gif", title: "Previous step", action:""}
+		//{ id: "scroll:project", type: "button", img: "up1.gif", title: "Previous step", action:""}
 		
 	]
 
@@ -127,11 +127,11 @@ var board_grid_context=
 var board_toolbar=
 	[
 		
-		{ id: "create:board", type: "button", img: "create.gif", title: "Create", action:"action_button_callback"},
-		{ id: "save:board", type: "button", img: "save.gif",  title: "Save", action:"action_button_callback" },
+		{ id: "create:board", type: "button", img: "create.gif", title: "Create", action:""},
+		{ id: "save:board", type: "button", img: "save.gif",  title: "Save", action:"" },
 		{ type: "separator" },
-		//{ id: "project:board:removeMe", type: "button", img: "up1.gif", title: "Previous step", action:"action_button_callback"}
-		{ id: "scroll:project", type: "button", img: "up1.gif", title: "Previous step", action:"action_button_callback"}
+		//{ id: "project:board:removeMe", type: "button", img: "up1.gif", title: "Previous step", action:""}
+		{ id: "scroll:project", type: "button", img: "up1.gif", title: "Previous step", action:""}
 		
 	]
 /*
@@ -172,7 +172,7 @@ var projecttestcount_grid_context=
 
 var projecttestcount_toolbar=
 	[
-		{ id: "project:projecttestcount:removeMe", type: "button", img: "up1.gif", title: "Previous step", action:"action_button_callback"}
+		{ id: "project:projecttestcount:removeMe", type: "button", img: "up1.gif", title: "Previous step", action:""}
 		
 	]
 
@@ -201,7 +201,7 @@ var projectprogress_grid_context=
 
 var projectprogress_toolbar=
 	[
-		{ id: "project:projectprogress:removeMe", type: "button", img: "up1.gif", title: "Previous step", action:"action_button_callback"}
+		{ id: "project:projectprogress:removeMe", type: "button", img: "up1.gif", title: "Previous step", action:""}
 		
 	]
 
@@ -245,12 +245,12 @@ var epic_toolbar=
 		
 		{ type: "separator"},
 		
-		{ id: "create:epic", type: "button", img: "create.gif", title: "Create", action:"action_button_callback"},
-		{ id: "save:epic", type: "button", img: "save.gif",  title: "Save", action:"action_button_callback" },
+		{ id: "create:epic", type: "button", img: "create.gif", title: "Create", action:""},
+		{ id: "save:epic", type: "button", img: "save.gif",  title: "Save", action:"" },
 		
 		{ type: "separator" },
-		{ id: "scroll:project", type: "button", img: "up1.gif", title: "Previous step", action:"action_button_callback"},
-		{ id: "scroll:feature", type: "button", img: "down1.gif",  title: "Next step", action:"action_button_callback" },
+		{ id: "scroll:project", type: "button", img: "up1.gif", title: "Previous step", action:""},
+		{ id: "scroll:feature", type: "button", img: "down1.gif",  title: "Next step", action:"" },
 		
 	]
 
@@ -309,11 +309,11 @@ var hourbooked_grid_context=
 	var hourbooked_toolbar=
 	[
 		
-		{ id: "create:hourbooked", type: "button", img: "create.gif", title: "Create", action:"action_button_callback"},
-		{ id: "save:hourbooked", type: "button", img: "save.gif",  title: "Save", action:"action_button_callback" },
+		{ id: "create:hourbooked", type: "button", img: "create.gif", title: "Create", action:""},
+		{ id: "save:hourbooked", type: "button", img: "save.gif",  title: "Save", action:"" },
 		{ type: "separator" },
-		{ id: "epic:hourbooked:removeMe", type: "button", img: "up1.gif", title: "Previous step", action:"action_button_callback"}
-		//{ id: "scroll:project", type: "button", img: "up1.gif", title: "Previous step", action:"action_button_callback"}
+		{ id: "epic:hourbooked:removeMe", type: "button", img: "up1.gif", title: "Previous step", action:""}
+		//{ id: "scroll:project", type: "button", img: "up1.gif", title: "Previous step", action:""}
 		
 	]
 	/*
@@ -361,11 +361,11 @@ var hourbooked_grid_context=
 		var estimation_toolbar=
 		[
 			
-			{ id: "create:estimation", type: "button", img: "create.gif", title: "Create", action:"action_button_callback"},
-			{ id: "save:estimation", type: "button", img: "save.gif",  title: "Save", action:"action_button_callback" },
+			{ id: "create:estimation", type: "button", img: "create.gif", title: "Create", action:""},
+			{ id: "save:estimation", type: "button", img: "save.gif",  title: "Save", action:"" },
 			{ type: "separator" },
-			{ id: "epic:estimation:removeMe", type: "button", img: "up1.gif", title: "Previous step", action:"action_button_callback"}
-			//{ id: "scroll:project", type: "button", img: "up1.gif", title: "Previous step", action:"action_button_callback"}
+			{ id: "epic:estimation:removeMe", type: "button", img: "up1.gif", title: "Previous step", action:""}
+			//{ id: "scroll:project", type: "button", img: "up1.gif", title: "Previous step", action:""}
 			
 		]
  /*var estimation_grid_context=
@@ -406,7 +406,7 @@ var hourbooked_grid_context=
 
 		var epictestcount_toolbar=
 			[
-				{ id: "epic:epictestcount:removeMe", type: "button", img: "up1.gif", title: "Previous step", action:"action_button_callback"}
+				{ id: "epic:epictestcount:removeMe", type: "button", img: "up1.gif", title: "Previous step", action:""}
 				
 			]
 /*		

@@ -101,14 +101,14 @@ var feature_toolbar=
 		
 		{ type: "separator"},
 		
-		{ id: "create:feature", type: "button", img: "create.gif", title: "Create", action:"action_button_callback"},
-		{ id: "save:feature", type: "button", img: "save.gif",  title: "Save", action:"action_button_callback" },
-		{ id: "file:download:feature", type: "button", img: "download.gif",  title: "Download file", action:"action_button_callback" },
+		{ id: "create:feature", type: "button", img: "create.gif", title: "Create", action:""},
+		{ id: "save:feature", type: "button", img: "save.gif",  title: "Save", action:"" },
+		{ id: "file:download:feature", type: "button", img: "download.gif",  title: "Download file", action:"" },
 		{ type: "separator" },
-		{ id: "scroll:epic", type: "button", img: "up1.gif", title: "Previous step Epic", action:"action_button_callback"},
-		{ id: "scroll:mytasks", type: "button", img: "up1.gif", title: "Previous step mytask", action:"action_button_callback"},
-		{ id: "scroll:scenerio", type: "button", img: "down1.gif",  title: "Next step scenario", action:"action_button_callback" },
-		{ id: "scroll:tasks", type: "button", img: "down1.gif",  title: "Next step Task", action:"action_button_callback" },
+		{ id: "scroll:epic", type: "button", img: "up1.gif", title: "Previous step Epic", action:""},
+		{ id: "scroll:mytasks", type: "button", img: "up1.gif", title: "Previous step mytask", action:""},
+		{ id: "scroll:scenerio", type: "button", img: "down1.gif",  title: "Next step scenario", action:"" },
+		{ id: "scroll:tasks", type: "button", img: "down1.gif",  title: "Next step Task", action:"" },
 		
 	]
 
@@ -148,7 +148,7 @@ var featuretestcount_grid_context=
 
 var featuretestcount_toolbar=
 	[
-		{ id: "feature:featuretestcount:removeMe", type: "button", img: "up1.gif", title: "Previous step", action:"action_button_callback"}
+		{ id: "feature:featuretestcount:removeMe", type: "button", img: "up1.gif", title: "Previous step", action:""}
 		
 	]
 
@@ -197,10 +197,10 @@ var jenkinsjob_grid_context=
 	var jenkinsjob_toolbar=
 	[
 		
-		{ id: "create:jenkinsjob", type: "button", img: "create.gif", title: "Create", action:"action_button_callback"},
-		{ id: "save:jenkinsjob", type: "button", img: "save.gif",  title: "Save", action:"action_button_callback" },
+		{ id: "create:jenkinsjob", type: "button", img: "create.gif", title: "Create", action:""},
+		{ id: "save:jenkinsjob", type: "button", img: "save.gif",  title: "Save", action:"" },
 		{ type: "separator" },
-		{ id: "feature:jenkinsjob:removeMe", type: "button", img: "up1.gif", title: "Previous step", action:"action_button_callback"}
+		{ id: "feature:jenkinsjob:removeMe", type: "button", img: "up1.gif", title: "Previous step", action:""}
 		
 		
 	]
@@ -273,10 +273,10 @@ var featuregroup_grid_context=
 	var featuregroup_toolbar=
 	[
 		
-		{ id: "create:featuregroup", type: "button", img: "create.gif", title: "Create", action:"action_button_callback"},
-		{ id: "save:featuregroup", type: "button", img: "save.gif",  title: "Save", action:"action_button_callback" },
+		{ id: "create:featuregroup", type: "button", img: "create.gif", title: "Create", action:""},
+		{ id: "save:featuregroup", type: "button", img: "save.gif",  title: "Save", action:"" },
 		{ type: "separator" },
-		{ id: "scroll:grouprun", type: "button", img: "down1.gif", title: "Next step", action:"action_button_callback"}
+		{ id: "scroll:grouprun", type: "button", img: "down1.gif", title: "Next step", action:""}
 		
 		
 	]
@@ -299,7 +299,7 @@ var featurelist_grid_context=
 
 	var featurelist_toolbar=
 		[
-			{ id: "scroll:feature", type: "button", img: "up1.gif", title: "Previous step to feature", action:"action_button_callback"}
+			{ id: "scroll:feature", type: "button", img: "up1.gif", title: "Previous step to feature", action:""}
 			
 		]
 

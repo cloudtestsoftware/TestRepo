@@ -387,6 +387,21 @@ function getTargetForm(menu, table){
 	return null;
 }
 
+function getAddons(menu, table){
+	try{
+		if(menu && table){
+			return menuconfig.menues[menu][table].addon; 
+		}
+	}catch(err){
+		if(debug){
+			dhtmlx.message(err +" : getTargetForm : "+table);
+		}
+	}
+	return null;
+}
+
+
+
 function search_custom_action(table){
 	//dhtmlx.message("table="+table);
 	widgetforms[table].hideItem("create:"+table);
@@ -450,11 +465,13 @@ var menuconfig={
 	            
 	        },
 	        "servicerepo": {
-                "servicerepo": {"caption":"Service Repo","child":"serviceparam","button_width":"100","showlistcols":[2,3],"buttonhide":""},
-                "serviceauth": {"caption":"Service Auth", "relation":"serviceauth2servicerepo", "parent":"servicerepo","button_width":"100","showlistcols":[3],"buttonhide":""},
-                "serviceparam": {"caption":"Service Param", "relation":"serviceparam2servicerepo", "parent":"servicerepo","button_width":"100","showlistcols":[4],"buttonhide":""},
-                "serviceapi": {"caption":"Service API", "relation":"serviceapi2servicerepo", "parent":"servicerepo","button_width":"100","showlistcols":[3,4]},
+                "servicerepo": {"caption":"Service Repo","child":"serviceapi","button_width":"100","showlistcols":[2,3],"addon":"serviceauth,serviceparam","buttonhide":"","rowselect":"initGlobalData"},
+                "serviceauth": {"caption":"Service Auth", "relation":"serviceauth2servicerepo", "parent":"servicerepo","button_width":"100","showlistcols":[2,3],"buttonhide":""},
+                "serviceparam": {"caption":"Service Param", "relation":"serviceparam2servicerepo", "parent":"servicerepo","button_width":"100","showlistcols":[3,4],"buttonhide":""},
+                "serviceapi": {"caption":"Service API", "relation":"serviceapi2servicerepo","parent":"servicerepo","child":"apiparam","addon":"apitemplate","button_width":"100","showlistcols":[3,4]},
                 "servicedoc": {"caption":"Service Template", "relation":"servicedoc2servicerepo", "parent":"servicerepo","button_width":"100","buttonhide":""},
+                "apitemplate": {"caption":"Api Template", "relation":"apitemplate2serviceapi", "parent":"serviceapi","button_width":"100","buttonhide":""},
+                "apiparam": {"caption":"Api Param", "relation":"apiparam2serviceapi", "parent":"serviceapi","button_width":"100","showlistcols":[3,4],"buttonhide":""},
             },
 	        "bookcourse": {
 	            "bookcourse": {"caption":"Book Course", "relation":"bookcourse2training", "parent":"mytraining","child":"coursefeedback","button_width":"100","disablefields":"status,amountpaid,confirmationno","buttonhide":"create,prod","formload":"verify_prod_access","rowselect":"verify_prod_access","buttonhide":"scroll:training,scroll:mytraining"},

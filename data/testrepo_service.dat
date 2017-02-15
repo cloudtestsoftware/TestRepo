@@ -9894,8 +9894,26 @@
     Remark=Name of the CICD Service 
   </Attribute>
   <Attribute>
-    AttributeName=Description
+    AttributeName=ShortName
     AttrIndex=2
+    AliasName=Short Name
+    Behavior=text
+    DomainName=String50_t
+    IsNull=no
+    DefaultValue=null
+    HasProperty=no
+    HasCodeObject=no
+    FieldType=null
+    IsViewField=no
+    SelectMandatory=yes
+    IsSearchField=yes
+    IsBaseline=yes
+    Version=1.0
+    Remark=a short name to identify API to call 
+  </Attribute>
+  <Attribute>
+    AttributeName=Description
+    AttrIndex=3
     AliasName=Description
     Behavior=text
     DomainName=String4000_t
@@ -9913,7 +9931,7 @@
   </Attribute>
   <Attribute>
     AttributeName=Endpoint
-    AttrIndex=3
+    AttrIndex=4
     AliasName=Endpoint
     Behavior=text
     DomainName=String300_t
@@ -9931,7 +9949,7 @@
   </Attribute>
   <Attribute>
     AttributeName=ExternalId
-    AttrIndex=4
+    AttrIndex=5
     AliasName=External Asset Id
     Behavior=text
     DomainName=String100_t
@@ -9949,7 +9967,7 @@
   </Attribute>
    <Attribute>
     AttributeName=Version
-    AttrIndex=5
+    AttrIndex=6
     AliasName=Version
     Behavior=text
     DomainName=String50_t
@@ -9967,7 +9985,7 @@
   </Attribute>
   <Attribute>
     AttributeName=ServiceType
-    AttrIndex=6
+    AttrIndex=7
     AliasName=Service Type
     Behavior=select
     DomainName=Type_t
@@ -9985,7 +10003,7 @@
   </Attribute>
   <Attribute>
     AttributeName=AuthType
-    AttrIndex=7
+    AttrIndex=8
     AliasName=Auth Type
     Behavior=select
     DomainName=Type_t
@@ -10003,7 +10021,7 @@
   </Attribute>
   <Attribute>
     AttributeName=IsActive
-    AttrIndex=8
+    AttrIndex=9
     AliasName=Is Active
     Behavior=select
     DomainName=Type_t
@@ -10021,7 +10039,7 @@
   </Attribute>
   <Attribute>
     AttributeName=MethodType
-    AttrIndex=9
+    AttrIndex=10
     AliasName=Method Type
     Behavior=select
     DomainName=Type_t
@@ -10039,7 +10057,7 @@
   </Attribute> 
   <Attribute>
     AttributeName=ExpiryDate
-    AttrIndex=10
+    AttrIndex=11
     AliasName=Expired On
     Behavior=date
     DomainName=Date_t
@@ -10057,7 +10075,7 @@
   </Attribute>
   <Attribute>
     AttributeName=PostBody
-    AttrIndex=11
+    AttrIndex=12
     AliasName=Post Body
     Behavior=text
     DomainName=String4000_t
@@ -10075,7 +10093,7 @@
   </Attribute>
    <Attribute>
     AttributeName=ResponseBody
-    AttrIndex=12
+    AttrIndex=13
     AliasName=Response Body
     Behavior=text
     DomainName=String4000_t
@@ -10179,16 +10197,6 @@
         IsMandatory=no
         Remark=Related to ServiceRepo
    </AttributeRelation>
-    <AttributeRelation>
-        RelationName=ServiceParam2ServiceApi
-        ParentTable=ServiceApi
-        RelationType=MTO
-        CurrentState=0
-        TabIndex=0
-        DefaultFilter=null 
-        IsMandatory=no
-        Remark=Related to ServiceApi
-   </AttributeRelation>
   <Index>
      Indexname=Pk_ServiceParam_Indx01
      Fields=ObjId
@@ -10199,11 +10207,7 @@
      Fields=ServiceParam2ServiceRepo
      IndexType=Indexed
   </Index>
-  <Index>
-     Indexname=Fk_ServiceParam_Indx02
-     Fields=ServiceParam2ServiceApi
-     IndexType=Indexed
-  </Index>
+  
 </SemanticObject>
 
 //**********************************************//
@@ -10315,9 +10319,27 @@
     Version=1.0
     Remark=Name of the API
   </Attribute>
+   <Attribute>
+    AttributeName=ShortName
+    AttrIndex=2
+    AliasName=Short Name
+    Behavior=text
+    DomainName=String50_t
+    IsNull=no
+    DefaultValue=null
+    HasProperty=no
+    HasCodeObject=no
+    FieldType=null
+    IsViewField=no
+    SelectMandatory=yes
+    IsSearchField=yes
+    IsBaseline=yes
+    Version=1.0
+    Remark=a short name to identify API to call 
+  </Attribute>
   <Attribute>
     AttributeName=Description
-    AttrIndex=2
+    AttrIndex=3
     AliasName=Description
     Behavior=text
     DomainName=String4000_t
@@ -10335,7 +10357,7 @@
   </Attribute>
   <Attribute>
     AttributeName=Uri
-    AttrIndex=3
+    AttrIndex=4
     AliasName=Relative Uri
     Behavior=text
     DomainName=String300_t
@@ -10353,7 +10375,7 @@
   </Attribute>
    <Attribute>
     AttributeName=Version
-    AttrIndex=4
+    AttrIndex=5
     AliasName=Version
     Behavior=text
     DomainName=String50_t
@@ -10371,7 +10393,7 @@
   </Attribute>
   <Attribute>
     AttributeName=MethodType
-    AttrIndex=5
+    AttrIndex=6
     AliasName=Method Type
     Behavior=select
     DomainName=Type_t
@@ -10389,7 +10411,7 @@
   </Attribute> 
    <Attribute>
     AttributeName=PostBody
-    AttrIndex=6
+    AttrIndex=7
     AliasName=Post Body
     Behavior=text
     DomainName=String4000_t
@@ -10407,7 +10429,7 @@
   </Attribute>
    <Attribute>
     AttributeName=ResponseBody
-    AttrIndex=7
+    AttrIndex=8
     AliasName=Response Body
     Behavior=text
     DomainName=String4000_t
@@ -10509,16 +10531,6 @@
     IsMandatory=no
     Remark=Related to ServiceRepo
   </AttributeRelation>
-  <AttributeRelation>
-    RelationName=ServiceDoc2ServiceApi
-    ParentTable=ServiceApi
-    RelationType=MTO
-    CurrentState=0
-    TabIndex=0
-    DefaultFilter=null 
-    IsMandatory=no
-    Remark=Related to ServiceApi
-  </AttributeRelation>
   
   <Index>
     Indexname=Pk_ServiceDoc_Indx01
@@ -10530,12 +10542,179 @@
     Fields=ServiceDoc2ServiceRepo
     IndexType=Indexed
   </Index>
+  
+  
+</SemanticObject>
+
+//*************************************************//
+  ApiTemplate
+//*********************************************//
+<SemanticObject>
+  ObjectName=ApiTemplate
+  AliasName=ApiTemplate
+  ObjectType=Table
+  ObjectFilter=
+  IsBaseline=Yes
+  Version=1.0
+  ObjectTypeNo=133
+  GroupAccess=yes
+  AllowDelete=no
+  AllowNew=yes
+  AllowSearch=yes
+  Remark= This table stores all attachment about service request and response
+  
+  <Attribute>
+    AttributeName=Name
+    AttrIndex=1
+    AliasName=Name
+    Behavior=text
+    DomainName=Name_t
+    IsNull=no
+    DefaultValue=null
+    HasProperty=no
+    HasCodeObject=no
+    FieldType=null
+    IsViewField=no
+    SelectMandatory=yes
+    IsSearchField=yes
+    IsBaseline=yes
+    Version=1.0
+    Remark=The name of steps in scenerio
+  </Attribute>
+  <Attribute>
+    AttributeName=filepath
+    AttrIndex=2
+    AliasName=File Path
+    Behavior=text
+    DomainName=String300_t
+    IsNull=yes
+    DefaultValue=null
+    HasProperty=no
+    HasCodeObject=no
+    FieldType=null
+    IsViewField=no
+    SelectMandatory=no
+    IsSearchField=yes
+    IsBaseline=yes
+    Version=1.0
+    Remark=path to the attachment
+  </Attribute>
+ 
+  <AttributeRelation>
+    RelationName=ApiTemplate2ServiceApi
+    ParentTable=ServiceApi
+    RelationType=MTO
+    CurrentState=0
+    TabIndex=0
+    DefaultFilter=null 
+    IsMandatory=no
+    Remark=Related to ServiceApi
+  </AttributeRelation>
+  
   <Index>
-    Indexname=Fk_ServiceDoc_Indx02
-    Fields=ServiceDoc2ServiceApi
+    Indexname=Pk_ApiTemplate_Indx01
+    Fields=ObjId
+    IndexType=Unique
+  </Index>
+  
+  <Index>
+    Indexname=Fk_ApiTemplate_Indx01
+    Fields=ApiTemplate2ServiceApi
     IndexType=Indexed
   </Index>
   
+</SemanticObject>
+
+//**********************************************//
+       ApiParam
+//**********************************************//
+<SemanticObject>
+  ObjectName=ApiParam
+  AliasName=ApiParam
+  ObjectType=Table
+  ObjectFilter=null
+  IsBaseline=Yes
+  Version=1.0
+  ObjectTypeNo=160
+  GroupAccess=yes
+  AllowDelete=no
+  AllowNew=yes
+  AllowSearch=yes
+  Remark= This table stores the ApiParam
+  <Attribute>
+    AttributeName=Name
+    AttrIndex=1
+    AliasName=Key Name
+    Behavior=text
+    DomainName=Name_t
+    IsNull=no
+    DefaultValue=null
+    HasProperty=no
+    HasCodeObject=no
+    FieldType=null
+    IsViewField=no
+    SelectMandatory=yes
+    IsSearchField=yes
+    IsBaseline=yes
+    Version=1.0
+    Remark=Name of the Cloud Setting
+  </Attribute>
+  <Attribute>
+    AttributeName=KeyValue
+    AttrIndex=2
+    AliasName=Key Value
+    Behavior=text
+    DomainName=String200_t
+    IsNull=no
+    DefaultValue=null
+    HasProperty=no
+    HasCodeObject=no
+    FieldType=null
+    IsViewField=no
+    SelectMandatory=yes
+    IsSearchField=yes
+    IsBaseline=yes
+    Version=1.0
+    Remark=Key value
+  </Attribute>
+   <Attribute>
+    AttributeName=ParamType
+    AttrIndex=3
+    AliasName=Param Type
+    Behavior=select
+    DomainName=Type_t
+    IsNull=no
+    DefaultValue=null
+    HasProperty=yes
+    HasCodeObject=no
+    FieldType=null
+    IsViewField=no
+    SelectMandatory=yes
+    IsSearchField=yes
+    IsBaseline=yes
+    Version=1.0
+    Remark=type of the variable like header , cookiee, body
+  </Attribute>
+    <AttributeRelation>
+        RelationName=ApiParam2ServiceApi
+        ParentTable=ServiceApi
+        RelationType=MTO
+        CurrentState=0
+        TabIndex=0
+        DefaultFilter=null 
+        IsMandatory=no
+        Remark=Related to ServiceApi
+   </AttributeRelation>
+  <Index>
+     Indexname=Pk_ApiParam_Indx01
+     Fields=ObjId
+     IndexType=Unique
+  </Index>
+  <Index>
+     Indexname=Fk_ApiParam_Indx01
+     Fields=ApiParam2ServiceApi
+     IndexType=Indexed
+  </Index>
 </SemanticObject>
 
 //**********************************************//

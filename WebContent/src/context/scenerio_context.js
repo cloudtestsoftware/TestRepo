@@ -50,15 +50,15 @@ var scenerio_toolbar=
 		
 		{ type: "separator"},
 		
-		{ id: "create:scenerio", type: "button", img: "create.gif", title: "Create", action:"action_button_callback"},
-		{ id: "save:scenerio", type: "button", img: "save.gif",  title: "Save", action:"action_button_callback" },
-		{ id: "file:download:scenerio", type: "button", img: "download.gif",  title: "Download file", action:"action_button_callback" },
+		{ id: "create:scenerio", type: "button", img: "create.gif", title: "Create", action:""},
+		{ id: "save:scenerio", type: "button", img: "save.gif",  title: "Save", action:"" },
+		{ id: "file:download:scenerio", type: "button", img: "download.gif",  title: "Download file", action:"" },
 		
 		{ type: "separator" },
-		{ id: "home:project", type: "button", img: "lookup.gif",  title: "Lookup", action:"action_button_callback" },
-		{ id: "scroll:feature", type: "button", img: "up1.gif", title: "Previous step", action:"action_button_callback"},
-		{ id: "scroll:teststeps", type: "button", img: "down1.gif", title: "Add Test cases", action:"action_button_callback"},
-		//{ id: "scenerio:matrixlist:handle_custom_changes", type: "button", img: "down1.gif",  title: "Next step", action:"action_button_callback" },
+		{ id: "home:project", type: "button", img: "lookup.gif",  title: "Lookup", action:"" },
+		{ id: "scroll:feature", type: "button", img: "up1.gif", title: "Previous step", action:""},
+		{ id: "scroll:teststeps", type: "button", img: "down1.gif", title: "Add Test cases", action:""},
+		//{ id: "scenerio:matrixlist:handle_custom_changes", type: "button", img: "down1.gif",  title: "Next step", action:"" },
 		
 	]
 
@@ -120,8 +120,8 @@ var matrixmap_grid_context=
 	var matrixmap_toolbar=
 	[
 		
-		{ id: "create:matrixmap", type: "button", img: "create.gif", title: "Create", action:"action_button_callback"},
-		{ id: "save:matrixmap", type: "button", img: "save.gif",  title: "Save", action:"action_button_callback" },
+		{ id: "create:matrixmap", type: "button", img: "create.gif", title: "Create", action:""},
+		{ id: "save:matrixmap", type: "button", img: "save.gif",  title: "Save", action:"" },
 		
 	]
 	/*
@@ -169,12 +169,12 @@ var matrixmap_grid_context=
 		var matrixlist_toolbar=
 		[
 			
-			{ id: "create:matrixlist", type: "button", img: "create.gif", title: "Create", action:"action_button_callback"},
-			{ id: "save:matrixlist", type: "button", img: "save.gif",  title: "Save", action:"action_button_callback" },
+			{ id: "create:matrixlist", type: "button", img: "create.gif", title: "Create", action:""},
+			{ id: "save:matrixlist", type: "button", img: "save.gif",  title: "Save", action:"" },
 			{ type: "separator" },
-			{ id: "scroll:project", type: "button", img: "home.gif", title: "Go to Project", action:"action_button_callback"},
-			{ id: "scenerio:matrixlist:removeMe", type: "button", img: "up1.gif", title: "Previous step", action:"action_button_callback"},
-			//{ id: "scroll:project", type: "button", img: "up1.gif", title: "Previous step", action:"action_button_callback"}
+			{ id: "scroll:project", type: "button", img: "home.gif", title: "Go to Project", action:""},
+			{ id: "scenerio:matrixlist:removeMe", type: "button", img: "up1.gif", title: "Previous step", action:""},
+			//{ id: "scroll:project", type: "button", img: "up1.gif", title: "Previous step", action:""}
 			
 		]
 		
@@ -222,7 +222,7 @@ var testcount_grid_context=
 
 var testcount_toolbar=
 			[
-				{ id: "scenerio:testcount:removeMe", type: "button", img: "up1.gif", title: "Previous step", action:"action_button_callback"}
+				{ id: "scenerio:testcount:removeMe", type: "button", img: "up1.gif", title: "Previous step", action:""}
 				
 			]
 			
@@ -269,11 +269,11 @@ var teststeps_grid_context=
 	var teststeps_toolbar=
 	[
 		
-		{ id: "create:teststeps", type: "button", img: "create.gif", title: "Create", action:"action_button_callback"},
-		{ id: "save:teststeps", type: "button", img: "save.gif",  title: "Save", action:"action_button_callback" },
+		{ id: "create:teststeps", type: "button", img: "create.gif", title: "Create", action:""},
+		{ id: "save:teststeps", type: "button", img: "save.gif",  title: "Save", action:"" },
 		{ type: "separator" },
-		{ id: "scenerio:teststeps:removeMe", type: "button", img: "up1.gif", title: "Previous step", action:"action_button_callback"},
-		//{ id: "scroll:testscenerio", type: "button", img: "up1.gif", title: "Previous step", action:"action_button_callback"},
+		{ id: "scenerio:teststeps:removeMe", type: "button", img: "up1.gif", title: "Previous step", action:""},
+		//{ id: "scroll:testscenerio", type: "button", img: "up1.gif", title: "Previous step", action:""},
 		
 		
 	]

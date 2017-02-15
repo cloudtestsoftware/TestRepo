@@ -71,11 +71,11 @@ var testscenerio_toolbar=
 	[
 		
 		
-		{ id: "file:download:testscenerio", type: "button", img: "download.gif",  title: "Download", action:"action_button_callback" },
-		{ id: "scenerio:teststeps:handle_custom_changes", type: "button", img: "testcase.gif",  title: "View Tests", action:"action_button_callback" },
+		{ id: "file:download:testscenerio", type: "button", img: "download.gif",  title: "Download", action:"" },
+		{ id: "scenerio:teststeps:handle_custom_changes", type: "button", img: "testcase.gif",  title: "View Tests", action:"" },
 		{ type: "separator" },
-		{ id: "scroll:featurerun", type: "button", img: "up1.gif", title: "Back to feature", action:"action_button_callback"},
-		{ id: "scroll:sceneriorun", type: "button", img: "down1.gif", title: "Go to Test", action:"action_button_callback"},
+		{ id: "scroll:featurerun", type: "button", img: "up1.gif", title: "Back to feature", action:""},
+		{ id: "scroll:sceneriorun", type: "button", img: "down1.gif", title: "Go to Test", action:""},
 		
 		
 	];
@@ -137,12 +137,12 @@ var sceneriorun_toolbar=
 				
 			]
 		},
-		{ id: "create:sceneriorun", type: "button", img: "create.gif", title: "Create", action:"action_button_callback"},
-		{ id: "save:sceneriorun", type: "button", img: "save.gif",  title: "Save", action:"action_button_callback" },
+		{ id: "create:sceneriorun", type: "button", img: "create.gif", title: "Create", action:""},
+		{ id: "save:sceneriorun", type: "button", img: "save.gif",  title: "Save", action:"" },
 		{ type: "separator" },
-		{ id: "scroll:testscenerio", type: "button", img: "up1.gif", title: "Back to testscenerio", action:"action_button_callback"},
-		{ id: "scroll:featurerun", type: "button", img: "up2.gif", title: "Back to featurerun", action:"action_button_callback"},
-		{ id: "scroll:attachment", type: "button", img: "down1.gif", title: "Go to attachmentr", action:"action_button_callback"},
+		{ id: "scroll:testscenerio", type: "button", img: "up1.gif", title: "Back to testscenerio", action:""},
+		{ id: "scroll:featurerun", type: "button", img: "up2.gif", title: "Back to featurerun", action:""},
+		{ id: "scroll:attachment", type: "button", img: "down1.gif", title: "Go to attachmentr", action:""},
 		
 	];
 

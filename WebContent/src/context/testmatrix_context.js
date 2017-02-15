@@ -65,10 +65,10 @@ var testmatrix_toolbar=
 				
 			]
 		},
-		{ id: "create:testmatrix", type: "button", img: "create.gif", title: "Create", action:"action_button_callback"},
-		{ id: "save:testmatrix", type: "button", img: "save.gif",  title: "Save", action:"action_button_callback" },
+		{ id: "create:testmatrix", type: "button", img: "create.gif", title: "Create", action:""},
+		{ id: "save:testmatrix", type: "button", img: "save.gif",  title: "Save", action:"" },
 		{ type: "separator" },
-		{ id: "scroll:testrun", type: "button", img: "down1.gif", title: "Go to matrix run", action:"action_button_callback"},
+		{ id: "scroll:testrun", type: "button", img: "down1.gif", title: "Go to matrix run", action:""},
 		
 	];
 
@@ -117,11 +117,11 @@ var testenv_grid_context=
 var testenv_toolbar=
 	[
 		
-		{ id: "create:testenv", type: "button", img: "create.gif", title: "Create", action:"action_button_callback"},
-		{ id: "save:testenv", type: "button", img: "save.gif",  title: "Save", action:"action_button_callback" },
-		{ id: "delete:testenv", type: "button", img: "delete.gif",  title: "Delete", action:"action_button_callback" },
+		{ id: "create:testenv", type: "button", img: "create.gif", title: "Create", action:""},
+		{ id: "save:testenv", type: "button", img: "save.gif",  title: "Save", action:"" },
+		{ id: "delete:testenv", type: "button", img: "delete.gif",  title: "Delete", action:"" },
 		{ type: "separator" },
-		{ id: "testmatrix:testenv:removeMe", type: "button", img: "up1.gif", title: "Back to previous step", action:"action_button_callback"},
+		{ id: "testmatrix:testenv:removeMe", type: "button", img: "up1.gif", title: "Back to previous step", action:""},
 		
 	];
 

@@ -67,6 +67,17 @@ var boardcell={};
 var boarddataview={};
 var boardgrid={};
 
+//serviceapi
+var paramgrid= {};
+var contenttype={};
+/*
+var servicerepodata={};
+var serviceauthdata{};
+var serviceparamdata{};
+var serviceapidata={};
+var apiparamdata={};
+*/
+
 var w=window,d=document,e=d.documentElement,g=d.getElementsByTagName('body')[0];
 var  layoutWidth,  layoutHeight;
 //var main_win ;
@@ -801,13 +812,7 @@ function getWidgetForm(table){
 
 function getMainForm(){
 	var form=main_form;
-	var tabwidget;
-	 try{
-		 tabwidget=current_grid.getUserData("","tabwidget");
-	 }catch(err){}	
 	
-	 
-    //if(tabwidget && tabwidget=='yes'||
 	 if(search_tabbar &&task_form &&search_tabbar.getActiveTab()=="task"	) {
 		 form= task_form;
 	 }
@@ -905,7 +910,7 @@ function removeWidget(table){
 	   if(main_form){
 		   main_form.removeItem(fieldset_name);
 	   }
-	  
+	   removeAddons(menuid,table);
 	   removeToolbarObjectMemory(menuid, table);
 	 
 	}
@@ -1324,6 +1329,8 @@ function grid_onRowSelect_callback(grid,table,rowId,cellIndex){
 	           try{
 	           		var colid=grid.getColumnId(colIdx);
 	           		var value=grid.cells(rowId,colIdx).getValue();
+	           		//formate json
+	           		value=formatJSON(value);
 	           		var type=form.getItemType(colid);
 	           		//value=value.split("-").join("&nbsp;");
 	           		
@@ -1506,6 +1513,29 @@ function clearAllChildBeneath(table){
 	   }
 	   return true;
 	}
+
+function removeAddons(menuid,table){
+	var addons=getAddons(menuid,table);
+	if(addons){
+		var addonslist=addons.split(",");
+		if(addonslist.length>0){
+			for ( var i=0;i<addonslist.length;i++){
+				var child=addonslist[i];
+				try{
+			  		widget_form=widgetforms[child];
+			        if(widget_form){
+			        	widget_form.unload();
+			        	widgetforms[child]=null;
+			        	dataforms[child]=null;
+			        	removeWidget(child);
+			        	
+			        }
+			   }catch(err){}
+				
+			}
+		}
+	}
+}
 
 function removeMe(name){
 	  var menulist=getMenu(menuid);
@@ -1761,6 +1791,7 @@ function saveChanges(table, target){
     }
 }
 
+
 //the name of the button should have
 //[caller]:[child]:[custom method]
 //example : project:sprint:handle_custom_project_changes
@@ -1856,8 +1887,17 @@ function collect_form_data(table,target){
 			               var val =null;
 			               try{
 			            	  val =data_form.getEditor(colid).getContent();
-			            	  val=createTextVersion(val);
-			            	  val=val.split("\n").join("<br>");
+			            	  try{
+			            		  val=createTextVersion(val);
+			            		  val = JSON.parse(val);
+			            		  val=JSON.stringify(val);
+			            		  //val=val.split("\t").join("");
+			            		 
+			            	  }catch(err){
+			            		  val=createTextVersion(val);
+				            	  //val=val.split("<br>").join("\n");
+			            	  }
+			            	 
 			            	  //val=val.replace(/<\/?[a-z][a-z0-9]*[^<>]*>/ig, "<br>");
 			            	  
 			               }catch(err){
@@ -1924,6 +1964,22 @@ function collect_form_data(table,target){
 
 }
 
+function formatJSON(val){
+	try{
+		val=JSON.parse(val);
+		val=JSON.stringify(val, null, 4);
+		val=val.trim().split("{").join("{<br>");
+		val=val.trim().split("}").join("<br>}<br>");
+		val=val.trim().split(",").join(",<br>");
+		return val;
+	}catch(err){}
+	try{
+		val=val.split("\n").join("<br>");
+	}catch(err){}
+	
+	return val;
+	
+}
 function strip(html)
 {
    var tmp = document.implementation.createHTMLDocument("New").body;
@@ -1965,9 +2021,13 @@ function postData(xml,url,table){
         		    reloadGrid(table);
         		   
         			//dhtmlx.alert("Data posted successfully!");
-        		}else if(url.indexOf("/jenkin")<0){
+        		}else if(url.indexOf("/jenkin")<0 && url.indexOf("/cicddata")<0){
         		  	dhtmlx.alert("Failed to save your data! Please try again.");
-        		}/*else if(url.indexOf("/jenkin")>=0){
+        		}else if( url.indexOf("/cicddata")>0){
+        			dhtmlx.alert("Posted CI/CD Job Successfully!");
+        		}
+        		
+        		/*else if(url.indexOf("/jenkin")>=0){
         			jobcounter=jobcounter+1;
         		  	//dhtmlx.alert("Posted Jenkin Job Successfully!");
         		}*/
@@ -2099,6 +2159,7 @@ function executeGet(url){
 		xmlHttpReq.send(null);
 	
 }
+
 
 function executeDownload(url,table,downloaduri,filename){
 	var xmlHttpReq;
@@ -2292,6 +2353,33 @@ function getGridColumnIndex(grid,colname){
 	return -1;
 	
 }
+
+
+function getGridColumnValueForSelectedRow(grid,colname){
+	 var colNum=grid.getColumnsNum();
+	 var value;	
+		for( var i=0;i<colNum;i++){
+			if(grid.getColumnId(i).indexOf(":"+colname)>=0 ){
+				value=grid.cells(grid.getSelectedRowId(),i).getValue();
+			}
+		}
+	return value;
+	
+}
+
+function getColumnValueByGridRowId(grid,colname,rowid){
+	 var colNum=grid.getColumnsNum();
+	 var value;	
+		for( var i=0;i<colNum;i++){
+			if(grid.getColumnId(i).indexOf(":"+colname)>=0 ){
+				value=grid.cells(rowid,i).getValue();
+			}
+		}
+	return value;
+	
+}
+
+
 
 function showAllGridColumns(grid){
     

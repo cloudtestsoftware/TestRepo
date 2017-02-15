@@ -70,7 +70,7 @@ var projectboard_toolbar=
 		},
 		
 		{ type: "separator" },
-		{ id: "scroll:sprint", type: "button", img: "down1.gif",  title: "Next step", action:"action_button_callback" },
+		{ id: "scroll:sprint", type: "button", img: "down1.gif",  title: "Next step", action:"" },
 		
 	]
 
@@ -126,11 +126,11 @@ var sprint_grid_context=
 	var sprint_toolbar=
 	[
 		
-		{ id: "create:sprint", type: "button", img: "create.gif", title: "Create", action:"action_button_callback"},
-		{ id: "save:sprint", type: "button", img: "save.gif",  title: "Save", action:"action_button_callback" },
+		{ id: "create:sprint", type: "button", img: "create.gif", title: "Create", action:""},
+		{ id: "save:sprint", type: "button", img: "save.gif",  title: "Save", action:"" },
 		{ type: "separator" },
-		{ id: "scroll:projectboard", type: "button", img: "up1.gif", title: "Previous step", action:"action_button_callback"},
-		{ id: "scroll:sprintboard", type: "button", img: "down1.gif", title: "Next step to sprint board", action:"action_button_callback"}
+		{ id: "scroll:projectboard", type: "button", img: "up1.gif", title: "Previous step", action:""},
+		{ id: "scroll:sprintboard", type: "button", img: "down1.gif", title: "Next step to sprint board", action:""}
 		
 	]
 /*
@@ -180,9 +180,9 @@ var sprintboard_grid_context=
 		[
 			
 		
-			{ id: "scroll:projectboard", type: "button", img: "home.gif", title: "Back to project board", action:"action_button_callback"},
-			{ id: "scroll:sprint", type: "button", img: "up1.gif", title: "Previous step", action:"action_button_callback"},
-			{ id: "view:sprintboard:viewBoard", type: "button", img: "down1.gif", title: "Next step to open board", action:"action_button_callback"}
+			{ id: "scroll:projectboard", type: "button", img: "home.gif", title: "Back to project board", action:""},
+			{ id: "scroll:sprint", type: "button", img: "up1.gif", title: "Previous step", action:""},
+			{ id: "view:sprintboard:viewBoard", type: "button", img: "down1.gif", title: "Next step to open board", action:""}
 			
 		]
 
@@ -226,7 +226,7 @@ var backlog_grid_context=
 			var backlog_toolbar=
 			[
 				
-				{ id: "view:board:viewBoard", type: "button", img: "view.gif", title: "View Board", action:"action_button_callback"},
+				{ id: "view:board:viewBoard", type: "button", img: "view.gif", title: "View Board", action:""},
 				
 			]
 
@@ -281,8 +281,8 @@ var feature_tab_toolbar=
 			{ type: "button", id: "feature:featuretestresult:handle_custom_changes", text: "projectboard Facts",img: "facts.gif" }
 		]
 	},
-	{ id: "update:feature:feature_putto_backlog", type: "button", img: "delete.gif", title: "Remove from sprint", action:"action_button_callback"},
-	{ id: "scroll:tasks", type: "button", img: "down1.gif", title: "Next step to task", action:"action_button_callback"}
+	{ id: "update:feature:feature_putto_backlog", type: "button", img: "delete.gif", title: "Remove from sprint", action:""},
+	{ id: "scroll:tasks", type: "button", img: "down1.gif", title: "Next step to task", action:""}
 	
 ]
 
@@ -337,11 +337,11 @@ var tasks_grid_context=
 var tasks_toolbar=
 	[
 		
-		{ id: "create:tasks", type: "button", img: "create.gif", title: "Create", action:"action_button_callback"},
-		{ id: "save:tasks", type: "button", img: "save.gif",  title: "Save", action:"action_button_callback" },
+		{ id: "create:tasks", type: "button", img: "create.gif", title: "Create", action:""},
+		{ id: "save:tasks", type: "button", img: "save.gif",  title: "Save", action:"" },
 		{ type: "separator" },
-		{ id: "scroll:feature:tabwidget", type: "button", img: "up1.gif", title: "Previous step", action:"action_button_callback"},
-		{ id: "scroll:tasknote:tabwidget", type: "button", img: "down1.gif", title: "Next step to add note", action:"action_button_callback"}
+		{ id: "scroll:feature:tabwidget", type: "button", img: "up1.gif", title: "Previous step", action:""},
+		{ id: "scroll:tasknote:tabwidget", type: "button", img: "down1.gif", title: "Next step to add note", action:""}
 		
 	];
 
@@ -396,12 +396,12 @@ var tasknote_grid_context=
 var tasknote_toolbar=
 	[
 		
-		{ id: "create:tasknote", type: "button", img: "create.gif", title: "Create", action:"action_button_callback"},
-		{ id: "save:tasknote", type: "button", img: "save.gif",  title: "Save", action:"action_button_callback" },
+		{ id: "create:tasknote", type: "button", img: "create.gif", title: "Create", action:""},
+		{ id: "save:tasknote", type: "button", img: "save.gif",  title: "Save", action:"" },
 		{ type: "separator" },
-		{ id: "scroll:tasks:tabwidget", type: "button", img: "up1.gif", title: "Back to task", action:"action_button_callback"},
-		{ id: "scroll:feature:tabwidget", type: "button", img: "home.gif", title: "Back to feature", action:"action_button_callback"},
-		{ id: "scroll:mytasks", type: "button", img: "up1.gif", title: "Back to my tasks", action:"action_button_callback"},
+		{ id: "scroll:tasks:tabwidget", type: "button", img: "up1.gif", title: "Back to task", action:""},
+		{ id: "scroll:feature:tabwidget", type: "button", img: "home.gif", title: "Back to feature", action:""},
+		{ id: "scroll:mytasks", type: "button", img: "up1.gif", title: "Back to my tasks", action:""},
 		
 	];
 
@@ -442,7 +442,7 @@ var projectboardresult_grid_context=
 
 var projectboardresult_toolbar=
 	[
-		{ id: "projectboard:projectboardresult:removeMe", type: "button", img: "up1.gif", title: "Previous step", action:"action_button_callback"}
+		{ id: "projectboard:projectboardresult:removeMe", type: "button", img: "up1.gif", title: "Previous step", action:""}
 		
 	]
 
@@ -491,7 +491,7 @@ var burndownchart_toolbar=
 				{ type: "button", id: "burndownchart:difficulttasks:handle_custom_changes", text: "Difficult Tasks",img: "facts.gif" }
 			]
 		},
-		{ id: "projectboard:burndownchart:removeMe", type: "button", img: "up1.gif", title: "Previous step", action:"action_button_callback"}
+		{ id: "projectboard:burndownchart:removeMe", type: "button", img: "up1.gif", title: "Previous step", action:""}
 		
 	]
 /*
@@ -544,9 +544,9 @@ var sprinttasks_toolbar=
 	[
 		
 		
-		{ id: "update:sprinttasks:update_sprint_tasks", type: "button", img: "save.gif",  title: "Save", action:"action_button_callback" },
+		{ id: "update:sprinttasks:update_sprint_tasks", type: "button", img: "save.gif",  title: "Save", action:"" },
 		{ type: "separator" },
-		{ id: "scroll:projectboard", type: "button", img: "up1.gif", title: "Previous step", action:"action_button_callback"},
+		{ id: "scroll:projectboard", type: "button", img: "up1.gif", title: "Previous step", action:""},
 		
 		
 	];
@@ -602,9 +602,9 @@ var difficulttasks_toolbar=
 	[
 		
 		
-		{ id: "update:difficulttasks:update_sprint_tasks", type: "button", img: "save.gif",  title: "Save", action:"action_button_callback" },
+		{ id: "update:difficulttasks:update_sprint_tasks", type: "button", img: "save.gif",  title: "Save", action:"" },
 		{ type: "separator" },
-		{ id: "scroll:projectboard", type: "button", img: "up1.gif", title: "Previous step", action:"action_button_callback"},
+		{ id: "scroll:projectboard", type: "button", img: "up1.gif", title: "Previous step", action:""},
 		
 		
 	];
@@ -645,7 +645,7 @@ var sprintresult_grid_context=
 
 var sprintresult_toolbar=
 	[
-		{ id: "projectboard:sprintresult:removeMe", type: "button", img: "up1.gif", title: "Previous step", action:"action_button_callback"}
+		{ id: "projectboard:sprintresult:removeMe", type: "button", img: "up1.gif", title: "Previous step", action:""}
 		
 	]
 	
@@ -675,7 +675,7 @@ var sprintvelocity_grid_context=
 
 var sprintvelocity_toolbar=
 	[
-		{ id: "projectboard:sprintvelocity:removeMe", type: "button", img: "up1.gif", title: "Previous step", action:"action_button_callback"}
+		{ id: "projectboard:sprintvelocity:removeMe", type: "button", img: "up1.gif", title: "Previous step", action:""}
 		
 	]
 

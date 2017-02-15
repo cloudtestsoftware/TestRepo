@@ -60,8 +60,8 @@ var calendar_grid_context=
 	var calendar_toolbar=
 	[
 		
-		{ id: "create:calendar", type: "button", img: "create.gif", title: "Create", action:"action_button_callback"},
-		{ id: "save:calendar", type: "button", img: "save.gif",  title: "Save", action:"action_button_callback" },
+		{ id: "create:calendar", type: "button", img: "create.gif", title: "Create", action:""},
+		{ id: "save:calendar", type: "button", img: "save.gif",  title: "Save", action:"" },
 		
 	]
 
@@ -108,8 +108,8 @@ var week_grid_context=
 	var week_toolbar=
 		[
 			
-			{ id: "create:week", type: "button", img: "create.gif", title: "Create", action:"action_button_callback"},
-			{ id: "save:week", type: "button", img: "save.gif",  title: "Save", action:"action_button_callback" },
+			{ id: "create:week", type: "button", img: "create.gif", title: "Create", action:""},
+			{ id: "save:week", type: "button", img: "save.gif",  title: "Save", action:"" },
 			
 		]
 	
@@ -157,8 +157,8 @@ var week_grid_context=
 		var cloudimage_toolbar=
 		[
 			
-			{ id: "create:cloudimage", type: "button", img: "create.gif", title: "Create", action:"action_button_callback"},
-			{ id: "save:cloudimage", type: "button", img: "save.gif",  title: "Save", action:"action_button_callback" },
+			{ id: "create:cloudimage", type: "button", img: "create.gif", title: "Create", action:""},
+			{ id: "save:cloudimage", type: "button", img: "save.gif",  title: "Save", action:"" },
 			
 		]
 

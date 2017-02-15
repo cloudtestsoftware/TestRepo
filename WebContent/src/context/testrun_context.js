@@ -89,12 +89,12 @@ var testrun_toolbar=
 		
 		{ type: "separator"},
 		
-		{ id: "testrun:jobrun:handle_custom_changes", type: "button", img: "testrun.gif", title: "Run Job", action:"action_button_callback"},
+		{ id: "testrun:jobrun:handle_custom_changes", type: "button", img: "testrun.gif", title: "Run Job", action:""},
 		
 		
 		{ type: "separator" },
-		{ id: "scroll:testmatrix", type: "button", img: "up1.gif", title: "Back to matrix", action:"action_button_callback"},
-		{ id: "scroll:jobrun", type: "button", img: "down1.gif",  title: "Next step job run", action:"action_button_callback" },
+		{ id: "scroll:testmatrix", type: "button", img: "up1.gif", title: "Back to matrix", action:""},
+		{ id: "scroll:jobrun", type: "button", img: "down1.gif",  title: "Next step job run", action:"" },
 		
 	];
 
@@ -139,8 +139,8 @@ var testrunresult_grid_context=
 
 var testrunresult_toolbar=
 	[
-	 	{ id: "scroll:testrun", type: "button", img: "up1.gif", title: "Back to testrun", action:"action_button_callback"},
-		{ id: "scroll:sceneriorunresult", type: "button", img: "down1.gif", title: "Go to failures", action:"action_button_callback"}
+	 	{ id: "scroll:testrun", type: "button", img: "up1.gif", title: "Back to testrun", action:""},
+		{ id: "scroll:sceneriorunresult", type: "button", img: "down1.gif", title: "Go to failures", action:""}
 		
 	];
 
@@ -184,8 +184,8 @@ var grouprunresult_grid_context=
 
 var grouprunresult_toolbar=
 	[
-	 	{ id: "scroll:grouprun", type: "button", img: "up1.gif", title: "Back to Grouprun", action:"action_button_callback"},
-		{ id: "scroll:sceneriorunresult", type: "button", img: "down1.gif", title: "Go to failures", action:"action_button_callback"}
+	 	{ id: "scroll:grouprun", type: "button", img: "up1.gif", title: "Back to Grouprun", action:""},
+		{ id: "scroll:sceneriorunresult", type: "button", img: "down1.gif", title: "Go to failures", action:""}
 		
 	];
 
@@ -239,11 +239,11 @@ var sceneriorunresult_grid_context=
 
 var sceneriorunresult_toolbar=
 	[
-	 	{ id: "update:sceneriorunresult:update_sceneriorun_result", type: "button", img: "Save.gif", title: "Update", action:"action_button_callback"},
-	 	{ id: "scroll:testrunresult", type: "button", img: "up.gif", title: "Back to result", action:"action_button_callback"},
-	 	{ id: "scroll:grouprunresult", type: "button", img: "up1.gif", title: "Back to group result", action:"action_button_callback"},
-	 	{ id: "scroll:summaryreport", type: "button", img: "up1.gif", title: "Back to Summary", action:"action_button_callback"},
-		{ id: "scroll:bug", type: "button", img: "down1.gif", title: "Go to Bug", action:"action_button_callback"}
+	 	{ id: "update:sceneriorunresult:update_sceneriorun_result", type: "button", img: "Save.gif", title: "Update", action:""},
+	 	{ id: "scroll:testrunresult", type: "button", img: "up.gif", title: "Back to result", action:""},
+	 	{ id: "scroll:grouprunresult", type: "button", img: "up1.gif", title: "Back to group result", action:""},
+	 	{ id: "scroll:summaryreport", type: "button", img: "up1.gif", title: "Back to Summary", action:""},
+		{ id: "scroll:bug", type: "button", img: "down1.gif", title: "Go to Bug", action:""}
 		
 	];
 
@@ -294,11 +294,11 @@ var jobrun_grid_context=
 var jobrun_toolbar=
 	[
 		
-		{ id: "automation:jobrun:post_run_job", type: "button", img: "testrun.gif", title: "Run", action:"action_button_callback"},
+		{ id: "automation:jobrun:post_run_job", type: "button", img: "testrun.gif", title: "Run", action:""},
 		
 		{ type: "separator" },
-		{ id: "scroll:testrun", type: "button", img: "up1.gif", title: "Back to Testrun", action:"action_button_callback"},
-		//{ id: "scroll:grouprun", type: "button", img: "up1.gif", title: "Back to Grouprun", action:"action_button_callback"},
+		{ id: "scroll:testrun", type: "button", img: "up1.gif", title: "Back to Testrun", action:""},
+		//{ id: "scroll:grouprun", type: "button", img: "up1.gif", title: "Back to Grouprun", action:""},
 		
 	];
 
@@ -365,13 +365,13 @@ var grouprun_toolbar=
 		},
 		{ type: "separator"},
 		
-		{ id: "create:grouprun", type: "button", img: "new.gif", title: "Create", action:"action_button_callback"},
-		{ id: "save:grouprun", type: "button", img: "save.gif", title: "Save", action:"action_button_callback"},
-		{ id: "grouprun:jobrun:handle_custom_changes", type: "button", img: "run.gif", title: "Run", action:"action_button_callback"},
+		{ id: "create:grouprun", type: "button", img: "new.gif", title: "Create", action:""},
+		{ id: "save:grouprun", type: "button", img: "save.gif", title: "Save", action:""},
+		{ id: "grouprun:jobrun:handle_custom_changes", type: "button", img: "run.gif", title: "Run", action:""},
 		
 		{ type: "separator" },
-		{ id: "scroll:featuregroup", type: "button", img: "up1.gif", title: "Back to Group", action:"action_button_callback"},
-		{ id: "scroll:jobrun", type: "button", img: "down1.gif",  title: "Next step job run", action:"action_button_callback" },
+		{ id: "scroll:featuregroup", type: "button", img: "up1.gif", title: "Back to Group", action:""},
+		{ id: "scroll:jobrun", type: "button", img: "down1.gif",  title: "Next step job run", action:"" },
 		
 	];
 /*
@@ -418,10 +418,10 @@ var summaryreport_grid_context=
 
 var summaryreport_toolbar=
 	[
-	 	{ id: "report:summaryreport:open_html_report", type: "button", img: "reports.gif", title: "Show Report", action:"action_button_callback"},
-		{ id: "scroll:grouprun", type: "button", img: "up1.gif", title: "Back to Group", action:"action_button_callback"},
-		{ id: "scroll:testrun", type: "button", img: "up.gif", title: "Back to Test Run", action:"action_button_callback"},
-		{ id: "scroll:sceneriorunresult", type: "button", img: "down1.gif", title: "Go to failures", action:"action_button_callback"},
+	 	{ id: "report:summaryreport:open_html_report", type: "button", img: "reports.gif", title: "Show Report", action:""},
+		{ id: "scroll:grouprun", type: "button", img: "up1.gif", title: "Back to Group", action:""},
+		{ id: "scroll:testrun", type: "button", img: "up.gif", title: "Back to Test Run", action:""},
+		{ id: "scroll:sceneriorunresult", type: "button", img: "down1.gif", title: "Go to failures", action:""},
 		
 	];
 	
@@ -463,8 +463,8 @@ var browserchart_grid_context=
 
 var browserchart_toolbar=
 	[
-		{ id: "scroll:grouprun", type: "button", img: "up1.gif", title: "Back to Group", action:"action_button_callback"},
-		{ id: "scroll:testrun", type: "button", img: "up.gif", title: "Back to Test Run", action:"action_button_callback"},
+		{ id: "scroll:grouprun", type: "button", img: "up1.gif", title: "Back to Group", action:""},
+		{ id: "scroll:testrun", type: "button", img: "up.gif", title: "Back to Test Run", action:""},
 		
 	];
 	
@@ -506,8 +506,8 @@ var testrunchart_grid_context=
 
 var testrunchart_toolbar=
 	[
-		{ id: "scroll:grouprun", type: "button", img: "up1.gif", title: "Back to Group", action:"action_button_callback"},
-		{ id: "scroll:testrun", type: "button", img: "up.gif", title: "Back to Test Run", action:"action_button_callback"},
+		{ id: "scroll:grouprun", type: "button", img: "up1.gif", title: "Back to Group", action:""},
+		{ id: "scroll:testrun", type: "button", img: "up.gif", title: "Back to Test Run", action:""},
 				
 	];
 

@@ -62,10 +62,10 @@ var product_grid_context=
 				{ type: "button", id: "product:producttestcount:handle_custom_changes", text: "Product Facts",img: "facts.gif" }
 			]
 		},
-		{ id: "create:product", type: "button", img: "create.gif", title: "Create", action:"action_button_callback"},
-		{ id: "save:product", type: "button", img: "save.gif",  title: "Save", action:"action_button_callback" },
+		{ id: "create:product", type: "button", img: "create.gif", title: "Create", action:""},
+		{ id: "save:product", type: "button", img: "save.gif",  title: "Save", action:"" },
 		{ type: "separator" },
-		{ id: "scroll:release", type: "button", img: "down1.gif", title: "Next step release", action:"action_button_callback"}
+		{ id: "scroll:release", type: "button", img: "down1.gif", title: "Next step release", action:""}
 		
 		
 	]
@@ -140,12 +140,12 @@ var release_grid_context=
 			
 			{ type: "separator"},
 			
-			{ id: "create:release", type: "button", img: "create.gif", title: "Create", action:"action_button_callback"},
-			{ id: "save:release", type: "button", img: "save.gif",  title: "Save", action:"action_button_callback" },
+			{ id: "create:release", type: "button", img: "create.gif", title: "Create", action:""},
+			{ id: "save:release", type: "button", img: "save.gif",  title: "Save", action:"" },
 			
 			{ type: "separator" },
-			{ id: "scroll:product", type: "button", img: "up1.gif", title: "Previous step product", action:"action_button_callback"},
-			{ id: "scroll:project", type: "button", img: "down1.gif",  title: "Next step project", action:"action_button_callback" },
+			{ id: "scroll:product", type: "button", img: "up1.gif", title: "Previous step product", action:""},
+			{ id: "scroll:project", type: "button", img: "down1.gif",  title: "Next step project", action:"" },
 			
 		]
 
@@ -184,7 +184,7 @@ var producttestcount_grid_context=
 
 	var producttestcount_toolbar=
 		[
-			{ id: "product:producttestcount:removeMe", type: "button", img: "up1.gif", title: "Previous step product", action:"action_button_callback"}
+			{ id: "product:producttestcount:removeMe", type: "button", img: "up1.gif", title: "Previous step product", action:""}
 			
 		]
 
@@ -223,7 +223,7 @@ var releasetestcount_grid_context=
 
 	var releasetestcount_toolbar=
 		[
-			{ id: "release:releasetestcount:removeMe", type: "button", img: "up1.gif", title: "Previous step", action:"action_button_callback"}
+			{ id: "release:releasetestcount:removeMe", type: "button", img: "up1.gif", title: "Previous step", action:""}
 			
 		]
 
@@ -244,12 +244,12 @@ var releasetestcount_grid_context=
 	
 	var documents_toolbar=
 		[
-			{ id: "make:documents:createAttachment", type: "button", img: "upload.gif", title: "Upload File", action:"action_button_callback"},
-			{ id: "show:documents:getDownloadFile", type: "button", img: "download.gif", title: "Download File", action:"action_button_callback"},
-			{ id: "delete:documents:deleteFile", type: "button", img: "delete.gif", title: "Delete File", action:"action_button_callback"},
-			{ id: "scroll:release", type: "button", img: "up1.gif", title: "Back to Release", action:"action_button_callback"},
-			{ id: "scroll:epic", type: "button", img: "up1.gif", title: "Back to epic", action:"action_button_callback"},
-			{ id: "scroll:feature", type: "button", img: "up1.gif", title: "Back to feature", action:"action_button_callback"},
+			{ id: "make:documents:createAttachment", type: "button", img: "upload.gif", title: "Upload File", action:""},
+			{ id: "show:documents:getDownloadFile", type: "button", img: "download.gif", title: "Download File", action:""},
+			{ id: "delete:documents:deleteFile", type: "button", img: "delete.gif", title: "Delete File", action:""},
+			{ id: "scroll:release", type: "button", img: "up1.gif", title: "Back to Release", action:""},
+			{ id: "scroll:epic", type: "button", img: "up1.gif", title: "Back to epic", action:""},
+			{ id: "scroll:feature", type: "button", img: "up1.gif", title: "Back to feature", action:""},
 			
 		]
 

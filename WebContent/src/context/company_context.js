@@ -83,10 +83,10 @@ var company_grid_context=
 var company_toolbar=
 	[
 		
-		//{ id: "create:company", type: "button", img: "create.gif", title: "Create", action:"action_button_callback"},
-		{ id: "save:company", type: "button", img: "save.gif",  title: "Save", action:"action_button_callback" },
+		//{ id: "create:company", type: "button", img: "create.gif", title: "Create", action:""},
+		{ id: "save:company", type: "button", img: "save.gif",  title: "Save", action:"" },
 		{ type: "separator" },
-		{ id: "scroll:testuser", type: "button", img: "down1.gif", title: "Back to user", action:"action_button_callback"},
+		{ id: "scroll:testuser", type: "button", img: "down1.gif", title: "Back to user", action:""},
 		
 	];
 
@@ -143,11 +143,11 @@ var privilegegroup_toolbar=
 				
 			]
 		},
-		{ id: "create:privilegegroup", type: "button", img: "create.gif", title: "Create", action:"action_button_callback"},
-		{ id: "save:privilegegroup", type: "button", img: "save.gif",  title: "Save", action:"action_button_callback" },
+		{ id: "create:privilegegroup", type: "button", img: "create.gif", title: "Create", action:""},
+		{ id: "save:privilegegroup", type: "button", img: "save.gif",  title: "Save", action:"" },
 		{ type: "separator" },
 		
-		{ id: "scroll:module", type: "button", img: "down1.gif", title: "Next step to give access for module", action:"action_button_callback"}
+		{ id: "scroll:module", type: "button", img: "down1.gif", title: "Next step to give access for module", action:""}
 		
 	];
 
@@ -198,10 +198,10 @@ var module_grid_context=
 var module_toolbar=
 	[
 		
-		{ id: "create:module", type: "button", img: "create.gif", title: "Create", action:"action_button_callback"},
-		{ id: "save:module", type: "button", img: "save.gif",  title: "Save", action:"action_button_callback" },
+		{ id: "create:module", type: "button", img: "create.gif", title: "Create", action:""},
+		{ id: "save:module", type: "button", img: "save.gif",  title: "Save", action:"" },
 		{ type: "separator" },
-		{ id: "scroll:privilegegroup", type: "button", img: "up1.gif", title: "Back to group", action:"action_button_callback"},
+		{ id: "scroll:privilegegroup", type: "button", img: "up1.gif", title: "Back to group", action:""},
 		
 	];
 
@@ -249,8 +249,8 @@ var cloudsetting_grid_context=
 var cloudsetting_toolbar=
 	[
 		
-		{ id: "create:cloudsetting", type: "button", img: "create.gif", title: "Create", action:"action_button_callback"},
-		{ id: "save:cloudsetting", type: "button", img: "save.gif",  title: "Save", action:"action_button_callback" },
+		{ id: "create:cloudsetting", type: "button", img: "create.gif", title: "Create", action:""},
+		{ id: "save:cloudsetting", type: "button", img: "save.gif",  title: "Save", action:"" },
 		
 		
 	];
@@ -303,12 +303,12 @@ var customerimage_grid_context=
 var customerimage_toolbar=
 	[
 		
-		{ id: "create:customerimage", type: "button", img: "create.gif", title: "Create", action:"action_button_callback"},
-		{ id: "save:customerimage", type: "button", img: "save.gif",  title: "Save", action:"action_button_callback" },
-		{ id: "launch:customerimage", type: "button", img: "launch.gif", title: "Launch Image", action:"action_button_callback"},
-		{ id: "start:customerimage", type: "button", img: "start.gif",  title: "Start Image", action:"action_button_callback" },
-		{ id: "stop:customerimage", type: "button", img: "stop.gif", title: "Stop Image", action:"action_button_callback"},
-		{ id: "terminate:customerimage", type: "button", img: "terminate.gif",  title: "Terminate", action:"action_button_callback" },
+		{ id: "create:customerimage", type: "button", img: "create.gif", title: "Create", action:""},
+		{ id: "save:customerimage", type: "button", img: "save.gif",  title: "Save", action:"" },
+		{ id: "launch:customerimage", type: "button", img: "launch.gif", title: "Launch Image", action:""},
+		{ id: "start:customerimage", type: "button", img: "start.gif",  title: "Start Image", action:"" },
+		{ id: "stop:customerimage", type: "button", img: "stop.gif", title: "Stop Image", action:""},
+		{ id: "terminate:customerimage", type: "button", img: "terminate.gif",  title: "Terminate", action:"" },
 		
 	];
 
@@ -356,8 +356,8 @@ var jenkins_grid_context=
 var jenkins_toolbar=
 	[
 		
-		{ id: "create:jenkins", type: "button", img: "create.gif", title: "Create", action:"action_button_callback"},
-		{ id: "save:jenkins", type: "button", img: "save.gif",  title: "Save", action:"action_button_callback" },
+		{ id: "create:jenkins", type: "button", img: "create.gif", title: "Create", action:""},
+		{ id: "save:jenkins", type: "button", img: "save.gif",  title: "Save", action:"" },
 		
 		
 	];

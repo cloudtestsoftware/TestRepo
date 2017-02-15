@@ -67,13 +67,13 @@ var bug_toolbar=
 				
 			]
 		},
-		{ id: "create:bug", type: "button", img: "create.gif", title: "Create", action:"action_button_callback"},
-		{ id: "save:bug", type: "button", img: "save.gif",  title: "Save", action:"action_button_callback" },
-		{ id: "bug:bugscenerio:handle_custom_changes", type: "button", img: "scenario.gif",  title: "View scenerio", action:"action_button_callback" },
-		{ id: "file:download:bug", type: "button", img: "download.gif",  title: "Download bug list", action:"action_button_callback" },
-		{ id: "bug:bug:removeMe", type: "button", img: "close.gif", title: "Close", action:"action_button_callback"},
+		{ id: "create:bug", type: "button", img: "create.gif", title: "Create", action:""},
+		{ id: "save:bug", type: "button", img: "save.gif",  title: "Save", action:"" },
+		{ id: "bug:bugscenerio:handle_custom_changes", type: "button", img: "scenario.gif",  title: "View scenerio", action:"" },
+		{ id: "file:download:bug", type: "button", img: "download.gif",  title: "Download bug list", action:"" },
+		{ id: "bug:bug:removeMe", type: "button", img: "close.gif", title: "Close", action:""},
 		{ type: "separator" },
-		{ id: "scroll:resolution", type: "button", img: "down1.gif", title: "Next step to bug board", action:"action_button_callback"}
+		{ id: "scroll:resolution", type: "button", img: "down1.gif", title: "Next step to bug board", action:""}
 		
 	];
 
@@ -134,14 +134,14 @@ var attachment_grid_context=
 var attachment_toolbar=
 	[
 		
-		{ id: "make:attachment:createAttachment", type: "button", img: "upload.gif",  title: "Upload file", action:"action_button_callback" },
-		{ id: "show:attachment:getDownloadFile", type: "button", img: "download.gif",  title: "Download attachment", action:"action_button_callback" },
-		{ id: "delete:attachment:deleteFile", type: "button", img: "delete.gif",  title: "Delete attachment", action:"action_button_callback" },
-		{ id: "bug:attachment:removeMe", type: "button", img: "close.gif", title: "Close", action:"action_button_callback"},
+		{ id: "make:attachment:createAttachment", type: "button", img: "upload.gif",  title: "Upload file", action:"" },
+		{ id: "show:attachment:getDownloadFile", type: "button", img: "download.gif",  title: "Download attachment", action:"" },
+		{ id: "delete:attachment:deleteFile", type: "button", img: "delete.gif",  title: "Delete attachment", action:"" },
+		{ id: "bug:attachment:removeMe", type: "button", img: "close.gif", title: "Close", action:""},
 		{ type: "separator" },
-		{ id: "scroll:sceneriorun", type: "button", img: "up1.gif", title: "Back to test", action:"action_button_callback"},
-		{ id: "scroll:testscenerio", type: "button", img: "up1.gif", title: "Back to scenario", action:"action_button_callback"},
-		{ id: "scroll:featurerun", type: "button", img: "up1.gif", title: "Back to feature", action:"action_button_callback"}
+		{ id: "scroll:sceneriorun", type: "button", img: "up1.gif", title: "Back to test", action:""},
+		{ id: "scroll:testscenerio", type: "button", img: "up1.gif", title: "Back to scenario", action:""},
+		{ id: "scroll:featurerun", type: "button", img: "up1.gif", title: "Back to feature", action:""}
 		
 	];
 
@@ -192,8 +192,8 @@ var bugscenerio_grid_context=
 var bugscenerio_toolbar=
 	[
 		
-	{ id: "scroll:bug", type: "button", img: "up.gif", title: "Back to Bug", action:"action_button_callback"},
-	{ id: "scroll:mybug", type: "button", img: "up1.gif", title: "Back to my bug", action:"action_button_callback"},
+	{ id: "scroll:bug", type: "button", img: "up.gif", title: "Back to Bug", action:""},
+	{ id: "scroll:mybug", type: "button", img: "up1.gif", title: "Back to my bug", action:""},
 		
 	];
 
@@ -246,11 +246,11 @@ var resolution_grid_context=
 var resolution_toolbar=
 	[
 		
-		{ id: "create:resolution", type: "button", img: "create.gif", title: "Create", action:"action_button_callback"},
-		{ id: "save:resolution", type: "button", img: "save.gif",  title: "Save", action:"action_button_callback" },
+		{ id: "create:resolution", type: "button", img: "create.gif", title: "Create", action:""},
+		{ id: "save:resolution", type: "button", img: "save.gif",  title: "Save", action:"" },
 		{ type: "separator" },
-		{ id: "mybug:resolution:removeMe", type: "button", img: "up1.gif", title: "Previous step", action:"action_button_callback"},
-		{ id: "scroll:bug", type: "button", img: "up1.gif", title: "Next step to bug", action:"action_button_callback"}
+		{ id: "mybug:resolution:removeMe", type: "button", img: "up1.gif", title: "Previous step", action:""},
+		{ id: "scroll:bug", type: "button", img: "up1.gif", title: "Next step to bug", action:""}
 		
 	];
 

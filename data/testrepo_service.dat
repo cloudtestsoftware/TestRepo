@@ -10076,7 +10076,7 @@
   <Attribute>
     AttributeName=PostBody
     AttrIndex=12
-    AliasName=Post Body
+    AliasName=Global Input <br> ( var= value /line) 
     Behavior=text
     DomainName=String4000_t
     IsNull=yes
@@ -10089,12 +10089,12 @@
     IsSearchField=no
     IsBaseline=yes
     Version=1.0
-    Remark=json body for post
+    Remark=Bulk input data which can be used for service call for all APIs. Normally the data will be passed using XL sheet
   </Attribute>
    <Attribute>
     AttributeName=ResponseBody
     AttrIndex=13
-    AliasName=Response Body
+    AliasName=Global Output <br> (context.var= xpath /line) 
     Behavior=text
     DomainName=String4000_t
     IsNull=yes
@@ -10107,7 +10107,7 @@
     IsSearchField=no
     IsBaseline=yes
     Version=1.0
-    Remark=json body of response
+    Remark=bulk output returned from all API which need to be asserted
   </Attribute>
   <Index>
      Indexname=Pk_ServiceRepo_Indx01

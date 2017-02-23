@@ -24,6 +24,8 @@ var restassured_template=
     " private  HashMap<String,String> header;   \n "+
     " private  HashMap<String,String> cookies;   \n "+
     " private  HashMap<String,String> variables;   \n "+
+    " private  static HashMap<String,String> inputlist;   \n "+
+    " private  static HashMap<String,String> outputlist;   \n "+
     " private  RequestSpecBuilder builder;   \n "+
     " private  Response response;   \n "+
     " private  Response callerresponse;   \n "+
@@ -36,19 +38,21 @@ var restassured_template=
 
 
     " public static void main(String[] args) { \n"+
-    "//      @apiname test= new @apiname(null,null);   \n "+
-    "//      test.@apiname();   \n "+
     "         runtest(); \n"+
    "} \n\n"+
    
    " // add list of behaviors you want to execute in this method calling .then().nextBehaviorToCall()\n" +
    "public static void runtest() { \n"+
    "      varmap=CustomHandler.getVarMap(); \n"+
+   "      setGlobalInputData(); \n"+
+   "      setGlobalOutputtData(null); \n"+
    "      @apiname test= new @apiname(null,null);   \n "+
    "      test.@apiname();   \n "+
   "} \n\n"+
   " public @apiname(){ \n"+
   "    this.varmap= CustomHandler.getVarMap(); \n"+
+  "      setGlobalInputData(); \n"+
+  "      setGlobalOutputtData(null); \n"+
   "} \n\n"+
    " public @apiname( Response response,HashMap<String,String> cookies){ \n"+
    "    this.callerresponse=response; \n"+
@@ -73,16 +77,38 @@ var restassured_template=
     "    @variables \n "+
     "    return variables;   \n "+
     "}\n\n"+
+    
+    " private static void setGlobalInputData(){\n"+
+    "    inputlist=new HashMap<String,String>();   \n "+
+    "    @inputlist \n "+
+    "}\n\n"+
+    
+    " private static void setGlobalOutputtData( HashMap<String,String> newoutputlist){\n"+
+    "    if(outputlist==null &&newoutputlist==null) {" +
+    "    \toutputlist=new HashMap<String,String>();   \n "+
+    "    \t@outputlist \n "+
+    "} else{\n outputlist=newoutputlist; \n}\n}\n\n"+
 
     " private  String getRequestBody(){\n"+
-    "    String body=\"@body\";   \n "+
-
+    "    String body=\"@body\";   \n \n"+
+    "// first replace local variables\n"+
     "    HashMap<String,String> vars=getVariables();   \n "+
-    "    for(String key : variables.keySet()){ \n "+
-
-    "        String val=variables.get(key);   \n "+
+    "    for(String key : vars.keySet()){ \n "+
+    "        String val=vars.get(key);   \n "+
     "        body=body.replaceAll(\"@\"+key,val);   \n "+
         "}\n"+
+    "// next replace data from input XL sheet\n"+
+    "    if (varmap!=null){\n"+
+    "\t    for(String key : varmap.keySet()){ \n "+
+    "\t        String val=varmap.get(key);   \n "+
+    "\t        body=body.replaceAll(\"@\"+key,val);   \n "+
+    "\t}\n }\n"+
+    "// then replace output data from the previous call\n"+
+    "    if (outputlist!=null){\n"+
+    "\t    for(String key : outputlist.keySet()){ \n "+
+    "\t        String val=outputlist.get(key);   \n "+
+    "\t        body=body.replaceAll(\"@\"+key,val);   \n "+
+    "\t}\n }\n"+
     "    return body;   \n "+
 
     "}\n\n"+
@@ -96,14 +122,29 @@ var restassured_template=
 
     "    return jsonpath;   \n "+
     "}\n\n"+
+   
+    "    private void populateOutputList(){ \n"+
+     "       if(outputlist!=null && jsonpath!=null){ \n"+
+      "          for(String key : outputlist.keySet()){ \n"+
+      "              String xpath=outputlist.get(key); \n"+
+     "               try{ \n"+
+     "                   String val=jsonpath.getString(xpath); \n"+
+     "                   if(val!=null && !val.isEmpty() ){ \n"+
+     "                       outputlist.put(key,val); \n"+
+    "                      CustomHandler.addTestResult(key,val); \n"+
+        "                    }  \n"+
+        "                }catch(Exception e){}\n"+
+        "           }\n"+
+        "     }\n"+
+        "  } \n"+
 
     " public HashMap<String,String> getCookies(){\n"+
-
     "   return cookies;   \n "+
     "}\n\n"+
     " public ApiMapper @apiname(){\n"+
 
     "    builder = new RequestSpecBuilder().addHeaders(getHeader());   \n "+
+    "// if this is the fist call from the client then set the cookie otherwise get cookie from previous call\n"+
     "    if(this.getCookies()==null){ \n "+
     "        builder.addCookies(this.getDefaultCookies());   \n "+
         "}else{\n"+
@@ -118,6 +159,7 @@ var restassured_template=
      "       response = given(spec).get(url).then().log().all().extract().response();   \n "+
         "}\n"+
      "   jsonpath = new JsonPath(response.asString());   \n "+
+     "   populateOutputList(); \n" +
      "   cookies.putAll(response.getCookies());   \n "+
      "   return new ApiMapper();   \n "+
     "}\n\n"+ 
@@ -128,6 +170,7 @@ var restassured_template=
         "\t// Ex:  private updateCompanyAddress.ApiMapper updateCompanyAddress(){ \n"+
         "\t//    updateCompanyAddress called= new updateCompanyAddress(response,cookies); \n"+
         "\t//    updateCompanyAddress.ApiMapper obj=called.updateCompanyAddress();\n\n"+
+        "\t//    updateCompanyAddress.setGlobalOutputtData(outputlist);\n"+
         "\t//    add any return varaible need to assert \n"+
         "\t//    CustomHandler.addTestResult(\"companyId\",String.valueOf(jsonpath.getInt(\"loginMobileMultiResponse.return.id[0]\"))); \n"+
         "\t//    return obj;\n"+
@@ -154,6 +197,55 @@ function getRestAssuredTemplate(){
 	var cookies;
 	var header;
 	var variables;
+	var repogrid=gridlist["servicerepo"];
+	var inputdata;
+	var outputdata;
+	if(repogrid){
+		 var rowid=repogrid.getSelectedRowId();
+		 if(!rowid) rowid=1;
+		 
+		 inputdata=getColumnValueByGridRowId(repogrid,"postbody",rowid);
+		 outputdata=getColumnValueByGridRowId(repogrid,"responsebody",rowid);
+		 if(inputdata){
+			 var inputvarlist=inputdata.replace("D!","").split("\n");
+			 var inputlist="";
+			 if(inputvarlist &&inputvarlist.length>0){
+				 for(var i=0;i<inputvarlist.length;i++){
+					 var items=inputvarlist[i].split("=");
+					 if(items &&items.length>1){
+						 inputlist+="\inputlist.put(\""+items[0]+"\",\""+items[1]+"\");\n";
+					 }
+				 }
+				
+			 }
+			 if (inputlist!=""){
+					template=template.split("@inputlist").join(inputlist);
+			}	
+		 }else{
+				template=template.split("@inputlist").join("");
+			}
+		 
+		 if(outputdata){
+			 var outputvarlist=outputdata.replace("D!","").split("\n");
+			 var outputlist="";
+			 if(outputvarlist &&outputvarlist.length>0){
+				 for(var i=0;i<outputvarlist.length;i++){
+					 var oitems=outputvarlist[i].split("=");
+					 if(oitems &&oitems.length>1){
+						 outputlist+="\toutputlist.put(\""+oitems[0]+"\",\""+oitems[1]+"\");\n";
+					 }
+				 }
+				
+			 }
+			 
+			 if (outputlist!=""){
+					template=template.split("@outputlist").join(outputlist);
+			}
+		 }else{
+				template=template.split("@outputlist").join("");
+			}
+		 
+	}
 	if (validator_template.validator["_packagename"]){
 		template=template.split("@packagename").join(validator_template.validator._packagename);
 	}
@@ -221,7 +313,7 @@ function getRestAssuredTemplate(){
 		template=template.split("@variables").join(variables);
 	}
 	
-	console.log(template);
+	//console.log(template);
 	
 	return template;
 	

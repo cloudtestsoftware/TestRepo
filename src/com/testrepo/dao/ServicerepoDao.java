@@ -30,7 +30,7 @@
 		private String []childtabs={""};
 		
 		private String [] maincol={"objid","name","packagename","description","endpoint","externalid","version","servicetype","authtype","isactive","methodtype","expirydate","postbody","responsebody"};
-		private String [] maincolcaption={"Id","Name","Package Name","Description","Endpoint","External Asset Id","Version","Service Type","Auth Type","Is Active","Method Type","Expired On","Post Body","Response Body"};
+		private String [] maincolcaption={"Id","Name","Package Name","Description","Endpoint","External Asset Id","Version","Service Type","Auth Type","Is Active","Method Type","Expired On","Global Input <br> ( var= value /line)","Global Output <br> (context.var= xpath /line)"};
 		private String [] mainsqldatatype={DataType.VARCHAR,DataType.VARCHAR,DataType.VARCHAR,DataType.VARCHAR,DataType.VARCHAR,DataType.VARCHAR,DataType.VARCHAR,DataType.VARCHAR,DataType.VARCHAR,DataType.VARCHAR,DataType.VARCHAR,DataType.DATE,DataType.VARCHAR,DataType.VARCHAR};
 		private String [] mainformfields={"input","input","input","input","input","input","input","combo","combo","combo","combo","calendar","input","input"};
 		private String [] maindatadomain={"Int_t","String200_t","String200_t","String4000_t","String300_t","String100_t","String50_t","Type_t","Type_t","Type_t","Type_t","Date_t","String4000_t","String4000_t"};

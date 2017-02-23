@@ -184,7 +184,21 @@ var serviceapi_grid_context=
     	{ type:"button" , name:"save:serviceapi", value:"Save", width:"100",  }
     	]  },
 		]  },
-	]  }
+	]  },
+	{ type:"block" , name:"serviceapi_action_block", list:[
+ 	    { type:"block" , name:"serviceapi_button_block",  list:[
+ 	    { type:"button" , name:"serviceapi:RestAssured:showRestAssured", value:"Rest Assured", width:"100", command:""  },
+ 	    { type:"newcolumn"   },
+ 	    { type:"button" , name:"serviceapi:ValidatorXML:showTestmaxXML", value:"Testmax XML", width:"100", command:""  },
+ 	    { type:"newcolumn"   },
+ 	    { type:"button" , name:"serviceapi:ValidatorJSON:showTestmaxJson", value:"Testmax JSON", width:"100", command:""  },
+ 	    { type:"newcolumn"   },
+ 	   	{ type:"button" , name:"serviceapi:serviceapi:copyToClipBoard", value:"Copy", width:"100", command:""  },
+ 	    { type:"newcolumn"   },
+ 	   	{ type:"container" , name:"serviceapi_html_cont",  inputWidth:"1200", inputHeight:"300"  },
+ 	   ]  },
+ 	  
+ 	 ]  },
 	
 	];
 
@@ -368,21 +382,71 @@ function setGlobalHttpHeaderWithServiceParam(httpro){
 					var keyname=getColumnValueByGridRowId(globalparamgrid,"name",id);
 					var keyvalue=getColumnValueByGridRowId(globalparamgrid,"keyvalue",id);
 					
-					if(keyname && keyvalue){
+					if(keyname && keyvalue &&httpro){
 						httpro.setRequestHeader(keyname, keyvalue );
 					}
 					if(keyname=="Content-Type"){
 						contenttype["serviceparam"]=keyvalue;
 					}
 					
+				}else if(header && header=="COOKIEE"){
+					var keyname=getColumnValueByGridRowId(globalparamgrid,"name",id);
+					var keyvalue=getColumnValueByGridRowId(globalparamgrid,"keyvalue",id);
+					
+					if(keyname && keyvalue){
+						
+						setCookie(keyname, keyvalue, 1);
+					}
+					
 				}
+				
 				
 				
 			});
 		}
 	}
 }
-
+function setupValidatorWithGlobalVariables(){
+	var grid=gridlist["servicerepo"];
+	var rowid;
+	var globalparamgrid;
+	if(grid){
+		var globalparamrelation="serviceparam2servicerepo";
+	    rowid=grid.getSelectedRowId();
+	    if(!rowid) rowid=1;
+	    if(!paramgrid[globalparamrelation]) paramgrid[globalparamrelation]={};
+	    globalparamgrid=paramgrid[globalparamrelation][rowid];
+		if(!globalparamgrid){
+			globalparamgrid=getServiceLocalData(grid, rowid, globalparamrelation);
+		 }
+		if(globalparamgrid){
+			globalparamgrid.forEachRow(function(id) {
+				
+				
+				var paramtype=getColumnValueByGridRowId(globalparamgrid,"paramtype",id);
+				
+					var keyname=getColumnValueByGridRowId(globalparamgrid,"name",id);
+					var keyvalue=getColumnValueByGridRowId(globalparamgrid,"keyvalue",id);
+					
+					if(paramtype && paramtype=="VARIABLE"){
+						
+						setupValidatorWsAttributes(keyname, keyvalue, "param");
+					}else if(paramtype && paramtype=="COOKIEE"){
+						setValidatorVaraibles(keyname,keyvalue);
+						setupValidatorWsAttributes(keyname, "@"+keyname, "cookie");
+					}else if(paramtype && paramtype=="HEADER"){
+						setupValidatorWsAttributes(keyname, keyvalue, "param");
+					}
+				
+				
+				
+			});
+		}
+		
+		
+	}
+	
+}
 function replaceDataWithGlobalVariables(data){
 	var grid=gridlist["servicerepo"];
 	var rowid;
@@ -400,10 +464,11 @@ function replaceDataWithGlobalVariables(data){
 			globalparamgrid.forEachRow(function(id) {
 				
 				
-				var variable=getColumnValueByGridRowId(globalparamgrid,"paramtype",id);
-				//if(variable && variable=="VARIABLE"){
+				var paramtype=getColumnValueByGridRowId(globalparamgrid,"paramtype",id);
+				
 					var keyname=getColumnValueByGridRowId(globalparamgrid,"name",id);
 					var keyvalue=getColumnValueByGridRowId(globalparamgrid,"keyvalue",id);
+					
 					try{
 						if(keyname && keyvalue &&data){
 							data=data.split("@"+keyname).join(keyvalue);
@@ -414,8 +479,6 @@ function replaceDataWithGlobalVariables(data){
 					if(keyname=="Content-Type"){
 						contenttype["serviceparam"]=keyvalue;
 					}
-					
-				//}
 				
 				
 			});
@@ -451,7 +514,7 @@ function replaceHttpAuthHeader(data){
 					var authvalue=getColumnValueByGridRowId(globalauthgrid,"keyvalue",id);
 					var keyname=getColumnValueByGridRowId(globalauthgrid,"name",id);
 					try{
-						
+						setupValidatorWsAttributes('Authorization', authvalue, "param");
 						if(keyname && authvalue &&data){
 							data=data.split("@"+keyname).join(authvalue);
 						}
@@ -488,10 +551,11 @@ function replaceDataWithApiParamVariables(data){
 			apiparamgrid.forEachRow(function(id) {
 				
 				
-				var variable=getColumnValueByGridRowId(apiparamgrid,"paramtype",id);
-				//if(variable && variable=="VARIABLE"){
+				var paramtype=getColumnValueByGridRowId(apiparamgrid,"paramtype",id);
+				
 					var keyname=getColumnValueByGridRowId(apiparamgrid,"name",id);
 					var keyvalue=getColumnValueByGridRowId(apiparamgrid,"keyvalue",id);
+					//setup validator var
 					
 					try{
 						if(keyname && keyvalue &&data){
@@ -502,9 +566,6 @@ function replaceDataWithApiParamVariables(data){
 					if(keyname=="Content-Type"){
 						contenttype["serviceapi"]=keyvalue;
 					}
-					
-				//}
-				
 				
 			});
 		}
@@ -515,6 +576,50 @@ function replaceDataWithApiParamVariables(data){
 	
 }
 
+
+//will be called only for serviceapi
+function setupValidatorWithApiParamVariables(){
+	var grid=gridlist["serviceapi"];
+	var rowid;
+	var apiparamgrid;
+	if(grid){
+		var apiparamrelation="apiparam2serviceapi";
+	    rowid=grid.getSelectedRowId();
+	    if(!rowid) rowid=1;
+	    if(!paramgrid[apiparamrelation]) paramgrid[apiparamrelation]={};
+	    apiparamgrid=paramgrid[apiparamrelation][rowid];
+		if(!apiparamgrid){
+			apiparamgrid=getServiceLocalData(grid, rowid, apiparamrelation);
+		 }
+		if(apiparamgrid){
+			apiparamgrid.forEachRow(function(id) {
+				
+				
+				var paramtype=getColumnValueByGridRowId(apiparamgrid,"paramtype",id);
+			
+				var keyname=getColumnValueByGridRowId(apiparamgrid,"name",id);
+				var keyvalue=getColumnValueByGridRowId(apiparamgrid,"keyvalue",id);
+				//setup validator var
+				
+				if(paramtype && paramtype=="VARIABLE"){
+					setValidatorVaraibles(keyname,keyvalue);
+					setupValidatorWsAttributes(keyname, keyvalue, "param");
+				}else if(paramtype && paramtype=="COOKIEE"){
+					setupValidatorWsAttributes(keyname, keyvalue, "cookie");
+				}else if(paramtype && paramtype=="HEADER"){
+					setupValidatorWsAttributes(keyname, keyvalue, "param");
+				}
+				
+				
+				
+			});
+		}
+		
+		
+	}
+	
+	
+}
 // will be called for serviceapi
 function setHttpHeaderWithApiParam(httpro){
 	var grid=gridlist["serviceapi"];
@@ -540,6 +645,16 @@ function setHttpHeaderWithApiParam(httpro){
 					
 					if(keyname && keyvalue){
 						httpro.setRequestHeader(keyname, keyvalue );
+						setupValidatorWsAttributes(keyname, keyvalue, "param");
+					}
+					
+				}else if(header && header=="COOKIEE"){
+					var keyname=getColumnValueByGridRowId(globalparamgrid,"name",id);
+					var keyvalue=getColumnValueByGridRowId(globalparamgrid,"keyvalue",id);
+					
+					if(keyname && keyvalue){
+						setCookie(keyname, keyvalue, 1);
+						setupValidatorWsAttributes(keyname, keyvalue, "cookie");
 					}
 					
 				}
@@ -572,14 +687,17 @@ function setHttpAuthHeader(httpro){
 					var authtype=getGridColumnValueForSelectedRow(grid,"authtype");
 					var authvalue=getColumnValueByGridRowId(globalauthgrid,"keyvalue",id);
 					if(!authtype) authtype="Basic";
-					if(authvalue){
-						httpro.setRequestHeader('Authorization', authvalue );
+					setupValidatorWsAttributes('Authorization', authvalue, "param");
+					if(authvalue &&httpro){
+						//httpro.setRequestHeader('Authorization', authvalue );
 						httpro.setRequestHeader("Access-Control-Allow-Origin", "*" );
-						httpro.setRequestHeader("Access-Control-Allow-Headers", "Origin, X-tested-With, Content-Type, Accept");
-					   
+						httpro.setRequestHeader("Access-Control-Allow-Methods", "POST,GET,PUT,DELETE" );
+						httpro.setRequestHeader("Access-Control-Allow-Headers", "Authorization, Lang" );
 						
-						//httpro.setRequestHeader('Authorization', 'Basic '+authvalue );
-						return;
+						httpro.setRequestHeader('Authorization', 'Basic '+btoa(authvalue));
+						//httpro.setRequestHeader('Authorization', 'Basic '+btoa("QA_AUTOMATION:aut0mat10#"));
+						
+						//break;
 					}
 					
 				//}
@@ -591,111 +709,62 @@ function setHttpAuthHeader(httpro){
 	
 }
 
-function runServiceRepoUrlTest2(name){
-	var grid=gridlist["servicerepo"];
-	
-	if(grid){
-		 var rowid=grid.getSelectedRowId();
-		 if(!rowid) rowid=1;
-		 var methodtype=getColumnValueByGridRowId(grid,"methodtype",rowid);
-		// var authtype=getColumnValueByGridRowId(grid,"authtype",rowid);
-		 var servicetype=getColumnValueByGridRowId(grid,"servicetype",rowid);
-		 var url=getColumnValueByGridRowId(grid,"endpoint",rowid);
-		  xml=getColumnValueByGridRowId(grid,"postbody",rowid);
-		 if(servicetype=='CICD'){
-			 url=www_url+"/rest/jenkin/cicdpost?token="+token ;
-		 }
-		 if(methodtype && methodtype=='POST' &&xml){
-			 
-			 	
-			 	url=replaceDataWithGlobalVariables(url);
-			 
-			 	httpro = new XMLHttpRequest();
-			 	httpro.open("POST", url, true);
-			 	if(servicetype=='CICD'){
-			 	httpro.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
-			 	}else{
-			 		setHttpAuthHeader(httpro)
-					setGlobalHttpHeaderWithServiceParam(httpro);
-			 	}
-				
-				httpro.onreadystatechange = function () { 
-				    if (httpro.readyState == 4 && httpro.status == 200) {
-				        var json = JSON.parse(httpro.responseText);
-				        dhtmlx.alert(json);
-				        //console.log(json.email + ", " + json.password)
-				    }
-				}
-				
-				//var data = JSON.stringify({"email":"hey@mail.com","password":"101010"});
-				if(xml){
-					xml=replaceDataWithGlobalVariables(xml);
-					xml=xml.split("<br>").join("\n");
-					/*
-					xml="<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n"+
-						"<servicerepo>\n"+
-						"<record id=\"0\">\n"+
-						"<command isRequired=\"true\" type=\"VARCHAR\">"+body+"</command>\n"+
-						"</record>\n"+
-						"</servicerepo>\n";
-						*/
-
-
-				}
-				
-				if(xml){
-					
-					var formData = new FormData();
-					formData.append("body",xml);
-					httpro.send(formData);
-					//httpro.send(body);
-					//postData(body,url,null);
-					
-				}else{
-					setInterval(dhtmlx.message("Waiting to post data to TEP! "),1000);
-				}
-				 
-			 
-		 }else if(methodtype && methodtype=='GET'){
-			 
-			    httpro = new XMLHttpRequest();
-			 	url=replaceDataWithGlobalVariables(url);
-			 	httpro.open("GET", url, true);
-				setHttpAuthHeader(httpro)
-				setGlobalHttpHeaderWithServiceParam(httpro);
-				httpro.onreadystatechange = function () { 
-				    if (httpro.readyState == 4 && httpro.status == 200) {
-				        var json = JSON.parse(httpro.responseText);
-				        dhtmlx.alert(json);
-				        //console.log(json.email + ", " + json.password)
-				    }
-				}
-				
-				httpro.send();
-			 
-		 }
-	}
-	
-}
 
 
 function saveCICDChanges(table,posturl){
 	
 	var parent_data= collect_form_data(table,null);
-	if(parent_data){
+	if(parent_data && table=="servicerepo"){
 		posturl=replaceDataWithGlobalVariables(posturl);
 		//replace auth
 		parent_data=replaceHttpAuthHeader(parent_data);
 		//replace param
 		parent_data=replaceDataWithGlobalVariables(parent_data);
 		postData(parent_data, posturl,table);
+	}else if(parent_data && table=="serviceapi"){
+			posturl=replaceDataWithGlobalVariables(posturl);
+			//replace auth
+			parent_data=replaceHttpAuthHeader(parent_data);
+			//replace param
+			parent_data=replaceDataWithApiParamVariables(parent_data);
+			parent_data=replaceDataWithGlobalVariables(parent_data);
+			//for validator
+			setupValidatorWithGlobalVariables();
+			setupValidatorWithApiParamVariables();
+			
+			//post data
+			postData(parent_data, posturl,table);
 	}else{
 		dhtmlx.message("No Data found in the object ="+table);
 	}
 	
 	
 }
-
+function updateServiceResponseToTable(table,colname,result){
+	var form =dataforms[table];
+	var grid=gridlist[table];
+	var colid;
+	//dhtmlx.alert(result.trim().length);
+	//result=result.split("&quot;").join("");
+	//dhtmlx.alert(result.trim().length);
+	//if(result && result.trim().length>150 ) {
+		if(!colname){colname="responsebody"};
+		try{
+			if(grid){
+				//dhtmlx.alert(result);
+				colid=setGridColumnValueForSelectedRow(grid,colname,result);
+				if(colid &&form){
+					form.setItemValue(colid, result);
+				}
+				
+			}
+		}catch(err){
+			dhtmlx.message(err);
+		}
+	//}
+	
+	
+}
 function runServiceRepoUrlTest(name){
 	var grid=gridlist["servicerepo"];
 	
@@ -707,26 +776,26 @@ function runServiceRepoUrlTest(name){
 		 var servicetype=getColumnValueByGridRowId(grid,"servicetype",rowid);
 		 var url=getColumnValueByGridRowId(grid,"endpoint",rowid);
 		 var body=getColumnValueByGridRowId(grid,"postbody",rowid);
-		 if(servicetype=='CICD'){
-			 url=www_url+"/rest/cicd/cicddata?token="+token ;
-		 }
-		 if(methodtype && methodtype=='POST' &&body && (body.indexOf("curl")==0 ||body.indexOf("--header")>0 )){
+		
+		 
+		 if( body.indexOf("curl")==0 ||body.indexOf("--header")>0 ||body.indexOf("-X")>0 ||body.indexOf("--cookie")>0){
 			 
+			 	url=www_url+"/rest/cicd/cicddata?token="+token ;
 			 	saveCICDChanges("servicerepo",url);
 			 	
 		 }else if(methodtype && methodtype=='POST'){
 			 
-			 	httpro = new XMLHttpRequest();
+			 	var httpro = new XMLHttpRequest();
 			 	httpro.open("POST", url, true);
 			 	
-			 	setHttpAuthHeader(httpro)
 				setGlobalHttpHeaderWithServiceParam(httpro);
-			 	
+				setHttpAuthHeader(httpro);
 				
 				httpro.onreadystatechange = function () { 
 				    if (httpro.readyState == 4 && httpro.status == 200) {
 				        var json = JSON.parse(httpro.responseText);
-				        dhtmlx.alert(json);
+				        updateServiceResponseToTable("servicerepo","responsebody",httpro.responseText);
+				        //dhtmlx.alert(json);
 				        //console.log(json.email + ", " + json.password)
 				    }
 				}
@@ -755,10 +824,10 @@ function runServiceRepoUrlTest(name){
 			 
 		 }else if(methodtype && methodtype=='GET'){
 			 
-			    httpro = new XMLHttpRequest();
+			    var httpro = new XMLHttpRequest();
 			 	url=replaceDataWithGlobalVariables(url);
 			 	httpro.open("GET", url, true);
-				setHttpAuthHeader(httpro)
+			 	setHttpAuthHeader(httpro);
 				setGlobalHttpHeaderWithServiceParam(httpro);
 				httpro.onreadystatechange = function () { 
 				    if (httpro.readyState == 4 && httpro.status == 200) {
@@ -780,63 +849,114 @@ function runServiceApiUrlTest(name){
 	var repogrid=gridlist["servicerepo"];
 	var grid=gridlist["serviceapi"];
 	var url;
+	var servicetype;
+	var repobody;
+	var packagename;
+	//clean up
+	var html_cell=htmlcells["serviceapi"];
+	if(html_cell){
+		html_cell.showHeader();
+		html_cell.showInnerScroll();
+	    html_cell.setText("Validator XML:");
+	    html_cell.attachHTMLString("");
+	}
+	
 	
 	if(repogrid){
-		 var rowid=grid.getSelectedRowId();
+		 var rowid=repogrid.getSelectedRowId();
 		 if(!rowid) rowid=1;
-		 url=getColumnValueByGridRowId(repogrid,"endpoint",rowid);;
+		 url=getColumnValueByGridRowId(repogrid,"endpoint",rowid);
+		 servicetype=getColumnValueByGridRowId(repogrid,"servicetype",rowid);
+		 packagename=getColumnValueByGridRowId(repogrid,"packagename",rowid);
+		 //repobody=getColumnValueByGridRowId(repogrid,"postbody",rowid);
 	}
 	if(grid){
 		 var rowid=grid.getSelectedRowId();
 		 if(!rowid) rowid=1;
+		 var name=getColumnValueByGridRowId(grid,"name",rowid);
+		 var shortname=getColumnValueByGridRowId(grid,"shortname",rowid);
+		 var description=getColumnValueByGridRowId(grid,"description",rowid);
 		 var methodtype=getColumnValueByGridRowId(grid,"methodtype",rowid);
+		 
 		// var authtype=getColumnValueByGridRowId(grid,"authtype",rowid);
 		 //var servicetype=getColumnValueByGridRowId(grid,"servicetype",rowid);
 		 var uri=getColumnValueByGridRowId(grid,"uri",rowid);
 		 var body=getColumnValueByGridRowId(grid,"postbody",rowid);
-		 if(uri &&(uri.indexOf("http:")||uri.indexOf("https:"))){
+		 if(uri &&(uri.indexOf("http:")>0||uri.indexOf("https:")>0)){
 			 url=uri;
 		 }else{
 			 url=url+uri;
 		 }
-		 if(methodtype && methodtype=='POST' &&body){
+		 //setup validator
+		 if(!description) description=name;
+		 setupValidator(name,description.substr(0,100),packagename);
+		 setupValidateWs(shortname, methodtype,url, 0)
+		 
+		 if(servicetype=='CICD'){
+			 url=www_url+"/rest/cicd/cicddata?token="+token ;
+		 }
+		 url=replaceDataWithApiParamVariables(url);
+		 url=replaceDataWithGlobalVariables(url);
+		 if( body.indexOf("curl ")>=0 ||body.indexOf("--header")>0 ||body.indexOf("-X")>0 ||body.indexOf("--cookie")>0){
+			 	url=www_url+"/rest/cicd/cicddata?token="+token ;
+			 	saveCICDChanges("serviceapi",url);
+			 	setupValidatorWsAttributes("body", body, "param");
+			 	
+		 }else if(methodtype && methodtype=='POST'){
 			 
-			 	httpro = new XMLHttpRequest();
-			 	url=replaceDataWithApiParamVariables(url);
-			 	url=replaceDataWithGlobalVariables(url);
+			 	var httpro = new XMLHttpRequest();
 			 	httpro.open("POST", url, true);
-				setHttpAuthHeader(httpro)
+			 	
+			 	setHttpAuthHeader(httpro);
 				setGlobalHttpHeaderWithServiceParam(httpro);
-				setHttpHeaderWithApiParam(httpro);
+			 	
+				
 				httpro.onreadystatechange = function () { 
 				    if (httpro.readyState == 4 && httpro.status == 200) {
 				        var json = JSON.parse(httpro.responseText);
-				        dhtmlx.alert(json);
+				        updateServiceResponseToTable("serviceapi","responsebody",httpro.responseText);
+				        //dhtmlx.alert(json);
 				        //console.log(json.email + ", " + json.password)
 				    }
 				}
-				//var data = JSON.stringify({"email":"hey@mail.com","password":"101010"});
 				if(body){
+					
 					body=replaceDataWithApiParamVariables(body);
 					body=replaceDataWithGlobalVariables(body);
-					body=body.split("<br>").join("\n");
+					body=body.split("<br>").join("");
 				}
 				
-				httpro.send(body);
+				if(body){
+					if(contenttype &&contenttype["serviceparam"]){
+							if(contenttype &&(contenttype["serviceparam"].indexOf("form-urlencoded")>0 
+									||contenttype["serviceparam"].indexOf("form-")>0)){
+								httpro.setRequestHeader("Content-Type",contenttype["serviceparam"]);
+								var formData = new FormData();
+								formData.append("body",body);
+								httpro.send(formData);
+							}else if(contenttype &&contenttype["serviceparam"].indexOf("json")>0 ){
+								httpro.send(body);
+							}
+					}else{
+						httpro.send(body);
+					}
+					
+				}
 			 
 		 }else if(methodtype && methodtype=='GET'){
 			 
-			    httpro = new XMLHttpRequest();
+			    var httpro = new XMLHttpRequest();
 			    url=replaceDataWithApiParamVariables(url);
 			 	url=replaceDataWithGlobalVariables(url);
 			 	httpro.open("GET", url, true);
-				setHttpAuthHeader(httpro)
+			 	setHttpAuthHeader(httpro);
 				setGlobalHttpHeaderWithServiceParam(httpro);
 				setHttpHeaderWithApiParam(httpro);
 				httpro.onreadystatechange = function () { 
 				    if (httpro.readyState == 4 && httpro.status == 200) {
+				    	updateServiceResponseToTable("serviceapi","responsebody",httpro.responseText);
 				        var json = JSON.parse(httpro.responseText);
-				        dhtmlx.alert(json);
+				       // dhtmlx.alert(json);
 				        //console.log(json.email + ", " + json.password)
 				    }
 				}
@@ -844,8 +964,57 @@ function runServiceApiUrlTest(name){
 				httpro.send();
 			 
 		 }
+		 var x2js = new X2JS();
+		 validator=x2js.json2xml_str(validator_template);
+		 validator_xml=getHtmlfromXML(validator);
+		 //console.log(validator);
+		 updateHTMLContent("serviceapi","Validator XML:",validator_xml);
+		
 	}
 	
+}
+
+function getHtmlfromXML(xmlstr){
+	var content=xmlstr.split("<").join("&lt;");
+	 content=content.split(">").join("&gt;");
+	 content=content.split("&gt;&lt;").join("&gt;<br>&lt;");
+	 content=content.split("'&gt;<br>&lt;").join("'&gt;&lt;");
+	 content=content.split("&gt;&lt;ws").join("&gt;<br>&lt;ws");
+	 content=content.split("&gt;&lt;url").join("&gt;<br>&lt;url");
+	 return content;
+}
+function setCookie(cname, cvalue, exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+    var expires = "expires="+d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie(cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+
+function checkCookie() {
+    var user = getCookie("username");
+    if (user != "") {
+        alert("Welcome again " + user);
+    } else {
+        user = prompt("Please enter your name:", "");
+        if (user != "" && user != null) {
+            setCookie("username", user, 365);
+        }
+    }
 }
 
 

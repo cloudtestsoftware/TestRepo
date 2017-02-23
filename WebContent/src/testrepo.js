@@ -68,8 +68,14 @@ var boarddataview={};
 var boardgrid={};
 
 //serviceapi
+
 var paramgrid= {};
 var contenttype={};
+var htmllayouts={};
+var htmlcells={};
+var validator_template;
+var validator_xml;
+
 /*
 var servicerepodata={};
 var serviceauthdata{};
@@ -1143,11 +1149,7 @@ function setGridFilters(grid){
 		try{
 			var colid=grid.getColumnId(colIdx);
 			if(colid){
-				if(colid.indexOf("name")>0 && filter.indexOf("#text_filter")<0){
-	        		filter+=",#text_filter";
-	        	}else if(colIdx>0){
-	        		filter+=",";
-	        	}
+				filter+=",#text_filter";
 	        	colIdx++;
 			}
 			
@@ -1239,18 +1241,27 @@ function addHTMLContent(table){
 			parent: container,
 			pattern: '1C'
 		});
-
+        
 	    html_cell = html_layout.cells('a');
-	    html_cell.setText("Comments");
-		//html_cell.hideHeader();
-		if(html_cell){
-			html_cell.attachHTMLString("<div> Hello I am here</div>");
-		}
+	    html_cell.hideHeader();
+	    htmllayouts[table]=html_layout;
+	    htmlcells[table]=html_cell;
 	}
 	
 	
 }
 
+function updateHTMLContent(table,title,content){
+	
+	var html_cell=htmlcells[table];
+	if(html_cell){
+		html_cell.showHeader();
+		html_cell.showInnerScroll();
+	    html_cell.setText(title);
+	    html_cell.attachHTMLString("");
+		html_cell.attachHTMLString(content);
+	}
+}
 
 function setParentObject(form, parent, table){
     var dhxCombo = form.getCombo(name);
@@ -1888,17 +1899,13 @@ function collect_form_data(table,target){
 			               try{
 			            	  val =data_form.getEditor(colid).getContent();
 			            	  try{
+			            		 
 			            		  val=createTextVersion(val);
 			            		  val = JSON.parse(val);
 			            		  val=JSON.stringify(val);
-			            		  //val=val.split("\t").join("");
 			            		 
-			            	  }catch(err){
-			            		  val=createTextVersion(val);
-				            	  //val=val.split("<br>").join("\n");
-			            	  }
+			            	  }catch(err){ }
 			            	 
-			            	  //val=val.replace(/<\/?[a-z][a-z0-9]*[^<>]*>/ig, "<br>");
 			            	  
 			               }catch(err){
 			            	   val =data_form.getItemValue(colid);
@@ -1966,20 +1973,64 @@ function collect_form_data(table,target){
 
 function formatJSON(val){
 	try{
-		val=JSON.parse(val);
-		val=JSON.stringify(val, null, 4);
-		val=val.trim().split("{").join("{<br>");
-		val=val.trim().split("}").join("<br>}<br>");
-		val=val.trim().split(",").join(",<br>");
-		return val;
+		var txt=JSON.parse(val);
+		if (typeof txt == 'object') {
+		    //Json
+			val=JSON.stringify(val, null, 4);
+			val=val.trim().split("{").join("{<br>");
+			val=val.trim().split("}").join("<br>}<br>");
+			val=val.trim().split(",").join(",<br>");
+			
+			return val;
+		}
 	}catch(err){}
-	try{
-		val=val.split("\n").join("<br>");
-	}catch(err){}
+	
+	val=keepStringFormating(val);
 	
 	return val;
 	
 }
+function keepStringFormating(txt){
+	
+	try{
+		txt=txt.replace(/\n/gi,"<br>");
+		
+	}catch(err){}
+	try{
+		txt=txt.split("!D").join("<div><br></div>");
+		//txt=txt.replace(/!p/gi,"<p>");
+	}catch(err){}
+	/*
+	try{
+		txt=txt.replace(/p!/gi,"</p>");
+	}catch(err){}
+	*/
+	try{
+		txt=txt.replace(/!B/gi,"<b>");
+	}catch(err){}
+	try{
+		txt=txt.replace(/B!/gi,"</b>");
+	}catch(err){}
+	
+	try{
+		txt=txt.replace(/!i/gi,"<i>");
+	}catch(err){}
+	try{
+		txt=txt.replace(/i!/gi,"</i>");
+	}catch(err){}
+	
+	try{
+		txt=txt.replace(/!U/gi,"<u>");
+	}catch(err){}
+	try{
+		txt=txt.replace(/U!/gi,"</u>");
+	}catch(err){}
+	
+	
+	
+	return txt;
+}
+
 function strip(html)
 {
    var tmp = document.implementation.createHTMLDocument("New").body;
@@ -1997,7 +2048,10 @@ function postData(xml,url,table){
 		http.onreadystatechange = function() {//Call a function when the state changes.
    			if(http.readyState == 4 && http.status == 200) {
    			   post_reponse=http.responseText;
-      			
+   			   if(url.indexOf("/formdata")<0){
+   				 updateServiceResponseToTable(table,null,post_reponse);
+   			   }
+   			  
       			if (window.DOMParser)
   				{
   					parser=new DOMParser();
@@ -2354,6 +2408,18 @@ function getGridColumnIndex(grid,colname){
 	
 }
 
+function setGridColumnValueForSelectedRow(grid,colname,value){
+	 var colNum=grid.getColumnsNum();
+	 var value;	
+		for( var i=0;i<colNum;i++){
+			if(grid.getColumnId(i).indexOf(":"+colname)>=0 ){
+				grid.cells(grid.getSelectedRowId(),i).setValue(value);
+				return grid.getColumnId(i);
+			}
+		}
+	return null;
+	
+}
 
 function getGridColumnValueForSelectedRow(grid,colname){
 	 var colNum=grid.getColumnsNum();

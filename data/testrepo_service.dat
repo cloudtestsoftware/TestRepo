@@ -9894,11 +9894,11 @@
     Remark=Name of the CICD Service 
   </Attribute>
   <Attribute>
-    AttributeName=ShortName
+    AttributeName=PackageName
     AttrIndex=2
-    AliasName=Short Name
+    AliasName=Package Name
     Behavior=text
-    DomainName=String50_t
+    DomainName=String200_t
     IsNull=no
     DefaultValue=null
     HasProperty=no
@@ -9909,7 +9909,7 @@
     IsSearchField=yes
     IsBaseline=yes
     Version=1.0
-    Remark=a short name to identify API to call 
+    Remark=a custom package name to be generated
   </Attribute>
   <Attribute>
     AttributeName=Description
@@ -10296,7 +10296,7 @@
   IsBaseline=Yes
   Version=1.0
   ObjectTypeNo=131
-  GroupAccess=admin
+  GroupAccess=yes
   AllowDelete=no
   AllowNew=yes
   AllowSearch=yes

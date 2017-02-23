@@ -182,10 +182,8 @@
 
 		public Rows getServiceapiByFilter(){
 			String newfilter=" groupuser='"+this.getGroupuser()+"'";
-			if(!tu.isEmptyValue(this.getFilters()) &&!tu.isEmptyValue(this.admingroup) &&!this.admingroup.equalsIgnoreCase(this.getGroupuser())){
+			if(!tu.isEmptyValue(this.getFilters())){
 				newfilter+=" and "+this.getFilters();
-			}else if(!tu.isEmptyValue(this.admingroup) &&this.admingroup.equalsIgnoreCase(this.getGroupuser())){
-				newfilter=this.getFilters();
 			}
 			String sql= "select * from table_Serviceapi where "+ newfilter;
 			TemplateTable tab=tu.getResultSet(sql);

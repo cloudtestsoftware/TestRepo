@@ -16,10 +16,10 @@ export JAVA_CLASSPATH=.$JAVA_CLASSPATH:$JAR_PATH/servlet.jar:$JAR_PATH/servicein
 
 ######### Single Table ###########
 
-#java -classpath $JAVA_CLASSPATH cms.service.gen.datagen -import schema -file $DATA_PATH/testrepo_service.dat -table ServiceRepo -compile -log cms.log -inifile $DATA_PATH/context.xml
+java -classpath $JAVA_CLASSPATH cms.service.gen.datagen -import schema -file $DATA_PATH/testrepo_service.dat -table ServiceRepo  -log cms.log -inifile $DATA_PATH/context.xml
 #java -classpath $JAVA_CLASSPATH cms.service.gen.datagen -import schema -file $DATA_PATH/testrepo_service.dat -table ServiceAuth -compile -log cms.log -inifile $DATA_PATH/context.xml
 
 #java -classpath $JAVA_CLASSPATH% cms.service.gen.datagen -import jobcode  -file $DATA_PATH/cmsjobcodenew.dat -dbtype oracle  -log cms.log -inifile $DATA_PATH/context.xml
-java -classpath $JAVA_CLASSPATH% cms.service.gen.datagen -import rule -file $DATA_PATH/testrepo_rule.dat  -log rule.log -inifile $DATA_PATH/context.xml
+#java -classpath $JAVA_CLASSPATH% cms.service.gen.datagen -import rule -file $DATA_PATH/testrepo_rule.dat  -log rule.log -inifile $DATA_PATH/context.xml
 
 

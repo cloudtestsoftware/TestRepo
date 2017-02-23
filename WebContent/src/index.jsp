@@ -11,6 +11,7 @@
 	<script src="./src/codebase/dhtmlx.js"></script>
 	<script language="JavaScript" src="./src/change_style.js" type="text/javascript"></script>
 	<script language="JavaScript" src="./src/testrepo.js" type="text/javascript"></script>
+	<script language="JavaScript" src="./src/base64.js" type="text/javascript"></script>
 	<script language="JavaScript" src="./src/textversion.js" type="text/javascript"></script>
 	<script language="JavaScript" src="./src/context/common_context.js" type="text/javascript"></script>
 	<script language="JavaScript" src="./src/context/project_context.js" type="text/javascript"></script>
@@ -32,6 +33,10 @@
 	<script language="JavaScript" src="./src/context/crm_context.js" type="text/javascript"></script>
 	<script language="JavaScript" src="./src/context/cloud_context.js" type="text/javascript"></script>
 	<script language="JavaScript" src="./src/context/service_context.js" type="text/javascript"></script>
+	<script language="JavaScript" src="./src/context/validator_context.js" type="text/javascript"></script>
+	<script language="JavaScript" src="./src/context/restassured_context.js" type="text/javascript"></script>
+	<script language="JavaScript" src="./src/x2js-master/xml2json.js" type="text/javascript"></script>
+	
 	<style>
 		div#layoutObj {
 			position: absolute;

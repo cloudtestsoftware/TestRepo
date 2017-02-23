@@ -11,6 +11,7 @@ var restassured_template=
 " import com.jayway.restassured.response.Response;   \n "+
 " import com.jayway.restassured.specification.RequestSpecification;   \n "+
 " import static com.jayway.restassured.RestAssured.given;   \n "+
+" import com.testmax.track.CustomHandler; \n"+
 " import java.util.HashMap;   \n \n \n"+
 
 
@@ -29,17 +30,30 @@ var restassured_template=
     " private  RequestSpecification spec;   \n "+
     " private  JsonPath jsonpath;   \n "+
     " private  String url=\"@url\";   \n "+
+    " private static HashMap<String,String> varmap; \n"+
     " private  String method=\"@method\";   \n \n"+
+    
 
 
     " public static void main(String[] args) { \n"+
-    "      @apiname test= new @apiname(null,null);   \n "+
-    "      test.@apiname();   \n "+
+    "//      @apiname test= new @apiname(null,null);   \n "+
+    "//      test.@apiname();   \n "+
+    "         runtest(); \n"+
    "} \n\n"+
-    
+   
+   " // add list of behaviors you want to execute in this method calling .then().nextBehaviorToCall()\n" +
+   "public static void runtest() { \n"+
+   "      varmap=CustomHandler.getVarMap(); \n"+
+   "      @apiname test= new @apiname(null,null);   \n "+
+   "      test.@apiname();   \n "+
+  "} \n\n"+
+  " public @apiname(){ \n"+
+  "    this.varmap= CustomHandler.getVarMap(); \n"+
+  "} \n\n"+
    " public @apiname( Response response,HashMap<String,String> cookies){ \n"+
    "    this.callerresponse=response; \n"+
    "    this.cookies=cookies;  \n"+
+   "    this.varmap= CustomHandler.getVarMap(); \n"+
    "} \n\n"+
     " private  HashMap<String,String> getHeader(){ \n"+
     "    header=new HashMap<String,String>();   \n "+
@@ -113,7 +127,9 @@ var restassured_template=
         "\t// use default behavior as then() and change return object type replacing void \n"+
         "\t// Ex:  private updateCompanyAddress.ApiMapper updateCompanyAddress(){ \n"+
         "\t//    updateCompanyAddress called= new updateCompanyAddress(response,cookies); \n"+
-        "\t//    updateCompanyAddress.ApiMapper obj=called.updateCompanyAddress();\n"+
+        "\t//    updateCompanyAddress.ApiMapper obj=called.updateCompanyAddress();\n\n"+
+        "\t//    add any return varaible need to assert \n"+
+        "\t//    CustomHandler.addTestResult(\"companyId\",String.valueOf(jsonpath.getInt(\"loginMobileMultiResponse.return.id[0]\"))); \n"+
         "\t//    return obj;\n"+
         "\t//} \n\n"+
         "\t      private ApiMapper then() {return this;} \n"+
